@@ -1,0 +1,884 @@
+$baseColor: #3bb8c8;
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: $baseColor;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-itens: center;
+  min-height: 9vh;
+  background-color: $baseColor;
+}
+
+.logo {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+  display: none;
+}
+
+.nav-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+
+  li {
+    list-style: none;
+    margin-top: 10px;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.6s;
+
+    &:hover {
+      background: #fff;
+      color: $baseColor;
+      padding: 12px;
+      border-radius: 20px;
+    }
+  }
+}
+
+.burguer {
+  display: none;
+
+  div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 80%;
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+
+
+  .logo {
+    display: block;
+    opacity: 0;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    border-radius: 15px;
+
+    li {
+      opacity: 1;
+    }
+
+    a {
+      color: $baseColor;
+
+      &:hover {
+        background: $baseColor;
+        color: #fff;
+        padding: 20px 40px;
+      }
+    }
+  }
+
+  .burguer {
+    right: 10px;
+    display: block;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .toggle {
+    .line1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .line2 {
+      opacity: 0;
+    }
+
+    .line3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }
+
+  .logoImg {
+    display: block;
+  }
+
+  .footerBody {
+
+    min-height: 6vh;
+    background: #fff;
+
+    .footerPage {
+      display: flex;
+      justify-content: space-around;
+      align-itens: center;
+      min-height: 100vh;
+      background-color: #fff;
+
+      .nav-links2 {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        li {
+
+          margin-top: 20px;
+          list-style: none;
+
+        }
+
+        a {
+
+          color: $baseColor;
+          font-weight: bold;
+          text-decoration: none;
+
+
+
+
+        }
+      }
+    }
+  }
+
+
+}
+
+.mainBody {
+  min-height: 78vh;
+
+
+
+  .sectionLog {
+
+
+
+
+
+    .box {
+      margin: 30px auto 0;
+      width: 100%;
+      max-width: 450px;
+      background: #fff;
+      border-radius: 30px;
+      box-shadow: 2px 2px 10px #000;
+
+
+      .logoImg {
+
+        display: block;
+        text-align: center;
+
+        img {
+          width: 100%;
+          max-width: 250px;
+          max-height: 125px;
+        }
+      }
+
+      .formsLog {
+        display: block;
+        text-align: center;
+        margin: 0 auto 6px;
+
+        form {
+          padding: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+          border: 0;
+          background: none;
+          display: block;
+          margin: 25px auto;
+          text-align: center;
+          border: 2px solid #3bb8c8;
+          padding: 12px 10px;
+          width: 250px;
+          outline: none;
+          color: #3bb8c8;
+          border-radius: 25px;
+          transition: 0.25s;
+
+          &:hover {
+            width: 370px;
+            border-color: #3bb8c8;
+          }
+
+          &:focus {
+            width: 370px;
+            border-color: #3bb8c8;
+          }
+        }
+
+        input[type="submit"] {
+          border: 0;
+          background: none;
+          display: block;
+          margin: 25px auto 20px;
+          text-align: center;
+          border: 2px solid #3bb8c8;
+          padding: 12px 10px;
+          width: 100px;
+          outline: none;
+          color: #3bb8c8;
+          border-radius: 25px;
+          transition: 0.25s;
+          cursor: pointer;
+
+          &:hover {
+            background: #3bb8c8;
+            border: 2px solid #3bb8c8;
+            color: #fff;
+          }
+        }
+
+        p {
+          display: inline-block;
+          color: $baseColor;
+          margin-bottom: 20px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.footerBody {
+  width: 100%;
+  margin-top: 20px;
+  bottom: 0;
+  min-height: 10vh;
+  background: #fff;
+
+  .footerPage {
+    display: flex;
+    justify-content: space-around;
+
+    min-height: 10vh;
+    background-color: #fff;
+
+    .nav-links2 {
+      display: flex;
+      justify-content: space-around;
+      width: 30%;
+
+      li {
+        margin-top: 20px;
+        list-style: none;
+
+      }
+
+      a {
+        color: $baseColor;
+        font-weight: bold;
+        text-decoration: none;
+
+
+
+
+      }
+    }
+  }
+}
+
+.menuBody {
+  text-align: center;
+  margin-top: 10px;
+  padding: 0 0 40px;
+  margin-bottom: 7px;
+
+  .menuList {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+    }
+
+    .btn-Menu {
+      border: 0;
+      background: none;
+      display: block;
+      margin: 25px auto 5px;
+      text-align: center;
+      border: 2px solid #3bb8c8;
+      padding: 12px 10px;
+      width: 250px;
+      outline: none;
+      color: #3bb8c8;
+      border-radius: 25px;
+      transition: 0.25s;
+      cursor: pointer;
+
+      :before {
+        margin-bottom: 20px;
+      }
+
+      &:hover {
+        background: #3bb8c8;
+        border: 2px solid #3bb8c8;
+        color: #fff;
+
+
+      }
+    }
+  }
+}
+
+.boxDescritive {
+  margin: 30px auto 0;
+  width: 100%;
+  max-width: 940px;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 2px 2px 10px #000;
+
+  .logoImg {
+    display: block;
+    text-align: center;
+
+    img {
+      width: 100%;
+      max-width: 250px;
+      max-height: 125px;
+    }
+  }
+
+  .inputData {
+    text-align: center;
+
+    .textInput {
+      font-size: 20px;
+      color: $baseColor;
+      margin-top: 20px;
+
+    }
+
+    input[type="text"] {
+      border: 0;
+      background: none;
+      display: inline-block;
+      margin: 25px auto 20px;
+      text-align: center;
+      border: 2px solid #3bb8c8;
+      padding: 10px 20px;
+      width: 400px;
+      outline: none;
+      color: #3bb8c8;
+      border-radius: 25px;
+      transition: 0.25s;
+
+      &::placeholder {
+        color: $baseColor;
+      }
+
+      &:focus {
+
+        color: $baseColor;
+        font-size: 12px;
+        font-weight: bold;
+
+      }
+    }
+
+    button[type="button"] {
+      border: 0;
+      background: none;
+      display: inline-block;
+      // margin: 25px auto 20px;
+      border: 2px solid #3bb8c8;
+      padding: 10px 10px;
+      width: 45px;
+      color: #3bb8c8;
+      border-radius: 50%;
+      transition: 0.25s;
+      cursor: pointer;
+
+
+    }
+
+    .btn-PopSam {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      margin-left: -40px;
+
+      input[type="radio"] {
+        display: none;
+
+        &:checked+label {
+          padding: 5px 15px;
+          background: $baseColor;
+          color: #fff;
+        }
+
+        &:checked+label:before {
+          display: none;
+        }
+
+      }
+
+      label {
+        color: $baseColor;
+        padding: 5px 20px 5px 51px;
+        display: inline-block;
+        position: relative;
+        font-size: 1em;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: $baseColor;
+          color: #fff;
+        }
+
+        &:before {
+          content: "";
+          width: 17px;
+          height: 17px;
+          display: inline-block;
+          background: none;
+          border: 3px solid $baseColor;
+          border-radius: 50%;
+          position: absolute;
+          left: 17px;
+          top: 3px;
+
+          &:hover {
+            border: 3px solid #fff;
+          }
+
+        }
+
+
+      }
+
+
+
+
+    }
+  }
+
+  .variavelPresent {
+    display: none;
+  }
+
+  .variavelPresentActive {
+    display: block;
+  }
+
+  #variavelText {
+    margin: -10px auto 20px;
+    color: $baseColor;
+  }
+
+
+
+  select {
+    margin-top: 15px;
+    color: $baseColor;
+    font: inherit;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid $baseColor;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+
+    display: inline-block;
+
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+
+
+    .textVariable {
+      color: $baseColor;
+      font-weight: bold;
+    }
+
+    .arrow {
+      margin-left: 10px;
+    }
+
+
+
+
+  }
+
+  .valorContent {
+    margin: 5px auto;
+    text-align: center;
+
+    .chipsPresent {
+      display: none;
+    }
+
+    .chipsActive {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+
+
+    }
+
+    #presentText {
+      padding-bottom: 20px;
+    }
+
+    p {
+      margin: 0 5px;
+      color: #fff;
+      display: inline-block;
+      background: #3bb8c8;
+      padding: 10px 35px;
+      border-radius: 30px;
+      position: relative;
+      box-shadow: .5px .5px 5px #000;
+
+      label {
+        margin: auto;
+        width: 10px;
+        height: 10px;
+        top: 0px;
+        right: 15px;
+        position: absolute;
+      }
+
+    }
+  }
+}
+
+.contentBtn {
+  padding: 20px;
+
+  .btnCalculate {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 2px solid $baseColor;
+    border-radius: 25px;
+    color: $baseColor;
+    cursor: pointer;
+
+    &:hover {
+      background: $baseColor;
+      color: #fff;
+    }
+  }
+
+  .btnImport {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 2px solid $baseColor;
+    border-radius: 25px;
+    color: $baseColor;
+    cursor: pointer;
+
+    &:hover {
+      background: $baseColor;
+      color: #fff;
+    }
+  }
+}
+
+#modalValue {
+  margin-bottom: 0px;
+  display: none;
+
+  .textInput2 {
+    font-size: 15px;
+    color: $baseColor;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+}
+
+#modalValue-Active {
+  display: block;
+
+  .textInput2 {
+    font-size: 15px;
+    color: $baseColor;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+}
+
+.content-Result {
+  display: none;
+}
+
+.content-ResultActive {
+  margin: 0 auto;
+  display: block;
+
+  .titleResult {
+    margin: 0 auto;
+
+    h2 {
+      text-align: center;
+      color: $baseColor;
+      padding: 20px;
+      display: block;
+    }
+  }
+
+  .resultDemonstration {
+    display: block;
+    text-align: center;
+
+    .TabControl {
+      width: 100%;
+      overflow: hidden;
+      margin: 0px auto;
+      display: block;
+
+
+    }
+
+    .TabControl #header {
+      margin: 0;
+      overflow: hidden;
+      cursor: pointer;
+      margin-left: 32%;
+    }
+
+    .TabControl #content {
+      width: 100%;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .TabControl .abas {
+      display: block;
+
+    }
+
+    .TabControl .abas li {
+      padding: 5px;
+      display: block;
+      float: left;
+
+
+    }
+
+    .aba {
+      width: 100px;
+      height: 30px;
+      text-align: center;
+      padding-top: 5px;
+      background: rgba(59, 184, 200, 0.22);
+      transition: .1s ease-in;
+
+      span {
+        color: $baseColor;
+      }
+    }
+
+    .ativa {
+      width: 100px;
+      height: 30px;
+      text-align: center;
+      padding-top: 5px;
+      background: rgba(59, 184, 200, 0.55);
+      transition: .3s ease-in;
+    }
+
+    .ativa span,
+    .selected span {
+      color: #fff;
+    }
+
+    .TabControl #content {
+      background: #fff;
+      margin: 0 auto 20px;
+    }
+
+    .TabControl .conteudo {
+      width: 100%;
+      display: none;
+      color: $baseColor;
+    }
+
+    .selected {
+      width: 100px;
+      height: 30px;
+      border: solid 1 px;
+      border-radius: 5px 5px 0 0;
+      text-align: center;
+      padding-top: 5px;
+      background: $baseColor;
+    }
+
+    .content {
+      margin: 0 auto;
+      text-align: center;
+
+      .contentList {
+        background: #fff;
+        width: 90%;
+
+        ul {
+          list-style: none;
+          display: flex;
+          justify-content: space-around;
+
+          li {
+            height: 40px;
+            padding: 10px 70px 10px;
+            cursor: pointer;
+            transition: 0.105ms ease-in;
+
+            a {
+              font-size: 18px;
+              color: $baseColor;
+              font-weight: bold;
+            }
+
+            &:hover {
+              background: rgba(59, 183, 200, 0.288);
+              color: $baseColor;
+              border-bottom: 2px solid $baseColor;
+            }
+          }
+        }
+      }
+
+      .contentTabs {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        display: none;
+
+
+        .contentBody-active {
+          display: block;
+        }
+
+
+      }
+    }
+  }
+}
+
+.reloadPage {
+  margin: 0 auto 20px;
+  text-align: center;
+  padding: 20px;
+
+  input[type="button"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+    border: 2px solid #3bb8c8;
+    padding: 12px 10px;
+    width: 250px;
+    outline: none;
+    color: #3bb8c8;
+    border-radius: 25px;
+    transition: 0.25s;
+
+    &:hover {
+      border-color: $baseColor;
+      background: $baseColor;
+      color: #fff;
+    }
+  }
+}
+
+// Gerando Tabelas
+
+#tableDemonstration{
+  margin: 30px auto;
+    .tableTitle{
+      font-size: 20px;
+      color: $baseColor;
+      font-weight: bolder;
+      letter-spacing: 3px;
+    }
+ 
+    
+    .tdVet{
+      border-collapse: collapse;
+      text-align: center;
+      padding: 10px;
+      border-bottom:2px solid $baseColor;
+    }
+    .tableLines{
+      border-left: 2px solid $baseColor;
+     
+    }
+
+}
