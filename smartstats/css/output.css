@@ -788,6 +788,10 @@ body {
     transform: rotate(90deg);
     bottom: 0;
   }
+  .bodyFull .formsLog {
+    margin-top: -50px;
+    margin-bottom: 25px;
+  }
   .bodyFull .sectionDescriptive {
     width: 100%;
     margin-bottom: 15%;
