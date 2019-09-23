@@ -1,0 +1,1333 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #3bb8c8;
+}
+
+.menuMobile {
+  left: -600px;
+  display: none;
+  width: 100%;
+  height: calc(100vh - 50px);
+  top: 50px;
+  position: absolute;
+  text-align: center;
+  background: #fff;
+}
+.menuMobile ul li {
+  padding: 10px 30px;
+  margin: 30% auto 20px auto;
+  display: block;
+  font-size: 15px;
+}
+.menuMobile ul li a {
+  text-decoration: none;
+  color: #3bb8c8;
+}
+
+.bodyFull {
+  margin: 0 auto;
+  height: 100vh;
+}
+.bodyFull header {
+  width: 100%;
+  height: 20%;
+  background-color: #3bb8c8;
+}
+.bodyFull header #navMenu {
+  text-align: center;
+}
+.bodyFull header #navMenu ul li {
+  display: inline-block;
+  margin: 20px auto 20px auto;
+}
+.bodyFull header #navMenu ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 15px;
+  font-weight: bolder;
+}
+.bodyFull header #navMenu ul li a:hover {
+  color: #3bb8c8;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.bodyFull header .toggle {
+  display: none;
+  background: #3bb8c8;
+  width: 60px;
+  height: 60px;
+  right: 25px;
+}
+.bodyFull header .toggle .hamburguer {
+  position: relative;
+  display: block;
+  background: #fff;
+  width: 30px;
+  height: 2px;
+  top: 29px;
+  left: 15px;
+  transition: 0.5s ease-in-out;
+}
+.bodyFull header .toggle .hamburguer:before,
+.bodyFull header .toggle .hamburguer:after {
+  background: #fff;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+.bodyFull header .toggle .hamburguer:before {
+  top: -10px;
+}
+.bodyFull header .toggle .hamburguer:after {
+  bottom: -10px;
+}
+.bodyFull .sectionContent {
+  width: 100%;
+  height: 75%;
+}
+.bodyFull .sectionContent .boxContent {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  background: #fff;
+  margin: auto;
+  border-radius: 30px;
+  box-shadow: 2px 2px 10px #000;
+}
+.bodyFull .sectionContent .boxContent .logoImg {
+  display: block;
+  text-align: center;
+}
+.bodyFull .sectionContent .boxContent .logoImg img {
+  width: 100%;
+  max-width: 250px;
+  max-height: 125px;
+}
+.bodyFull .sectionContent .boxContent .formsLog {
+  display: block;
+  text-align: center;
+  margin: 0 auto 20px auto;
+}
+.bodyFull .sectionContent .boxContent .formsLog form {
+  padding: 10px;
+}
+.bodyFull .sectionContent .boxContent .formsLog input[type=email],
+.bodyFull .sectionContent .boxContent .formsLog input[type=password] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 25px auto;
+  text-align: center;
+  border: 2px solid #3bb8c8;
+  padding: 12px 10px;
+  width: 250px;
+  outline: none;
+  color: #3bb8c8;
+  border-radius: 25px;
+  transition: 0.25s;
+}
+.bodyFull .sectionContent .boxContent .formsLog input[type=email]:hover,
+.bodyFull .sectionContent .boxContent .formsLog input[type=password]:hover {
+  width: 370px;
+  border-color: #3bb8c8;
+}
+.bodyFull .sectionContent .boxContent .formsLog input[type=email]:focus,
+.bodyFull .sectionContent .boxContent .formsLog input[type=password]:focus {
+  width: 370px;
+  border-color: #3bb8c8;
+}
+.bodyFull .sectionContent .boxContent .formsLog input[type=submit] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 25px auto 20px;
+  text-align: center;
+  border: 2px solid #3bb8c8;
+  padding: 12px 10px;
+  width: 100px;
+  outline: none;
+  color: #3bb8c8;
+  border-radius: 25px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.bodyFull .sectionContent .boxContent .formsLog input[type=submit]:hover {
+  background: #3bb8c8;
+  border: 2px solid #3bb8c8;
+  color: #fff;
+}
+.bodyFull .sectionContent .boxContent .formsLog p {
+  display: inline-block;
+  color: #3bb8c8;
+  margin-bottom: 20px;
+}
+.bodyFull .sectionContent .boxContent .formsLog p:hover {
+  text-decoration: underline;
+}
+.bodyFull .sectionContent .menuList {
+  padding: 20px;
+  list-style: none;
+}
+.bodyFull .sectionContent .menuList a {
+  text-decoration: none;
+}
+.bodyFull .sectionContent .menuList .btn-Menu {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 25px auto 5px;
+  text-align: center;
+  border: 2px solid #3bb8c8;
+  padding: 12px 10px;
+  width: 250px;
+  outline: none;
+  color: #3bb8c8;
+  border-radius: 25px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.bodyFull .sectionContent .menuList .btn-Menu :before {
+  margin-bottom: 20px;
+}
+.bodyFull .sectionContent .menuList .btn-Menu:hover {
+  background: #3bb8c8;
+  border: 2px solid #3bb8c8;
+  color: #fff;
+}
+.bodyFull .sectionDescriptive {
+  width: 100%;
+  margin-bottom: 15%;
+}
+.bodyFull .sectionDescriptive .boxContent {
+  display: block;
+  width: 100%;
+  max-width: 650px;
+  background: #fff;
+  margin: auto;
+  border-radius: 30px;
+  box-shadow: 2px 2px 10px #000;
+}
+.bodyFull .sectionDescriptive .boxContent .logoImg {
+  display: block;
+  text-align: center;
+}
+.bodyFull .sectionDescriptive .boxContent .logoImg img {
+  width: 100%;
+  max-width: 250px;
+  max-height: 125px;
+}
+.bodyFull .sectionDescriptive .boxContent .pageDescritive {
+  margin: auto;
+}
+.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData {
+  text-align: center;
+}
+.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .textInput {
+  font-size: 20px;
+  color: #3bb8c8;
+  margin-top: 20px;
+}
+.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData input[type=text] {
+  border: 0;
+  background: none;
+  display: inline-block;
+  margin: 25px auto 20px;
+  text-align: center;
+  border: 2px solid #3bb8c8;
+  padding: 10px 20px;
+  width: 400px;
+  outline: none;
+  color: #3bb8c8;
+  border-radius: 25px;
+  transition: 0.25s;
+}
+.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData input[type=text]::placeholder {
+  color: #3bb8c8;
+}
+.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData input[type=text]:focus {
+  color: #3bb8c8;
+  font-size: 12px;
+  font-weight: bold;
+}
+.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData button[type=button] {
+  border: 0;
+  background: none;
+  display: inline-block;
+  border: 2px solid #3bb8c8;
+  padding: 10px 10px;
+  width: 45px;
+  color: #3bb8c8;
+  border-radius: 50%;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: -40px;
+}
+.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam input[type=radio] {
+  display: none;
+}
+.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam input[type=radio]:checked + label {
+  padding: 5px 15px;
+  background: #3bb8c8;
+  color: #fff;
+}
+.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam input[type=radio]:checked + label:before {
+  display: none;
+}
+.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label {
+  color: #3bb8c8;
+  padding: 5px 20px 5px 51px;
+  display: inline-block;
+  position: relative;
+  font-size: 1em;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label:hover {
+  background: #3bb8c8;
+  color: #fff;
+}
+.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label:before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  background: none;
+  border: 3px solid #3bb8c8;
+  border-radius: 50%;
+  position: absolute;
+  left: 17px;
+  top: 3px;
+}
+.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label:before:hover {
+  border: 3px solid #fff;
+}
+.bodyFull .sectionDescriptive .variavelPresent {
+  display: none;
+}
+.bodyFull .sectionDescriptive .variavelPresentActive {
+  display: block;
+}
+.bodyFull .sectionDescriptive #variavelText {
+  margin: -10px auto 20px;
+  color: #3bb8c8;
+}
+.bodyFull .sectionDescriptive select {
+  margin-top: 15px;
+  color: #3bb8c8;
+  font: inherit;
+  font-size: 16px;
+  background-color: #fff;
+  border: 1px solid #3bb8c8;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  display: inline-block;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.bodyFull .sectionDescriptive select .textVariable {
+  color: #3bb8c8;
+  font-weight: bold;
+}
+.bodyFull .sectionDescriptive select .arrow {
+  margin-left: 10px;
+}
+.bodyFull .sectionDescriptive .valorContent {
+  margin: 5px auto;
+  text-align: center;
+}
+.bodyFull .sectionDescriptive .valorContent .chipsPresent {
+  display: none;
+}
+.bodyFull .sectionDescriptive .valorContent .chipsActive {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.bodyFull .sectionDescriptive .valorContent #presentText {
+  padding-bottom: 20px;
+}
+.bodyFull .sectionDescriptive .valorContent p {
+  margin: 0 5px;
+  color: #fff;
+  display: inline-block;
+  background: #3bb8c8;
+  padding: 10px 35px;
+  border-radius: 30px;
+  position: relative;
+  box-shadow: 0.2px 0.2px 2px #000;
+}
+.bodyFull .sectionDescriptive .valorContent p label {
+  margin: auto;
+  width: 10px;
+  height: 10px;
+  top: 0px;
+  right: 15px;
+  position: absolute;
+}
+.bodyFull .sectionDescriptive .contentBtn {
+  padding: 20px;
+}
+.bodyFull .sectionDescriptive .contentBtn .btnCalculate {
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid #3bb8c8;
+  border-radius: 25px;
+  color: #3bb8c8;
+  cursor: pointer;
+}
+.bodyFull .sectionDescriptive .contentBtn .btnCalculate:hover {
+  background: #3bb8c8;
+  color: #fff;
+}
+.bodyFull .sectionDescriptive .contentBtn .btnImport {
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid #3bb8c8;
+  border-radius: 25px;
+  color: #3bb8c8;
+  cursor: pointer;
+}
+.bodyFull .sectionDescriptive .contentBtn .btnImport:hover {
+  background: #3bb8c8;
+  color: #fff;
+}
+.bodyFull .sectionDescriptive #modalValue {
+  margin-bottom: 0px;
+  display: none;
+}
+.bodyFull .sectionDescriptive #modalValue .textInput2 {
+  font-size: 15px;
+  color: #3bb8c8;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+.bodyFull .sectionDescriptive #modalValue-Active {
+  display: block;
+}
+.bodyFull .sectionDescriptive #modalValue-Active .textInput2 {
+  font-size: 15px;
+  color: #3bb8c8;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+.bodyFull .sectionDescriptive .content-Result {
+  display: none;
+}
+.bodyFull .sectionDescriptive .content-ResultActive {
+  margin: 0 auto;
+  display: block;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .titleResult {
+  margin: 0 auto;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .titleResult h2 {
+  text-align: center;
+  color: #3bb8c8;
+  padding: 20px;
+  display: block;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration {
+  display: block;
+  text-align: center;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl {
+  width: 100%;
+  overflow: hidden;
+  margin: 0px auto;
+  display: block;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #header {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #content {
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .abas {
+  display: block;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .abas li {
+  padding: 5px;
+  display: block;
+  float: left;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .aba {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  padding-top: 5px;
+  background: rgba(59, 184, 200, 0.22);
+  transition: 0.1s ease-in;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .aba span {
+  color: #3bb8c8;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .ativa {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  padding-top: 5px;
+  background: rgba(59, 184, 200, 0.55);
+  transition: 0.3s ease-in;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .ativa span,
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .selected span {
+  color: #fff;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #content {
+  background: #fff;
+  margin: 0 auto 20px;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .conteudo {
+  width: 100%;
+  display: none;
+  color: #3bb8c8;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .selected {
+  width: 100px;
+  height: 30px;
+  border: solid 1 px;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  padding-top: 5px;
+  background: #3bb8c8;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content {
+  margin: 0 auto;
+  text-align: center;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList {
+  background: #fff;
+  width: 90%;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul li {
+  height: 40px;
+  padding: 10px 70px 10px;
+  cursor: pointer;
+  transition: 0.105ms ease-in;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul li a {
+  font-size: 18px;
+  color: #3bb8c8;
+  font-weight: bold;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul li:hover {
+  background: rgba(59, 183, 200, 0.288);
+  color: #3bb8c8;
+  border-bottom: 2px solid #3bb8c8;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentTabs {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: none;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentTabs .contentBody-active {
+  display: block;
+}
+.bodyFull .sectionDescriptive .reloadPage {
+  margin: 0 auto 20px;
+  text-align: center;
+  padding: 20px;
+}
+.bodyFull .sectionDescriptive .reloadPage input[type=button] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 25px auto;
+  text-align: center;
+  border: 2px solid #3bb8c8;
+  padding: 12px 10px;
+  width: 250px;
+  outline: none;
+  color: #3bb8c8;
+  border-radius: 25px;
+  transition: 0.25s;
+}
+.bodyFull .sectionDescriptive .reloadPage input[type=button]:hover {
+  border-color: #3bb8c8;
+  background: #3bb8c8;
+  color: #fff;
+}
+.bodyFull .sectionDescriptive #tableDemonstration {
+  margin: 30px auto;
+}
+.bodyFull .sectionDescriptive #tableDemonstration .tableTitle {
+  font-size: 20px;
+  color: #3bb8c8;
+  font-weight: bolder;
+  letter-spacing: 3px;
+}
+.bodyFull .sectionDescriptive #tableDemonstration .tdVet {
+  border-collapse: collapse;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 2px solid #3bb8c8;
+}
+.bodyFull .sectionDescriptive #tableDemonstration .tableLines {
+  border-left: 2px solid #3bb8c8;
+}
+.bodyFull .footerContent {
+  width: 100%;
+  min-height: 5%;
+  margin-top: auto;
+  background-color: #fff;
+}
+.bodyFull .footerContent .footerMenu {
+  margin: auto;
+  text-align: center;
+}
+.bodyFull .footerContent .footerMenu ul li {
+  color: #3bb8c8;
+  font-weight: bold;
+  margin: 10px auto 0;
+  display: inline-block;
+  padding: 0px 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .MobileActive {
+    left: 0px;
+    display: block;
+    width: 100%;
+    height: calc(100vh - 50px);
+    top: 50px;
+    position: absolute;
+    text-align: center;
+    background: #fff;
+  }
+  .MobileActive ul li {
+    color: #3bb8c8;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px 30px;
+    margin: 30% auto 20px auto;
+    display: block;
+    font-size: 15px;
+  }
+
+  .bodyFull {
+    margin: 0 auto;
+  }
+  .bodyFull header #navMenu {
+    text-align: center;
+  }
+  .bodyFull header #navMenu ul li {
+    display: none;
+  }
+  .bodyFull header .toggle {
+    display: block;
+  }
+  .bodyFull header .toggle .Active.hamburguer {
+    transform: rotate(45deg);
+  }
+  .bodyFull header .toggle .Active.hamburguer::before {
+    transform: rotate(90deg);
+    top: 0;
+  }
+  .bodyFull header .toggle .Active.hamburguer::after {
+    transform: rotate(90deg);
+    bottom: 0;
+  }
+  .bodyFull .sectionDescriptive {
+    width: 100%;
+    margin-bottom: 15%;
+    margin-left: -25px;
+  }
+  .bodyFull .sectionDescriptive .boxContent {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    background: #fff;
+    margin: auto;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px #000;
+  }
+  .bodyFull .sectionDescriptive .boxContent .logoImg {
+    display: block;
+    text-align: center;
+  }
+  .bodyFull .sectionDescriptive .boxContent .logoImg img {
+    width: 100%;
+    max-width: 250px;
+    max-height: 125px;
+  }
+  .bodyFull .sectionDescriptive .boxContent .pageDescritive {
+    margin: auto;
+  }
+  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData {
+    text-align: center;
+  }
+  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .textInput {
+    font-size: 20px;
+    color: #3bb8c8;
+    margin-top: 20px;
+  }
+  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData input[type=text] {
+    border: 0;
+    background: none;
+    display: inline-block;
+    margin: 25px auto 20px;
+    text-align: center;
+    border: 2px solid #3bb8c8;
+    padding: 10px 20px;
+    width: 200px;
+    outline: none;
+    color: #3bb8c8;
+    border-radius: 25px;
+    transition: 0.25s;
+  }
+  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData input[type=text]::placeholder {
+    color: #3bb8c8;
+  }
+  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData input[type=text]:focus {
+    color: #3bb8c8;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData button[type=button] {
+    border: 0;
+    background: none;
+    display: inline-block;
+    border: 2px solid #3bb8c8;
+    padding: 10px 10px;
+    width: 45px;
+    color: #3bb8c8;
+    border-radius: 50%;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam {
+    display: block;
+    margin: 20px auto 20px auto;
+  }
+  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam input[type=radio] {
+    display: none;
+  }
+  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam input[type=radio]:checked + label {
+    padding: 5px 15px;
+    background: #3bb8c8;
+    color: #fff;
+  }
+  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam input[type=radio]:checked + label:before {
+    display: none;
+  }
+  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label {
+    margin: auto;
+    color: #3bb8c8;
+    padding: 5px 20px 5px 51px;
+    display: block;
+    width: 150px;
+    font-size: 1em;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label:hover {
+    background: #3bb8c8;
+    color: #fff;
+  }
+  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label:before {
+    content: "";
+    width: 17px;
+    height: 17px;
+    display: block;
+    background: none;
+    border: 3px solid #3bb8c8;
+    border-radius: 50%;
+    left: 17px;
+    top: 3px;
+  }
+  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label:before:hover {
+    border: 3px solid #fff;
+  }
+  .bodyFull .sectionDescriptive .variavelPresent {
+    display: none;
+  }
+  .bodyFull .sectionDescriptive .variavelPresentActive {
+    display: block;
+  }
+  .bodyFull .sectionDescriptive #variavelText {
+    margin: -10px auto 20px;
+    color: #3bb8c8;
+  }
+  .bodyFull .sectionDescriptive select {
+    margin-top: 15px;
+    color: #3bb8c8;
+    font: inherit;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #3bb8c8;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    display: inline-block;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  .bodyFull .sectionDescriptive select .textVariable {
+    color: #3bb8c8;
+    font-weight: bold;
+  }
+  .bodyFull .sectionDescriptive select .arrow {
+    margin-left: 10px;
+  }
+  .bodyFull .sectionDescriptive .valorContent {
+    margin: 5px auto;
+    text-align: center;
+  }
+  .bodyFull .sectionDescriptive .valorContent .chipsPresent {
+    display: none;
+  }
+  .bodyFull .sectionDescriptive .valorContent .chipsActive {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .bodyFull .sectionDescriptive .valorContent #presentText {
+    padding-bottom: 20px;
+  }
+  .bodyFull .sectionDescriptive .valorContent p {
+    margin: 0 5px;
+    color: #fff;
+    display: inline-block;
+    background: #3bb8c8;
+    padding: 10px 35px;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 0.2px 0.2px 2px #000;
+  }
+  .bodyFull .sectionDescriptive .valorContent p label {
+    margin: auto;
+    width: 10px;
+    height: 10px;
+    top: 0px;
+    right: 15px;
+    position: absolute;
+  }
+  .bodyFull .sectionDescriptive .contentBtn {
+    padding: 20px;
+  }
+  .bodyFull .sectionDescriptive .contentBtn .btnCalculate {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 2px solid #3bb8c8;
+    border-radius: 25px;
+    color: #3bb8c8;
+    cursor: pointer;
+  }
+  .bodyFull .sectionDescriptive .contentBtn .btnCalculate:hover {
+    background: #3bb8c8;
+    color: #fff;
+  }
+  .bodyFull .sectionDescriptive .contentBtn .btnImport {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 2px solid #3bb8c8;
+    border-radius: 25px;
+    color: #3bb8c8;
+    cursor: pointer;
+  }
+  .bodyFull .sectionDescriptive .contentBtn .btnImport:hover {
+    background: #3bb8c8;
+    color: #fff;
+  }
+  .bodyFull .sectionDescriptive #modalValue {
+    margin-bottom: 0px;
+    display: none;
+  }
+  .bodyFull .sectionDescriptive #modalValue .textInput2 {
+    font-size: 15px;
+    color: #3bb8c8;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+  .bodyFull .sectionDescriptive #modalValue-Active {
+    display: block;
+  }
+  .bodyFull .sectionDescriptive #modalValue-Active .textInput2 {
+    font-size: 15px;
+    color: #3bb8c8;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+  .bodyFull .sectionDescriptive .content-Result {
+    display: none;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive {
+    margin: -20px auto;
+    display: block;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .titleResult {
+    margin: 0 auto;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .titleResult h2 {
+    text-align: center;
+    color: #3bb8c8;
+    padding: 20px;
+    display: block;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration {
+    display: block;
+    text-align: center;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl {
+    width: 100%;
+    overflow: hidden;
+    margin: 0px auto;
+    display: block;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #header {
+    margin: auto;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #content {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .abas {
+    display: block;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .abas li {
+    padding: 5px;
+    display: block;
+    float: left;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .aba {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    background: rgba(59, 184, 200, 0.22);
+    transition: 0.1s ease-in;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .aba span {
+    color: #3bb8c8;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .ativa {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    background: rgba(59, 184, 200, 0.55);
+    transition: 0.3s ease-in;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .ativa span,
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .selected span {
+    color: #fff;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #content {
+    background: #fff;
+    margin: 0 auto 20px;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .conteudo {
+    width: 100%;
+    display: none;
+    color: #3bb8c8;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .selected {
+    width: 100px;
+    height: 30px;
+    border: solid 1 px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    padding-top: 5px;
+    background: #3bb8c8;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList {
+    background: #fff;
+    width: 90%;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul li {
+    height: 40px;
+    padding: 10px 70px 10px;
+    cursor: pointer;
+    transition: 0.105ms ease-in;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul li a {
+    font-size: 18px;
+    color: #3bb8c8;
+    font-weight: bold;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul li:hover {
+    background: rgba(59, 183, 200, 0.288);
+    color: #3bb8c8;
+    border-bottom: 2px solid #3bb8c8;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentTabs {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+  }
+  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentTabs .contentBody-active {
+    display: block;
+  }
+  .bodyFull .sectionDescriptive .reloadPage {
+    margin: 0 auto 20px;
+    text-align: center;
+    padding: 20px;
+  }
+  .bodyFull .sectionDescriptive .reloadPage input[type=button] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+    border: 2px solid #3bb8c8;
+    padding: 12px 10px;
+    width: 250px;
+    outline: none;
+    color: #3bb8c8;
+    border-radius: 25px;
+    transition: 0.25s;
+  }
+  .bodyFull .sectionDescriptive .reloadPage input[type=button]:hover {
+    border-color: #3bb8c8;
+    background: #3bb8c8;
+    color: #fff;
+  }
+  .bodyFull .sectionDescriptive #tableDemonstration {
+    margin: 30px auto;
+  }
+  .bodyFull .sectionDescriptive #tableDemonstration .tableTitle {
+    font-size: 20px;
+    color: #3bb8c8;
+    font-weight: bolder;
+    letter-spacing: 3px;
+  }
+  .bodyFull .sectionDescriptive #tableDemonstration .tdVet {
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid #3bb8c8;
+  }
+  .bodyFull .sectionDescriptive #tableDemonstration .tableLines {
+    border-left: 2px solid #3bb8c8;
+  }
+  .bodyFull .footerContent {
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 5%;
+    margin-top: auto;
+    background-color: #fff;
+  }
+  .bodyFull .footerContent .footerMenu ul li {
+    display: block;
+    margin: auto;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .bodyFull {
+    margin: auto;
+  }
+  .bodyFull .sectionDescriptive {
+    margin: auto;
+  }
+  .bodyFull .sectionDescriptive .boxContent {
+    width: 100%;
+  }
+  .bodyFull .content-ResultActive {
+    margin: -20px auto;
+    display: block;
+  }
+  .bodyFull .content-ResultActive .titleResult {
+    margin: 0 auto;
+  }
+  .bodyFull .content-ResultActive .titleResult h2 {
+    text-align: center;
+    color: #3bb8c8;
+    padding: 20px;
+    display: block;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration {
+    display: block;
+    text-align: center;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .TabControl {
+    width: 100%;
+    overflow: hidden;
+    margin: 0px auto;
+    display: block;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .TabControl #header {
+    margin: auto;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .TabControl #content {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .TabControl .abas {
+    display: block;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .TabControl .abas li {
+    padding: 5px;
+    display: block;
+    float: left;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .aba {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    background: rgba(59, 184, 200, 0.22);
+    transition: 0.1s ease-in;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .aba span {
+    color: #3bb8c8;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .ativa {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    background: rgba(59, 184, 200, 0.55);
+    transition: 0.3s ease-in;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .ativa span,
+.bodyFull .content-ResultActive .resultDemonstration .selected span {
+    color: #fff;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .TabControl #content {
+    background: #fff;
+    margin: 0 auto 20px;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .TabControl .conteudo {
+    width: 100%;
+    display: none;
+    color: #3bb8c8;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .selected {
+    width: 100px;
+    height: 30px;
+    border: solid 1 px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    padding-top: 5px;
+    background: #3bb8c8;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .content {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .content .contentList {
+    background: #fff;
+    width: 90%;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .content .contentList ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .content .contentList ul li {
+    height: 40px;
+    padding: 10px 70px 10px;
+    cursor: pointer;
+    transition: 0.105ms ease-in;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .content .contentList ul li a {
+    font-size: 18px;
+    color: #3bb8c8;
+    font-weight: bold;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .content .contentList ul li:hover {
+    background: rgba(59, 183, 200, 0.288);
+    color: #3bb8c8;
+    border-bottom: 2px solid #3bb8c8;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .content .contentTabs {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+  }
+  .bodyFull .content-ResultActive .resultDemonstration .content .contentTabs .contentBody-active {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */

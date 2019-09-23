@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Document</title>
+ <link rel="stylesheet" href="../css/output.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<nav id="menuMobile" class="menuMobile">
+ <ul>
+  <li><a href="../index.html">Inicio</a></li>
+  <li><a href="#">Criar Conta</a></li>
+  <li><a href="#">Sobre</a></li>
+ </ul>
+</nav>
+
+<body>
+ <div class="bodyFull">
+  <header>
+   <nav id="navMenu">
+    <ul>
+     <li><a href="../index.html">Inicio</a></li>
+     <li><a href="#">Criar Conta</a></li>
+     <li><a href="#">Sobre</a></li>
+    </ul>
+   </nav>
+   <div class="toggle">
+    <span class="hamburguer"></span>
+   </div>
+  </header>
+
+  <section class="sectionDescriptive">
+   <div class="boxContent">
+    <div class="formsLog">
+     <div class="logoImg">
+      <img src="../images/logoStats.png" alt="Logo Smart Stats">
+     </div>
+    <div class="pageDescritive">
+      <div class="inputData">
+        <div class="textVariavel">
+        <p class="textInput">Informe o Nome da Variável</p>
+        <input type="text" class="nameVariable" placeholder="Variável Pesquisada" name="variables" id="variables">
+        <div id="variavelPresent" class="variavelPresent">
+          <div ><p id="variavelText">A Variável Pesquisada é: </p></div>
+        </div>
+      </div>
+
+        <div id="btn-Pop" class="btn-PopSam">
+          <input type="radio" name="Population" id="btn-Population">
+          <label for="btn-Population">População</label>
+          <input type="radio" name="Population" id="btn-Sample">
+          <label for="btn-Sample">Amostra</label>
+        </div>
+        <div class="typeVariable">
+
+          <select class="textVariable" name="variable" id="selectVariable">
+            <option class="textVariable" value="">Informe o Tipo da Variável &#9660;</option>
+            <option class="textVariable" value="ordinal">Qualitativa Ordinal</option>
+            <option class="textVariable" value="nominal">Qualitativa Nominal</option>
+            <option class="textVariable" value="discreta">Quantitativa Discreta</option>
+            <option class="textVariable" value="continua">Quantitativa Continua</option>
+          </select>
+          <div id="modalValue">
+            <p class="textInput2">Ordenação das variáveis ordinaisl</p>
+            <input type="text" class="nameOrganize" placeholder="Ex: Ótimo, Bom, Ruim" name="organize"
+              id="valueOrganize" required />
+          </div>
+          <div class="valorContent">
+
+            <input class="enter" type="text" placeholder="Digite os Valores">
+            <div id="chipsPresent" class="chipsPresent">
+              <div id="presentText"></div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="contentBtn">
+          <button id="btnCalculate" class="btnCalculate" type="submit">Calcular</button>
+          <button class="btnImport" type="submit">Importar Arquivo</button>
+        </div>
+
+      </div>
+      <div>
+
+      </div>
+    </div>
+    <div class="content-Result">
+      <div class="titleResult">
+        <h2>Resultados</h2>
+      </div>
+      <div class="resultDemonstration">
+        <div class="content-Result">
+          <div class="resultDemonstration">
+            <div class="TabControl">
+              <div id="header">
+                <ul class="abas">
+                  <li>
+                    <div class="aba">
+                      <span>Tabela</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="aba">
+                      <span>Gráficos</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="aba">
+                      <span>Tab 3</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div id="content">
+                <div class="conteudo">
+                  <table id="tableDemonstration" cellspacing="0" celllpacing="0"  border=0>
+                    
+                  </table>
+
+                </div>
+                <div class="conteudo">
+                    <div id="chart_div"></div>
+                </div>
+                <div class="conteudo">
+                  Conteúdo da aba 3
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reloadPage">
+        <input type="button" value="Limpar">
+      </div>
+     
+    </div>
+   </div>
+  </section>
+
+  <footer class="footerContent">
+   <div class="footerMenu">
+    <ul>
+     <li>Inicio</li>
+     <li>Criar Conta</li>
+     <li>Sobre</li>
+    </ul>
+   </div>
+  </footer>
+ </div>
+ <script src="../js/index.js"></script>
+ <script src="../js/calculation.js"></script>
+</body>
+
+</html>

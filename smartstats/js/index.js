@@ -1,0 +1,29 @@
+$(function(){
+ $('.toggle').click(function(){
+     $('.hamburguer').toggleClass('Active')
+     $('#menuMobile').toggleClass('MobileActive')
+     $('.btn-PopSam label').toggle(function(){
+         $('.btn-PopSam label').css('position', ''),
+         $('.btn-PopSam').css('display', 'block')
+     });
+ });
+ $("#content div:nth-child(1)").show();
+     $(".abas li:first div").addClass("selected");       
+     $(".aba").click(function(){
+         $(".aba").removeClass("selected");
+         $(this).addClass("selected");
+         var indice = $(this).parent().index();
+         indice++;
+         $("#content div").hide();
+        $("#content div:nth-child("+indice+")").show();
+     });
+     
+     $(".aba").hover(
+         function(){$(this).addClass("ativa")},
+         function(){$(this).removeClass("ativa")}
+     ); 
+
+     $(".reloadPage").click(function() {
+       location.reload();
+});
+});
