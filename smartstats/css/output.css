@@ -217,7 +217,7 @@ body {
   bottom: -10px;
 }
 .bodyFull .sectionContent {
-  width: 100%;
+  width: calc(100% - 30px);
   height: 75%;
 }
 .bodyFull .sectionContent .boxContent {
@@ -796,11 +796,12 @@ body {
     width: 100%;
     margin-bottom: 15%;
     margin-left: -25px;
+    padding: 0 15px;
   }
   .bodyFull .sectionDescriptive .boxContent {
     display: block;
     width: 100%;
-    max-width: 450px;
+    padding: 0 15px;
     background: #fff;
     margin: auto;
     border-radius: 30px;
