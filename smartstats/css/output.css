@@ -217,15 +217,15 @@ body {
   bottom: -10px;
 }
 .bodyFull .sectionContent {
-  width: calc(100% - 30px);
+  width: calc(100%-30px);
   height: 75%;
+  padding: 0 15px;
 }
 .bodyFull .sectionContent .boxContent {
   display: block;
   width: 100%;
-  max-width: 450px;
   background: #fff;
-  margin: auto;
+  margin: 0 auto;
   border-radius: 30px;
   box-shadow: 2px 2px 10px #000;
 }
@@ -793,10 +793,7 @@ body {
     margin-bottom: 25px;
   }
   .bodyFull .sectionDescriptive {
-    width: 100%;
-    margin-bottom: 15%;
-    margin-left: -25px;
-    padding: 0 15px;
+    width: calc(100%-30px);
   }
   .bodyFull .sectionDescriptive .boxContent {
     display: block;
