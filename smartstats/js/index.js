@@ -7,6 +7,8 @@ $(function(){
          $('.btn-PopSam').css('display', 'block')
      });
  });
+
+ 
  $("#content div:nth-child(1)").show();
      $(".abas li:first div").addClass("selected");       
      $(".aba").click(function(){
