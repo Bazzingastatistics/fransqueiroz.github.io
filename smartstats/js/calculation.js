@@ -247,9 +247,23 @@ $(document).ready(function () {
 
  });
 
+ function break()
  $('#selectBreaker').click(function () {
     let selectValue = $('#selectBreaker').val();
-    $(this).attr('class', 'selectBreaker-Active');
+   if (selectValue == "4"){
+       $('.quartil').toggle('selectBreaker-Active')
+   }
+     if (selectValue == "5"){
+    $('.quintl').toggle('selectBreaker-Active')
+    }
+ if (selectValue == "10"){
+        $('.decil').toggle('selectBreaker-Active')
+    }
+    if (selectValue == "100"){
+        $('.porcentil').toggle('selectBreaker-Active')
+    }
+
+    
 
     // if(selectValue == '4' || (selectValue == '5') || (selectValue == '10') || (selectValue == '100')){
         

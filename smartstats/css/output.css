@@ -217,7 +217,7 @@ body {
   bottom: -10px;
 }
 .bodyFull .sectionContent {
-  width: calc(100%-30px);
+  width: calc(100%-30);
   height: 75%;
   padding: 0 15px;
 }
@@ -715,6 +715,9 @@ body {
 }
 .bodyFull .sectionDescriptive .breakerContent .selectBreaker .porcentil {
   display: none;
+}
+.bodyFull .sectionDescriptive .breakerContent .selectBreaker-Active {
+  display: block;
 }
 .bodyFull .sectionDescriptive .reloadPage {
   margin: 0 auto 20px;
