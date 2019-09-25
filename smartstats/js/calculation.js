@@ -246,4 +246,29 @@ $(document).ready(function () {
 
 
  });
+
+ $('#selectBreaker').click(function () {
+    let selectValue = $('#selectBreaker').val();
+    $(this).attr('class', 'selectBreaker-Active');
+
+    // if(selectValue == '4' || (selectValue == '5') || (selectValue == '10') || (selectValue == '100')){
+        
+    // } 
+
+    // switch(selectValue){
+    //     case '4':
+    //         $('.quartil').css('display', 'block');
+    //         break
+    //     case '5':
+    //         $('.quintil').css('display', 'block');
+    //         break
+    //     case '10':
+    //         $('.decil').css('display', 'block');
+    //         break
+    //     case '100':
+    //         $('.porcentil').css('display', 'block');
+    //         break
+    // }
+
+ });
 });    

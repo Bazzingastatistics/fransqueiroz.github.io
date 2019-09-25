@@ -454,6 +454,7 @@ body {
   color: #3bb8c8;
 }
 .bodyFull .sectionDescriptive select {
+  width: 50%;
   margin-top: 15px;
   color: #3bb8c8;
   font: inherit;
@@ -683,6 +684,37 @@ body {
 }
 .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentTabs .contentBody-active {
   display: block;
+}
+.bodyFull .sectionDescriptive .breakerContent {
+  margin: 20px auto 20px;
+  text-align: center;
+}
+.bodyFull .sectionDescriptive .breakerContent .textInput {
+  font-size: 20px;
+  color: #3bb8c8;
+  margin: 20px auto 0px;
+  padding: 10px 0 0 0;
+}
+.bodyFull .sectionDescriptive .breakerContent .selectBreaker {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px;
+}
+.bodyFull .sectionDescriptive .breakerContent .selectBreaker .quartil {
+  display: none;
+}
+.bodyFull .sectionDescriptive .breakerContent .selectBreaker .quintil {
+  display: none;
+}
+.bodyFull .sectionDescriptive .breakerContent .selectBreaker .decil {
+  display: none;
+}
+.bodyFull .sectionDescriptive .breakerContent .selectBreaker .porcentil {
+  display: none;
 }
 .bodyFull .sectionDescriptive .reloadPage {
   margin: 0 auto 20px;
