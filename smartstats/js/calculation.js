@@ -247,8 +247,25 @@ $(document).ready(function () {
 
  });
 
+ function break()
  $('#selectBreaker').click(function () {
     let selectValue = $('#selectBreaker').val();
+<<<<<<< HEAD
+=======
+   if (selectValue == "4"){
+       $('.quartil').toggle('selectBreaker-Active')
+   }
+     if (selectValue == "5"){
+    $('.quintl').toggle('selectBreaker-Active')
+    }
+ if (selectValue == "10"){
+        $('.decil').toggle('selectBreaker-Active')
+    }
+    if (selectValue == "100"){
+        $('.porcentil').toggle('selectBreaker-Active')
+    }
+
+>>>>>>> e88a38fa8c5b167c928736a4c7afea546b6cdb90
     
 
     if(selectValue == '4' || (selectValue == '5') || (selectValue == '10') || (selectValue == '100')){
