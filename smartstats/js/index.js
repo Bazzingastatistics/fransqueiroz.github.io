@@ -64,4 +64,13 @@ if ('speechSynthesis' in window) {
   } else {
     $('#modal1').openModal();
   }
+
+  let InputBreaker = $('#inputBreaker');
+  if(InputBreaker){
+     $('#etiqueta').html(InputBreaker.val());
+
+     $('#inputBreaker').on('input', function(){
+      $('#etiqueta').html(InputBreaker.val());
+     })
+  }else{ false};
 });

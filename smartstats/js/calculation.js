@@ -249,11 +249,11 @@ $(document).ready(function () {
 
  $('#selectBreaker').click(function () {
     let selectValue = $('#selectBreaker').val();
-    $(this).attr('class', 'selectBreaker-Active');
+    
 
-    // if(selectValue == '4' || (selectValue == '5') || (selectValue == '10') || (selectValue == '100')){
+    if(selectValue == '4' || (selectValue == '5') || (selectValue == '10') || (selectValue == '100')){
         
-    // } 
+    } 
 
     // switch(selectValue){
     //     case '4':

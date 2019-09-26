@@ -695,26 +695,67 @@ body {
   margin: 20px auto 0px;
   padding: 10px 0 0 0;
 }
-.bodyFull .sectionDescriptive .breakerContent .selectBreaker {
-  margin: auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 25px;
+.bodyFull .sectionDescriptive .breakerContent .inputDiv {
+  width: 450px;
+  margin: 10px auto;
+  padding: 50px;
+  box-sizing: border-box;
+  position: relative;
 }
-.bodyFull .sectionDescriptive .breakerContent .selectBreaker .quartil {
-  display: none;
+.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range] {
+  display: block;
+  width: 350px;
 }
-.bodyFull .sectionDescriptive .breakerContent .selectBreaker .quintil {
-  display: none;
+.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]:focus {
+  outline: none;
 }
-.bodyFull .sectionDescriptive .breakerContent .selectBreaker .decil {
-  display: none;
+.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range],
+.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-webkit-slider-runnable-track,
+.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
 }
-.bodyFull .sectionDescriptive .breakerContent .selectBreaker .porcentil {
-  display: none;
+.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-webkit-slider-thumb {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #3bb8c8;
+  border-radius: 50%;
+  margin-top: -9px;
+}
+.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-moz-range-thumb {
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  border: 3px solid #3bb8c8;
+  border-radius: 50%;
+}
+.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-ms-thumb {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #3bb8c8;
+  border-radius: 50%;
+}
+.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-webkit-slider-runnable-track {
+  background-color: #3bb8c8;
+  height: 3px;
+}
+.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]:focus::-webkit-slider-runnable-track {
+  outline: none;
+}
+.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-moz-range-track {
+  background-color: #3bb8c8;
+  height: 3px;
+}
+.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-ms-track {
+  background-color: #3bb8c8;
+  height: 3px;
+}
+.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-ms-fill-lower {
+  background-color: #000;
+}
+.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-ms-fill-upper {
+  background-color: black;
 }
 .bodyFull .sectionDescriptive .reloadPage {
   margin: 0 auto 20px;
