@@ -247,45 +247,19 @@ $(document).ready(function () {
 
  });
 
- function break()
- $('#selectBreaker').click(function () {
-    let selectValue = $('#selectBreaker').val();
-<<<<<<< HEAD
-=======
-   if (selectValue == "4"){
-       $('.quartil').toggle('selectBreaker-Active')
-   }
-     if (selectValue == "5"){
-    $('.quintl').toggle('selectBreaker-Active')
-    }
- if (selectValue == "10"){
-        $('.decil').toggle('selectBreaker-Active')
-    }
-    if (selectValue == "100"){
-        $('.porcentil').toggle('selectBreaker-Active')
-    }
+//  $('#selectBreaker').click(function(){
+//      console.log();
 
->>>>>>> e88a38fa8c5b167c928736a4c7afea546b6cdb90
-    
+//      if($(this).val() == "4"){
+//         let etiqueta = '<div id="etiqueta"></div>'
+//         $('.inputDiv').append(etiqueta);
+//         let input = '<input type="range"min="0" max="100" autocomplete="off" id="inputBreaker">'
+//         $('.inputDiv').append(input);
+//      }
+//  });
 
-    if(selectValue == '4' || (selectValue == '5') || (selectValue == '10') || (selectValue == '100')){
-        
-    } 
 
-    // switch(selectValue){
-    //     case '4':
-    //         $('.quartil').css('display', 'block');
-    //         break
-    //     case '5':
-    //         $('.quintil').css('display', 'block');
-    //         break
-    //     case '10':
-    //         $('.decil').css('display', 'block');
-    //         break
-    //     case '100':
-    //         $('.porcentil').css('display', 'block');
-    //         break
-    // }
 
- });
-});    
+
+});
+   
