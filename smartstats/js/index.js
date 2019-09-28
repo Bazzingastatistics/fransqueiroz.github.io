@@ -73,4 +73,12 @@ if ('speechSynthesis' in window) {
       $('#etiqueta').html(InputBreaker.val());
      })
   }else{ false};
+
+    $('#inputBreaker').click(function(){
+      if(!$('#selectBreaker').val()){
+        alert('Selecione uma Medida Separatriz')
+        $('#inputBreaker').val(1);
+        $('#etiqueta').html(1);
+      }
+    });
 });

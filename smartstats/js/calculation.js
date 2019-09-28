@@ -247,16 +247,26 @@ $(document).ready(function () {
 
  });
 
-//  $('#selectBreaker').click(function(){
-//      console.log();
+ $('#selectBreaker').click(function(){
+     console.log();
 
-//      if($(this).val() == "4"){
-//         let etiqueta = '<div id="etiqueta"></div>'
-//         $('.inputDiv').append(etiqueta);
-//         let input = '<input type="range"min="0" max="100" autocomplete="off" id="inputBreaker">'
-//         $('.inputDiv').append(input);
-//      }
-//  });
+     if($(this).val() == "4"){
+       
+        $('#inputBreaker').attr('max',4);
+     }
+     if($(this).val() == "5"){
+        
+        $('#inputBreaker').attr('max',5);
+     }
+     if($(this).val() == "10"){
+        
+        $('#inputBreaker').attr('max',10);
+     }
+     if($(this).val() == "100"){
+        
+        $('#inputBreaker').attr('max',100);
+     }
+ });
 
 
 
