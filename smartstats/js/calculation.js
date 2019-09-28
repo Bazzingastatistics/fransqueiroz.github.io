@@ -1,5 +1,207 @@
 // Funções de Cálculo
 
+// Qualitativa Nominal
+
+function qlNominal(vetor) {
+
+    // Ordenando o vetor
+    vetor.sort();
+
+    // Declarando variáveis
+    let vetFi = [];
+    let vetE = [];
+    let vetFr = [];
+    let vetFac = [];
+    let vetFacP = [];
+    let vetModa = [];
+    let vetMediana = [];
+    let k = 0;
+    let acum = 0;
+
+    // Acumulando valores e carregando vetores(para uso posterior)
+    for (let i = 0; i < vetor.length; i++) {
+        for (let j = i; j < vetor.length; j++) {
+            if (vetor[i] == vetor[i - 1]) {
+                break
+            }
+            else if (vetor[i] == vetor[j]) {
+                acum += 1;
+            }
+        }
+        if (acum > 0) {
+            vetFi.push(acum);
+            vetE.push(vetor[i]);
+
+            // Carregando vetor da frequência em percentual
+            vetFr.push(((vetFi[k] / vetor.length) * 100).toFixed(2));
+
+            // Carregando vetor da frequência acumulada
+            if (k == 0) {
+                vetFac.push(vetFi[k]);
+                vetFacP.push((parseFloat(vetFr[k])).toFixed(2));
+                k++
+            }
+            else {
+                vetFac.push(vetFac[k - 1] + vetFi[k]);
+                vetFacP.push(((parseFloat(vetFacP[k - 1])) + parseFloat(vetFr[k])).toFixed(2));
+                k++
+            }
+        }
+        acum = 0;
+    }
+
+    // Moda
+    vetModa = modaGeral(vetFi, vetE);
+
+    // Mediana
+    vetMediana = medianaGeral(vetor);
+
+}
+
+// Qualitativa Ordinal
+
+function qlOrdinal(vetor, vetorOrd) {
+
+    // Ordenando o vetor
+    vetor.sort(function (a, b) {
+        return a - b;
+    });
+
+    // Invertendo o vetor
+    //vetor.reverse();
+
+    // Declarando variáveis
+    let vetFi = [];
+    let vetE = [];
+    let vetFr = [];
+    let vetFac = [];
+    let vetFacP = [];
+    let vetModa = [];
+    let vetMediana = [];
+    let k = 0;
+    let acum = 0;
+
+    // Acumulando valores e carregando vetores(para uso posterior)
+    for (let i = 0; i < vetorOrd.length; i++) {
+        for (let j = i; j < vetor.length; j++) {
+            if (vetorOrd[i] == vetor[j]) {
+                acum += 1;
+            }
+        }
+        if (acum > 0) {
+            vetFi.push(acum);
+            vetE.push(vetorOrd[i]);
+
+            // Carregando vetor da frequência em percentual
+            vetFr.push(((vetFi[k] / vetor.length) * 100).toFixed(2));
+
+            // Carregando vetor da frequência acumulada
+            if (k == 0) {
+                vetFac.push(vetFi[k]);
+                vetFacP.push((parseFloat(vetFr[k])).toFixed(2));
+                k++
+            }
+            else {
+                vetFac.push(vetFac[k - 1] + vetFi[k]);
+                vetFacP.push(((parseFloat(vetFacP[k - 1])) + parseFloat(vetFr[k])).toFixed(2));
+                k++
+            }
+        }
+        acum = 0;
+    }
+    // Moda
+    vetModa = modaGeral(vetFi, vetE);
+
+    // Mediana
+    vetMediana = medianaGeral(vetor);
+
+    }
+
+// Quantitativa Discreta
+
+function qtDiscreta(vetor, analiseDiscreta) {
+
+    // Ordenando o vetor
+    vetor.sort(function (a, b) {
+        return a - b;
+    });
+
+    // Declarando variáveis
+    let vetFi = [];
+    let vetE = [];
+    let vetFr = [];
+    let vetFac = [];
+    let vetFacP = [];
+    let vetModa = [];
+    let vetMediana = [];
+    let acum = 0;
+    let k = 0;
+    let acMed = 0;
+
+    // Acumulando valores e carregando vetores(para uso posterior)
+    for (let i = 0; i < vetor.length; i++) {
+        for (let j = i; j < vetor.length; j++) {
+            if (vetor[i] == vetor[i - 1]) {
+                break
+            }
+            else if (vetor[i] == vetor[j]) {
+                acum += 1;
+            }
+        }
+        if (acum > 0) {
+            vetE.push(vetor[i]);
+            vetFi.push(acum);
+            acMed = acMed + (vetor[i] * acum);
+
+            // Carregando vetor da frequência em percentual
+            vetFr.push(((vetFi[k] / vetor.length) * 100).toFixed(2));
+
+            // Carregando vetor da frequência acumulada
+            if (k == 0) {
+                vetFac.push(vetFi[k]);
+                vetFacP.push((parseFloat(vetFr[k])).toFixed(2));
+                k++
+            }
+            else {
+                vetFac.push(vetFac[k - 1] + vetFi[k]);
+                vetFacP.push(((parseFloat(vetFacP[k - 1])) + parseFloat(vetFr[k])).toFixed(2));
+                k++
+            }
+        }
+        acum = 0;
+    }
+
+    // Moda
+    vetModa = modaGeral(vetFi, vetE);
+
+    // Média
+    let med = (acMed / vetor.length).toFixed(2);
+
+    // Mediana
+    vetMediana = medianaGeral(vetor);
+
+    // Desvio Padrão e Coeficiente da Variável
+    let acumDesv = 0;
+    let desvPad = 0;
+    let cv = 0;
+
+    if (analiseDiscreta == "amostra") {
+        for (let l = 0; l < vetFi.length; l++) {
+            acumDesv += (((vetE[l] - med) ** 2) * vetFi[l]);
+        }
+        desvPad = Math.sqrt((acumDesv / (vetor.length - 1))).toFixed(2);
+    }
+    if (analiseDiscreta == "população") {
+        for (let l = 0; l < vetFi.length; l++) {
+            acumDesv += (((vetE[l] - med) ** 2) * vetFi[l]);
+        }
+        desvPad = Math.sqrt((acumDesv / (vetor.length))).toFixed(2);
+    }
+
+    cv = Math.round(((desvPad / med) * 100));
+
+}
+
 // Quantitativa Continua
 function qtContinua(vetor,nameVariable) {
 
@@ -78,7 +280,7 @@ function qtContinua(vetor,nameVariable) {
      vetFi.push(acItem);
 
      // Carregando vetor da frequência em percentual
-     vetFr.push(Math.round((vetFi[i] / vetor.length) * 100));
+     vetFr.push(((vetFi[i] / vetor.length) * 100).toFixed(2));
 
      // Carregando vetor da frequência acumulada
      if (i == 0) {
@@ -89,33 +291,215 @@ function qtContinua(vetor,nameVariable) {
      }
 
      // Carregando vetor da frequência acumulada percentual
-     vetFacP.push(Math.round((vetFac[i] / vetor.length) * 100));
+     vetFacP.push(((vetFac[i] / vetor.length) * 100).toFixed(2));
 
      //Zerando contador
      acItem = 0;
 
  }
+
+ // Moda
+ let eMax = Math.max.apply(null, vetFi);
+ let posModa = vetFi.indexOf(eMax);
+ vetModa.push((vetMin[posModa] + vetMax[posModa]) / 2);
+
  // Calcular a média
  for (let k = 0; k < vetMin.length; k++) {
      acMed = acMed + ((vetMin[k] + vetMax[k]) / 2) * vetFi[k];
  }
- med = acMed / vetor.length;
- console.log(med);
+ med = (acMed / vetor.length).toFixed(2);
 
  // Calcular a mediana
- let meddiana
+ let vetMediana = [];
  let pos = Math.round(vetor.length * 0.5);
  let limInf
  for (let l = 0; l < vetMin.length; l++) {
      if ((vetMin[l] + int) > vetor[pos]) {
          limInf = vetMin[l];
-
-         meddiana = limInf + ((pos - vetFac[l - 1]) / vetFi[l]) * int
+         if (l == 0) {
+             vetMediana.push(limInf + (((pos - 0) / vetFi[l]) * int));
+             break;
+         } else
+             vetMediana.push(limInf + (((pos - vetFac[l - 1]) / vetFi[l]) * int));
          break;
      }
  }
+
+ // Desvio Padrão e Coeficiente da Variável
+ let acumDesv = 0;
+ let desvPad = 0;
+ let cv = 0;
+
+ if (analiseContinua == "amostra") {
+     for (let n = 0; n < vetFi.length; n++) {
+         acumDesv += (((((vetMin[n] + vetMax[n]) / 2) - med) ** 2) * vetFi[n]);
+     }
+     desvPad = Math.sqrt((acumDesv / (vetor.length - 1))).toFixed(2);
+ }
+ if (analiseContinua == "população") {
+     for (let n = 0; n < vetFi.length; n++) {
+         acumDesv += (((((vetMin[n] + vetMax[n]) / 2) - med) ** 2) * vetFi[n]);
+     }
+     desvPad = Math.sqrt((acumDesv / (vetor.length))).toFixed(2);
+ }
+
+ cv = Math.round(((desvPad / med) * 100));
+
+
+ 
  tableContinua(nameVariable,lin, vetMin, vetMax, vetFi, vetFr, vetFac, vetFacP);
 }
+
+//__________________________________________________________________________
+
+// Moda Geral
+function modaGeral(vetFi, vetE) {
+    let eMax = Math.max.apply(null, vetFi);
+    let indices = [];
+    let vetModa = [];
+    let posModa = vetFi.indexOf(eMax);
+    while (posModa != -1) {
+        indices.push(posModa);
+        posModa = vetFi.indexOf(eMax, posModa + 1);
+    }
+    for (let l = 0; l < indices.length; l++) {
+        vetModa.push(vetE[indices[l]]);
+    }
+    return vetModa;
+}
+
+// Mediana Geral
+function medianaGeral(vetor) {
+    let vetMediana = [];
+    if (vetor.length % 2 == 0) {
+        vetMediana.push(vetor[(vetor.length / 2) - 1]);
+        vetMediana.push(vetor[Math.round((vetor.length / 2))]);
+    } else {
+        vetMediana.push(vetor[Math.round((vetor.length / 2)) - 1]);
+    }
+    return vetMediana;
+}
+
+//Separatriz Geral
+function sepGeral(vetor, sepGeral) {
+    let pos = Math.round((vetor.length * (sepGeral / 100)) - 1);
+    if (pos < 0) {
+        pos = 0;
+    }
+    return vetor[pos];
+}
+
+//Separatriz Continua
+
+function sepCt(vetor, sepContinua) {
+
+    // Ordenando o vetor
+    vetor.sort(function (a, b) {
+        return a - b;
+    });
+
+    // Determinando limite máximo
+    let xMax = Math.max.apply(null, vetor);
+
+    // Determinando limite mínimo
+    let xMin = Math.min.apply(null, vetor);
+
+    // Determinando aplitude
+    let amp = xMax - xMin;
+
+    // Determinando quantidade de linhas
+    let lin = Math.floor(Math.sqrt(vetor.length));
+
+    // Preparando var para calcular intervalo de classe
+    let ampI = amp + 1;
+
+    // Looping para determinar a quantidade de linhas e intervalo
+    for (; ;) {
+        if (ampI % lin == 0) {
+            break;
+        }
+        if (ampI % (lin - 1) == 0) {
+            lin--;
+            break;
+        }
+        if (ampI % (lin + 1) == 0) {
+            lin++;
+            break;
+        }
+        else {
+            ampI++;
+        }
+    }
+
+    // Calculando intervalo
+    let int = ampI / lin;
+
+    // Determinando faixas de valores
+    let vetMax = [];
+    let vetMin = [];
+    let acVal = xMin;
+
+    for (; ;) {
+
+        if (vetMax.length == lin) {
+            break;
+        }
+        vetMin.push(acVal);
+        acVal += int;
+        vetMax.push(acVal);
+    }
+
+    // Separando os valores e realizando contagem
+    let vetFi = [];
+    let vetFr = [];
+    let vetFac = [];
+    
+
+    for (let i = 0; i < vetMin.length; i++) {
+        let acItem = 0;
+        for (let j = 0; j < vetor.length; j++) {
+            if (vetor[j] >= vetMin[i] & vetor[j] < vetMax[i]) {
+                acItem++
+            }
+        }
+        // Carregando vetor da contagem
+        vetFi.push(acItem);
+
+        // Carregando vetor da frequência em percentual
+        vetFr.push(((vetFi[i] / vetor.length) * 100).toFixed(2));
+
+        // Carregando vetor da frequência acumulada
+        if (i == 0) {
+            vetFac.push(vetFi[i]);
+        }
+        else {
+            vetFac.push(vetFac[i - 1] + vetFi[i]);
+        }
+
+        //Zerando contador
+        acItem = 0;
+
+    }
+
+    // Medidas Separatrizes da Contínua
+    let posQa = (vetor.length * (sepContinua / 100)).toFixed(2);
+    let limInfSep;
+    let sepQtContinua;
+    for (let m = 0; m < vetMin.length; m++) {
+        if ((vetMin[m] + int) > vetor[Math.round(posQa)]) {
+            limInfSep = vetMin[m];
+            if (m == 0) {
+                sepQtContinua = (limInfSep + (((posQa - 0) / vetFi[m]) * int)).toFixed(2);
+                break;
+            } else
+                sepQtContinua = (limInfSep + (((posQa - vetFac[m - 1]) / vetFi[m]) * int)).toFixed(2);
+            break;
+        }
+    }
+    return sepQtContinua;
+}
+
+//_______________________________________________________________________________
 
 // Gerando Tabelas 
 function tableContinua(nameVariable,lin, vetMin, vetMax, vetFi, vetFr, vetFac, vetFacP) {
@@ -138,6 +522,12 @@ function tableContinua(nameVariable,lin, vetMin, vetMax, vetFi, vetFr, vetFac, v
      
      $('#tableDemonstration').append(table);
  }
+ let foot = `<tr>
+                <td class="tdVet tableTitle tableLines">Fi</td>
+                <td class="tdVet tableTitle tableLines">Fi</td>
+                <td class="tdVet tableTitle tableLines">Fi</td>
+
+            </tr>`
 
 }
 //_______________________________________________________________________________________________________
@@ -209,13 +599,18 @@ $(document).ready(function () {
 
  });
 
+ let nameUniverse = $("[name=Population]");
 
+ for(let i = 0; i < nameUniverse.length; i++){
+     if(nameUniverse[i].checked){
+         let universe = nameUniverse[i].val();
+     }
+ }
+
+ console.log(universe);
 
  $('.btnCalculate').click(function () {
      let type = $('#selectVariable').val();
-
-
-
 
      switch (type) {
          case 'ordinal':
@@ -225,16 +620,22 @@ $(document).ready(function () {
 
                  return false;
              }
-             alert('Ordinaaall');
+             //Mudar testOrd, colocar vetor dos Dados de Ordenação
+             qlOrdinal(valuesVector, testeOrd);
+            //  Adicionar esse no botão calcular da Separatriz adicionando uma variavel.
+            //  let sepQlOrdinal = sepGeral(valuesVector, sepOrdinal);
              break;
          case 'nominal':
-             alert('Nominaaal');
+            qlNominal(valuesVector);
+            // let sepQlNominal = sepGeral(valuesVector, sepNominal);
              break
          case 'discreta':
-             alert('Discretaaa');
+            qtDiscreta(valuesVector, analiseDiscreta);
+            // let sepQtDiscreta = sepGeral(valuesVector, sepDiscreta);
              break;
          case 'continua':
-             qtContinua(valuesVector,nameVariable);
+            qtContinua(valuesVector,analiseContinua,nameVariable);
+            // let sepQtContinua = sepCt(valuesVector, sepContinua);
              break
      }
 
