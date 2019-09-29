@@ -43,7 +43,7 @@
             <div class="inputData">
               <div class="textVariavel">
                 <p class="textInput">Informe o Nome da Variável</p>
-                <input type="text" class="nameVariable" placeholder="Variável Pesquisada" name="variables"
+                <input type="text" class="nameVariable" placeholder="Digite a Variável Pesquisada e aperte Enter" name="variables"
                   id="variables">
                 <div id="variavelPresent" class="variavelPresent">
                   <div>
@@ -52,11 +52,12 @@
                 </div>
               </div>
 
-              <div id="btn-Pop" class="btn-PopSam">
-                <input type="radio" name="Population" value="population" class="btnTyping" id="btn-Population">
-                <label for="btn-Population">População</label>
-                <input type="radio" name="Population" value="amostra" class="btnTyping" id="btn-Sample">
-                <label for="btn-Sample">Amostra</label>
+              <div  class="btn-PopSam">
+                  <select class="textVariable" name="variable" id="selectSampling">
+                      <option class="textVariable" value="">Informe o Tipo de Amostragem &#9660;</option>
+                      <option class="textVariable" value="populacao">População</option>
+                      <option class="textVariable" value="amostra">Amostra</option>
+                    </select>
               </div>
               <div class="typeVariable">
 
@@ -68,13 +69,16 @@
                   <option class="textVariable" value="continua">Quantitativa Continua</option>
                 </select>
                 <div id="modalValue">
-                  <p class="textInput2">Ordenação das variáveis ordinaisl</p>
-                  <input type="text" class="nameOrganize" placeholder="Ex: Ótimo, Bom, Ruim" name="organize"
+                  <span class="textInput2">Ordenação das variáveis ordinaisl</span>
+                  <input type="text" class="nameOrganizes enterOrganize" placeholder="Ex: Ótimo, Bom, Ruim" name="organize"
                     id="valueOrganize" required />
+                    <div id="modalPresent" class="modalPresent">
+                        <div id="organizeText"></div>
+                      </div>
                 </div>
                 <div class="valorContent">
 
-                  <input class="enter" type="text" placeholder="Digite os Valores">
+                  <input class="enter" type="text" placeholder="Digite o valor e aperte Enter">
                   <div id="chipsPresent" class="chipsPresent">
                     <div id="presentText"></div>
                   </div>

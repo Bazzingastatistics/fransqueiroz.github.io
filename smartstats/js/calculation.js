@@ -557,6 +557,34 @@ $(document).ready(function () {
      }
  });
 
+ //Campo de ordenação
+
+ var modalPresent = $('#modalPresent');
+ var modalPresentText = $('#organizeText');
+ var valuesOrdination = [];
+
+ $('.enterOrganize').keyup(function (e) {
+     if (e.keyCode == 13) {
+         if (!$(this).val()) {
+             alert("Campo de Ordenação Vazio");
+         }
+         else {
+             valuesOrdination.push($(this).val());
+             console.log(valuesOrdination);
+             modalPresent.removeClass('modalPresent').addClass('modalPresentActive');
+             let ordenationTest = '<p data-posicao="' + ($(this).val()) + '" class="deletOrdination">' + $(this).val() + '<label >x</label> </p>'
+             modalPresentText.append(ordenationTest);
+             $(this).val("");
+         }
+     }
+ });
+
+ $(document).on('click', '.deletOrdination', function () {
+    $(this).remove();
+    valuesOrdination.splice(valuesOrdination.indexOf($(this).attr('data-posicao')), 1);
+    console.log(valuesOrdination);
+});
+
  //Adicionando Valores para em um vetor
  var Present = $('#chipsPresent');
  var chipPresent = $('.chipsPresent');
@@ -584,8 +612,15 @@ $(document).ready(function () {
      $(this).remove();
      valuesVector.splice(valuesVector.indexOf($(this).attr('data-posicao')), 1);
      console.log(valuesVector);
-
  });
+
+
+ 
+ $('#selectSampling').click(function () {
+    let universe = $(this).val();
+    console.log(universe);
+});
+
 
  $('#selectVariable').click(function () {
      if ($('#selectVariable').val() == "ordinal") {
@@ -599,15 +634,6 @@ $(document).ready(function () {
 
  });
 
- let nameUniverse = $("[name=Population]");
-
- for(let i = 0; i < nameUniverse.length; i++){
-     if(nameUniverse[i].checked){
-         let universe = nameUniverse[i].val();
-     }
- }
-
- console.log(universe);
 
  $('.btnCalculate').click(function () {
      let type = $('#selectVariable').val();
@@ -620,21 +646,36 @@ $(document).ready(function () {
 
                  return false;
              }
-             //Mudar testOrd, colocar vetor dos Dados de Ordenação
-             qlOrdinal(valuesVector, testeOrd);
+             
+             qlOrdinal(valuesVector, valuesOrdination);
             //  Adicionar esse no botão calcular da Separatriz adicionando uma variavel.
             //  let sepQlOrdinal = sepGeral(valuesVector, sepOrdinal);
              break;
          case 'nominal':
+                if (universe == null || universe == "") {
+                    alert('Selecione um tipo de amostragem');
+   
+                    return false;
+                }
             qlNominal(valuesVector);
             // let sepQlNominal = sepGeral(valuesVector, sepNominal);
              break
          case 'discreta':
-            qtDiscreta(valuesVector, analiseDiscreta);
+                if (universe == null || universe == "") {
+                    alert('Selecione um tipo de amostragem');
+   
+                    return false;
+                }
+            qtDiscreta(valuesVector, universe);
             // let sepQtDiscreta = sepGeral(valuesVector, sepDiscreta);
              break;
          case 'continua':
-            qtContinua(valuesVector,analiseContinua,nameVariable);
+                if (universe == null || universe == "") {
+                    alert('Selecione um tipo de amostragem');
+   
+                    return false;
+                }
+            qtContinua(valuesVector, universe,nameVariable);
             // let sepQtContinua = sepCt(valuesVector, sepContinua);
              break
      }
