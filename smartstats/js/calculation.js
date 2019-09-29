@@ -614,10 +614,10 @@ $(document).ready(function () {
      console.log(valuesVector);
  });
 
-
+ let universe;
  
  $('#selectSampling').click(function () {
-    let universe = $(this).val();
+    universe = $(this).val();
     console.log(universe);
 });
 
@@ -637,7 +637,10 @@ $(document).ready(function () {
 
  $('.btnCalculate').click(function () {
      let type = $('#selectVariable').val();
-
+     if ($('#selectVariable').val() == null || $('#selectVariable').val() == "") {
+        alert("Escolha um tipo de Variável")
+    } else{
+        
      switch (type) {
          case 'ordinal':
 
@@ -647,43 +650,29 @@ $(document).ready(function () {
                  return false;
              }
              
-             qlOrdinal(valuesVector, valuesOrdination);
+             qlOrdinal(valuesVector, valuesOrdination, nameVariable);
             //  Adicionar esse no botão calcular da Separatriz adicionando uma variavel.
             //  let sepQlOrdinal = sepGeral(valuesVector, sepOrdinal);
              break;
          case 'nominal':
-                if (universe == null || universe == "") {
-                    alert('Selecione um tipo de amostragem');
-   
-                    return false;
-                }
-            qlNominal(valuesVector);
+                
+            qlNominal(valuesVector, nameVariable);
             // let sepQlNominal = sepGeral(valuesVector, sepNominal);
              break
          case 'discreta':
-                if (universe == null || universe == "") {
-                    alert('Selecione um tipo de amostragem');
-   
-                    return false;
-                }
-            qtDiscreta(valuesVector, universe);
+                
+            qtDiscreta(valuesVector, universe, nameVariable);
             // let sepQtDiscreta = sepGeral(valuesVector, sepDiscreta);
              break;
          case 'continua':
-                if (universe == null || universe == "") {
-                    alert('Selecione um tipo de amostragem');
-   
-                    return false;
-                }
+                
             qtContinua(valuesVector, universe,nameVariable);
             // let sepQtContinua = sepCt(valuesVector, sepContinua);
              break
      }
-
-     if (type == '') {
-         alert("Escolha um tipo de Variável")
-     } else {
-         $(".content-Result").attr('class', 'content-ResultActive');
+     $(".content-Result").attr('class', 'content-ResultActive');
+     
+         
      }
 
 
