@@ -67,9 +67,6 @@ function qlOrdinal(vetor, vetorOrd) {
         return a - b;
     });
 
-    // Invertendo o vetor
-    //vetor.reverse();
-
     // Declarando variáveis
     let vetFi = [];
     let vetE = [];
@@ -115,11 +112,11 @@ function qlOrdinal(vetor, vetorOrd) {
     // Mediana
     vetMediana = medianaGeral(vetor);
 
-    }
+}
 
 // Quantitativa Discreta
 
-function qtDiscreta(vetor, analiseDiscreta) {
+function qtDiscreta(vetor, nameVariable, analiseDiscreta) {
 
     // Ordenando o vetor
     vetor.sort(function (a, b) {
@@ -203,151 +200,152 @@ function qtDiscreta(vetor, analiseDiscreta) {
 }
 
 // Quantitativa Continua
-function qtContinua(vetor,nameVariable) {
+function qtContinua(vetor, nameVariable, analiseContinua) {
 
- // Ordenando o vetor
- vetor.sort(function (a, b) {
-     return a - b;
- });
+    // Ordenando o vetor
+    vetor.sort(function (a, b) {
+        return a - b;
+    });
 
- // Determinando limite máximo
- let xMax = Math.max.apply(null, vetor);
+    // Determinando limite máximo
+    let xMax = Math.max.apply(null, vetor);
 
- // Determinando limite mínimo
- let xMin = Math.min.apply(null, vetor);
+    // Determinando limite mínimo
+    let xMin = Math.min.apply(null, vetor);
 
- // Determinando aplitude
- let amp = xMax - xMin;
+    // Determinando aplitude
+    let amp = xMax - xMin;
 
- // Determinando quantidade de linhas
- let lin = Math.floor(Math.sqrt(vetor.length));
+    // Determinando quantidade de linhas
+    let lin = Math.floor(Math.sqrt(vetor.length));
 
- // Preparando var para calcular intervalo de classe
- let ampI = amp + 1;
+    // Preparando var para calcular intervalo de classe
+    let ampI = amp + 1;
 
- // Looping para determinar a quantidade de linhas e intervalo
- for (; ;) {
-     if (ampI % lin == 0) {
-         break;
-     }
-     if (ampI % (lin - 1) == 0) {
-         lin--;
-         break;
-     }
-     if (ampI % (lin + 1) == 0) {
-         lin++;
-         break;
-     }
-     else {
-         ampI++;
-     }
- }
+    // Looping para determinar a quantidade de linhas e intervalo
+    for (; ;) {
+        if (ampI % lin == 0) {
+            break;
+        }
+        if (ampI % (lin - 1) == 0) {
+            lin--;
+            break;
+        }
+        if (ampI % (lin + 1) == 0) {
+            lin++;
+            break;
+        }
+        else {
+            ampI++;
+        }
+    }
 
- // Calculando intervalo
- let int = ampI / lin;
+    // Calculando intervalo
+    let int = ampI / lin;
 
- // Determinando faixas de valores
- let vetMax = [];
- let vetMin = [];
- let acVal = xMin;
+    // Determinando faixas de valores
+    let vetMax = [];
+    let vetMin = [];
+    let acVal = xMin;
 
- for (; ;) {
+    for (; ;) {
 
-     if (vetMax.length == lin) {
-         break;
-     }
-     vetMin.push(acVal);
-     acVal += int;
-     vetMax.push(acVal);
- }
+        if (vetMax.length == lin) {
+            break;
+        }
+        vetMin.push(acVal);
+        acVal += int;
+        vetMax.push(acVal);
+    }
 
- // Separando os valores e realizando contagem
- let vetFi = [];
- let vetFr = [];
- let vetFac = [];
- let vetFacP = [];
- let acMed = 0;
- let med = 0;
+    // Separando os valores e realizando contagem
+    let vetFi = [];
+    let vetFr = [];
+    let vetFac = [];
+    let vetFacP = [];
+    let acMed = 0;
+    let med = 0;
 
- for (let i = 0; i < vetMin.length; i++) {
-     let acItem = 0;
-     for (let j = 0; j < vetor.length; j++) {
-         if (vetor[j] >= vetMin[i] & vetor[j] < vetMax[i]) {
-             acItem++
-         }
-     }
-     // Carregando vetor da contagem
-     vetFi.push(acItem);
+    for (let i = 0; i < vetMin.length; i++) {
+        let acItem = 0;
+        for (let j = 0; j < vetor.length; j++) {
+            if (vetor[j] >= vetMin[i] & vetor[j] < vetMax[i]) {
+                acItem++
+            }
+        }
+        // Carregando vetor da contagem
+        vetFi.push(acItem);
 
-     // Carregando vetor da frequência em percentual
-     vetFr.push(((vetFi[i] / vetor.length) * 100).toFixed(2));
+        // Carregando vetor da frequência em percentual
+        vetFr.push(((vetFi[i] / vetor.length) * 100).toFixed(2));
 
-     // Carregando vetor da frequência acumulada
-     if (i == 0) {
-         vetFac.push(vetFi[i]);
-     }
-     else {
-         vetFac.push(vetFac[i - 1] + vetFi[i]);
-     }
+        // Carregando vetor da frequência acumulada
+        if (i == 0) {
+            vetFac.push(vetFi[i]);
+        }
+        else {
+            vetFac.push(vetFac[i - 1] + vetFi[i]);
+        }
 
-     // Carregando vetor da frequência acumulada percentual
-     vetFacP.push(((vetFac[i] / vetor.length) * 100).toFixed(2));
+        // Carregando vetor da frequência acumulada percentual
+        vetFacP.push(((vetFac[i] / vetor.length) * 100).toFixed(2));
 
-     //Zerando contador
-     acItem = 0;
+        //Zerando contador
+        acItem = 0;
 
- }
+    }
 
- // Moda
- let eMax = Math.max.apply(null, vetFi);
- let posModa = vetFi.indexOf(eMax);
- vetModa.push((vetMin[posModa] + vetMax[posModa]) / 2);
+    // Moda
+    let vetModa = [];
+    let eMax = Math.max.apply(null, vetFi);
+    let posModa = vetFi.indexOf(eMax);
+    vetModa.push((vetMin[posModa] + vetMax[posModa]) / 2);
 
- // Calcular a média
- for (let k = 0; k < vetMin.length; k++) {
-     acMed = acMed + ((vetMin[k] + vetMax[k]) / 2) * vetFi[k];
- }
- med = (acMed / vetor.length).toFixed(2);
+    // Calcular a média
+    for (let k = 0; k < vetMin.length; k++) {
+        acMed = acMed + ((vetMin[k] + vetMax[k]) / 2) * vetFi[k];
+    }
+    med = (acMed / vetor.length).toFixed(2);
 
- // Calcular a mediana
- let vetMediana = [];
- let pos = Math.round(vetor.length * 0.5);
- let limInf
- for (let l = 0; l < vetMin.length; l++) {
-     if ((vetMin[l] + int) > vetor[pos]) {
-         limInf = vetMin[l];
-         if (l == 0) {
-             vetMediana.push(limInf + (((pos - 0) / vetFi[l]) * int));
-             break;
-         } else
-             vetMediana.push(limInf + (((pos - vetFac[l - 1]) / vetFi[l]) * int));
-         break;
-     }
- }
+    // Calcular a mediana
+    let vetMediana = [];
+    let pos = Math.round(vetor.length * 0.5);
+    let limInf
+    for (let l = 0; l < vetMin.length; l++) {
+        if ((vetMin[l] + int) > vetor[pos]) {
+            limInf = vetMin[l];
+            if (l == 0) {
+                vetMediana.push(limInf + (((pos - 0) / vetFi[l]) * int));
+                break;
+            } else
+                vetMediana.push(limInf + (((pos - vetFac[l - 1]) / vetFi[l]) * int));
+            break;
+        }
+    }
 
- // Desvio Padrão e Coeficiente da Variável
- let acumDesv = 0;
- let desvPad = 0;
- let cv = 0;
+    // Desvio Padrão e Coeficiente da Variável
+    let acumDesv = 0;
+    let desvPad = 0;
+    let cv = 0;
 
- if (analiseContinua == "amostra") {
-     for (let n = 0; n < vetFi.length; n++) {
-         acumDesv += (((((vetMin[n] + vetMax[n]) / 2) - med) ** 2) * vetFi[n]);
-     }
-     desvPad = Math.sqrt((acumDesv / (vetor.length - 1))).toFixed(2);
- }
- if (analiseContinua == "população") {
-     for (let n = 0; n < vetFi.length; n++) {
-         acumDesv += (((((vetMin[n] + vetMax[n]) / 2) - med) ** 2) * vetFi[n]);
-     }
-     desvPad = Math.sqrt((acumDesv / (vetor.length))).toFixed(2);
- }
+    if (analiseContinua == "amostra") {
+        for (let n = 0; n < vetFi.length; n++) {
+            acumDesv += (((((vetMin[n] + vetMax[n]) / 2) - med) ** 2) * vetFi[n]);
+        }
+        desvPad = Math.sqrt((acumDesv / (vetor.length - 1))).toFixed(2);
+    }
+    if (analiseContinua == "população") {
+        for (let n = 0; n < vetFi.length; n++) {
+            acumDesv += (((((vetMin[n] + vetMax[n]) / 2) - med) ** 2) * vetFi[n]);
+        }
+        desvPad = Math.sqrt((acumDesv / (vetor.length))).toFixed(2);
+    }
 
- cv = Math.round(((desvPad / med) * 100));
+    cv = Math.round(((desvPad / med) * 100));
 
 
- 
- tableContinua(nameVariable,lin, vetMin, vetMax, vetFi, vetFr, vetFac, vetFacP);
+
+    tableContinua(nameVariable, lin, vetMin, vetMax, vetFi, vetFr, vetFac, vetFacP);
 }
 
 //__________________________________________________________________________
@@ -453,7 +451,7 @@ function sepCt(vetor, sepContinua) {
     let vetFi = [];
     let vetFr = [];
     let vetFac = [];
-    
+
 
     for (let i = 0; i < vetMin.length; i++) {
         let acItem = 0;
@@ -502,27 +500,27 @@ function sepCt(vetor, sepContinua) {
 //_______________________________________________________________________________
 
 // Gerando Tabelas 
-function tableContinua(nameVariable,lin, vetMin, vetMax, vetFi, vetFr, vetFac, vetFacP) {
- let linha = lin;
- let line1 = `<tr>
+function tableContinua(nameVariable, lin, vetMin, vetMax, vetFi, vetFr, vetFac, vetFacP) {
+    let linha = lin;
+    let line1 = `<tr>
                  <td class="tdVet tableTitle">${nameVariable}</td>
                  <td class="tdVet tableTitle tableLines">Fi</td>
                  <td class="tdVet tableTitle tableLines">Fr%</td>
                  <td class="tdVet tableTitle tableLines">Fac</td>
                  <td class="tdVet tableTitle tableLines">FacP%</td>
               </tr>`
- $('#tableDemonstration').append(line1);
- for (let i = 0; i < linha; i++) {
-     let table = `<tr><td class="tdVet"><p>${vetMin[i]} |--- ${vetMax[i]}</p></td>
+    $('#tableDemonstration').append(line1);
+    for (let i = 0; i < linha; i++) {
+        let table = `<tr><td class="tdVet"><p>${vetMin[i]} |--- ${vetMax[i]}</p></td>
                       <td class="tdVet tableLines"><p>${vetFi[i]} </p></td>
                       <td class="tdVet tableLines"><p>${vetFr[i]}% </p></td>
                       <td class="tdVet tableLines"><p>${vetFac[i]} </p></td>
                       <td class="tdVet tableLines"><p>${vetFacP[i]}% </p></td>
      </tr>`
-     
-     $('#tableDemonstration').append(table);
- }
- let foot = `<tr>
+
+        $('#tableDemonstration').append(table);
+    }
+    let foot = `<tr>
                 <td class="tdVet tableTitle tableLines">Fi</td>
                 <td class="tdVet tableTitle tableLines">Fi</td>
                 <td class="tdVet tableTitle tableLines">Fi</td>
@@ -535,172 +533,171 @@ function tableContinua(nameVariable,lin, vetMin, vetMax, vetFi, vetFr, vetFac, v
 // ______________________________________________________________________________________________
 
 $(document).ready(function () {
- //Adicionando o Nome da Variável
- let nameVariable;
+    //Adicionando o Nome da Variável
+    let nameVariable;
 
- const inputEnter1 = document.querySelector('.nameVariable');
- inputEnter1.addEventListener('keyup', function (e) {
-     var key = e.which || e.keyCode;
-     if (key == 13) {
-         if (!$(this).val()) {
-             alert('Campo de Valores Vazio');
-         } else {
-             var valtext = '<span>' + '' + '</span>';
-             $('#variavelText').append(valtext);
-             nameVariable = $(this).val();
-             console.log(nameVariable);
-             $('#variavelPresent').removeClass('variavelPresent').addClass('variavelPresentActive');
-             // valtext =   $(this).val() + '</span>';
-             $('#variavelText').append($(this).val());
-             inputEnter1.value = "";
-         }
-     }
- });
+    const inputEnter1 = document.querySelector('.nameVariable');
+    inputEnter1.addEventListener('keyup', function (e) {
+        var key = e.which || e.keyCode;
+        if (key == 13) {
+            if (!$(this).val()) {
+                alert('Campo de Valores Vazio');
+            } else {
+                var valtext = '<span>' + '' + '</span>';
+                $('#variavelText').append(valtext);
+                nameVariable = $(this).val();
+                console.log(nameVariable);
+                $('#variavelPresent').removeClass('variavelPresent').addClass('variavelPresentActive');
+                // valtext =   $(this).val() + '</span>';
+                $('#variavelText').append($(this).val());
+                inputEnter1.value = "";
+            }
+        }
+    });
 
- //Campo de ordenação
+    //Campo de ordenação
 
- var modalPresent = $('#modalPresent');
- var modalPresentText = $('#organizeText');
- var valuesOrdination = [];
+    var modalPresent = $('#modalPresent');
+    var modalPresentText = $('#organizeText');
+    var valuesOrdination = [];
 
- $('.enterOrganize').keyup(function (e) {
-     if (e.keyCode == 13) {
-         if (!$(this).val()) {
-             alert("Campo de Ordenação Vazio");
-         }
-         else {
-             valuesOrdination.push($(this).val());
-             console.log(valuesOrdination);
-             modalPresent.removeClass('modalPresent').addClass('modalPresentActive');
-             let ordenationTest = '<p data-posicao="' + ($(this).val()) + '" class="deletOrdination">' + $(this).val() + '<label >x</label> </p>'
-             modalPresentText.append(ordenationTest);
-             $(this).val("");
-         }
-     }
- });
+    $('.enterOrganize').keyup(function (e) {
+        if (e.keyCode == 13) {
+            if (!$(this).val()) {
+                alert("Campo de Ordenação Vazio");
+            }
+            else {
+                valuesOrdination.push($(this).val());
+                console.log(valuesOrdination);
+                modalPresent.removeClass('modalPresent').addClass('modalPresentActive');
+                let ordenationTest = '<p data-posicao="' + ($(this).val()) + '" class="deletOrdination">' + $(this).val() + '<label >x</label> </p>'
+                modalPresentText.append(ordenationTest);
+                $(this).val("");
+            }
+        }
+    });
 
- $(document).on('click', '.deletOrdination', function () {
-    $(this).remove();
-    valuesOrdination.splice(valuesOrdination.indexOf($(this).attr('data-posicao')), 1);
-    console.log(valuesOrdination);
+    $(document).on('click', '.deletOrdination', function () {
+        $(this).remove();
+        valuesOrdination.splice(valuesOrdination.indexOf($(this).attr('data-posicao')), 1);
+        console.log(valuesOrdination);
+    });
+
+    //Adicionando Valores para em um vetor
+    var Present = $('#chipsPresent');
+    var chipPresent = $('.chipsPresent');
+    var chipActive = $('.chipsActive');
+    var presentText = $('#presentText');
+    var valuesVector = [];
+
+    $('.enter').keyup(function (e) {
+        if (e.keyCode == 13) {
+            if (!$(this).val()) {
+                alert("Campo de Valores Vazio");
+            }
+            else {
+                valuesVector.push($(this).val());
+                console.log(valuesVector);
+                Present.removeClass('chipsPresent').addClass('chipsActive');
+                var text = '<p data-posicao="' + ($(this).val()) + '" class="delet">' + $(this).val() + '<label >x</label> </p>'
+                presentText.append(text);
+                $(this).val("");
+            }
+        }
+    });
+
+    $(document).on('click', '.delet', function () {
+        $(this).remove();
+        valuesVector.splice(valuesVector.indexOf($(this).attr('data-posicao')), 1);
+        console.log(valuesVector);
+    });
+
+    let universe;
+
+    $('#selectSampling').click(function () {
+        universe = $(this).val();
+        console.log(universe);
+    });
+
+
+    $('#selectVariable').click(function () {
+        if ($('#selectVariable').val() == "ordinal") {
+            $('#modalValue').attr("id", "modalValue-Active");
+
+        } else {
+            if ($('#selectVariable').val() == "nominal" || $('#selectVariable').val() == "discreta" || $('#selectVariable').val() == "continua" || $('#selectVariable').val() == "") {
+                $("#modalValue-Active").attr('id', 'modalValue');
+            }
+        }
+
+    });
+
+
+    $('.btnCalculate').click(function () {
+        let type = $('#selectVariable').val();
+        if ($('#selectVariable').val() == null || $('#selectVariable').val() == "") {
+            alert("Escolha um tipo de Variável")
+        } else {
+
+            switch (type) {
+                case 'ordinal':
+
+                    if ($('#valueOrganize').val() == null || $('#valueOrganize').val() == "") {
+                        alert('Campo de Ordenação Vazio');
+
+                        return false;
+                    }
+
+                    qlOrdinal(valuesVector, valuesOrdination, nameVariable);
+                    //  Adicionar esse no botão calcular da Separatriz adicionando uma variavel.
+                    //  let sepQlOrdinal = sepGeral(valuesVector, sepOrdinal);
+                    break;
+                case 'nominal':
+
+                    qlNominal(valuesVector, nameVariable);
+                    // let sepQlNominal = sepGeral(valuesVector, sepNominal);
+                    break
+                case 'discreta':
+
+                    qtDiscreta(valuesVector, nameVariable, universe);
+                    // let sepQtDiscreta = sepGeral(valuesVector, sepDiscreta);
+                    break;
+                case 'continua':
+
+                    qtContinua(valuesVector, nameVariable, universe);
+                    // let sepQtContinua = sepCt(valuesVector, sepContinua);
+                    break
+            }
+            $(".content-Result").attr('class', 'content-ResultActive');
+
+
+        }
+
+
+    });
+
+    $('#selectBreaker').click(function () {
+        console.log();
+
+        if ($(this).val() == "4") {
+
+            $('#inputBreaker').attr('max', 4);
+        }
+        if ($(this).val() == "5") {
+
+            $('#inputBreaker').attr('max', 5);
+        }
+        if ($(this).val() == "10") {
+
+            $('#inputBreaker').attr('max', 10);
+        }
+        if ($(this).val() == "100") {
+
+            $('#inputBreaker').attr('max', 100);
+        }
+    });
+
+
+
+
 });
-
- //Adicionando Valores para em um vetor
- var Present = $('#chipsPresent');
- var chipPresent = $('.chipsPresent');
- var chipActive = $('.chipsActive');
- var presentText = $('#presentText');
- var valuesVector = [];
-
- $('.enter').keyup(function (e) {
-     if (e.keyCode == 13) {
-         if (!$(this).val()) {
-             alert("Campo de Valores Vazio");
-         }
-         else {
-             valuesVector.push($(this).val());
-             console.log(valuesVector);
-             Present.removeClass('chipsPresent').addClass('chipsActive');
-             var text = '<p data-posicao="' + ($(this).val()) + '" class="delet">' + $(this).val() + '<label >x</label> </p>'
-             presentText.append(text);
-             $(this).val("");
-         }
-     }
- });
-
- $(document).on('click', '.delet', function () {
-     $(this).remove();
-     valuesVector.splice(valuesVector.indexOf($(this).attr('data-posicao')), 1);
-     console.log(valuesVector);
- });
-
- let universe;
- 
- $('#selectSampling').click(function () {
-    universe = $(this).val();
-    console.log(universe);
-});
-
-
- $('#selectVariable').click(function () {
-     if ($('#selectVariable').val() == "ordinal") {
-         $('#modalValue').attr("id", "modalValue-Active");
-
-     } else {
-         if ($('#selectVariable').val() == "nominal" || $('#selectVariable').val() == "discreta" || $('#selectVariable').val() == "continua" || $('#selectVariable').val() == "") {
-             $("#modalValue-Active").attr('id', 'modalValue');
-         }
-     }
-
- });
-
-
- $('.btnCalculate').click(function () {
-     let type = $('#selectVariable').val();
-     if ($('#selectVariable').val() == null || $('#selectVariable').val() == "") {
-        alert("Escolha um tipo de Variável")
-    } else{
-        
-     switch (type) {
-         case 'ordinal':
-
-             if ($('#valueOrganize').val() == null || $('#valueOrganize').val() == "") {
-                 alert('Campo de Ordenação Vazio');
-
-                 return false;
-             }
-             
-             qlOrdinal(valuesVector, valuesOrdination, nameVariable);
-            //  Adicionar esse no botão calcular da Separatriz adicionando uma variavel.
-            //  let sepQlOrdinal = sepGeral(valuesVector, sepOrdinal);
-             break;
-         case 'nominal':
-                
-            qlNominal(valuesVector, nameVariable);
-            // let sepQlNominal = sepGeral(valuesVector, sepNominal);
-             break
-         case 'discreta':
-                
-            qtDiscreta(valuesVector, universe, nameVariable);
-            // let sepQtDiscreta = sepGeral(valuesVector, sepDiscreta);
-             break;
-         case 'continua':
-                
-            qtContinua(valuesVector, universe,nameVariable);
-            // let sepQtContinua = sepCt(valuesVector, sepContinua);
-             break
-     }
-     $(".content-Result").attr('class', 'content-ResultActive');
-     
-         
-     }
-
-
- });
-
- $('#selectBreaker').click(function(){
-     console.log();
-
-     if($(this).val() == "4"){
-       
-        $('#inputBreaker').attr('max',4);
-     }
-     if($(this).val() == "5"){
-        
-        $('#inputBreaker').attr('max',5);
-     }
-     if($(this).val() == "10"){
-        
-        $('#inputBreaker').attr('max',10);
-     }
-     if($(this).val() == "100"){
-        
-        $('#inputBreaker').attr('max',100);
-     }
- });
-
-
-
-
-});
-   
