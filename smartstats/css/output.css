@@ -638,43 +638,61 @@ body {
   padding-top: 5px;
   background: #3bb8c8;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content {
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content {
   margin: 0 auto;
   text-align: center;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList {
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList {
   background: #fff;
   width: 90%;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul {
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul li {
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList ul li {
   height: 40px;
   padding: 10px 70px 10px;
   cursor: pointer;
   transition: 0.105ms ease-in;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul li a {
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList ul li a {
   font-size: 18px;
   color: #3bb8c8;
   font-weight: bold;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul li:hover {
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList ul li:hover {
   background: rgba(59, 183, 200, 0.288);
   color: #3bb8c8;
   border-bottom: 2px solid #3bb8c8;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentTabs {
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content .contentTabs {
   width: 100%;
   margin: 0 auto;
   text-align: center;
   display: none;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentTabs .contentBody-active {
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content .contentTabs .contentBody-active {
   display: block;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content #tableDemonstration-Medias {
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 500px;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content #tableDemonstration-Medias td {
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px 15px 0;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content #tableDemonstration-Medias .tableTitle {
+  border-bottom: 2px solid #3bb8c8;
+}
+.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content #tableDemonstration-Medias .tableLines {
+  border-collapse: collapse;
+  border-left: 2px solid #3bb8c8;
 }
 .bodyFull .sectionDescriptive .breakerContent {
   margin: 20px auto 20px;
@@ -802,6 +820,9 @@ body {
 }
 .bodyFull .sectionDescriptive #tableDemonstration {
   margin: 30px auto;
+}
+.bodyFull .sectionDescriptive #tableDemonstration tr:nth-child(even) {
+  background: rgba(59, 184, 200, 0.07);
 }
 .bodyFull .sectionDescriptive #tableDemonstration .tableTitle {
   font-size: 20px;

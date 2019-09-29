@@ -520,12 +520,22 @@ function tableContinua(nameVariable, lin, vetMin, vetMax, vetFi, vetFr, vetFac, 
 
         $('#tableDemonstration').append(table);
     }
-    let foot = `<tr>
-                <td class="tdVet tableTitle tableLines">Fi</td>
-                <td class="tdVet tableTitle tableLines">Fi</td>
-                <td class="tdVet tableTitle tableLines">Fi</td>
+    let table2 = `<tr>
+                 <td class="tdVet tableTitle">Medias</td>
+                 <td class="tdVet tableTitle tableLines">Moda</td>
+                 <td class="tdVet tableTitle tableLines">Mediana%</td>
+                 <td class="tdVet tableTitle tableLines">Desvio Padrão</td>
+                 <td class="tdVet tableTitle tableLines">Coeficiente de Variação%</td>
+              </tr>`
+    
+              $('#tableDemonstration-Medias').append(table2);
+    let table3 = `<tr><td class="tdVet"><p>${vetMin[i]} |--- ${vetMax[i]}</p></td>
+                <td class="tdVet tableLines"><p>${vetFi[i]} </p></td>
+                <td class="tdVet tableLines"><p>${vetFr[i]}% </p></td>
+                <td class="tdVet tableLines"><p>${vetFac[i]} </p></td>
+                <td class="tdVet tableLines"><p>${vetFacP[i]}% </p></td>
+                </tr>`
 
-            </tr>`
 
 }
 //_______________________________________________________________________________________________________
