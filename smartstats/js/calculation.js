@@ -56,6 +56,7 @@ function qlNominal(vetor) {
     // Mediana
     vetMediana = medianaGeral(vetor);
 
+    tableFull(nameVariable, lin,vetE, vetFi, vetFr, vetFac, vetFacP);
 }
 
 // Qualitativa Ordinal
@@ -112,6 +113,7 @@ function qlOrdinal(vetor, vetorOrd) {
     // Mediana
     vetMediana = medianaGeral(vetor);
 
+    tableFull(nameVariable, lin,vetE, vetFi, vetFr, vetFac, vetFacP);
 }
 
 // Quantitativa Discreta
@@ -197,6 +199,7 @@ function qtDiscreta(vetor, nameVariable, analiseDiscreta) {
 
     cv = Math.round(((desvPad / med) * 100));
 
+    tableFull(nameVariable, lin,vetE, vetFi, vetFr, vetFac, vetFacP);
 }
 
 // Quantitativa Continua
@@ -500,6 +503,49 @@ function sepCt(vetor, sepContinua) {
 //_______________________________________________________________________________
 
 // Gerando Tabelas 
+
+//Tabela Nominal, Ordinal, Discreta
+
+function tableFull(nameVariable,vetE, vetFi, vetFr, vetFac, vetFacP) {
+    let linha = lin;
+    let line1 = `<tr>
+                 <td class="tdVet tableTitle">${nameVariable}</td>
+                 <td class="tdVet tableTitle tableLines">Fi</td>
+                 <td class="tdVet tableTitle tableLines">Fr%</td>
+                 <td class="tdVet tableTitle tableLines">Fac</td>
+                 <td class="tdVet tableTitle tableLines">FacP%</td>
+              </tr>`
+    $('#tableDemonstration').append(line1);
+    for (let i = 0; i < linha; i++) {
+        let table = `<tr><td class="tdVet"><p>${vetE[i]}</p></td>
+                      <td class="tdVet tableLines"><p>${vetFi[i]} </p></td>
+                      <td class="tdVet tableLines"><p>${vetFr[i]}% </p></td>
+                      <td class="tdVet tableLines"><p>${vetFac[i]} </p></td>
+                      <td class="tdVet tableLines"><p>${vetFacP[i]}% </p></td>
+     </tr>`
+
+        $('#tableDemonstration').append(table);
+    }
+    let table2 = `<tr>
+                 <td class="tdVet tableTitle">Medias</td>
+                 <td class="tdVet tableTitle tableLines">Moda</td>
+                 <td class="tdVet tableTitle tableLines">Mediana%</td>
+                 <td class="tdVet tableTitle tableLines">Desvio Padrão</td>
+                 <td class="tdVet tableTitle tableLines">Coeficiente de Variação%</td>
+              </tr>`
+    
+              $('#tableDemonstration-Medias').append(table2);
+    let table3 = `<tr><td class="tdVet"><p>${vetMin[i]} |--- ${vetMax[i]}</p></td>
+                <td class="tdVet tableLines"><p>${vetFi[i]} </p></td>
+                <td class="tdVet tableLines"><p>${vetFr[i]}% </p></td>
+                <td class="tdVet tableLines"><p>${vetFac[i]} </p></td>
+                <td class="tdVet tableLines"><p>${vetFacP[i]}% </p></td>
+                </tr>`
+
+
+}
+
+//Tabela Continua
 function tableContinua(nameVariable, lin, vetMin, vetMax, vetFi, vetFr, vetFac, vetFacP) {
     let linha = lin;
     let line1 = `<tr>
