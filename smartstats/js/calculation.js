@@ -348,7 +348,7 @@ function qtContinua(vetor, nameVariable, analiseContinua) {
 
 
 
-    tableContinua(nameVariable, lin, vetMin, vetMax, vetFi, vetFr, vetFac, vetFacP,med,vetMediana);
+    tableContinua(nameVariable, lin, vetMin, vetMax, vetFi, vetFr, vetFac, vetFacP,vetModa,med,vetMediana,desvPad,cv);
 }
 
 //__________________________________________________________________________
@@ -546,7 +546,7 @@ function tableFull(nameVariable,vetE, vetFi, vetFr, vetFac, vetFacP,vetModa,vetM
 }
 
 //Tabela Continua
-function tableContinua(nameVariable, lin, vetMin, vetMax, vetFi, vetFr, vetFac, vetFacP,med,vetMediana) {
+function tableContinua(nameVariable, lin, vetMin, vetMax, vetFi, vetFr, vetFac, vetFacP,vetModa,med,vetMediana,desvPad,cv) {
     let linha = lin;
     let line1 =/*html*/ `<tr>
                             <td class="tdVet tableTitle">${nameVariable}</td>
@@ -575,11 +575,11 @@ function tableContinua(nameVariable, lin, vetMin, vetMax, vetFi, vetFr, vetFac, 
                           </tr>`
     
               $('#tableDemonstration-Medias').append(table2);
-    let table3 = `<tr><td class="tdVet"><p>${med}</p></td>
-                <td class="tdVet tableTitle tableLines"><p>${vetMediana} </p></td>
-                <td class="tdVet tableTitle tableLines"><p> </p></td>
-                <td class="tdVet tableTitle tableLines"><p></p></td>
-                <td class="tdVet tableTitle tableLines"><p> </p></td>
+    let table3 =/*html*/ `<tr><td class="tdVet tableTitle"><p>${med}</p></td>
+                <td class="tdVet tableTitle tableLines"><p>${vetModa[0]} </p></td>
+                <td class="tdVet tableTitle tableLines"><p>${vetMediana[0]}  </p></td>
+                <td class="tdVet tableTitle tableLines"><p>${desvPad} </p></td>
+                <td class="tdVet tableTitle tableLines"><p>${cv}  </p></td>
                 </tr>`
                 $('#tableDemonstration-Medias').append(table3);
 
@@ -692,6 +692,8 @@ $(document).ready(function () {
 
     $('.btnCalculate').click(function () {
         let type = $('#selectVariable').val();
+        $('#tableDemonstration').html("");
+        $('#tableDemonstration-Medias').html("");
         
         if ($('#selectVariable').val() == null || $('#selectVariable').val() == "") {
             alert("Escolha um tipo de Variável")
