@@ -56,7 +56,7 @@ function qlNominal(vetor) {
     // Mediana
     vetMediana = medianaGeral(vetor);
 
-    tableFull(nameVariable, lin,vetE, vetFi, vetFr, vetFac, vetFacP);
+    tableFull(nameVariable, lin,vetE, vetFi, vetFr, vetFac, vetFacP,vetModa,vetMediana);
 }
 
 // Qualitativa Ordinal
@@ -348,7 +348,7 @@ function qtContinua(vetor, nameVariable, analiseContinua) {
 
 
 
-    tableContinua(nameVariable, lin, vetMin, vetMax, vetFi, vetFr, vetFac, vetFacP);
+    tableContinua(nameVariable, lin, vetMin, vetMax, vetFi, vetFr, vetFac, vetFacP,med,vetMediana);
 }
 
 //__________________________________________________________________________
@@ -506,27 +506,27 @@ function sepCt(vetor, sepContinua) {
 
 //Tabela Nominal, Ordinal, Discreta
 
-function tableFull(nameVariable,vetE, vetFi, vetFr, vetFac, vetFacP) {
+function tableFull(nameVariable,vetE, vetFi, vetFr, vetFac, vetFacP,vetModa,vetMediana) {
     let linha = lin;
-    let line1 = `<tr>
-                 <td class="tdVet tableTitle">${nameVariable}</td>
-                 <td class="tdVet tableTitle tableLines">Fi</td>
-                 <td class="tdVet tableTitle tableLines">Fr%</td>
-                 <td class="tdVet tableTitle tableLines">Fac</td>
-                 <td class="tdVet tableTitle tableLines">FacP%</td>
-              </tr>`
+    let line1 =/*html*/ `<tr>
+                            <td class="tdVet tableTitle">${nameVariable}</td>
+                            <td class="tdVet tableTitle tableLines">Fi</td>
+                            <td class="tdVet tableTitle tableLines">Fr%</td>
+                            <td class="tdVet tableTitle tableLines">Fac</td>
+                            <td class="tdVet tableTitle tableLines">FacP%</td>
+                        </tr>`
     $('#tableDemonstration').append(line1);
     for (let i = 0; i < linha; i++) {
-        let table = `<tr><td class="tdVet"><p>${vetE[i]}</p></td>
-                      <td class="tdVet tableLines"><p>${vetFi[i]} </p></td>
-                      <td class="tdVet tableLines"><p>${vetFr[i]}% </p></td>
-                      <td class="tdVet tableLines"><p>${vetFac[i]} </p></td>
-                      <td class="tdVet tableLines"><p>${vetFacP[i]}% </p></td>
-     </tr>`
+        let table =/*html*/ `<tr><td class="tdVet"><p>${vetE[i]}</p></td>
+                                    <td class="tdVet tableLines"><p>${vetFi[i]} </p></td>
+                                    <td class="tdVet tableLines"><p>${vetFr[i]}% </p></td>
+                                    <td class="tdVet tableLines"><p>${vetFac[i]} </p></td>
+                                    <td class="tdVet tableLines"><p>${vetFacP[i]}% </p></td>
+                            </tr>`
 
         $('#tableDemonstration').append(table);
     }
-    let table2 = `<tr>
+    let table2 =/*html*/ `<tr>
                  <td class="tdVet tableTitle">Medias</td>
                  <td class="tdVet tableTitle tableLines">Moda</td>
                  <td class="tdVet tableTitle tableLines">Mediana%</td>
@@ -535,52 +535,53 @@ function tableFull(nameVariable,vetE, vetFi, vetFr, vetFac, vetFacP) {
               </tr>`
     
               $('#tableDemonstration-Medias').append(table2);
-    let table3 = `<tr><td class="tdVet"><p>${vetMin[i]} |--- ${vetMax[i]}</p></td>
-                <td class="tdVet tableLines"><p>${vetFi[i]} </p></td>
-                <td class="tdVet tableLines"><p>${vetFr[i]}% </p></td>
-                <td class="tdVet tableLines"><p>${vetFac[i]} </p></td>
-                <td class="tdVet tableLines"><p>${vetFacP[i]}% </p></td>
-                </tr>`
+    // let table3 = `<tr><td class="tdVet"><p></p></td>
+    //             <td class="tdVet tableLines"><p>${vetModa} </p></td>
+    //             <td class="tdVet tableLines"><p>${vetMediana}</p></td>
+    //             <td class="tdVet tableLines"><p> </p></td>
+    //             <td class="tdVet tableLines"><p> </p></td>
+    //             </tr>`
 
 
 }
 
 //Tabela Continua
-function tableContinua(nameVariable, lin, vetMin, vetMax, vetFi, vetFr, vetFac, vetFacP) {
+function tableContinua(nameVariable, lin, vetMin, vetMax, vetFi, vetFr, vetFac, vetFacP,med,vetMediana) {
     let linha = lin;
-    let line1 = `<tr>
-                 <td class="tdVet tableTitle">${nameVariable}</td>
-                 <td class="tdVet tableTitle tableLines">Fi</td>
-                 <td class="tdVet tableTitle tableLines">Fr%</td>
-                 <td class="tdVet tableTitle tableLines">Fac</td>
-                 <td class="tdVet tableTitle tableLines">FacP%</td>
-              </tr>`
+    let line1 =/*html*/ `<tr>
+                            <td class="tdVet tableTitle">${nameVariable}</td>
+                            <td class="tdVet tableTitle tableLines">Fi</td>
+                            <td class="tdVet tableTitle tableLines">Fr%</td>
+                            <td class="tdVet tableTitle tableLines">Fac</td>
+                            <td class="tdVet tableTitle tableLines">FacP%</td>
+                        </tr>`
     $('#tableDemonstration').append(line1);
     for (let i = 0; i < linha; i++) {
-        let table = `<tr><td class="tdVet"><p>${vetMin[i]} |--- ${vetMax[i]}</p></td>
-                      <td class="tdVet tableLines"><p>${vetFi[i]} </p></td>
-                      <td class="tdVet tableLines"><p>${vetFr[i]}% </p></td>
-                      <td class="tdVet tableLines"><p>${vetFac[i]} </p></td>
-                      <td class="tdVet tableLines"><p>${vetFacP[i]}% </p></td>
-     </tr>`
+        let table =/*html*/ `<tr><td class="tdVet"><p>${vetMin[i]} |--- ${vetMax[i]}</p></td>
+                                 <td class="tdVet tableLines"><p>${vetFi[i]} </p></td>
+                                 <td class="tdVet tableLines"><p>${vetFr[i]}% </p></td>
+                                 <td class="tdVet tableLines"><p>${vetFac[i]} </p></td>
+                                 <td class="tdVet tableLines"><p>${vetFacP[i]}% </p></td>
+                             </tr>`
 
         $('#tableDemonstration').append(table);
     }
-    let table2 = `<tr>
-                 <td class="tdVet tableTitle">Medias</td>
-                 <td class="tdVet tableTitle tableLines">Moda</td>
-                 <td class="tdVet tableTitle tableLines">Mediana</td>
-                 <td class="tdVet tableTitle tableLines">Desvio Padrão</td>
-                 <td class="tdVet tableTitle tableLines">Coeficiente de Variação%</td>
-              </tr>`
+    let table2 =/*html*/ `<tr>
+                            <td class="tdVet tableTitle">Medias</td>
+                            <td class="tdVet tableTitle tableLines">Moda</td>
+                            <td class="tdVet tableTitle tableLines">Mediana</td>
+                            <td class="tdVet tableTitle tableLines">Desvio Padrão</td>
+                            <td class="tdVet tableTitle tableLines">Coeficiente de Variação%</td>
+                          </tr>`
     
               $('#tableDemonstration-Medias').append(table2);
-    // let table3 = `<tr><td class="tdVet"><p>${vetMin[i]} |--- ${vetMax[i]}</p></td>
-    //             <td class="tdVet tableLines"><p>${vetFi[i]} </p></td>
-    //             <td class="tdVet tableLines"><p>${vetFr[i]}% </p></td>
-    //             <td class="tdVet tableLines"><p>${vetFac[i]} </p></td>
-    //             <td class="tdVet tableLines"><p>${vetFacP[i]}% </p></td>
-    //             </tr>`
+    let table3 = `<tr><td class="tdVet"><p>${med}</p></td>
+                <td class="tdVet tableTitle tableLines"><p>${vetMediana} </p></td>
+                <td class="tdVet tableTitle tableLines"><p> </p></td>
+                <td class="tdVet tableTitle tableLines"><p></p></td>
+                <td class="tdVet tableTitle tableLines"><p> </p></td>
+                </tr>`
+                $('#tableDemonstration-Medias').append(table3);
 
 
 }
@@ -691,15 +692,20 @@ $(document).ready(function () {
 
     $('.btnCalculate').click(function () {
         let type = $('#selectVariable').val();
+        
         if ($('#selectVariable').val() == null || $('#selectVariable').val() == "") {
             alert("Escolha um tipo de Variável")
         } else {
-
+        
             switch (type) {
                 case 'ordinal':
 
-                    if ($('#valueOrganize').val() == null || $('#valueOrganize').val() == "") {
+                    if (valuesOrdination == null || valuesOrdination == "") {
                         alert('Campo de Ordenação Vazio');
+                        return false;
+                    }
+                    if (valuesVector == null || valuesVector == "") {
+                        alert('Digite os Valores e Aperte Enter');
 
                         return false;
                     }
@@ -709,17 +715,29 @@ $(document).ready(function () {
                     //  let sepQlOrdinal = sepGeral(valuesVector, sepOrdinal);
                     break;
                 case 'nominal':
+                    if (valuesVector == null || valuesVector == "") {
+                        alert('Digite os Valores e Aperte Enter');
 
+                        return false;
+                    }
                     qlNominal(valuesVector, nameVariable);
                     // let sepQlNominal = sepGeral(valuesVector, sepNominal);
                     break
                 case 'discreta':
+                    if (valuesVector == null || valuesVector == "") {
+                        alert('Digite os Valores e Aperte Enter');
 
+                        return false;
+                    }
                     qtDiscreta(valuesVector, nameVariable, universe);
                     // let sepQtDiscreta = sepGeral(valuesVector, sepDiscreta);
                     break;
                 case 'continua':
+                    if (valuesVector == null || valuesVector == "") {
+                        alert('Digite os Valores e Aperte Enter');
 
+                        return false;
+                    }
                     qtContinua(valuesVector, nameVariable, universe);
                     // let sepQtContinua = sepCt(valuesVector, sepContinua);
                     break

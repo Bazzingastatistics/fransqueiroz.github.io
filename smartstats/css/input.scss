@@ -609,6 +609,10 @@ body {
    }
   }
 
+  #valueOrganize:focus{
+    border-color: #3bb8c8;
+  }
+
   #modalValue {
    margin-bottom: 0px;
    display: none;
@@ -957,7 +961,10 @@ body {
 
   }
    
-
+  .contentBtn{
+    margin-top: -20px;
+    padding: 0px 0 20px 0;
+  }
    
   }
 
