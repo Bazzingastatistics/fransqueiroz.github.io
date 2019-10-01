@@ -2,7 +2,7 @@
 
 // Qualitativa Nominal
 
-function qlNominal(vetor) {
+function qlNominal(vetor,nameVariable) {
 
     // Ordenando o vetor
     vetor.sort();
@@ -56,12 +56,12 @@ function qlNominal(vetor) {
     // Mediana
     vetMediana = medianaGeral(vetor);
 
-    tableFull(nameVariable, lin,vetE, vetFi, vetFr, vetFac, vetFacP,vetModa,vetMediana);
+    tableQualy(nameVariable,vetE, vetFi, vetFr, vetFac, vetFacP,vetModa,vetMediana);
 }
 
 // Qualitativa Ordinal
 
-function qlOrdinal(vetor, vetorOrd) {
+function qlOrdinal(vetor, vetorOrd,nameVariable) {
 
     // Ordenando o vetor
     vetor.sort(function (a, b) {
@@ -113,7 +113,7 @@ function qlOrdinal(vetor, vetorOrd) {
     // Mediana
     vetMediana = medianaGeral(vetor);
 
-    tableFull(nameVariable, lin,vetE, vetFi, vetFr, vetFac, vetFacP);
+    tableQualy(nameVariable,vetE, vetFi, vetFr, vetFac, vetFacP,vetModa,vetMediana);
 }
 
 // Quantitativa Discreta
@@ -190,7 +190,7 @@ function qtDiscreta(vetor, nameVariable, analiseDiscreta) {
         }
         desvPad = Math.sqrt((acumDesv / (vetor.length - 1))).toFixed(2);
     }
-    if (analiseDiscreta == "população") {
+    if (analiseDiscreta == "populacao") {
         for (let l = 0; l < vetFi.length; l++) {
             acumDesv += (((vetE[l] - med) ** 2) * vetFi[l]);
         }
@@ -199,7 +199,7 @@ function qtDiscreta(vetor, nameVariable, analiseDiscreta) {
 
     cv = Math.round(((desvPad / med) * 100));
 
-    tableFull(nameVariable, lin,vetE, vetFi, vetFr, vetFac, vetFacP);
+    tableDiscreta(nameVariable,vetE, vetFi, vetFr, vetFac, vetFacP,vetModa,med,vetMediana,desvPad,cv);
 }
 
 // Quantitativa Continua
@@ -337,7 +337,7 @@ function qtContinua(vetor, nameVariable, analiseContinua) {
         }
         desvPad = Math.sqrt((acumDesv / (vetor.length - 1))).toFixed(2);
     }
-    if (analiseContinua == "população") {
+    if (analiseContinua == "populacao") {
         for (let n = 0; n < vetFi.length; n++) {
             acumDesv += (((((vetMin[n] + vetMax[n]) / 2) - med) ** 2) * vetFi[n]);
         }
@@ -506,8 +506,8 @@ function sepCt(vetor, sepContinua) {
 
 //Tabela Nominal, Ordinal, Discreta
 
-function tableFull(nameVariable,vetE, vetFi, vetFr, vetFac, vetFacP,vetModa,vetMediana) {
-    let linha = lin;
+function tableQualy(nameVariable,vetE, vetFi, vetFr, vetFac, vetFacP,vetModa,vetMediana) {
+    let linha = vetE.length;
     let line1 =/*html*/ `<tr>
                             <td class="tdVet tableTitle">${nameVariable}</td>
                             <td class="tdVet tableTitle tableLines">Fi</td>
@@ -526,23 +526,74 @@ function tableFull(nameVariable,vetE, vetFi, vetFr, vetFac, vetFacP,vetModa,vetM
 
         $('#tableDemonstration').append(table);
     }
+    let tableSoma = /*html*/`<tr><td class="tdVet "><p></p></td>
+                                    <td class="tdVet"><p>${vetFac[vetFac.length - 1]} </p></td>
+                                    <td class="tdVet  tableLines"><p>${vetFacP[vetFacP.length - 1]}%</p></td>
+                                    <td class="tdVet "><p> </p></td>
+                                    <td class="tdVet "><p></p></td>
+                                </tr>`
+  $('#tableDemonstration').append(tableSoma);
     let table2 =/*html*/ `<tr>
-                 <td class="tdVet tableTitle">Medias</td>
-                 <td class="tdVet tableTitle tableLines">Moda</td>
-                 <td class="tdVet tableTitle tableLines">Mediana%</td>
-                 <td class="tdVet tableTitle tableLines">Desvio Padrão</td>
-                 <td class="tdVet tableTitle tableLines">Coeficiente de Variação%</td>
+                 <td class="tdVet tableTitle">Moda</td>
+                 <td class="tdVet tableTitle tableLines">Mediana</td>
               </tr>`
     
               $('#tableDemonstration-Medias').append(table2);
-    // let table3 = `<tr><td class="tdVet"><p></p></td>
-    //             <td class="tdVet tableLines"><p>${vetModa} </p></td>
-    //             <td class="tdVet tableLines"><p>${vetMediana}</p></td>
-    //             <td class="tdVet tableLines"><p> </p></td>
-    //             <td class="tdVet tableLines"><p> </p></td>
-    //             </tr>`
+              let table3 =/*html*/ `<tr><td class="tdVet tableTitle"><p>${vetModa} </p></td>
+                                        <td class="tdVet tableTitle tableLines"><p>${vetMediana}</p></td>
+                                    </tr>`
+                $('#tableDemonstration-Medias').append(table3);
+}
 
+//Table Discreta
 
+function tableDiscreta(nameVariable,vetE, vetFi, vetFr, vetFac, vetFacP,vetModa,med,vetMediana,desvPad,cv) {
+    let linha = vetE.length;
+    let line1 =/*html*/ `<tr>
+                            <td class="tdVet tableTitle">${nameVariable}</td>
+                            <td class="tdVet tableTitle tableLines">Fi</td>
+                            <td class="tdVet tableTitle tableLines">Fr%</td>
+                            <td class="tdVet tableTitle tableLines">Fac</td>
+                            <td class="tdVet tableTitle tableLines">FacP%</td>
+                        </tr>`
+    $('#tableDemonstration').append(line1);
+    for (let i = 0; i < linha; i++) {
+        let table =/*html*/ `<tr><td class="tdVet"><p>${vetE[i]}</p></td>
+                                    <td class="tdVet tableLines"><p>${vetFi[i]} </p></td>
+                                    <td class="tdVet tableLines"><p>${vetFr[i]}% </p></td>
+                                    <td class="tdVet tableLines"><p>${vetFac[i]} </p></td>
+                                    <td class="tdVet tableLines"><p>${vetFacP[i]}% </p></td>
+                            </tr>`
+
+        $('#tableDemonstration').append(table);
+    }
+
+    let tableSoma = /*html*/`<tr><td class="tdVet "><p></p></td>
+                                    <td class="tdVet"><p>${vetFac[vetFac.length - 1]} </p></td>
+                                    <td class="tdVet  tableLines"><p>${vetFacP[vetFacP.length - 1]}%</p></td>
+                                    <td class="tdVet "><p> </p></td>
+                                    <td class="tdVet "><p></p></td>
+                                </tr>`
+  $('#tableDemonstration').append(tableSoma);
+    let table2 =/*html*/ `<tr>
+                            <td class="tdVet tableTitle">Medias</td>
+                            <td class="tdVet tableTitle tableLines">Moda</td>
+                            <td class="tdVet tableTitle tableLines">Mediana</td>
+                            <td class="tdVet tableTitle tableLines">Desvio Padrão</td>
+                            <td class="tdVet tableTitle tableLines">Coeficiente de Variação</td>
+                        </tr>`
+    
+              $('#tableDemonstration-Medias').append(table2);
+    
+        
+    
+              let table3 =/*html*/ `<tr><td class="tdVet tableTitle"><p>${med}</p></td>
+                                        <td class="tdVet tableTitle tableLines"><p>${vetModa} </p></td>
+                                        <td class="tdVet tableTitle tableLines"><p>${vetMediana}  </p></td>
+                                        <td class="tdVet tableTitle tableLines"><p>${desvPad} </p></td>
+                                        <td class="tdVet tableTitle tableLines"><p>${cv}%  </p></td>
+                                    </tr>`
+              $('#tableDemonstration-Medias').append(table3);
 }
 
 //Tabela Continua
@@ -566,20 +617,30 @@ function tableContinua(nameVariable, lin, vetMin, vetMax, vetFi, vetFr, vetFac, 
 
         $('#tableDemonstration').append(table);
     }
+
+
+    let tableSoma = /*html*/`<tr><td class="tdVet "><p></p></td>
+                                    <td class="tdVet"><p>${vetFac[vetFac.length - 1]} </p></td>
+                                    <td class="tdVet  tableLines"><p>${vetFacP[vetFacP.length - 1]}%</p></td>
+                                    <td class="tdVet "><p> </p></td>
+                                    <td class="tdVet "><p></p></td>
+                                </tr>`
+  $('#tableDemonstration').append(tableSoma);
+
     let table2 =/*html*/ `<tr>
                             <td class="tdVet tableTitle">Medias</td>
                             <td class="tdVet tableTitle tableLines">Moda</td>
                             <td class="tdVet tableTitle tableLines">Mediana</td>
                             <td class="tdVet tableTitle tableLines">Desvio Padrão</td>
-                            <td class="tdVet tableTitle tableLines">Coeficiente de Variação%</td>
+                            <td class="tdVet tableTitle tableLines">Coeficiente de Variação</td>
                           </tr>`
     
               $('#tableDemonstration-Medias').append(table2);
     let table3 =/*html*/ `<tr><td class="tdVet tableTitle"><p>${med}</p></td>
-                <td class="tdVet tableTitle tableLines"><p>${vetModa[0]} </p></td>
-                <td class="tdVet tableTitle tableLines"><p>${vetMediana[0]}  </p></td>
+                <td class="tdVet tableTitle tableLines"><p>${vetModa} </p></td>
+                <td class="tdVet tableTitle tableLines"><p>${vetMediana}  </p></td>
                 <td class="tdVet tableTitle tableLines"><p>${desvPad} </p></td>
-                <td class="tdVet tableTitle tableLines"><p>${cv}  </p></td>
+                <td class="tdVet tableTitle tableLines"><p>${cv}%  </p></td>
                 </tr>`
                 $('#tableDemonstration-Medias').append(table3);
 
@@ -773,6 +834,79 @@ $(document).ready(function () {
         }
     });
 
+    $('#btnCalculateBreaker').click(function(){
+        let selectBreaker = $('#selectBreaker').val();
+        let value;
+        let separaTrix;
+        switch(selectBreaker){
+            case "4":
+                 value = ($('#inputBreaker').val() * 25 );
+                break;
+
+            case "5":
+                 value = ($('#inputBreaker').val() * 20 );
+                break;
+
+            case "10":
+                 value = ($('#inputBreaker').val() * 10 );
+                break;
+            case "100":
+                 value = $('#inputBreaker').val();
+        }
+
+        let type = $('#selectVariable').val();
+        if ($('#selectVariable').val() == null || $('#selectVariable').val() == "") {
+            alert("Escolha um tipo de Variável")
+        } else {
+        
+            switch (type) {
+                case 'ordinal':
+
+                    if (valuesOrdination == null || valuesOrdination == "") {
+                        alert('Campo de Ordenação Vazio');
+                        return false;
+                    }
+                    if (valuesVector == null || valuesVector == "") {
+                        alert('Digite os Valores e Aperte Enter');
+
+                        return false;
+                    }
+
+                    
+                      separaTrix = sepGeral(valuesVector, value);
+                    break;
+                case 'nominal':
+                    if (valuesVector == null || valuesVector == "") {
+                        alert('Digite os Valores e Aperte Enter');
+
+                        return false;
+                    }
+                    
+                     separaTrix = sepGeral(valuesVector, value);
+                    break
+                case 'discreta':
+                    if (valuesVector == null || valuesVector == "") {
+                        alert('Digite os Valores e Aperte Enter');
+
+                        return false;
+                    }
+                    
+                     separaTrix = sepGeral(valuesVector, value);
+                    break;
+                case 'continua':
+                    if (valuesVector == null || valuesVector == "") {
+                        alert('Digite os Valores e Aperte Enter');
+
+                        return false;
+                    }
+                     separaTrix = sepCt(valuesVector, value);
+                    break
+            }
+            let apresent = /*html*/ `<p>A separatriz selecionada é igual a: ${separaTrix}</p>`            
+            $('.content-Breaker-Result').append(apresent);
+            
+        }
+    });
 
 
 
