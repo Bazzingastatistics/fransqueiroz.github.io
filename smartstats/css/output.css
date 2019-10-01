@@ -680,7 +680,6 @@ body {
   display: block;
 }
 .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content #tableDemonstration-Medias {
-  display: block;
   margin: auto;
   width: 100%;
   max-width: 500px;
@@ -801,6 +800,11 @@ body {
   margin-top: -20px;
   padding: 0px 0 20px 0;
 }
+.bodyFull .sectionDescriptive .breakerContent .content-Breaker-Result p {
+  color: #3bb8c8;
+  font-weight: 500;
+  padding: 10px;
+}
 .bodyFull .sectionDescriptive .reloadPage {
   margin: 0 auto 20px;
   text-align: center;
@@ -845,6 +849,18 @@ body {
 }
 .bodyFull .sectionDescriptive #tableDemonstration .tableLines {
   border-left: 2px solid #3bb8c8;
+}
+.bodyFull #btnCalculateBreaker {
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid #3bb8c8;
+  border-radius: 25px;
+  color: #3bb8c8;
+  cursor: pointer;
+}
+.bodyFull #btnCalculateBreaker:hover {
+  background: #3bb8c8;
+  color: #fff;
 }
 .bodyFull .footerContent {
   width: 100%;

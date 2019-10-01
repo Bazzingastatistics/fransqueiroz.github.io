@@ -831,8 +831,6 @@ body {
      }
 
      #tableDemonstration-Medias{
-       display: block;
-     
        margin: auto;
        width: 100%;
        max-width: 500px;
@@ -965,6 +963,14 @@ body {
     margin-top: -20px;
     padding: 0px 0 20px 0;
   }
+
+  .content-Breaker-Result{
+    p{
+      color: $baseColor;
+      font-weight: 500;
+      padding: 10px;
+    }
+  }
    
   }
 
@@ -1025,6 +1031,20 @@ body {
 
   }
 
+ }
+
+ #btnCalculateBreaker{
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid $baseColor;
+  border-radius: 25px;
+  color: $baseColor;
+  cursor: pointer;
+
+  &:hover {
+   background: $baseColor;
+   color: #fff;
+  }
  }
 
  .footerContent {

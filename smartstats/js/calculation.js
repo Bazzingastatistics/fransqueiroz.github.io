@@ -902,7 +902,7 @@ $(document).ready(function () {
                      separaTrix = sepCt(valuesVector, value);
                     break
             }
-            let apresent = /*html*/ `<p>A separatriz selecionada é igual a: ${separaTrix}</p>`            
+            let apresent = /*html*/ `<p>A separatriz selecionada é igual a:<strong> ${separaTrix}</strong></p>`            
             $('.content-Breaker-Result').append(apresent);
             
         }
