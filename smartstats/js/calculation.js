@@ -318,10 +318,10 @@ function qtContinua(vetor, nameVariable, analiseContinua) {
         if ((vetMin[l] + int) > vetor[pos]) {
             limInf = vetMin[l];
             if (l == 0) {
-                vetMediana.push(limInf + (((pos - 0) / vetFi[l]) * int));
+                vetMediana.push((limInf + (((pos - 0) / vetFi[l]) * int)).toFixed(2));
                 break;
             } else
-                vetMediana.push(limInf + (((pos - vetFac[l - 1]) / vetFi[l]) * int));
+                vetMediana.push((limInf + (((pos - vetFac[l - 1]) / vetFi[l]) * int)).toFixed(2));
             break;
         }
     }
