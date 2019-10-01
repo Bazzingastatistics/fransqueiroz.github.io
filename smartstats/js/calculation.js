@@ -81,7 +81,7 @@ function qlOrdinal(vetor, vetorOrd,nameVariable) {
 
     // Acumulando valores e carregando vetores(para uso posterior)
     for (let i = 0; i < vetorOrd.length; i++) {
-        for (let j = i; j < vetor.length; j++) {
+        for (let j = 0; j < vetor.length; j++) {
             if (vetorOrd[i] == vetor[j]) {
                 acum += 1;
             }
@@ -113,6 +113,11 @@ function qlOrdinal(vetor, vetorOrd,nameVariable) {
     // Mediana
     vetMediana = medianaGeral(vetor);
 
+    console.log(vetE);
+    console.log(vetFi);
+    console.log(vetFr);
+    console.log(vetFac);
+    console.log(vetFacP);
     tableQualy(nameVariable,vetE, vetFi, vetFr, vetFac, vetFacP,vetModa,vetMediana);
 }
 

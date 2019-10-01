@@ -26,25 +26,27 @@ $(function(){
      ); 
 
      $(".reloadPage").click(function() {
-       location.reload();
-});
+      if(confirm("Deseja Limpar a Tela?")){
+          location.reload();
+        }
+      });
 
-if ('speechSynthesis' in window) {
-    speechSynthesis.onvoiceschanged = function() {
-      var $voicelist = $('#voices');
+      if ('speechSynthesis' in window) {
+          speechSynthesis.onvoiceschanged = function() {
+            var $voicelist = $('#voices');
 
-      if($voicelist.find('option').length == 0) {
-        speechSynthesis.getVoices().forEach(function(voice, index) {
-          var $option = $('<option>')
-          .val(index)
-          .html(voice.name + (voice.default ? ' (default)' :''));
+            if($voicelist.find('option').length == 0) {
+              speechSynthesis.getVoices().forEach(function(voice, index) {
+                var $option = $('<option>')
+                .val(index)
+                .html(voice.name + (voice.default ? ' (default)' :''));
 
-          $voicelist.append($option);
-        });
+                $voicelist.append($option);
+              });
 
-        $voicelist.material_select();
-      }
-    }
+              $voicelist.material_select();
+            }
+          }
 
     $('#speak').click(function(){
       var text = $('#message').val();
