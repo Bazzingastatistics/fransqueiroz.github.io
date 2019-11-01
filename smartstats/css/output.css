@@ -131,7 +131,7 @@ table {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #3bb8c8;
+  background: #3e939e;
 }
 
 .menuMobile {
@@ -152,7 +152,7 @@ body {
 }
 .menuMobile ul li a {
   text-decoration: none;
-  color: #3bb8c8;
+  color: #3e939e;
 }
 
 .bodyFull {
@@ -161,8 +161,8 @@ body {
 }
 .bodyFull header {
   width: 100%;
-  height: 20%;
-  background-color: #3bb8c8;
+  height: 16%;
+  background-color: #3e939e;
 }
 .bodyFull header #navMenu {
   text-align: center;
@@ -179,13 +179,13 @@ body {
   font-weight: bolder;
 }
 .bodyFull header #navMenu ul li a:hover {
-  color: #3bb8c8;
+  color: #3e939e;
   background-color: #fff;
   border-radius: 20px;
 }
 .bodyFull header .toggle {
   display: none;
-  background: #3bb8c8;
+  background: #3e939e;
   width: 60px;
   height: 60px;
   right: 25px;
@@ -220,6 +220,7 @@ body {
   width: calc(100%-30);
   height: 75%;
   padding: 0 15px;
+  margin-bottom: 35px;
 }
 .bodyFull .sectionContent .boxContent {
   display: block;
@@ -254,23 +255,23 @@ body {
   display: block;
   margin: 25px auto;
   text-align: center;
-  border: 2px solid #3bb8c8;
+  border: 2px solid #3e939e;
   padding: 12px 10px;
   width: 250px;
   outline: none;
-  color: #3bb8c8;
+  color: #3e939e;
   border-radius: 25px;
   transition: 0.25s;
 }
 .bodyFull .sectionContent .boxContent .formsLog input[type=email]:hover,
 .bodyFull .sectionContent .boxContent .formsLog input[type=password]:hover {
   width: 370px;
-  border-color: #3bb8c8;
+  border-color: #3e939e;
 }
 .bodyFull .sectionContent .boxContent .formsLog input[type=email]:focus,
 .bodyFull .sectionContent .boxContent .formsLog input[type=password]:focus {
   width: 370px;
-  border-color: #3bb8c8;
+  border-color: #3e939e;
 }
 .bodyFull .sectionContent .boxContent .formsLog input[type=submit] {
   border: 0;
@@ -278,23 +279,23 @@ body {
   display: block;
   margin: 25px auto 20px;
   text-align: center;
-  border: 2px solid #3bb8c8;
+  border: 2px solid #3e939e;
   padding: 12px 10px;
   width: 100px;
   outline: none;
-  color: #3bb8c8;
+  color: #3e939e;
   border-radius: 25px;
   transition: 0.25s;
   cursor: pointer;
 }
 .bodyFull .sectionContent .boxContent .formsLog input[type=submit]:hover {
-  background: #3bb8c8;
-  border: 2px solid #3bb8c8;
+  background: #3e939e;
+  border: 2px solid #3e939e;
   color: #fff;
 }
 .bodyFull .sectionContent .boxContent .formsLog p {
   display: inline-block;
-  color: #3bb8c8;
+  color: #3e939e;
   margin-bottom: 20px;
 }
 .bodyFull .sectionContent .boxContent .formsLog p:hover {
@@ -313,11 +314,11 @@ body {
   display: block;
   margin: 25px auto 5px;
   text-align: center;
-  border: 2px solid #3bb8c8;
+  border: 2px solid #3e939e;
   padding: 12px 10px;
   width: 250px;
   outline: none;
-  color: #3bb8c8;
+  color: #3e939e;
   border-radius: 25px;
   transition: 0.25s;
   cursor: pointer;
@@ -326,15 +327,15 @@ body {
   margin-bottom: 20px;
 }
 .bodyFull .sectionContent .menuList .btn-Menu:hover {
-  background: #3bb8c8;
-  border: 2px solid #3bb8c8;
+  background: #3e939e;
+  border: 2px solid #3e939e;
   color: #fff;
 }
-.bodyFull .sectionDescriptive {
+.bodyFull #sectionDescriptive {
   width: 100%;
   margin-bottom: 15%;
 }
-.bodyFull .sectionDescriptive .boxContent {
+.bodyFull #sectionDescriptive .boxContent {
   display: block;
   width: 100%;
   max-width: 650px;
@@ -343,84 +344,84 @@ body {
   border-radius: 30px;
   box-shadow: 2px 2px 10px #000;
 }
-.bodyFull .sectionDescriptive .boxContent .logoImg {
+.bodyFull #sectionDescriptive .boxContent .logoImg {
   display: block;
   text-align: center;
 }
-.bodyFull .sectionDescriptive .boxContent .logoImg img {
+.bodyFull #sectionDescriptive .boxContent .logoImg img {
   width: 100%;
   max-width: 250px;
   max-height: 125px;
 }
-.bodyFull .sectionDescriptive .boxContent .pageDescritive {
+.bodyFull #sectionDescriptive .boxContent .pageDescritive {
   margin: auto;
 }
-.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData {
+.bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData {
   text-align: center;
 }
-.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .textInput {
+.bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .textInput {
   font-size: 20px;
-  color: #3bb8c8;
+  color: #3e939e;
   margin-top: 20px;
 }
-.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData input[type=text] {
+.bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData input[type=text] {
   border: 0;
   background: none;
   display: inline-block;
   margin: 25px auto 20px;
   text-align: center;
-  border: 2px solid #3bb8c8;
+  border: 2px solid #3e939e;
   padding: 10px 20px;
   width: 400px;
   outline: none;
-  color: #3bb8c8;
+  color: #3e939e;
   border-radius: 25px;
   transition: 0.25s;
 }
-.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData input[type=text]::placeholder {
-  color: #3bb8c8;
+.bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData input[type=text]::placeholder {
+  color: #3e939e;
 }
-.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData input[type=text]:focus {
-  color: #3bb8c8;
+.bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData input[type=text]:focus {
+  color: #3e939e;
   font-size: 12px;
   font-weight: bold;
 }
-.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData button[type=button] {
+.bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData button[type=button] {
   border: 0;
   background: none;
   display: inline-block;
-  border: 2px solid #3bb8c8;
+  border: 2px solid #3e939e;
   padding: 10px 10px;
   width: 45px;
-  color: #3bb8c8;
+  color: #3e939e;
   border-radius: 50%;
   transition: 0.25s;
   cursor: pointer;
 }
-.bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam {
+.bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
 }
-.bodyFull .sectionDescriptive .variavelPresent {
+.bodyFull #sectionDescriptive .variavelPresent {
   display: none;
 }
-.bodyFull .sectionDescriptive .variavelPresentActive {
+.bodyFull #sectionDescriptive .variavelPresentActive {
   display: block;
 }
-.bodyFull .sectionDescriptive #variavelText {
+.bodyFull #sectionDescriptive #variavelText {
   margin: -10px auto 20px;
-  color: #3bb8c8;
+  color: #3e939e;
 }
-.bodyFull .sectionDescriptive select {
+.bodyFull #sectionDescriptive select {
   width: 50%;
   margin-top: 15px;
-  color: #3bb8c8;
+  color: #3e939e;
   font: inherit;
   font-size: 16px;
   background-color: #fff;
-  border: 1px solid #3bb8c8;
+  border: 1px solid #3e939e;
   border-top: none;
   border-right: none;
   border-left: none;
@@ -434,39 +435,39 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-.bodyFull .sectionDescriptive select .textVariable {
-  color: #3bb8c8;
+.bodyFull #sectionDescriptive select .textVariable {
+  color: #3e939e;
   font-weight: bold;
 }
-.bodyFull .sectionDescriptive select .arrow {
+.bodyFull #sectionDescriptive select .arrow {
   margin-left: 10px;
 }
-.bodyFull .sectionDescriptive .valorContent {
+.bodyFull #sectionDescriptive .valorContent {
   margin: 5px auto;
   text-align: center;
 }
-.bodyFull .sectionDescriptive .valorContent .chipsPresent {
+.bodyFull #sectionDescriptive .valorContent .chipsPresent {
   display: none;
 }
-.bodyFull .sectionDescriptive .valorContent .chipsActive {
+.bodyFull #sectionDescriptive .valorContent .chipsActive {
   display: block;
   margin: 0 auto;
   text-align: center;
 }
-.bodyFull .sectionDescriptive .valorContent #presentText {
+.bodyFull #sectionDescriptive .valorContent #presentText {
   padding-bottom: 20px;
 }
-.bodyFull .sectionDescriptive .valorContent p {
+.bodyFull #sectionDescriptive .valorContent p {
   margin: 0 5px;
   color: #fff;
   display: inline-block;
-  background: #3bb8c8;
+  background: #3e939e;
   padding: 5px 35px;
   border-radius: 30px;
   position: relative;
   box-shadow: 0.2px 0.2px 2px #000;
 }
-.bodyFull .sectionDescriptive .valorContent p label {
+.bodyFull #sectionDescriptive .valorContent p label {
   margin: auto;
   width: 10px;
   height: 10px;
@@ -474,79 +475,79 @@ body {
   right: 15px;
   position: absolute;
 }
-.bodyFull .sectionDescriptive .contentBtn {
+.bodyFull #sectionDescriptive .contentBtn {
   padding: 20px;
 }
-.bodyFull .sectionDescriptive .contentBtn .btnCalculate {
+.bodyFull #sectionDescriptive .contentBtn .btnCalculate {
   padding: 10px 20px;
   background-color: #fff;
-  border: 2px solid #3bb8c8;
+  border: 2px solid #3e939e;
   border-radius: 25px;
-  color: #3bb8c8;
+  color: #3e939e;
   cursor: pointer;
 }
-.bodyFull .sectionDescriptive .contentBtn .btnCalculate:hover {
-  background: #3bb8c8;
+.bodyFull #sectionDescriptive .contentBtn .btnCalculate:hover {
+  background: #3e939e;
   color: #fff;
 }
-.bodyFull .sectionDescriptive .contentBtn .btnImport {
+.bodyFull #sectionDescriptive .contentBtn .btnImport {
   padding: 10px 20px;
   background-color: #fff;
-  border: 2px solid #3bb8c8;
+  border: 2px solid #3e939e;
   border-radius: 25px;
-  color: #3bb8c8;
+  color: #3e939e;
   cursor: pointer;
 }
-.bodyFull .sectionDescriptive .contentBtn .btnImport:hover {
-  background: #3bb8c8;
+.bodyFull #sectionDescriptive .contentBtn .btnImport:hover {
+  background: #3e939e;
   color: #fff;
 }
-.bodyFull .sectionDescriptive #valueOrganize:focus {
-  border-color: #3bb8c8;
+.bodyFull #sectionDescriptive #valueOrganize:focus {
+  border-color: #3e939e;
 }
-.bodyFull .sectionDescriptive #modalValue {
+.bodyFull #sectionDescriptive #modalValue {
   margin-bottom: 0px;
   display: none;
 }
-.bodyFull .sectionDescriptive #modalValue .textInput2 {
+.bodyFull #sectionDescriptive #modalValue .textInput2 {
   font-size: 15px;
-  color: #3bb8c8;
+  color: #3e939e;
   margin-top: 20px;
   margin-bottom: 0px;
 }
-.bodyFull .sectionDescriptive #modalValue-Active {
+.bodyFull #sectionDescriptive #modalValue-Active {
   display: block;
 }
-.bodyFull .sectionDescriptive #modalValue-Active .textInput2 {
+.bodyFull #sectionDescriptive #modalValue-Active .textInput2 {
   display: block;
   font-weight: bolder;
   font-size: 15px;
-  color: #3bb8c8;
+  color: #3e939e;
   margin-top: 20px;
   margin-bottom: 0px;
 }
-.bodyFull .sectionDescriptive #modalValue-Active .modalPresent {
+.bodyFull #sectionDescriptive #modalValue-Active .modalPresent {
   display: none;
 }
-.bodyFull .sectionDescriptive #modalValue-Active .modalPresentActive {
+.bodyFull #sectionDescriptive #modalValue-Active .modalPresentActive {
   display: block;
   margin: 0 auto;
   text-align: center;
 }
-.bodyFull .sectionDescriptive #modalValue-Active #modalPresent {
+.bodyFull #sectionDescriptive #modalValue-Active #modalPresent {
   padding-bottom: 2px;
 }
-.bodyFull .sectionDescriptive #modalValue-Active p {
+.bodyFull #sectionDescriptive #modalValue-Active p {
   margin: 0 5px;
   color: #fff;
   display: inline-block;
-  background: #3bb8c8;
+  background: #3e939e;
   padding: 5px 35px;
   border-radius: 30px;
   position: relative;
   box-shadow: 0.2px 0.2px 2px #000;
 }
-.bodyFull .sectionDescriptive #modalValue-Active p label {
+.bodyFull #sectionDescriptive #modalValue-Active p label {
   margin: auto;
   width: 10px;
   height: 10px;
@@ -554,53 +555,53 @@ body {
   right: 15px;
   position: absolute;
 }
-.bodyFull .sectionDescriptive .content-Result {
+.bodyFull #sectionDescriptive .content-Result {
   display: none;
 }
-.bodyFull .sectionDescriptive .content-ResultActive {
+.bodyFull #sectionDescriptive .content-ResultActive {
   margin: 0 auto;
   display: block;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .titleResult {
+.bodyFull #sectionDescriptive .content-ResultActive .titleResult {
   margin: 0 auto;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .titleResult h2 {
+.bodyFull #sectionDescriptive .content-ResultActive .titleResult h2 {
   text-align: center;
-  color: #3bb8c8;
+  color: #3e939e;
   padding: 20px;
   display: block;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration {
   display: block;
   text-align: center;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl {
   width: 100%;
   overflow: hidden;
   margin: 0px auto;
   display: block;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #header {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #header {
   display: flex;
   justify-content: space-evenly;
   margin: 0 auto;
   overflow: hidden;
   cursor: pointer;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #content {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #content {
   width: 100%;
   overflow: hidden;
   height: 100%;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .abas {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .abas {
   display: block;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .abas li {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .abas li {
   padding: 5px;
   display: block;
   float: left;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .aba {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .aba {
   width: 100px;
   height: 30px;
   text-align: center;
@@ -608,10 +609,10 @@ body {
   background: rgba(59, 184, 200, 0.22);
   transition: 0.1s ease-in;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .aba span {
-  color: #3bb8c8;
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .aba span {
+  color: #3e939e;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .ativa {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .ativa {
   width: 100px;
   height: 30px;
   text-align: center;
@@ -619,161 +620,161 @@ body {
   background: rgba(59, 184, 200, 0.55);
   transition: 0.3s ease-in;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .ativa span,
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .selected span {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .ativa span,
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .selected span {
   color: #fff;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #content {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #content {
   background: #fff;
   margin: 0 auto 20px;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .conteudo {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .conteudo {
   width: 100%;
   display: none;
-  color: #3bb8c8;
+  color: #3e939e;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .selected {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .selected {
   width: 100px;
   height: 30px;
   border: solid 1 px;
   border-radius: 5px 5px 0 0;
   text-align: center;
   padding-top: 5px;
-  background: #3bb8c8;
+  background: #3e939e;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content {
   margin: 0 auto;
   text-align: center;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList {
   background: #fff;
   width: 90%;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList ul {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList ul li {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList ul li {
   height: 40px;
   padding: 10px 70px 10px;
   cursor: pointer;
   transition: 0.105ms ease-in;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList ul li a {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList ul li a {
   font-size: 18px;
-  color: #3bb8c8;
+  color: #3e939e;
   font-weight: bold;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList ul li:hover {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList ul li:hover {
   background: rgba(59, 183, 200, 0.288);
-  color: #3bb8c8;
-  border-bottom: 2px solid #3bb8c8;
+  color: #3e939e;
+  border-bottom: 2px solid #3e939e;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content .contentTabs {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content .contentTabs {
   width: 100%;
   margin: 0 auto;
   text-align: center;
   display: none;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content .contentTabs .contentBody-active {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content .contentTabs .contentBody-active {
   display: block;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content #tableDemonstration-Medias {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content #tableDemonstration-Medias {
   margin: auto;
   width: 100%;
   max-width: 500px;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content #tableDemonstration-Medias td {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content #tableDemonstration-Medias td {
   text-align: center;
   box-sizing: border-box;
   padding: 10px 15px 0;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content #tableDemonstration-Medias .tableTitle {
-  border-bottom: 2px solid #3bb8c8;
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content #tableDemonstration-Medias .tableTitle {
+  border-bottom: 2px solid #3e939e;
 }
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration #content #tableDemonstration-Medias .tableLines {
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content #tableDemonstration-Medias .tableLines {
   border-collapse: collapse;
-  border-left: 2px solid #3bb8c8;
+  border-left: 2px solid #3e939e;
 }
-.bodyFull .sectionDescriptive .breakerContent {
+.bodyFull #sectionDescriptive .breakerContent {
   margin: 20px auto 20px;
   text-align: center;
 }
-.bodyFull .sectionDescriptive .breakerContent .textInput {
+.bodyFull #sectionDescriptive .breakerContent .textInput {
   font-size: 20px;
-  color: #3bb8c8;
+  color: #3e939e;
   margin: 20px auto 0px;
   padding: 10px 0 0 0;
 }
-.bodyFull .sectionDescriptive .breakerContent .inputDiv {
+.bodyFull #sectionDescriptive .breakerContent .inputDiv {
   width: 450px;
   margin: 10px auto;
   padding: 50px;
   box-sizing: border-box;
   position: relative;
 }
-.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range] {
+.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range] {
   display: block;
   width: 350px;
 }
-.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]:focus {
+.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]:focus {
   outline: none;
 }
-.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range],
-.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-webkit-slider-runnable-track,
-.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-webkit-slider-thumb {
+.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range],
+.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-webkit-slider-runnable-track,
+.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
-.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-webkit-slider-thumb {
+.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-webkit-slider-thumb {
   background-color: #fff;
   width: 20px;
   height: 20px;
-  border: 3px solid #3bb8c8;
+  border: 3px solid #3e939e;
   border-radius: 50%;
   margin-top: -9px;
 }
-.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-moz-range-thumb {
+.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-moz-range-thumb {
   background-color: #fff;
   width: 15px;
   height: 15px;
-  border: 3px solid #3bb8c8;
+  border: 3px solid #3e939e;
   border-radius: 50%;
 }
-.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-ms-thumb {
+.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-ms-thumb {
   background-color: #fff;
   width: 20px;
   height: 20px;
-  border: 3px solid #3bb8c8;
+  border: 3px solid #3e939e;
   border-radius: 50%;
 }
-.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-webkit-slider-runnable-track {
-  background-color: #3bb8c8;
+.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-webkit-slider-runnable-track {
+  background-color: #3e939e;
   height: 3px;
 }
-.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]:focus::-webkit-slider-runnable-track {
+.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]:focus::-webkit-slider-runnable-track {
   outline: none;
 }
-.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-moz-range-track {
-  background-color: #3bb8c8;
+.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-moz-range-track {
+  background-color: #3e939e;
   height: 3px;
 }
-.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-ms-track {
-  background-color: #3bb8c8;
+.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-ms-track {
+  background-color: #3e939e;
   height: 3px;
 }
-.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-ms-fill-lower {
+.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-ms-fill-lower {
   background-color: #000;
 }
-.bodyFull .sectionDescriptive .breakerContent .inputDiv input[type=range]::-ms-fill-upper {
+.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-ms-fill-upper {
   background-color: black;
 }
-.bodyFull .sectionDescriptive .breakerContent .inputDiv #etiqueta {
+.bodyFull #sectionDescriptive .breakerContent .inputDiv #etiqueta {
   position: absolute;
   z-index: 9;
   color: #fff;
   font-weight: bold;
-  background-color: #3bb8c8;
+  background-color: #3e939e;
   width: 30px;
   height: 25px;
   font-size: 1em;
@@ -781,7 +782,7 @@ body {
   padding-top: 12px;
   top: -5px;
 }
-.bodyFull .sectionDescriptive .breakerContent .inputDiv #etiqueta::after {
+.bodyFull #sectionDescriptive .breakerContent .inputDiv #etiqueta::after {
   content: "";
   display: block;
   width: 10px;
@@ -791,75 +792,75 @@ body {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   z-index: 8;
-  background-color: #3bb8c8;
+  background-color: #3e939e;
   position: relative;
   left: 9px;
   top: 2px;
 }
-.bodyFull .sectionDescriptive .breakerContent .contentBtn {
+.bodyFull #sectionDescriptive .breakerContent .contentBtn {
   margin-top: -20px;
   padding: 0px 0 20px 0;
 }
-.bodyFull .sectionDescriptive .breakerContent .content-Breaker-Result p {
-  color: #3bb8c8;
+.bodyFull #sectionDescriptive .breakerContent .content-Breaker-Result p {
+  color: #3e939e;
   font-weight: 500;
   padding: 10px;
 }
-.bodyFull .sectionDescriptive .reloadPage {
+.bodyFull #sectionDescriptive .reloadPage {
   margin: 0 auto 20px;
   text-align: center;
   padding: 20px;
 }
-.bodyFull .sectionDescriptive .reloadPage input[type=button] {
+.bodyFull #sectionDescriptive .reloadPage input[type=button] {
   border: 0;
   background: none;
   display: block;
   margin: 25px auto;
   text-align: center;
-  border: 2px solid #3bb8c8;
+  border: 2px solid #3e939e;
   padding: 12px 10px;
   width: 250px;
   outline: none;
-  color: #3bb8c8;
+  color: #3e939e;
   border-radius: 25px;
   transition: 0.25s;
 }
-.bodyFull .sectionDescriptive .reloadPage input[type=button]:hover {
-  border-color: #3bb8c8;
-  background: #3bb8c8;
+.bodyFull #sectionDescriptive .reloadPage input[type=button]:hover {
+  border-color: #3e939e;
+  background: #3e939e;
   color: #fff;
 }
-.bodyFull .sectionDescriptive #tableDemonstration {
+.bodyFull #sectionDescriptive #tableDemonstration {
   margin: 30px auto;
 }
-.bodyFull .sectionDescriptive #tableDemonstration tr:nth-child(even) {
+.bodyFull #sectionDescriptive #tableDemonstration tr:nth-child(even) {
   background: rgba(59, 184, 200, 0.07);
 }
-.bodyFull .sectionDescriptive #tableDemonstration .tableTitle {
+.bodyFull #sectionDescriptive #tableDemonstration .tableTitle {
   font-size: 20px;
-  color: #3bb8c8;
+  color: #3e939e;
   font-weight: bolder;
   letter-spacing: 3px;
 }
-.bodyFull .sectionDescriptive #tableDemonstration .tdVet {
+.bodyFull #sectionDescriptive #tableDemonstration .tdVet {
   border-collapse: collapse;
   text-align: center;
   padding: 10px;
-  border-bottom: 2px solid #3bb8c8;
+  border-bottom: 2px solid #3e939e;
 }
-.bodyFull .sectionDescriptive #tableDemonstration .tableLines {
-  border-left: 2px solid #3bb8c8;
+.bodyFull #sectionDescriptive #tableDemonstration .tableLines {
+  border-left: 2px solid #3e939e;
 }
 .bodyFull #btnCalculateBreaker {
   padding: 10px 20px;
   background-color: #fff;
-  border: 2px solid #3bb8c8;
+  border: 2px solid #3e939e;
   border-radius: 25px;
-  color: #3bb8c8;
+  color: #3e939e;
   cursor: pointer;
 }
 .bodyFull #btnCalculateBreaker:hover {
-  background: #3bb8c8;
+  background: #3e939e;
   color: #fff;
 }
 .bodyFull .footerContent {
@@ -873,7 +874,7 @@ body {
   text-align: center;
 }
 .bodyFull .footerContent .footerMenu ul li {
-  color: #3bb8c8;
+  color: #3e939e;
   font-weight: bold;
   margin: 10px auto 0;
   display: inline-block;
@@ -881,6 +882,10 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  header {
+    height: 15%;
+  }
+
   .MobileActive {
     left: 0px;
     display: block;
@@ -892,7 +897,7 @@ body {
     background: #fff;
   }
   .MobileActive ul li {
-    color: #3bb8c8;
+    color: #3e939e;
     font-size: 15px;
     font-weight: 700;
     padding: 10px 30px;
@@ -928,12 +933,10 @@ body {
     margin-top: -50px;
     margin-bottom: 25px;
   }
-  .bodyFull .sectionDescriptive {
-    width: calc(100%-);
-  }
-  .bodyFull .sectionDescriptive .boxContent {
+  .bodyFull #sectionDescriptive .boxContent {
     display: block;
     width: 100%;
+    max-width: 370px;
     padding: 0 15px;
     background: #fff;
     margin: auto;
@@ -942,78 +945,78 @@ body {
     -webkit-animation-name: fadeInLeft;
     animation-name: fadeInLeft;
   }
-  .bodyFull .sectionDescriptive .boxContent .logoImg {
+  .bodyFull #sectionDescriptive .boxContent .logoImg {
     display: block;
     text-align: center;
   }
-  .bodyFull .sectionDescriptive .boxContent .logoImg img {
+  .bodyFull #sectionDescriptive .boxContent .logoImg img {
     width: 100%;
     max-width: 250px;
     max-height: 125px;
   }
-  .bodyFull .sectionDescriptive .boxContent .pageDescritive {
+  .bodyFull #sectionDescriptive .boxContent .pageDescritive {
     margin: auto;
   }
-  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData {
+  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData {
     text-align: center;
   }
-  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .textInput {
+  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .textInput {
     font-size: 20px;
-    color: #3bb8c8;
+    color: #3e939e;
     margin-top: 20px;
   }
-  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData input[type=text] {
+  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData input[type=text] {
     border: 0;
     background: none;
     display: inline-block;
     margin: 25px auto 20px;
     text-align: center;
-    border: 2px solid #3bb8c8;
+    border: 2px solid #3e939e;
     padding: 10px 20px;
     width: 200px;
     outline: none;
-    color: #3bb8c8;
+    color: #3e939e;
     border-radius: 25px;
     transition: 0.25s;
   }
-  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData input[type=text]::placeholder {
-    color: #3bb8c8;
+  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData input[type=text]::placeholder {
+    color: #3e939e;
   }
-  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData input[type=text]:focus {
-    color: #3bb8c8;
+  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData input[type=text]:focus {
+    color: #3e939e;
     font-size: 12px;
     font-weight: bold;
   }
-  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData button[type=button] {
+  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData button[type=button] {
     border: 0;
     background: none;
     display: inline-block;
-    border: 2px solid #3bb8c8;
+    border: 2px solid #3e939e;
     padding: 10px 10px;
     width: 45px;
-    color: #3bb8c8;
+    color: #3e939e;
     border-radius: 50%;
     transition: 0.25s;
     cursor: pointer;
   }
-  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam {
+  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam {
     display: block;
     margin: 20px auto 20px auto;
   }
-  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam input[type=radio] {
+  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam input[type=radio] {
     display: none;
   }
-  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam input[type=radio]:checked + label {
+  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam input[type=radio]:checked + label {
     padding: 5px 15px;
-    background: #3bb8c8;
+    background: #3e939e;
     color: #fff;
   }
-  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam input[type=radio]:checked + label:before {
+  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam input[type=radio]:checked + label:before {
     display: none;
   }
-  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label {
+  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label {
     margin: auto;
-    color: #3bb8c8;
+    color: #3e939e;
     padding: 5px 20px 5px 51px;
     display: block;
     width: 150px;
@@ -1022,41 +1025,41 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
   }
-  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label:hover {
-    background: #3bb8c8;
+  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label:hover {
+    background: #3e939e;
     color: #fff;
   }
-  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label:before {
+  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label:before {
     content: "";
     width: 17px;
     height: 17px;
     display: block;
     background: none;
-    border: 3px solid #3bb8c8;
+    border: 3px solid #3e939e;
     border-radius: 50%;
     left: 17px;
     top: 3px;
   }
-  .bodyFull .sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label:before:hover {
+  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label:before:hover {
     border: 3px solid #fff;
   }
-  .bodyFull .sectionDescriptive .variavelPresent {
+  .bodyFull #sectionDescriptive .variavelPresent {
     display: none;
   }
-  .bodyFull .sectionDescriptive .variavelPresentActive {
+  .bodyFull #sectionDescriptive .variavelPresentActive {
     display: block;
   }
-  .bodyFull .sectionDescriptive #variavelText {
+  .bodyFull #sectionDescriptive #variavelText {
     margin: -10px auto 20px;
-    color: #3bb8c8;
+    color: #3e939e;
   }
-  .bodyFull .sectionDescriptive select {
+  .bodyFull #sectionDescriptive select {
     margin-top: 15px;
-    color: #3bb8c8;
+    color: #3e939e;
     font: inherit;
     font-size: 16px;
     background-color: #fff;
-    border: 1px solid #3bb8c8;
+    border: 1px solid #3e939e;
     border-top: none;
     border-right: none;
     border-left: none;
@@ -1070,39 +1073,39 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
   }
-  .bodyFull .sectionDescriptive select .textVariable {
-    color: #3bb8c8;
+  .bodyFull #sectionDescriptive select .textVariable {
+    color: #3e939e;
     font-weight: bold;
   }
-  .bodyFull .sectionDescriptive select .arrow {
+  .bodyFull #sectionDescriptive select .arrow {
     margin-left: 10px;
   }
-  .bodyFull .sectionDescriptive .valorContent {
+  .bodyFull #sectionDescriptive .valorContent {
     margin: 5px auto;
     text-align: center;
   }
-  .bodyFull .sectionDescriptive .valorContent .chipsPresent {
+  .bodyFull #sectionDescriptive .valorContent .chipsPresent {
     display: none;
   }
-  .bodyFull .sectionDescriptive .valorContent .chipsActive {
+  .bodyFull #sectionDescriptive .valorContent .chipsActive {
     display: block;
     margin: 0 auto;
     text-align: center;
   }
-  .bodyFull .sectionDescriptive .valorContent #presentText {
+  .bodyFull #sectionDescriptive .valorContent #presentText {
     padding-bottom: 20px;
   }
-  .bodyFull .sectionDescriptive .valorContent p {
+  .bodyFull #sectionDescriptive .valorContent p {
     margin: 0 5px;
     color: #fff;
     display: inline-block;
-    background: #3bb8c8;
+    background: #3e939e;
     padding: 10px 35px;
     border-radius: 30px;
     position: relative;
     box-shadow: 0.2px 0.2px 2px #000;
   }
-  .bodyFull .sectionDescriptive .valorContent p label {
+  .bodyFull #sectionDescriptive .valorContent p label {
     margin: auto;
     width: 10px;
     height: 10px;
@@ -1110,91 +1113,91 @@ body {
     right: 15px;
     position: absolute;
   }
-  .bodyFull .sectionDescriptive .contentBtn {
+  .bodyFull #sectionDescriptive .contentBtn {
     padding: 20px;
   }
-  .bodyFull .sectionDescriptive .contentBtn .btnCalculate {
+  .bodyFull #sectionDescriptive .contentBtn .btnCalculate {
     padding: 10px 20px;
     background-color: #fff;
-    border: 2px solid #3bb8c8;
+    border: 2px solid #3e939e;
     border-radius: 25px;
-    color: #3bb8c8;
+    color: #3e939e;
     cursor: pointer;
   }
-  .bodyFull .sectionDescriptive .contentBtn .btnCalculate:hover {
-    background: #3bb8c8;
+  .bodyFull #sectionDescriptive .contentBtn .btnCalculate:hover {
+    background: #3e939e;
     color: #fff;
   }
-  .bodyFull .sectionDescriptive .contentBtn .btnImport {
+  .bodyFull #sectionDescriptive .contentBtn .btnImport {
     padding: 10px 20px;
     background-color: #fff;
-    border: 2px solid #3bb8c8;
+    border: 2px solid #3e939e;
     border-radius: 25px;
-    color: #3bb8c8;
+    color: #3e939e;
     cursor: pointer;
   }
-  .bodyFull .sectionDescriptive .contentBtn .btnImport:hover {
-    background: #3bb8c8;
+  .bodyFull #sectionDescriptive .contentBtn .btnImport:hover {
+    background: #3e939e;
     color: #fff;
   }
-  .bodyFull .sectionDescriptive #modalValue {
+  .bodyFull #sectionDescriptive #modalValue {
     margin-bottom: 0px;
     display: none;
   }
-  .bodyFull .sectionDescriptive #modalValue-Active {
+  .bodyFull #sectionDescriptive #modalValue-Active {
     display: block;
   }
-  .bodyFull .sectionDescriptive #modalValue-Active .textInput2 {
+  .bodyFull #sectionDescriptive #modalValue-Active .textInput2 {
     font-size: 15px;
-    color: #3bb8c8;
+    color: #3e939e;
     margin-top: 20px;
     margin-bottom: 0px;
   }
-  .bodyFull .sectionDescriptive .content-Result {
+  .bodyFull #sectionDescriptive .content-Result {
     display: none;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive {
+  .bodyFull #sectionDescriptive .content-ResultActive {
     margin: -20px auto;
     display: block;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .titleResult {
+  .bodyFull #sectionDescriptive .content-ResultActive .titleResult {
     margin: 0 auto;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .titleResult h2 {
+  .bodyFull #sectionDescriptive .content-ResultActive .titleResult h2 {
     text-align: center;
-    color: #3bb8c8;
+    color: #3e939e;
     padding: 20px;
     display: block;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration {
     display: block;
     text-align: center;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl {
     width: 100%;
     overflow: hidden;
     margin: 0px auto;
     display: block;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #header {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #header {
     margin: auto;
     overflow: hidden;
     cursor: pointer;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #content {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #content {
     width: 100%;
     overflow: hidden;
     height: 100%;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .abas {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .abas {
     display: block;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .abas li {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .abas li {
     padding: 5px;
     display: block;
     float: left;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .aba {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .aba {
     width: 100px;
     height: 30px;
     text-align: center;
@@ -1202,10 +1205,10 @@ body {
     background: rgba(59, 184, 200, 0.22);
     transition: 0.1s ease-in;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .aba span {
-    color: #3bb8c8;
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .aba span {
+    color: #3e939e;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .ativa {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .ativa {
     width: 100px;
     height: 30px;
     text-align: center;
@@ -1213,107 +1216,107 @@ body {
     background: rgba(59, 184, 200, 0.55);
     transition: 0.3s ease-in;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .ativa span,
-.bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .selected span {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .ativa span,
+.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .selected span {
     color: #fff;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #content {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #content {
     background: #fff;
     margin: 0 auto 20px;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .conteudo {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .conteudo {
     width: 100%;
     display: none;
-    color: #3bb8c8;
+    color: #3e939e;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .selected {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .selected {
     width: 100px;
     height: 30px;
     border: solid 1 px;
     border-radius: 5px 5px 0 0;
     text-align: center;
     padding-top: 5px;
-    background: #3bb8c8;
+    background: #3e939e;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .content {
     margin: 0 auto;
     text-align: center;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList {
     background: #fff;
     width: 90%;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul li {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul li {
     height: 40px;
     padding: 10px 70px 10px;
     cursor: pointer;
     transition: 0.105ms ease-in;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul li a {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul li a {
     font-size: 18px;
-    color: #3bb8c8;
+    color: #3e939e;
     font-weight: bold;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul li:hover {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul li:hover {
     background: rgba(59, 183, 200, 0.288);
-    color: #3bb8c8;
-    border-bottom: 2px solid #3bb8c8;
+    color: #3e939e;
+    border-bottom: 2px solid #3e939e;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentTabs {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .content .contentTabs {
     width: 100%;
     margin: 0 auto;
     text-align: center;
     display: none;
   }
-  .bodyFull .sectionDescriptive .content-ResultActive .resultDemonstration .content .contentTabs .contentBody-active {
+  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .content .contentTabs .contentBody-active {
     display: block;
   }
-  .bodyFull .sectionDescriptive .reloadPage {
+  .bodyFull #sectionDescriptive .reloadPage {
     margin: 0 auto 20px;
     text-align: center;
     padding: 20px;
   }
-  .bodyFull .sectionDescriptive .reloadPage input[type=button] {
+  .bodyFull #sectionDescriptive .reloadPage input[type=button] {
     border: 0;
     background: none;
     display: block;
     margin: 25px auto;
     text-align: center;
-    border: 2px solid #3bb8c8;
+    border: 2px solid #3e939e;
     padding: 12px 10px;
     width: 250px;
     outline: none;
-    color: #3bb8c8;
+    color: #3e939e;
     border-radius: 25px;
     transition: 0.25s;
   }
-  .bodyFull .sectionDescriptive .reloadPage input[type=button]:hover {
-    border-color: #3bb8c8;
-    background: #3bb8c8;
+  .bodyFull #sectionDescriptive .reloadPage input[type=button]:hover {
+    border-color: #3e939e;
+    background: #3e939e;
     color: #fff;
   }
-  .bodyFull .sectionDescriptive #tableDemonstration {
+  .bodyFull #sectionDescriptive #tableDemonstration {
     margin: 30px auto;
   }
-  .bodyFull .sectionDescriptive #tableDemonstration .tableTitle {
+  .bodyFull #sectionDescriptive #tableDemonstration .tableTitle {
     font-size: 20px;
-    color: #3bb8c8;
+    color: #3e939e;
     font-weight: bolder;
     letter-spacing: 3px;
   }
-  .bodyFull .sectionDescriptive #tableDemonstration .tdVet {
+  .bodyFull #sectionDescriptive #tableDemonstration .tdVet {
     border-collapse: collapse;
     text-align: center;
     padding: 10px;
-    border-bottom: 2px solid #3bb8c8;
+    border-bottom: 2px solid #3e939e;
   }
-  .bodyFull .sectionDescriptive #tableDemonstration .tableLines {
-    border-left: 2px solid #3bb8c8;
+  .bodyFull #sectionDescriptive #tableDemonstration .tableLines {
+    border-left: 2px solid #3e939e;
   }
   .bodyFull .footerContent {
     bottom: 0;
@@ -1331,16 +1334,34 @@ body {
     margin: auto;
     padding: 20px;
   }
+
+  .bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range] {
+    display: block;
+    width: 290px;
+  }
 }
 @media screen and (max-width: 420px) {
   .bodyFull {
     margin: auto;
   }
-  .bodyFull .sectionDescriptive {
+  .bodyFull #sectionDescriptive {
     margin: auto;
+    padding: 10px;
   }
-  .bodyFull .sectionDescriptive .boxContent {
+  .bodyFull #sectionDescriptive .boxContent {
     width: 100%;
+    width: 100%;
+    max-width: 320px;
+    padding: 0 50px;
+  }
+  .bodyFull #sectionDescriptive .boxContent .formsLog {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+  }
+  .bodyFull #sectionDescriptive .boxContent .formsLog .breakerContent {
+    text-align: left;
+    margin-left: 15px;
   }
   .bodyFull .content-ResultActive {
     margin: -20px auto;
@@ -1351,7 +1372,7 @@ body {
   }
   .bodyFull .content-ResultActive .titleResult h2 {
     text-align: center;
-    color: #3bb8c8;
+    color: #3e939e;
     padding: 20px;
     display: block;
   }
@@ -1392,7 +1413,7 @@ body {
     transition: 0.1s ease-in;
   }
   .bodyFull .content-ResultActive .resultDemonstration .aba span {
-    color: #3bb8c8;
+    color: #3e939e;
   }
   .bodyFull .content-ResultActive .resultDemonstration .ativa {
     width: 100px;
@@ -1413,7 +1434,7 @@ body {
   .bodyFull .content-ResultActive .resultDemonstration .TabControl .conteudo {
     width: 100%;
     display: none;
-    color: #3bb8c8;
+    color: #3e939e;
   }
   .bodyFull .content-ResultActive .resultDemonstration .selected {
     width: 100px;
@@ -1422,7 +1443,7 @@ body {
     border-radius: 5px 5px 0 0;
     text-align: center;
     padding-top: 5px;
-    background: #3bb8c8;
+    background: #3e939e;
   }
   .bodyFull .content-ResultActive .resultDemonstration .content {
     margin: 0 auto;
@@ -1445,13 +1466,13 @@ body {
   }
   .bodyFull .content-ResultActive .resultDemonstration .content .contentList ul li a {
     font-size: 18px;
-    color: #3bb8c8;
+    color: #3e939e;
     font-weight: bold;
   }
   .bodyFull .content-ResultActive .resultDemonstration .content .contentList ul li:hover {
     background: rgba(59, 183, 200, 0.288);
-    color: #3bb8c8;
-    border-bottom: 2px solid #3bb8c8;
+    color: #3e939e;
+    border-bottom: 2px solid #3e939e;
   }
   .bodyFull .content-ResultActive .resultDemonstration .content .contentTabs {
     width: 100%;

@@ -124,7 +124,7 @@ q:after {
  content: none;
 }
 
-$baseColor: #3bb8c8;
+$baseColor: #3e939e;
 
 table {
  border-collapse: collapse;
@@ -176,8 +176,8 @@ body {
 
  header {
   width: 100%;
-  height: 20%;
-  background-color: #3bb8c8;
+  height: 16%;
+  background-color: $baseColor;
 
   #navMenu {
    text-align: center;
@@ -212,7 +212,7 @@ body {
 
   .toggle {
    display: none;
-   background: #3bb8c8;
+   background: $baseColor;
 
    width: 60px;
    height: 60px;
@@ -255,6 +255,7 @@ body {
   width: calc(100%-30);
   height: 75%;
   padding: 0 15px;
+  margin-bottom: 35px;
 
 
   .boxContent {
@@ -295,22 +296,22 @@ body {
      display: block;
      margin: 25px auto;
      text-align: center;
-     border: 2px solid #3bb8c8;
+     border: 2px solid $baseColor;
      padding: 12px 10px;
      width: 250px;
      outline: none;
-     color: #3bb8c8;
+     color: $baseColor;
      border-radius: 25px;
      transition: 0.25s;
 
      &:hover {
       width: 370px;
-      border-color: #3bb8c8;
+      border-color: $baseColor;
      }
 
      &:focus {
       width: 370px;
-      border-color: #3bb8c8;
+      border-color: $baseColor;
      }
     }
 
@@ -320,18 +321,18 @@ body {
      display: block;
      margin: 25px auto 20px;
      text-align: center;
-     border: 2px solid #3bb8c8;
+     border: 2px solid $baseColor;
      padding: 12px 10px;
      width: 100px;
      outline: none;
-     color: #3bb8c8;
+     color: $baseColor;
      border-radius: 25px;
      transition: 0.25s;
      cursor: pointer;
 
      &:hover {
-      background: #3bb8c8;
-      border: 2px solid #3bb8c8;
+      background: $baseColor;
+      border: 2px solid $baseColor;
       color: #fff;
      }
     }
@@ -363,11 +364,11 @@ body {
     display: block;
     margin: 25px auto 5px;
     text-align: center;
-    border: 2px solid #3bb8c8;
+    border: 2px solid $baseColor;
     padding: 12px 10px;
     width: 250px;
     outline: none;
-    color: #3bb8c8;
+    color: $baseColor;
     border-radius: 25px;
     transition: 0.25s;
     cursor: pointer;
@@ -377,8 +378,8 @@ body {
     }
 
     &:hover {
-     background: #3bb8c8;
-     border: 2px solid #3bb8c8;
+     background: $baseColor;
+     border: 2px solid $baseColor;
      color: #fff;
 
 
@@ -387,7 +388,7 @@ body {
   }
  }
 
- .sectionDescriptive {
+ #sectionDescriptive {
   width: 100%;
   margin-bottom: 15%;
 
@@ -433,11 +434,11 @@ body {
       display: inline-block;
       margin: 25px auto 20px;
       text-align: center;
-      border: 2px solid #3bb8c8;
+      border: 2px solid $baseColor;
       padding: 10px 20px;
       width: 400px;
       outline: none;
-      color: #3bb8c8;
+      color: $baseColor;
       border-radius: 25px;
       transition: 0.25s;
 
@@ -459,10 +460,10 @@ body {
       background: none;
       display: inline-block;
       // margin: 25px auto 20px;
-      border: 2px solid #3bb8c8;
+      border: 2px solid $baseColor;
       padding: 10px 10px;
       width: 45px;
-      color: #3bb8c8;
+      color: $baseColor;
       border-radius: 50%;
       transition: 0.25s;
       cursor: pointer;
@@ -610,7 +611,7 @@ body {
   }
 
   #valueOrganize:focus{
-    border-color: #3bb8c8;
+    border-color: $baseColor;
   }
 
   #modalValue {
@@ -656,7 +657,7 @@ body {
     margin: 0 5px;
     color: #fff;
     display: inline-block;
-    background: #3bb8c8;
+    background: $baseColor;
     padding: 5px 35px;
     border-radius: 30px;
     position: relative;
@@ -986,11 +987,11 @@ body {
     display: block;
     margin: 25px auto;
     text-align: center;
-    border: 2px solid #3bb8c8;
+    border: 2px solid $baseColor;
     padding: 12px 10px;
     width: 250px;
     outline: none;
-    color: #3bb8c8;
+    color: $baseColor;
     border-radius: 25px;
     transition: 0.25s;
 
@@ -1073,6 +1074,9 @@ body {
 
 
 @media screen and(max-width:600px) {
+  header{
+    height: 15%;
+  }
  .MobileActive {
   left: 0px;
   display: block;
@@ -1147,14 +1151,15 @@ body {
    margin-bottom: 25px;
   }
 
-  .sectionDescriptive {
-   width: calc(100%-);
+  #sectionDescriptive {
+   
    
 
 
    .boxContent {
     display: block;
     width: 100%;
+    max-width: 370px;
     padding: 0 15px;
     background: #fff;
     margin: auto;
@@ -1198,11 +1203,11 @@ body {
        display: inline-block;
        margin: 25px auto 20px;
        text-align: center;
-       border: 2px solid #3bb8c8;
+       border: 2px solid $baseColor;
        padding: 10px 20px;
        width: 200px;
        outline: none;
-       color: #3bb8c8;
+       color: $baseColor;
        border-radius: 25px;
        transition: 0.25s;
 
@@ -1224,10 +1229,10 @@ body {
        background: none;
        display: inline-block;
        // margin: 25px auto 20px;
-       border: 2px solid #3bb8c8;
+       border: 2px solid $baseColor;
        padding: 10px 10px;
        width: 45px;
-       color: #3bb8c8;
+       color: $baseColor;
        border-radius: 50%;
        transition: 0.25s;
        cursor: pointer;
@@ -1376,7 +1381,7 @@ body {
      margin: 0 5px;
      color: #fff;
      display: inline-block;
-     background: #3bb8c8;
+     background: $baseColor;
      padding: 10px 35px;
      border-radius: 30px;
      position: relative;
@@ -1611,11 +1616,11 @@ body {
      display: block;
      margin: 25px auto;
      text-align: center;
-     border: 2px solid #3bb8c8;
+     border: 2px solid $baseColor;
      padding: 12px 10px;
      width: 250px;
      outline: none;
-     color: #3bb8c8;
+     color: $baseColor;
      border-radius: 25px;
      transition: 0.25s;
 
@@ -1679,6 +1684,10 @@ body {
    ;
   }
  }
+ .bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range] {
+  display: block;
+  width: 290px;
+}
 
 }
 
@@ -1686,12 +1695,26 @@ body {
  .bodyFull {
   margin: auto;
 
-  .sectionDescriptive {
+  #sectionDescriptive {
    margin: auto;
+   padding: 10px;
 
    .boxContent {
     width: 100%;
+    width: 100%;
+    max-width: 320px;
+    padding: 0 50px;
+    
+    .formsLog{
+      display: flex;
+      flex-direction: column;
+      flex-flow: wrap;
 
+      .breakerContent{
+        text-align: left;
+        margin-left: 15px;
+      }
+    }
    }
   }
 

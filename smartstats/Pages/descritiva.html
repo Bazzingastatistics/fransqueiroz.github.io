@@ -7,11 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Smart Stats</title>
   <link rel="shortcut icon" href="../images/favicon-stats.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/animate.css">
   <link rel="stylesheet" href="../css/output.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
-<nav id="menuMobile" class="menuMobile">
+<nav id="menuMobile" class=" position-absolute menuMobile">
   <ul>
     <li><a href="menu.html">Inicio</a></li>
     <li><a href="#">Criar Conta</a></li>
@@ -33,154 +34,154 @@
         <span class="hamburguer"></span>
       </div>
     </header>
-
-    <section class="sectionDescriptive">
-      <div class="boxContent">
-        <div class="formsLog">
-          <div class="logoImg">
-            <img src="../images/logoStats.png" alt="Logo Smart Stats">
-          </div>
-          <div class="pageDescritive">
-            <div class="inputData">
-              <div class="textVariavel">
-                <p class="textInput">Informe o Nome da Variável</p>
-                <input type="text" class="nameVariable" placeholder="Digite a Variável Pesquisada e aperte Enter" name="variables"
-                  id="variables">
-                <div id="variavelPresent" class="variavelPresent">
-                  <div>
-                    <p id="variavelText">A Variável Pesquisada é: </p>
-                  </div>
-                </div>
-              </div>
-
-              <div  class="btn-PopSam">
-                  <select class="textVariable" name="variable" id="selectSampling">
-                      <option class="textVariable" value="">Informe o Tipo de Amostragem &#9660;</option>
-                      <option class="textVariable" value="populacao">População</option>
-                      <option class="textVariable" value="amostra">Amostra</option>
-                    </select>
-              </div>
-              <div class="typeVariable">
-
-                <select class="textVariable" name="variable" id="selectVariable">
-                  <option class="textVariable" value="">Informe o Tipo da Variável &#9660;</option>
-                  <option class="textVariable" value="ordinal">Qualitativa Ordinal</option>
-                  <option class="textVariable" value="nominal">Qualitativa Nominal</option>
-                  <option class="textVariable" value="discreta">Quantitativa Discreta</option>
-                  <option class="textVariable" value="continua">Quantitativa Continua</option>
-                </select>
-                <div id="modalValue">
-                  <span class="textInput2">Ordenação das variáveis ordinaisl</span>
-                  <input type="text" class="nameOrganizes enterOrganize" placeholder="Ex: Ótimo, Bom, Ruim" name="organize"
-                    id="valueOrganize" required />
-                    <div id="modalPresent" class="modalPresent">
-                        <div id="organizeText"></div>
-                      </div>
-                </div>
-                <div class="valorContent">
-
-                  <input class="enter" type="text" placeholder="Digite o valor e aperte Enter">
-                  <div id="chipsPresent" class="chipsPresent">
-                    <div id="presentText"></div>
-                  </div>
-                </div>
-
-              </div>
-
-
-              <div class="contentBtn">
-                <button id="btnCalculate" class="btnCalculate" type="submit">Calcular</button>
-                <button class="btnImport" type="submit">Importar Arquivo</button>
-              </div>
-
+    <div class="container">
+      <section id="sectionDescriptive">
+        <div class="boxContent">
+          <div class="formsLog">
+            <div class="logoImg">
+              <img src="../images/logoStats.png" alt="Logo Smart Stats">
             </div>
-            <div>
-
-            </div>
-          </div>
-          <div class="content-Result">
-            <div class="titleResult">
-              <h2>Resultados</h2>
-            </div>
-            <div class="resultDemonstration">
-              <div class="content-Result">
-                <div class="resultDemonstration">
-                  <div class="TabControl">
-                    <div id="header">
-                      <ul class="abas">
-                        <li>
-                          <div class="aba">
-                            <span>Tabela</span>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="aba">
-                            <span>Gráficos</span>
-                          </div>
-                        </li>
-                      </ul>
+            <div class="pageDescritive">
+              <div class="inputData">
+                <div class="textVariavel">
+                  <p class="textInput">Informe o Nome da Variável</p>
+                  <input type="text" class="nameVariable" placeholder="Digite a Variável Pesquisada e aperte Enter" name="variables"
+                    id="variables">
+                  <div id="variavelPresent" class="variavelPresent">
+                    <div>
+                      <p id="variavelText">A Variável Pesquisada é: </p>
                     </div>
-                    <div id="content">
-                      <div class="conteudo">
-                        <table id="tableDemonstration" cellspacing="0" celllpacing="0" border=0>
+                  </div>
+                </div>
 
-                        </table>
+                <div  class="btn-PopSam">
+                    <select class="textVariable" name="variable" id="selectSampling">
+                        <option class="textVariable" value="">Informe o Tipo de Amostragem &#9660;</option>
+                        <option class="textVariable" value="populacao">População</option>
+                        <option class="textVariable" value="amostra">Amostra</option>
+                      </select>
+                </div>
+                <div class="typeVariable">
+
+                  <select class="textVariable" name="variable" id="selectVariable">
+                    <option class="textVariable" value="">Informe o Tipo da Variável &#9660;</option>
+                    <option class="textVariable" value="ordinal">Qualitativa Ordinal</option>
+                    <option class="textVariable" value="nominal">Qualitativa Nominal</option>
+                    <option class="textVariable" value="discreta">Quantitativa Discreta</option>
+                    <option class="textVariable" value="continua">Quantitativa Continua</option>
+                  </select>
+                  <div id="modalValue">
+                    <span class="textInput2">Ordenação das variáveis ordinaisl</span>
+                    <input type="text" class="nameOrganizes enterOrganize" placeholder="Ex: Ótimo, Bom, Ruim" name="organize"
+                      id="valueOrganize" required />
+                      <div id="modalPresent" class="modalPresent">
+                          <div id="organizeText"></div>
+                        </div>
+                  </div>
+                  <div class="valorContent">
+
+                    <input class="enter" type="text" placeholder="Digite o valor e aperte Enter">
+                    <div id="chipsPresent" class="chipsPresent">
+                      <div id="presentText"></div>
+                    </div>
+                  </div>
+
+                </div>
+
+
+                <div class="contentBtn">
+                  <button id="btnCalculate" class="btnCalculate" type="submit">Calcular</button>
+                  <button class="btnImport" type="submit">Importar Arquivo</button>
+                </div>
+
+              </div>
+              <div>
+
+              </div>
+            </div>
+            <div class="content-Result">
+              <div class="titleResult">
+                <h2>Resultados</h2>
+              </div>
+              <div class="resultDemonstration">
+                <div class="content-Result">
+                  <div class="resultDemonstration">
+                    <div class="TabControl">
+                      <div id="header">
+                        <ul class="abas">
+                          <li>
+                            <div class="aba">
+                              <span>Tabela</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="aba">
+                              <span>Gráficos</span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div id="content">
+                        <div class="conteudo">
+                          <table id="tableDemonstration" cellspacing="0" celllpacing="0" border=0>
+
+                          </table>
+                          
+                            <table id="tableDemonstration-Medias" cellspacing="0" celllpacing="0" border=0></table>
                         
-                          <table id="tableDemonstration-Medias" cellspacing="0" celllpacing="0" border=0></table>
-                       
-                      </div>
-                      <div class="conteudo">
-                        <div id="chart_div"></div>
-                      </div>
-                      <div class="conteudo">
-                        Conteúdo da aba 3
-                      </div>
+                        </div>
+                        <div class="conteudo">
+                          <div id="chart_div"></div>
+                        </div>
+                        <div class="conteudo">
+                          Conteúdo da aba 3
+                        </div>
 
+                      </div>
                     </div>
                   </div>
                 </div>
+
+              </div>
+
+              <div class="reloadPage">
+                <input type="button" value="Limpar">
               </div>
 
             </div>
+            <div class="breakerContent">
+              <p class="textInput">Medidas Separatrizes</p>
+              <div class="selectBreaker">
 
-            <div class="reloadPage">
-              <input type="button" value="Limpar">
-            </div>
-
-          </div>
-          <div class="breakerContent">
-            <p class="textInput">Medidas Separatrizes</p>
-            <div class="selectBreaker">
-
-              <select class="textVariable" name="variable" id="selectBreaker">
-                <option class="textVariable" value="">Informe a Medida Separatriz &#9660;</option>
-                <option class="textVariable" value="4">Quartil</option>
-                <option class="textVariable" value="5">Quintil</option>
-                <option class="textVariable" value="10">Decil</option>
-                <option class="textVariable" value="100">Porcentil</option>
-              </select>
-              <div class="container">
-                <div class="inputDiv">
-                  <div id="etiqueta"></div>
-                  
-                  <input id="inputBreaker" type="range" value="1" min="1" max="100" autocomplete="off">
+                <select class="textVariable" name="variable" id="selectBreaker">
+                  <option class="textVariable" value="">Informe a Medida Separatriz &#9660;</option>
+                  <option class="textVariable" value="4">Quartil</option>
+                  <option class="textVariable" value="5">Quintil</option>
+                  <option class="textVariable" value="10">Decil</option>
+                  <option class="textVariable" value="100">Porcentil</option>
+                </select>
+                <div class="container">
+                  <div class="inputDiv">
+                    <div id="etiqueta"></div>
+                    
+                    <input id="inputBreaker" type="range" value="1" min="1" max="100" autocomplete="off">
+                  </div>
                 </div>
-              </div>
-              
-
-            </div>
-            <div class="contentBtn">
-                <button id="btnCalculateBreaker" class="btnCalculate2" type="submit">Calcular Separatriz</button>
                 
-              </div>
-              <div class="content-Breaker-Result">
 
               </div>
+              <div class="contentBtn">
+                  <button id="btnCalculateBreaker" class="btnCalculate2" type="submit">Calcular Separatriz</button>
+                  
+                </div>
+                <div class="content-Breaker-Result">
+
+                </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
+      </section>
+    </div>
     <footer class="footerContent">
       <div class="footerMenu">
         <ul>
@@ -191,6 +192,9 @@
       </div>
     </footer>
   </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="../js/index.js"></script>
   <script src="../js/calculation.js"></script>
 </body>
