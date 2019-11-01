@@ -1276,6 +1276,36 @@ body {
   .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .content .contentTabs .contentBody-active {
     display: block;
   }
+  .bodyFull #sectionDescriptive .breakerContent .textInput {
+    font-size: 15px;
+  }
+  .bodyFull #sectionDescriptive .breakerContent .inputDiv {
+    width: 270px;
+    padding: 30px 0 !important;
+    float: left;
+  }
+  .bodyFull #sectionDescriptive .breakerContent .inputDiv #etiqueta {
+    position: absolute;
+    z-index: 9;
+    color: #fff;
+    font-weight: bold;
+    background-color: #3e939e;
+    width: 30px;
+    height: 35px;
+    font-size: 1em;
+    text-align: center;
+    padding-top: 12px;
+    top: -5px;
+  }
+  .bodyFull #sectionDescriptive .breakerContent .contentBtn {
+    margin-top: -20px;
+    padding: 0px 0 20px 0;
+  }
+  .bodyFull #sectionDescriptive .breakerContent .content-Breaker-Result p {
+    color: #3e939e;
+    font-weight: 500;
+    padding: 10px;
+  }
   .bodyFull #sectionDescriptive .reloadPage {
     margin: 0 auto 20px;
     text-align: center;
@@ -1337,7 +1367,8 @@ body {
 
   .bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range] {
     display: block;
-    width: 290px;
+    width: 170px;
+    margin-top: 20px;
   }
 }
 @media screen and (max-width: 420px) {
