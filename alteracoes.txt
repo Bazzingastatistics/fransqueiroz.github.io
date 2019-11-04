@@ -1,0 +1,16 @@
+.bodyFull #sectionDescriptive .boxContent{
+padding: 0 5px
+
+.bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData input[type=text]{
+width:250px
+
+.bodyFull #sectionDescriptive select
+width:260px
+
+.bodyFull #sectionDescriptive .boxContent .formsLog .breakerContent{
+tirar margin-left
+width do select 260px
+
+.bodyFull #sectionDescriptive .breakerContent .inputDiv{
+display:flex
+justify-content:center

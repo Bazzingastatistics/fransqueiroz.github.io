@@ -1,67 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Smart Stats</title>
-    <link rel="shortcut icon" href="../images/favicon-stats.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/animate.css">
-    <link rel="stylesheet" href="../css/output.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Smart Stats</title>
+  <link rel="shortcut icon" href="../assets/favicon-stats.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/animate.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/output.css">
 </head>
-<nav id="menuMobile" class="menuMobile">
- <ul>
-  <li><a href="../index.html">Inicio</a></li>
-  <li><a href="#">Criar Conta</a></li>
-  <li><a href="#">Sobre</a></li>
- </ul>
-</nav>
 
 <body>
- <div class="bodyFull">
+
   <header>
-   <nav id="navMenu">
-    <ul>
-     <li><a href="../index.html">Inicio</a></li>
-     <li><a href="#">Criar Conta</a></li>
-     <li><a href="#">Sobre</a></li>
-    </ul>
-            </nav>
-            <div class="toggle">
-                <span class="hamburguer"></span>
+    <div>
+        <div class="collapse navbar-collapse navMobile " id="navbarNavMobile">
+            <div class="navbar-nav m-auto">
+              <a class="nav-item nav-link" href="../index.html">Inicio</a>
+              <a class="nav-item nav-link" href="#">Criar Conta</a>
+              <a class="nav-item nav-link" href="#">Contato</a>
+              <a class="nav-item nav-link" href="#">Política de Privacidade</a>
+              <a class="nav-item nav-link" href="#">Sobre</a>
             </div>
-        </header>
-
-        <section class="sectionContent">
-            <div class="boxContent">
-                <div class="formsLog">
-                    <div class="logoImg">
-                        <img src="../images/logoStats.png" alt="Logo Smart Stats">
-                    </div>
-                    <div class="menuBody">
-                     <ul class="menuList">
-                       <a href="descritiva.html"><li class="btn-Menu">Descritiva</li></a>
-                       <a href="#"></a><li class="btn-Menu">Probabilidade</li>
-                       <a href="#"></a><li class="btn-Menu">Correlação e Regressão</li>
-                     </ul>
-                   </div>
-                </div>
-            </div>
-        </section>
-
-        <footer class="footerContent">
-            <div class="footerMenu">
-                <ul>
-                    <li>Inicio</li>
-                    <li>Criar Conta</li>
-                    <li>Sobre</li>
-                </ul>
-            </div>
-        </footer>
+          </div>
     </div>
-    <script src="js/index.js"></script>
+    <div class="navContent">
+      <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-light ">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavMobile"
+            aria-controls="navbarNavMobile" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+          <div class="collapse navbar-collapse hidden-sm" id="navbarNavAltMarkup">
+            <div class="navbar-nav m-auto">
+              <a class="nav-item nav-link" href="../index.html">Inicio</a>
+              <a class="nav-item nav-link" href="#">Criar Conta</a>
+              <a class="nav-item nav-link" href="#">Contato</a>
+              <a class="nav-item nav-link" href="#">Política de Privacidade</a>
+              <a class="nav-item nav-link" href="#">Sobre</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <section>
+    <div class="container fullContainer">
+      <div class="contentMenu d-block">
+        <div class="content row m-auto justify-content-center">
+          <div class="brandLogo">
+            <img class="logo" src="../assets/logoStats.png" alt="">
+          </div>
+        </div>
+        <div class="row justify-content-sm-center contentBtnMenu">
+          <ul>
+           <a href="descritive.html"><li class="btn-Menu">Descritiva</li></a>
+           <a href="#"><li class="btn-Menu">Probabilidade</li></a>
+           <a href="#"><li class="btn-Menu">Correlação e Regressão</li></a>
+          </ul>
+        </div>
+        
+
+      </div>
+    </div>
+  </section>
+
 </body>
+
+<script src="../js/jquery-3.3.1.slim.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/index.js"></script>
 
 </html>

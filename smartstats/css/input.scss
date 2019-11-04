@@ -1,1655 +1,541 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
- margin: 0;
- padding: 0;
- border: 0;
- font-size: 100%;
- font: inherit;
- vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
- display: block;
-}
+$baseColor: #469ba7;
+$secondColor: #fff;
 
 body {
- line-height: 1;
-}
-
-ol,
-ul {
- list-style: none;
-}
-
-blockquote,
-q {
- quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
- content: '';
- content: none;
-}
-
-$baseColor: #3e939e;
-
-table {
- border-collapse: collapse;
- border-spacing: 0;
-}
-
-body {
- font-family: Arial, Helvetica, sans-serif;
- background: $baseColor
-}
-
-.menuMobile {
- left: -600px;
- display: none;
- width: 100%;
- height: calc(100vh - 50px);
- top: 50px;
- position: absolute;
- text-align: center;
- background: #fff;
-
- ul {
-
-  li {
-
-   padding: 10px 30px;
-   margin: 30% auto 20px auto;
-   display: block;
-   font-size: 15px;
-
-   a {
-    text-decoration: none;
-    color: $baseColor;
-   }
-  }
- }
-}
-
-
-
-
-
-
-
-
-.bodyFull {
- margin: 0 auto;
- height: 100vh;
-
- header {
-  width: 100%;
-  height: 16%;
   background-color: $baseColor;
-
-  #navMenu {
-   text-align: center;
-
-
-   ul {
-    li {
-     display: inline-block;
-     margin: 20px auto 20px auto;
-
-     a {
-      text-decoration: none;
-      color: #fff;
-      padding: 10px 30px;
-      font-size: 15px;
-      font-weight: bolder;
-
-      &:hover {
-       color: $baseColor;
-       background-color: #fff;
-       border-radius: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 
-      }
-     }
+.navMobile {
 
-    }
-   }
-  }
+  transition: .3s ease-in-out;
+}
 
-
-
-  .toggle {
-   display: none;
-   background: $baseColor;
-
-   width: 60px;
-   height: 60px;
-   right: 25px;
-
-   .hamburguer {
-    position: relative;
-    display: block;
-    background: #fff;
-    width: 30px;
-    height: 2px;
-    top: 29px;
-    left: 15px;
-    transition: .5s ease-in-out;
-   }
-
-   .hamburguer:before,
-   .hamburguer:after {
-    background: #fff;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transition: .5s ease-in-out;
-   }
-
-   .hamburguer:before {
-    top: -10px;
-   }
-
-   .hamburguer:after {
-    bottom: -10px;
-   }
-
-  }
- }
-
- .sectionContent {
-  width: calc(100%-30);
-  height: 75%;
-  padding: 0 15px;
-  margin-bottom: 35px;
-
-
-  .boxContent {
-   display: block;
-   width: 100%;
-   max-width: 500px;
-   background: #fff;
-   margin: 0 auto;
-   border-radius: 30px;
-   box-shadow: 2px 2px 10px #000;
-
-   .logoImg {
-
-    display: block;
-    text-align: center;
-
-    img {
-     width: 100%;
-     max-width: 250px;
-     max-height: 125px;
-    }
-   }
-
-   .formsLog {
-    display: block;
-    text-align: center;
-    margin: 0 auto 20px auto;
-
-
-    form {
-     padding: 10px;
-    }
-
-    input[type="email"],
-    input[type="password"] {
-     border: 0;
-     background: none;
-     display: block;
-     margin: 25px auto;
-     text-align: center;
-     border: 2px solid $baseColor;
-     padding: 12px 10px;
-     width: 250px;
-     outline: none;
-     color: $baseColor;
-     border-radius: 25px;
-     transition: 0.25s;
-
-     &:hover {
-      width: 370px;
-      border-color: $baseColor;
-     }
-
-     &:focus {
-      width: 370px;
-      border-color: $baseColor;
-     }
-    }
-
-    input[type="submit"] {
-     border: 0;
-     background: none;
-     display: block;
-     margin: 25px auto 20px;
-     text-align: center;
-     border: 2px solid $baseColor;
-     padding: 12px 10px;
-     width: 100px;
-     outline: none;
-     color: $baseColor;
-     border-radius: 25px;
-     transition: 0.25s;
-     cursor: pointer;
-
-     &:hover {
-      background: $baseColor;
-      border: 2px solid $baseColor;
-      color: #fff;
-     }
-    }
-
-    p {
-     display: inline-block;
-     color: $baseColor;
-     margin-bottom: 20px;
-
-     &:hover {
-      text-decoration: underline;
-     }
-    }
-
-   }
-  }
-
-  .menuList {
-   padding: 20px;
-   list-style: none;
-
-   a {
-    text-decoration: none;
-   }
-
-   .btn-Menu {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 25px auto 5px;
-    text-align: center;
-    border: 2px solid $baseColor;
-    padding: 12px 10px;
-    width: 250px;
-    outline: none;
-    color: $baseColor;
-    border-radius: 25px;
-    transition: 0.25s;
-    cursor: pointer;
-
-    :before {
-     margin-bottom: 20px;
-    }
-
-    &:hover {
-     background: $baseColor;
-     border: 2px solid $baseColor;
-     color: #fff;
-
-
-    }
-   }
-  }
- }
-
- #sectionDescriptive {
+.navbarMobile-Active {
   width: 100%;
-  margin-bottom: 15%;
+  height: 100vh;
+  display: flex;
+  position: absolute;
+  top: 51px;
+  left: 0px;
+  background: rgb(255, 255, 255);
+  padding: 80px;
+  z-index: 9;
 
-  .boxContent {
-   display: block;
-   width: 100%;
-   max-width: 650px;
-   background: #fff;
-   margin: auto;
-   border-radius: 30px;
-   box-shadow: 2px 2px 10px #000;
-
-   .logoImg {
-
-    display: block;
-    text-align: center;
-
-    img {
-     width: 100%;
-     max-width: 250px;
-     max-height: 125px;
-    }
-   }
-
-
-
-   .pageDescritive {
-    margin: auto;
-
-    .inputData {
-     text-align: center;
-
-     .textInput {
-      font-size: 20px;
-      color: $baseColor;
-      margin-top: 20px;
-
-     }
-
-     input[type="text"] {
-      border: 0;
-      background: none;
-      display: inline-block;
-      margin: 25px auto 20px;
+  div {
+    a {
       text-align: center;
-      border: 2px solid $baseColor;
-      padding: 10px 20px;
-      width: 400px;
-      outline: none;
+      padding: 40px;
       color: $baseColor;
-      border-radius: 25px;
-      transition: 0.25s;
+      font-size: 1.2em;
+    }
+  }
+}
 
-      &::placeholder {
-       color: $baseColor;
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.navContent .navbar-collapse .navbar-nav a {
+  color: $secondColor;
+  font-size: 18px;
+  padding: 10px 30px;
+  font-weight: bold;
+
+  &:hover {
+    background: $secondColor;
+    border-radius: 30px;
+    color: $baseColor;
+  }
+}
+
+.fullContainer {
+  display: flex;
+  justify-content: center;
+
+  .contentSection {
+    width: 100%;
+    margin-top: 50px;
+    max-width: 500px;
+    height: 550px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px #000;
+
+    .content {
+
+      .brandLogo {
+
+        .logo {
+          width: 100%;
+          max-width: 250px;
+          max-height: 150px;
+          margin: 1em auto;
+        }
+      }
+    }
+
+    .contentLog {
+      margin: 1em;
+
+      input[type="email"],
+      input[type="password"] {
+        border: 0;
+        background: none;
+        display: block;
+        text-align: center;
+        border-bottom: 1.5px solid $baseColor;
+        padding: 12px 10px;
+        width: 360px;
+        height: 50px;
+        outline: none;
+        color: $baseColor;
+        transition: 0.25s;
+
+        &:focus {
+          width: 370px;
+          border-color: $baseColor;
+        }
       }
 
-      &:focus {
+      input[type="submit"] {
+        border: 0;
+        background: none;
+        margin: 25px auto 20px;
+        border: 2px solid $baseColor;
+        padding: 12px 10px;
+        width: 200px;
+        outline: none;
+        color: $baseColor;
+        border-radius: 25px;
+        transition: 0.25s;
+        cursor: pointer;
 
-       color: $baseColor;
-       font-size: 12px;
-       font-weight: bold;
-
+        &:hover {
+          background: $baseColor;
+          border: 2px solid $baseColor;
+          color: $secondColor;
+        }
       }
-     }
+    }
 
-     button[type="button"] {
-      border: 0;
-      background: none;
-      display: inline-block;
-      // margin: 25px auto 20px;
-      border: 2px solid $baseColor;
-      padding: 10px 10px;
-      width: 45px;
+    .textLog {
+      margin: 0 0 0 20px;
       color: $baseColor;
-      border-radius: 50%;
-      transition: 0.25s;
-      cursor: pointer;
+    }
+  }
 
+  .contentMenu {
+    width: 100%;
+    margin-top: 50px;
+    max-width: 500px;
+    height: 550px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px #000;
 
-     }
+    .content {
 
-     .btn-PopSam {
+      .brandLogo {
+
+        .logo {
+          width: 100%;
+          max-width: 250px;
+          max-height: 150px;
+          margin: 1em auto;
+        }
+      }
+    }
+
+    .contentBtnMenu {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 20px;
-
-     }
-    }
-   }
-  }
-
-  .variavelPresent {
-   display: none;
-  }
-
-  .variavelPresentActive {
-   display: block;
-  }
-
-  #variavelText {
-   margin: -10px auto 20px;
-   color: $baseColor;
-  }
-
-  select {
-   width: 50%;
-   margin-top: 15px;
-   color: $baseColor;
-   font: inherit;
-   font-size: 16px;
-   background-color: #fff;
-   border: 1px solid $baseColor;
-   border-top: none;
-   border-right: none;
-   border-left: none;
-
-   display: inline-block;
-
-   line-height: 1.5em;
-   padding: 0.5em 3.5em 0.5em 1em;
-   margin: 0;
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;
-   -webkit-appearance: none;
-   -moz-appearance: none;
-
-
-
-   .textVariable {
-    color: $baseColor;
-    font-weight: bold;
-   }
-
-   .arrow {
-    margin-left: 10px;
-   }
-
-
-
-
-  }
-
-
-
-  .valorContent {
-   margin: 5px auto;
-   text-align: center;
-
-   .chipsPresent {
-    display: none;
-   }
-
-   .chipsActive {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-
-
-   }
-
-   #presentText {
-    padding-bottom: 20px;
-   }
-
-   p {
-    margin: 0 5px;
-    color: #fff;
-    display: inline-block;
-    background: $baseColor;
-    padding: 5px 35px;
-    border-radius: 30px;
-    position: relative;
-    box-shadow: .2px .2px 2px #000;
-
-    label {
-     margin: auto;
-     width: 10px;
-     height: 10px;
-     top: 0px;
-     right: 15px;
-     position: absolute;
-    }
-
-   }
-  }
-
-  .contentBtn {
-   padding: 20px;
-
-   .btnCalculate {
-    padding: 10px 20px;
-    background-color: #fff;
-    border: 2px solid $baseColor;
-    border-radius: 25px;
-    color: $baseColor;
-    cursor: pointer;
-
-    &:hover {
-     background: $baseColor;
-     color: #fff;
-    }
-   }
-
-   .btnImport {
-    padding: 10px 20px;
-    background-color: #fff;
-    border: 2px solid $baseColor;
-    border-radius: 25px;
-    color: $baseColor;
-    cursor: pointer;
-
-    &:hover {
-     background: $baseColor;
-     color: #fff;
-    }
-   }
-  }
-
-  #valueOrganize:focus{
-    border-color: $baseColor;
-  }
-
-  #modalValue {
-   margin-bottom: 0px;
-   display: none;
-
-   .textInput2 {
-    font-size: 15px;
-    color: $baseColor;
-    margin-top: 20px;
-    margin-bottom: 0px;
-   }
-  }
-
-  #modalValue-Active {
-   display: block;
-
-   .textInput2 {
-     display: block;
-     font-weight: bolder;
-    font-size: 15px;
-    color: $baseColor;
-    margin-top: 20px;
-    margin-bottom: 0px;
-   }
-
-   .modalPresent{
-     display:none;
-   }
-
-   .modalPresentActive{
-     display: block;
-     margin: 0 auto;
-     text-align: center;
-   }
-
-
-   #modalPresent{
-     padding-bottom: 2px;
-   }
-
-   p {
-    margin: 0 5px;
-    color: #fff;
-    display: inline-block;
-    background: $baseColor;
-    padding: 5px 35px;
-    border-radius: 30px;
-    position: relative;
-    box-shadow: .2px .2px 2px #000;
-
-      label {
-      margin: auto;
-      width: 10px;
-      height: 10px;
-      top: 0px;
-      right: 15px;
-      position: absolute;
-      }
-    }
-   
-  }
-
-  .content-Result {
-   display: none;
-  }
-
-  .content-ResultActive {
-   margin: 0 auto;
-   display: block;
-
-   .titleResult {
-    margin: 0 auto;
-
-    h2 {
-     text-align: center;
-     color: $baseColor;
-     padding: 20px;
-     display: block;
-    }
-   }
-
-   .resultDemonstration {
-    display: block;
-    text-align: center;
-
-    .TabControl {
-     width: 100%;
-     overflow: hidden;
-     margin: 0px auto;
-     display: block;
-
-
-    }
-
-    .TabControl #header {
-     display: flex;
-     justify-content: space-evenly;
-     margin: 0 auto;
-     overflow: hidden;
-     cursor: pointer;
-
-    }
-
-    .TabControl #content {
-     width: 100%;
-     overflow: hidden;
-     height: 100%;
-    }
-
-    .TabControl .abas {
-     display: block;
-
-    }
-
-    .TabControl .abas li {
-     padding: 5px;
-     display: block;
-     float: left;
-
-
-    }
-
-    .aba {
-     width: 100px;
-     height: 30px;
-     text-align: center;
-     padding-top: 5px;
-     background: rgba(59, 184, 200, 0.22);
-     transition: .1s ease-in;
-
-     span {
-      color: $baseColor;
-     }
-    }
-
-    .ativa {
-     width: 100px;
-     height: 30px;
-     text-align: center;
-     padding-top: 5px;
-     background: rgba(59, 184, 200, 0.55);
-     transition: .3s ease-in;
-    }
-
-    .ativa span,
-    .selected span {
-     color: #fff;
-    }
-
-    .TabControl #content {
-     background: #fff;
-     margin: 0 auto 20px;
-    }
-
-    .TabControl .conteudo {
-     width: 100%;
-     display: none;
-     color: $baseColor;
-    }
-
-    .selected {
-     width: 100px;
-     height: 30px;
-     border: solid 1 px;
-     border-radius: 5px 5px 0 0;
-     text-align: center;
-     padding-top: 5px;
-     background: $baseColor;
-    }
-
-    #content {
-     margin: 0 auto;
-     text-align: center;
-
-     .contentList {
-      background: #fff;
-      width: 90%;
+      flex-direction: row;
 
       ul {
-       list-style: none;
-       display: flex;
-       justify-content: space-around;
-
-       li {
-        height: 40px;
-        padding: 10px 70px 10px;
-        cursor: pointer;
-        transition: 0.105ms ease-in;
+        list-style: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin-top: 20px;
 
         a {
-         font-size: 18px;
-         color: $baseColor;
-         font-weight: bold;
+          text-decoration: none;
+
+          li {
+            padding: 50px 0;
+          }
         }
+
+      }
+
+      .btn-Menu {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 25px auto 5px;
+        text-align: center;
+        border: 2px solid $baseColor;
+        padding: 12px 10px;
+        width: 250px;
+        outline: none;
+        color: $baseColor;
+        border-radius: 25px;
+        transition: 0.3s ease-in;
+        cursor: pointer;
 
         &:hover {
-         background: rgba(59, 183, 200, 0.288);
-         color: $baseColor;
-         border-bottom: 2px solid $baseColor;
+          background: $baseColor;
+          color: $secondColor;
         }
-       }
-      }
-     }
 
-     .contentTabs {
-      width: 100%;
-      margin: 0 auto;
-      text-align: center;
-      display: none;
-
-
-      .contentBody-active {
-       display: block;
-      }
-
-
-     }
-
-     #tableDemonstration-Medias{
-       margin: auto;
-       width: 100%;
-       max-width: 500px;
-       td{
-         text-align: center;
-         box-sizing: border-box;
-         padding: 10px 15px 0;
-
-         
-       }
-       .tableTitle{
-        border-bottom: 2px solid $baseColor;
-       }
-       .tableLines{
-         border-collapse: collapse;
-         border-left: 2px solid $baseColor;
-         
-       }
-     }
-    }
-   }
-  }
-
-  .breakerContent {
-   margin: 20px auto 20px;
-   text-align: center;
-
-   .textInput {
-    font-size: 20px;
-    color: $baseColor;
-    margin: 20px auto 0px;
-    padding: 10px 0 0 0;
-   }
-   .inputDiv {
-    width: 450px;
-    margin: 10px auto;
-    padding: 50px;
-    box-sizing: border-box;
-    position: relative;
-    input[type='range'] {
-      display: block;
-      width: 350px;
-
-      &:focus{
-        outline: none;
       }
     }
-    input[type='range'],
-    input[type='range']::-webkit-slider-runnable-track,
-    input[type='range']::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    } 
-    input[type=range]::-webkit-slider-thumb {
-      background-color: #fff;
-      width: 20px;
-      height: 20px;
-      border: 3px solid $baseColor;
-      border-radius: 50%;
-      margin-top: -9px;
-    }
-    input[type=range]::-moz-range-thumb {
-      background-color: #fff;
-      width: 15px;
-      height: 15px;
-      border: 3px solid $baseColor;
-      border-radius: 50%;
-    }
-    input[type=range]::-ms-thumb {
-      background-color: #fff;
-      width: 20px;
-      height: 20px;
-      border: 3px solid $baseColor;
-      border-radius: 50%;
-    }
-    input[type=range]::-webkit-slider-runnable-track {
-      background-color: $baseColor;
-      height: 3px;
-    }
-    input[type=range]:focus::-webkit-slider-runnable-track {
-      outline: none;
-    }
-    input[type=range]::-moz-range-track {
-      background-color: $baseColor;
-      height: 3px;
-    }
-    input[type=range]::-ms-track {
-      background-color: $baseColor;
-      height: 3px;
-    }
-    input[type=range]::-ms-fill-lower {
-      background-color: #000;
-    }
-    input[type=range]::-ms-fill-upper {
-      background-color: black;
-    } 
-
-    #etiqueta{
-      position: absolute;
-      z-index: 9;
-      color: #fff;
-      font-weight: bold;
-      background-color: $baseColor;
-      width: 30px;
-      height: 25px;
-      font-size: 1em;
-      text-align: center;
-      padding-top: 12px;
-      top: -5px;
-
-      &::after{
-        content: "";
-        display: block;
-        width: 10px;
-        height: 10px;
-        -webkit-transform: rotate(45deg);
-        -mox-transform: rotate(45deg);
-        -ms-transform:  rotate(45deg);
-        transform:  rotate(45deg);
-        z-index: 8;
-        background-color: $baseColor;
-        position: relative;
-        left: 9px;
-        top: 2px;
-      }  
-    }
-
-  }
-   
-  .contentBtn{
-    margin-top: -20px;
-    padding: 0px 0 20px 0;
-  }
-
-  .content-Breaker-Result{
-    p{
-      color: $baseColor;
-      font-weight: 500;
-      padding: 10px;
-    }
-  }
-   
-  }
 
 
-  .reloadPage {
-   margin: 0 auto 20px;
-   text-align: center;
-   padding: 20px;
-
-   input[type="button"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 25px auto;
-    text-align: center;
-    border: 2px solid $baseColor;
-    padding: 12px 10px;
-    width: 250px;
-    outline: none;
-    color: $baseColor;
-    border-radius: 25px;
-    transition: 0.25s;
-
-    &:hover {
-     border-color: $baseColor;
-     background: $baseColor;
-     color: #fff;
-    }
-   }
-  }
-
-  #tableDemonstration {
-   margin: 30px auto;
-
-   tr{
-     &:nth-child(even) {background: rgba(59, 184, 200, 0.07)}
-   }
-
-   .tableTitle {
-    font-size: 20px;
-    color: $baseColor;
-    font-weight: bolder;
-    letter-spacing: 3px;
-   }
-
-
-   .tdVet {
-    border-collapse: collapse;
-    text-align: center;
-    padding: 10px;
-    border-bottom: 2px solid $baseColor;
-   }
-
-   .tableLines {
-    border-left: 2px solid $baseColor;
-
-   }
-
-  }
-
- }
-
- #btnCalculateBreaker{
-  padding: 10px 20px;
-  background-color: #fff;
-  border: 2px solid $baseColor;
-  border-radius: 25px;
-  color: $baseColor;
-  cursor: pointer;
-
-  &:hover {
-   background: $baseColor;
-   color: #fff;
-  }
- }
-
- .footerContent {
-
-  width: 100%;
-  min-height: 5%;
-  margin-top: auto;
-  background-color: #fff;
-
-  .footerMenu {
-   margin: auto;
-   text-align: center;
-
-   ul {
-    li {
-     color: $baseColor;
-     font-weight: bold;
-     margin: 10px auto 0;
-     display: inline-block;
-     padding: 0px 50px;
-    }
-   }
-  }
- }
-}
-
-
-@media screen and(max-width:600px) {
-  header{
-    height: 15%;
-  }
- .MobileActive {
-  left: 0px;
-  display: block;
-  width: 100%;
-
-  height: calc(100vh - 50px);
-  top: 50px;
-  position: absolute;
-  text-align: center;
-  background: #fff;
-
-
-
-  ul {
-   li {
-
-    color: $baseColor;
-    font-size: 15px;
-    font-weight: 700;
-    padding: 10px 30px;
-    margin: 30% auto 20px auto;
-    display: block;
-    font-size: 15px;
-   }
-  }
- }
-
- .bodyFull {
-  margin: 0 auto;
-
-  header {
-
-
-   #navMenu {
-    text-align: center;
-
-    ul {
-     li {
-      display: none;
-
-     }
-    }
-   }
-
-   .toggle {
-    display: block;
-
-    .Active {
-     &.hamburguer {
-      transform: rotate(45deg);
-
-      &::before {
-       transform: rotate(90deg);
-       top: 0;
-      }
-
-      &::after {
-       transform: rotate(90deg);
-       bottom: 0;
-      }
-     }
-
-
-    }
-   }
 
 
   }
 
-  .formsLog {
-   margin-top: -50px;
-   margin-bottom: 25px;
-  }
-
-  #sectionDescriptive {
-   
-   
-
-
-   .boxContent {
-    display: block;
+  .contentDescritive {
     width: 100%;
-    max-width: 370px;
-    padding: 0 15px;
+    margin-top: 50px;
+    max-width: 500px;
     background: #fff;
-    margin: auto;
     border-radius: 30px;
     box-shadow: 2px 2px 10px #000;
-    -webkit-animation-name: fadeInLeft;
-    animation-name: fadeInLeft;
-    
 
+    .content {
 
-    .logoImg {
+      .brandLogo {
 
-     display: block;
-     text-align: center;
-
-     img {
-      width: 100%;
-      max-width: 250px;
-      max-height: 125px;
-     }
+        .logo {
+          width: 100%;
+          max-width: 250px;
+          max-height: 150px;
+          margin: 1em auto;
+        }
+      }
     }
 
-
-
-    .pageDescritive {
-     margin: auto;
-
-     .inputData {
-      text-align: center;
+    .bodyDescritive {
+      display: flex;
+      justify-content: center;
 
       .textInput {
-       font-size: 20px;
-       color: $baseColor;
-       margin-top: 20px;
-
+        font-size: 1.2em;
+        color: $baseColor;
+        margin-top: 20px;
+        text-align: center;
       }
 
       input[type="text"] {
-       border: 0;
-       background: none;
-       display: inline-block;
-       margin: 25px auto 20px;
-       text-align: center;
-       border: 2px solid $baseColor;
-       padding: 10px 20px;
-       width: 200px;
-       outline: none;
-       color: $baseColor;
-       border-radius: 25px;
-       transition: 0.25s;
-
-       &::placeholder {
+        border: 0;
+        background: none;
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+        border: 2px solid $baseColor;
+        padding: 10px 20px;
+        width: 400px;
+        outline: none;
         color: $baseColor;
-       }
+        border-radius: 25px;
+        transition: 0.25s;
 
-       &:focus {
+        &::placeholder {
+          color: $baseColor;
+        }
 
+        &:focus {
+
+          color: $baseColor;
+          font-size: 12px;
+          font-weight: bold;
+
+        }
+      }
+
+      small {
         color: $baseColor;
-        font-size: 12px;
+        text-align: center;
+        display: block;
+      }
+
+      .variavelPresent {
+        display: none;
+      }
+
+      .variavelPresentActive {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+
+        p {
+          color: $baseColor;
+          font-weight: 600;
+          margin-bottom: -15px;
+        }
+      }
+
+      .textVariable {
+        display: block;
+        margin: 20px auto 0;
+        color: $baseColor;
         font-weight: bold;
-
-       }
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-color: $baseColor;
       }
 
-      button[type="button"] {
-       border: 0;
-       background: none;
-       display: inline-block;
-       // margin: 25px auto 20px;
-       border: 2px solid $baseColor;
-       padding: 10px 10px;
-       width: 45px;
-       color: $baseColor;
-       border-radius: 50%;
-       transition: 0.25s;
-       cursor: pointer;
-
-
-      }
-
-      .btn-PopSam {
-       display: block;
-       margin: 20px auto 20px auto;
-
-
-
-       input[type="radio"] {
+      #modalValue {
+        margin-bottom: 0px;
         display: none;
 
-        &:checked+label {
-         padding: 5px 15px;
-         background: $baseColor;
-         color: #fff;
+        .textInput2 {
+          font-size: 15px;
+          color: $baseColor;
+          margin-top: 20px;
+          margin-bottom: 0px;
+          text-align: center;
         }
+      }
 
-        &:checked+label:before {
-         display: none;
-        }
 
-       }
-
-       label {
-        margin: auto;
-        color: $baseColor;
-        padding: 5px 20px 5px 51px;
+      #modalValue-Active {
         display: block;
-        width: 150px;
-        font-size: 1em;
-        border-radius: 3px;
+
+        .textInput2 {
+          display: block;
+          font-weight: bolder;
+          font-size: 15px;
+          color: $baseColor;
+          margin-top: 20px;
+          margin-bottom: 0px;
+          text-align: center;
+        }
+
+        .modalPresent {
+          display: none;
+        }
+
+        .modalPresentActive {
+          display: block;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+
+        #modalPresent {
+          padding-bottom: 2px;
+        }
+
+        p {
+          margin: 0 5px 5px;
+          color: #fff;
+          display: inline-block;
+          background: $baseColor;
+          padding: 5px 35px;
+          border-radius: 30px;
+          position: relative;
+          box-shadow: .2px .2px 2px #000;
+
+          label {
+            margin: auto;
+            width: 10px;
+            height: 10px;
+            top: 0px;
+            right: 15px;
+            position: absolute;
+          }
+        }
+
+        input {
+          display: block;
+          margin-bottom: 10px;
+        }
+      }
+
+      .valorContent {
+        margin-top: 10px;
+
+        input {
+          display: block;
+        }
+      }
+    }
+
+    #chipsPresent {
+      padding: 0 20px;
+
+      #presentText {
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+
+        p {
+          margin: 0 5px 5px;
+          color: #fff;
+          display: inline-block;
+          background: $baseColor;
+          padding: 5px 30px;
+          border-radius: 30px;
+          position: relative;
+          box-shadow: .2px .2px 2px #000;
+
+          label {
+            margin: auto;
+            width: 10px;
+            height: 10px;
+            top: 0px;
+            right: 15px;
+            position: absolute;
+          }
+
+        }
+      }
+    }
+
+    .contentBtn {
+      padding: 20px;
+
+      .btnCalculate {
+        padding: 10px 20px;
+        background-color: #fff;
+        border: 2px solid $baseColor;
+        border-radius: 25px;
+        color: $baseColor;
         cursor: pointer;
-        transition: all 0.3s ease;
 
         &:hover {
-         background: $baseColor;
-         color: #fff;
+          background: $baseColor;
+          color: #fff;
         }
-
-        &:before {
-         content: "";
-         width: 17px;
-         height: 17px;
-         display: block;
-         background: none;
-         border: 3px solid $baseColor;
-         border-radius: 50%;
-
-         left: 17px;
-         top: 3px;
-
-         &:hover {
-          border: 3px solid #fff;
-         }
-
-        }
-
-
-       }
-
-
-
-
       }
-     }
-    }
-   }
 
-   .variavelPresent {
+      .btnImport {
+        padding: 10px 20px;
+        background-color: #fff;
+        border: 2px solid $baseColor;
+        border-radius: 25px;
+        color: $baseColor;
+        cursor: pointer;
+
+        &:hover {
+          background: $baseColor;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .content-Result {
     display: none;
-   }
+    width: 100%;
 
-   .variavelPresentActive {
-    display: block;
-   }
-
-   #variavelText {
-    margin: -10px auto 20px;
-    color: $baseColor;
-   }
-
-   select {
-    margin-top: 15px;
-    color: $baseColor;
-    font: inherit;
-    font-size: 16px;
-    background-color: #fff;
-    border: 1px solid $baseColor;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-
-    display: inline-block;
-
-    line-height: 1.5em;
-    padding: 0.5em 3.5em 0.5em 1em;
-    margin: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-
-
-
-    .textVariable {
-     color: $baseColor;
-     font-weight: bold;
-    }
-
-    .arrow {
-     margin-left: 10px;
-    }
-
-
-
-
-   }
-
-   .valorContent {
-    margin: 5px auto;
-    text-align: center;
-
-    .chipsPresent {
-     display: none;
-    }
-
-    .chipsActive {
-     display: block;
-     margin: 0 auto;
-     text-align: center;
-
-
-    }
-
-    #presentText {
-     padding-bottom: 20px;
-    }
-
-    p {
-     margin: 0 5px;
-     color: #fff;
-     display: inline-block;
-     background: $baseColor;
-     padding: 10px 35px;
-     border-radius: 30px;
-     position: relative;
-     box-shadow: .2px .2px 2px #000;
-
-     label {
-      margin: auto;
-      width: 10px;
-      height: 10px;
-      top: 0px;
-      right: 15px;
-      position: absolute;
-     }
-
-    }
-   }
-
-   .contentBtn {
-    padding: 20px;
-
-    .btnCalculate {
-     padding: 10px 20px;
-     background-color: #fff;
-     border: 2px solid $baseColor;
-     border-radius: 25px;
-     color: $baseColor;
-     cursor: pointer;
-
-     &:hover {
-      background: $baseColor;
-      color: #fff;
-     }
-    }
-
-    .btnImport {
-     padding: 10px 20px;
-     background-color: #fff;
-     border: 2px solid $baseColor;
-     border-radius: 25px;
-     color: $baseColor;
-     cursor: pointer;
-
-     &:hover {
-      background: $baseColor;
-      color: #fff;
-     }
-    }
-   }
-
-   #modalValue {
-    margin-bottom: 0px;
-    display: none;
-   }
-
-   #modalValue-Active {
-    display: block;
-
-    .textInput2 {
-     font-size: 15px;
-     color: $baseColor;
-     margin-top: 20px;
-     margin-bottom: 0px;
-    }
-   }
-
-
-   .content-Result {
-    display: none;
-   }
-
-   .content-ResultActive {
-    margin: -20px auto;
-    display: block;
-
-    .titleResult {
-     margin: 0 auto;
-
-     h2 {
+    h2 {
       text-align: center;
       color: $baseColor;
       padding: 20px;
       display: block;
-     }
     }
+  }
 
-    .resultDemonstration {
-     display: block;
-     text-align: center;
+  .content-ResultActive {
+    margin: 0px auto;
+    display: block;
+    width: 100%;
 
-     .TabControl {
-      width: 100%;
-      overflow: hidden;
-      margin: 0px auto;
-      display: block;
-
-
-     }
-
-     .TabControl #header {
-      margin: auto;
-      overflow: hidden;
-      cursor: pointer;
-
-     }
-
-     .TabControl #content {
-      width: 100%;
-      overflow: hidden;
-      height: 100%;
-     }
-
-     .TabControl .abas {
-      display: block;
-
-     }
-
-     .TabControl .abas li {
-      padding: 5px;
-      display: block;
-      float: left;
-
-
-     }
-
-     .aba {
-      width: 100px;
-      height: 30px;
-      text-align: center;
-      padding-top: 5px;
-      background: rgba(59, 184, 200, 0.22);
-      transition: .1s ease-in;
-
-      span {
-       color: $baseColor;
-      }
-     }
-
-     .ativa {
-      width: 100px;
-      height: 30px;
-      text-align: center;
-      padding-top: 5px;
-      background: rgba(59, 184, 200, 0.55);
-      transition: .3s ease-in;
-     }
-
-     .ativa span,
-     .selected span {
-      color: #fff;
-     }
-
-     .TabControl #content {
-      background: #fff;
-      margin: 0 auto 20px;
-     }
-
-     .TabControl .conteudo {
-      width: 100%;
-      display: none;
-      color: $baseColor;
-     }
-
-     .selected {
-      width: 100px;
-      height: 30px;
-      border: solid 1 px;
-      border-radius: 5px 5px 0 0;
-      text-align: center;
-      padding-top: 5px;
-      background: $baseColor;
-     }
-
-     .content {
+    .titleResult {
       margin: 0 auto;
-      text-align: center;
 
-      .contentList {
-       background: #fff;
-       width: 90%;
-
-       ul {
-        list-style: none;
-        display: flex;
-        justify-content: space-around;
-
-        li {
-         height: 40px;
-         padding: 10px 70px 10px;
-         cursor: pointer;
-         transition: 0.105ms ease-in;
-
-         a {
-          font-size: 18px;
-          color: $baseColor;
-          font-weight: bold;
-         }
-
-         &:hover {
-          background: rgba(59, 183, 200, 0.288);
-          color: $baseColor;
-          border-bottom: 2px solid $baseColor;
-         }
-        }
-       }
-      }
-
-      .contentTabs {
-       width: 100%;
-       margin: 0 auto;
-       text-align: center;
-       display: none;
-
-
-       .contentBody-active {
+      h2 {
+        text-align: center;
+        color: $baseColor;
+        padding: 20px;
         display: block;
-       }
+      }
+    }
 
+
+    #nav-tab {
+
+      #nav-table-tab,
+      #nav-graphic-tab {
+        width: 150px;
+        color: $baseColor;
 
       }
-     }
     }
-   }
+  }
 
-   .breakerContent { 
-    .textInput {
-     font-size: 15px;
+  #tableDemonstration {
+    margin: 20px auto;
+
+    .tableTitle {
+      font-size: 20px;
+      color: $baseColor;
+      font-weight: bolder;
     }
-    .inputDiv {
-      width: 270px;
-     padding: 30px 0!important;
-     float: left;
- 
-     #etiqueta{
-       position: absolute;
-       z-index: 9;
-       color: #fff;
-       font-weight: bold;
-       background-color: $baseColor;
-       width: 30px;
-       height: 35px;
-       font-size: 1em;
-       text-align: center;
-       padding-top: 12px;
-       top: -5px;
-  
-     }
- 
-   }
-    
-   .contentBtn{
-     margin-top: -20px;
-     padding: 0px 0 20px 0;
-   }
- 
-   .content-Breaker-Result{
-     p{
-       color: $baseColor;
-       font-weight: 500;
-       padding: 10px;
-     }
-   }
-    
-   }
-   .reloadPage {
+
+
+    .tdVet {
+      border-collapse: collapse;
+      text-align: center;
+      padding: 6px;
+      border-bottom: 2px solid $baseColor;
+
+      p {
+        color: $baseColor;
+        margin-bottom: 0;
+      }
+    }
+
+    .tableLines {
+      border-left: 2px solid $baseColor;
+
+    }
+
+  }
+
+  #tableDemonstration-Medias {
+    .tableTitle {
+      font-size: 18px;
+      color: $baseColor;
+      font-weight: bolder;
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+
+    .tdVet {
+      border-collapse: collapse;
+      text-align: center;
+      border-bottom: 2px solid $baseColor;
+
+      p {
+        color: $baseColor;
+        margin-bottom: 0;
+      }
+    }
+
+    .tableLines {
+      border-left: 2px solid $baseColor;
+
+    }
+
+  }
+  .reloadPage {
     margin: 0 auto 20px;
     text-align: center;
     padding: 20px;
-
+ 
     input[type="button"] {
      border: 0;
      background: none;
@@ -1663,7 +549,7 @@ body {
      color: $baseColor;
      border-radius: 25px;
      transition: 0.25s;
-
+ 
      &:hover {
       border-color: $baseColor;
       background: $baseColor;
@@ -1672,245 +558,193 @@ body {
     }
    }
 
-   // Tabelas
-   #tableDemonstration {
-    margin: 30px auto;
-
-    .tableTitle {
-     font-size: 20px;
-     color: $baseColor;
-     font-weight: bolder;
-     letter-spacing: 3px;
-    }
-
-
-    .tdVet {
-     border-collapse: collapse;
+   .breakerContent{
+     margin:20px auto 20px;
      text-align: center;
-     padding: 10px;
-     border-bottom: 2px solid $baseColor;
-    }
 
-    .tableLines {
-     border-left: 2px solid $baseColor;
-
-    }
-
-   }
-  }
-
-  .footerContent {
-   bottom: 0;
-   left: 0;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   width: 100%;
-   min-height: 5%;
-
-   margin-top: auto;
-   background-color: #fff;
-
-   .footerMenu {
-    ul {
-     li {
-      display: block;
-      margin: auto;
-      padding: 20px;
+     .textInput{
+       font-size: 20px;
+       color: $baseColor;
+       
      }
-    }
-   }
-
-   ;
-  }
- }
- .bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range] {
-  display: block;
-  width: 170px;
-  margin-top: 20px;
-}
-
-}
-
-@media screen and (max-width:420px) {
- .bodyFull {
-  margin: auto;
-
-  #sectionDescriptive {
-   margin: auto;
-   padding: 10px;
-
-   .boxContent {
-    width: 100%;
-    width: 100%;
-    max-width: 320px;
-    padding: 0 50px;
-    
-    .formsLog{
-      display: flex;
-      flex-direction: column;
-      flex-flow: wrap;
-
-      .breakerContent{
-        text-align: left;
-        margin-left: 15px;
+     .selectBreaker{
+      .container{
+        
       }
     }
    }
+}
+
+
+
+
+@media screen and (max-width:1024px) {
+  .fullContainer {
+    .contentSection {
+      margin-top: 220px;
+    }
   }
+}
 
-  .content-ResultActive {
-   margin: -20px auto;
-   display: block;
+@media screen and (max-width:768px) {
+  .navContent .navbar-collapse .navbar-nav a {
+    color: $secondColor;
+    font-size: 14px;
+    padding: 10px 30px;
+    font-weight: bold;
 
-   .titleResult {
-    margin: 0 auto;
-
-    h2 {
-     text-align: center;
-     color: $baseColor;
-     padding: 20px;
-     display: block;
-    }
-   }
-
-   .resultDemonstration {
-    display: block;
-    text-align: center;
-
-    .TabControl {
-     width: 100%;
-     overflow: hidden;
-     margin: 0px auto;
-     display: block;
-
-
-    }
-
-    .TabControl #header {
-     margin: auto;
-     overflow: hidden;
-     cursor: pointer;
-
-    }
-
-    .TabControl #content {
-     width: 100%;
-     overflow: hidden;
-     height: 100%;
-    }
-
-    .TabControl .abas {
-     display: block;
-
-    }
-
-    .TabControl .abas li {
-     padding: 5px;
-     display: block;
-     float: left;
-
-
-    }
-
-    .aba {
-     width: 100px;
-     height: 30px;
-     text-align: center;
-     padding-top: 5px;
-     background: rgba(59, 184, 200, 0.22);
-     transition: .1s ease-in;
-
-     span {
+    &:hover {
+      background: $secondColor;
+      border-radius: 30px;
       color: $baseColor;
-     }
     }
-
-    .ativa {
-     width: 100px;
-     height: 30px;
-     text-align: center;
-     padding-top: 5px;
-     background: rgba(59, 184, 200, 0.55);
-     transition: .3s ease-in;
-    }
-
-    .ativa span,
-    .selected span {
-     color: #fff;
-    }
-
-    .TabControl #content {
-     background: #fff;
-     margin: 0 auto 20px;
-    }
-
-    .TabControl .conteudo {
-     width: 100%;
-     display: none;
-     color: $baseColor;
-    }
-
-    .selected {
-     width: 100px;
-     height: 30px;
-     border: solid 1 px;
-     border-radius: 5px 5px 0 0;
-     text-align: center;
-     padding-top: 5px;
-     background: $baseColor;
-    }
-
-    .content {
-     margin: 0 auto;
-     text-align: center;
-
-     .contentList {
-      background: #fff;
-      width: 90%;
-
-      ul {
-       list-style: none;
-       display: flex;
-       justify-content: space-around;
-
-       li {
-        height: 40px;
-        padding: 10px 70px 10px;
-        cursor: pointer;
-        transition: 0.105ms ease-in;
-
-        a {
-         font-size: 18px;
-         color: $baseColor;
-         font-weight: bold;
-        }
-
-        &:hover {
-         background: rgba(59, 183, 200, 0.288);
-         color: $baseColor;
-         border-bottom: 2px solid $baseColor;
-        }
-       }
-      }
-     }
-
-     .contentTabs {
-      width: 100%;
-      margin: 0 auto;
-      text-align: center;
-      display: none;
-
-
-      .contentBody-active {
-       display: block;
-      }
-
-
-     }
-    }
-   }
   }
- }
+}
 
+
+@media screen and (max-width:575px) {
+  .fullContainer {
+    .contentSection {
+      margin-top: 70px;
+    }
+
+    .bodyDescritive {
+      display: flex;
+      justify-content: center;
+
+      .textInput {
+        font-size: 1.2em;
+        color: $baseColor;
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      input[type="text"] {
+        margin: 0 auto 20px;
+        padding: 10px 20px;
+        width: 300px !important;
+        height: 60px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:400px) {
+  .fullContainer {
+    .contentSection {
+      margin-top: 10px;
+
+      .contentLog {
+
+        input[type="email"],
+        input[type="password"] {
+          width: 260px;
+          height: 50px;
+
+          &:hover {
+            width: 260px;
+          }
+        }
+      }
+
+      .textLog {
+        text-align: left;
+        margin: 0 0 1rem 20px;
+        color: $baseColor;
+      }
+    }
+
+    .bodyDescritive {
+      display: flex;
+      justify-content: center;
+
+      .textInput {
+        font-size: 1.2em;
+        color: $baseColor;
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      input[type="text"] {
+        margin: 0 auto 20px;
+        padding: 10px 20px;
+        width: 250px !important;
+        height: 60px;
+      }
+    }
+    #tableDemonstration {
+      margin: 20px auto;
+  
+      .tableTitle {
+        font-size: 17px;
+        color: $baseColor;
+        font-weight: bolder;
+      }
+  
+  
+      .tdVet {
+        border-collapse: collapse;
+        text-align: center;
+        border-bottom: 2px solid $baseColor;
+        padding:5px 0px!important;
+        margin: 5px auto !important;
+  
+        p {
+          font-size: 15px;
+          color: $baseColor;
+          margin-bottom: 0;
+          padding: 0px 2px !important;
+          
+        }
+      }
+  
+      .tableLines {
+        border-left: 2px solid $baseColor;
+  
+      }
+      
+  
+    }
+    #nav-tab {
+
+      #nav-table-tab,
+      #nav-graphic-tab {
+        width: 100px !important;
+        color: $baseColor;
+
+      }
+    }
+  
+    #tableDemonstration-Medias {
+      margin: 0 auto;
+      .tableTitle {
+        font-size: 13px;
+        color: $baseColor;
+        font-weight: bolder;
+        margin-bottom: 0;
+        
+      }
+  
+  
+      .tdVet {
+        border-collapse: collapse;
+        text-align: center;
+        border-bottom: 2px solid $baseColor;
+        padding: 5px 10px;
+        
+  
+        p {
+          color: $baseColor;
+          margin-bottom: 0;
+         
+        }
+      }
+  
+      .tableLines {
+        border-left: 2px solid $baseColor;
+  
+      }
+  
+    }
+  }
 }

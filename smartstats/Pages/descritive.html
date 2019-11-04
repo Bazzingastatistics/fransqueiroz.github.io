@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Smart Stats</title>
+  <link rel="shortcut icon" href="../assets/favicon-stats.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="../css/animate.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/output.css">
+</head>
+
+<body>
+
+  <header>
+    <div>
+      <div class="collapse navbar-collapse navMobile " id="navbarNavMobile">
+        <div class="navbar-nav m-auto">
+          <a class="nav-item nav-link" href="menu.html">Inicio</a>
+          <a class="nav-item nav-link" href="#">Criar Conta</a>
+          <a class="nav-item nav-link" href="#">Contato</a>
+          <a class="nav-item nav-link" href="#">Política de Privacidade</a>
+          <a class="nav-item nav-link" href="#">Sobre</a>
+        </div>
+      </div>
+    </div>
+    <div class="navContent">
+      <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-light ">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavMobile"
+            aria-controls="navbarNavMobile" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+          <div class="collapse navbar-collapse hidden-sm" id="navbarNavAltMarkup">
+            <div class="navbar-nav m-auto">
+              <a class="nav-item nav-link" href="menu.html">Inicio</a>
+              <a class="nav-item nav-link" href="#">Criar Conta</a>
+              <a class="nav-item nav-link" href="#">Contato</a>
+              <a class="nav-item nav-link" href="#">Política de Privacidade</a>
+              <a class="nav-item nav-link" href="#">Sobre</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <section>
+    <div class="container fullContainer">
+      <div class="contentDescritive d-block">
+        <div class="content row m-auto justify-content-center">
+          <div class="brandLogo">
+            <img class="logo" src="../assets/logoStats.png" alt="">
+          </div>
+        </div>
+        <div class="row justify-content-sm-center bodyDescritive">
+          <div class="textVariavel">
+            <p class="textInput">Informe o Nome da Variável</p>
+            <input type="text" class="nameVariable" placeholder="Digite a Variável Pesquisada" name="variables"
+              id="variables">
+            <small>Aperte Enter para Confirmar</small>
+            <div id="variavelPresent" class="variavelPresent">
+              <div>
+                <p id="variavelText">A Variável Pesquisada é: </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="btn-PopSam">
+              <select class="textVariable" name="variable" id="selectSampling">
+                <option class="textVariable" value="">Informe o Tipo de Amostragem</option>
+                <option class="textVariable" value="populacao">População</option>
+                <option class="textVariable" value="amostra">Amostra</option>
+              </select>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="typeVariable d-block m-auto">
+              <select class="textVariable" name="variable" id="selectVariable">
+                <option class="textVariable" value="">Informe o Tipo da Variável</option>
+                <option class="textVariable" value="ordinal">Qualitativa Ordinal</option>
+                <option class="textVariable" value="nominal">Qualitativa Nominal</option>
+                <option class="textVariable" value="discreta">Quantitativa Discreta</option>
+                <option class="textVariable" value="continua">Quantitativa Continua</option>
+              </select>
+              <div id="modalValue">
+                <span class="textInput2">Ordenação das variáveis ordinaisl</span>
+                <input type="text" class="nameOrganizes enterOrganize" placeholder="Ex: Ótimo, Bom, Ruim"
+                  name="organize" id="valueOrganize" required />
+                <div id="modalPresent" class="modalPresent">
+                  <div id="organizeText"></div>
+                </div>
+              </div>
+              <div class="valorContent">
+
+                <input class="enter" type="text" placeholder="Digite o valor e aperte Enter">
+                <div id="chipsPresent" class="chipsPresent">
+                  <div id="presentText"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="contentBtn">
+              <button id="btnCalculate" class="btnCalculate" type="submit">Calcular</button>
+              <button class="btnImport" type="submit">Importar Arquivo</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="content-Result">
+            <div class="titleResult">
+              <h2>Resultados</h2>
+            </div>
+            <div class="container p-4" style="padding-bottom: 0px !important;">
+              <div class="row justify-content-center">
+                <div class="col-xs-12 ">
+                  <nav>
+                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                      <a class="nav-item nav-link active" id="nav-table-tab" data-toggle="tab" href="#nav-home"
+                        role="tab" aria-controls="nav-home" aria-selected="true">Tabela</a>
+                      <a class="nav-item nav-link" id="nav-graphic-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                        aria-controls="nav-profile" aria-selected="false">Gráficos</a>
+                    </div>
+                  </nav>
+                  <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                      aria-labelledby="nav-table-tab">
+                      <div class="conteudo">
+                        <table id="tableDemonstration" cellspacing="0" celllpacing="0" border=0></table>
+
+                        <table id="tableDemonstration-Medias" cellspacing="0" celllpacing="0" border=0></table>
+
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-graphic-tab"></div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="reloadPage">
+                    <input type="button" value="Limpar">
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="breakerContent">
+                <p class="textInput">Medidas Separatrizes</p>
+                <div class="selectBreaker">
+  
+                  <select class="textVariable" name="variable" id="selectBreaker">
+                    <option class="textVariable" value="">Informe a Medida Separatriz</option>
+                    <option class="textVariable" value="4">Quartil</option>
+                    <option class="textVariable" value="5">Quintil</option>
+                    <option class="textVariable" value="10">Decil</option>
+                    <option class="textVariable" value="100">Porcentil</option>
+                  </select>
+                  <div class="container">
+                    <!-- <div class="inputDiv">
+                      
+                      <div id="etiqueta"></div>
+                      
+                      <input id="inputBreaker" type="range" value="1" min="1" max="100" autocomplete="off">
+
+                    </div> -->
+                    <form action="#">
+                        <p class="range-field">
+                          <input type="range" id="test5" min="0" max="100" autocomplete="off"/>
+                        </p>
+                      </form>
+                  </div>
+                  
+  
+                </div>
+                <div class="contentBtn">
+                    <button id="btnCalculateBreaker" class="btnCalculate2" type="submit">Calcular Separatriz</button>
+                    
+                  </div>
+                  <div class="content-Breaker-Result">
+  
+                  </div>
+              </div>
+        </div>
+        
+        
+
+
+      </div>
+    </div>
+  </section>
+
+</body>
+
+<script src="../js/jquery-3.3.1.slim.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/calculation.js"></script>
+
+</html>

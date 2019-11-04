@@ -1,553 +1,284 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
 body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-body {
+  background-color: #469ba7;
   font-family: Arial, Helvetica, sans-serif;
-  background: #3e939e;
 }
 
-.menuMobile {
-  left: -600px;
-  display: none;
+.navMobile {
+  transition: 0.3s ease-in-out;
+}
+
+.navbarMobile-Active {
   width: 100%;
-  height: calc(100vh - 50px);
-  top: 50px;
-  position: absolute;
-  text-align: center;
-  background: #fff;
-}
-.menuMobile ul li {
-  padding: 10px 30px;
-  margin: 30% auto 20px auto;
-  display: block;
-  font-size: 15px;
-}
-.menuMobile ul li a {
-  text-decoration: none;
-  color: #3e939e;
-}
-
-.bodyFull {
-  margin: 0 auto;
   height: 100vh;
-}
-.bodyFull header {
-  width: 100%;
-  height: 16%;
-  background-color: #3e939e;
-}
-.bodyFull header #navMenu {
-  text-align: center;
-}
-.bodyFull header #navMenu ul li {
-  display: inline-block;
-  margin: 20px auto 20px auto;
-}
-.bodyFull header #navMenu ul li a {
-  text-decoration: none;
-  color: #fff;
-  padding: 10px 30px;
-  font-size: 15px;
-  font-weight: bolder;
-}
-.bodyFull header #navMenu ul li a:hover {
-  color: #3e939e;
-  background-color: #fff;
-  border-radius: 20px;
-}
-.bodyFull header .toggle {
-  display: none;
-  background: #3e939e;
-  width: 60px;
-  height: 60px;
-  right: 25px;
-}
-.bodyFull header .toggle .hamburguer {
-  position: relative;
-  display: block;
-  background: #fff;
-  width: 30px;
-  height: 2px;
-  top: 29px;
-  left: 15px;
-  transition: 0.5s ease-in-out;
-}
-.bodyFull header .toggle .hamburguer:before,
-.bodyFull header .toggle .hamburguer:after {
-  background: #fff;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
+  display: flex;
   position: absolute;
-  transition: 0.5s ease-in-out;
+  top: 51px;
+  left: 0px;
+  background: white;
+  padding: 80px;
+  z-index: 9;
 }
-.bodyFull header .toggle .hamburguer:before {
-  top: -10px;
+.navbarMobile-Active div a {
+  text-align: center;
+  padding: 40px;
+  color: #469ba7;
+  font-size: 1.2em;
 }
-.bodyFull header .toggle .hamburguer:after {
-  bottom: -10px;
+
+.navbar-toggler-icon {
+  filter: invert(1);
 }
-.bodyFull .sectionContent {
-  width: calc(100%-30);
-  height: 75%;
-  padding: 0 15px;
-  margin-bottom: 35px;
+
+.navContent .navbar-collapse .navbar-nav a {
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 30px;
+  font-weight: bold;
 }
-.bodyFull .sectionContent .boxContent {
-  display: block;
-  width: 100%;
-  max-width: 500px;
+.navContent .navbar-collapse .navbar-nav a:hover {
   background: #fff;
-  margin: 0 auto;
+  border-radius: 30px;
+  color: #469ba7;
+}
+
+.fullContainer {
+  display: flex;
+  justify-content: center;
+}
+.fullContainer .contentSection {
+  width: 100%;
+  margin-top: 50px;
+  max-width: 500px;
+  height: 550px;
+  background: #fff;
   border-radius: 30px;
   box-shadow: 2px 2px 10px #000;
 }
-.bodyFull .sectionContent .boxContent .logoImg {
-  display: block;
-  text-align: center;
-}
-.bodyFull .sectionContent .boxContent .logoImg img {
+.fullContainer .contentSection .content .brandLogo .logo {
   width: 100%;
   max-width: 250px;
-  max-height: 125px;
+  max-height: 150px;
+  margin: 1em auto;
 }
-.bodyFull .sectionContent .boxContent .formsLog {
-  display: block;
-  text-align: center;
-  margin: 0 auto 20px auto;
+.fullContainer .contentSection .contentLog {
+  margin: 1em;
 }
-.bodyFull .sectionContent .boxContent .formsLog form {
-  padding: 10px;
-}
-.bodyFull .sectionContent .boxContent .formsLog input[type=email],
-.bodyFull .sectionContent .boxContent .formsLog input[type=password] {
+.fullContainer .contentSection .contentLog input[type=email],
+.fullContainer .contentSection .contentLog input[type=password] {
   border: 0;
   background: none;
   display: block;
-  margin: 25px auto;
   text-align: center;
-  border: 2px solid #3e939e;
+  border-bottom: 1.5px solid #469ba7;
   padding: 12px 10px;
-  width: 250px;
+  width: 360px;
+  height: 50px;
   outline: none;
-  color: #3e939e;
-  border-radius: 25px;
+  color: #469ba7;
   transition: 0.25s;
 }
-.bodyFull .sectionContent .boxContent .formsLog input[type=email]:hover,
-.bodyFull .sectionContent .boxContent .formsLog input[type=password]:hover {
+.fullContainer .contentSection .contentLog input[type=email]:focus,
+.fullContainer .contentSection .contentLog input[type=password]:focus {
   width: 370px;
-  border-color: #3e939e;
+  border-color: #469ba7;
 }
-.bodyFull .sectionContent .boxContent .formsLog input[type=email]:focus,
-.bodyFull .sectionContent .boxContent .formsLog input[type=password]:focus {
-  width: 370px;
-  border-color: #3e939e;
-}
-.bodyFull .sectionContent .boxContent .formsLog input[type=submit] {
+.fullContainer .contentSection .contentLog input[type=submit] {
   border: 0;
   background: none;
-  display: block;
   margin: 25px auto 20px;
-  text-align: center;
-  border: 2px solid #3e939e;
+  border: 2px solid #469ba7;
   padding: 12px 10px;
-  width: 100px;
+  width: 200px;
   outline: none;
-  color: #3e939e;
+  color: #469ba7;
   border-radius: 25px;
   transition: 0.25s;
   cursor: pointer;
 }
-.bodyFull .sectionContent .boxContent .formsLog input[type=submit]:hover {
-  background: #3e939e;
-  border: 2px solid #3e939e;
+.fullContainer .contentSection .contentLog input[type=submit]:hover {
+  background: #469ba7;
+  border: 2px solid #469ba7;
   color: #fff;
 }
-.bodyFull .sectionContent .boxContent .formsLog p {
-  display: inline-block;
-  color: #3e939e;
-  margin-bottom: 20px;
+.fullContainer .contentSection .textLog {
+  margin: 0 0 0 20px;
+  color: #469ba7;
 }
-.bodyFull .sectionContent .boxContent .formsLog p:hover {
-  text-decoration: underline;
+.fullContainer .contentMenu {
+  width: 100%;
+  margin-top: 50px;
+  max-width: 500px;
+  height: 550px;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 2px 2px 10px #000;
 }
-.bodyFull .sectionContent .menuList {
-  padding: 20px;
+.fullContainer .contentMenu .content .brandLogo .logo {
+  width: 100%;
+  max-width: 250px;
+  max-height: 150px;
+  margin: 1em auto;
+}
+.fullContainer .contentMenu .contentBtnMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.fullContainer .contentMenu .contentBtnMenu ul {
   list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin-top: 20px;
 }
-.bodyFull .sectionContent .menuList a {
+.fullContainer .contentMenu .contentBtnMenu ul a {
   text-decoration: none;
 }
-.bodyFull .sectionContent .menuList .btn-Menu {
+.fullContainer .contentMenu .contentBtnMenu ul a li {
+  padding: 50px 0;
+}
+.fullContainer .contentMenu .contentBtnMenu .btn-Menu {
   border: 0;
   background: none;
   display: block;
   margin: 25px auto 5px;
   text-align: center;
-  border: 2px solid #3e939e;
+  border: 2px solid #469ba7;
   padding: 12px 10px;
   width: 250px;
   outline: none;
-  color: #3e939e;
+  color: #469ba7;
   border-radius: 25px;
-  transition: 0.25s;
+  transition: 0.3s ease-in;
   cursor: pointer;
 }
-.bodyFull .sectionContent .menuList .btn-Menu :before {
-  margin-bottom: 20px;
-}
-.bodyFull .sectionContent .menuList .btn-Menu:hover {
-  background: #3e939e;
-  border: 2px solid #3e939e;
+.fullContainer .contentMenu .contentBtnMenu .btn-Menu:hover {
+  background: #469ba7;
   color: #fff;
 }
-.bodyFull #sectionDescriptive {
+.fullContainer .contentDescritive {
   width: 100%;
-  margin-bottom: 15%;
-}
-.bodyFull #sectionDescriptive .boxContent {
-  display: block;
-  width: 100%;
-  max-width: 650px;
+  margin-top: 50px;
+  max-width: 500px;
   background: #fff;
-  margin: auto;
   border-radius: 30px;
   box-shadow: 2px 2px 10px #000;
 }
-.bodyFull #sectionDescriptive .boxContent .logoImg {
-  display: block;
-  text-align: center;
-}
-.bodyFull #sectionDescriptive .boxContent .logoImg img {
+.fullContainer .contentDescritive .content .brandLogo .logo {
   width: 100%;
   max-width: 250px;
-  max-height: 125px;
+  max-height: 150px;
+  margin: 1em auto;
 }
-.bodyFull #sectionDescriptive .boxContent .pageDescritive {
-  margin: auto;
+.fullContainer .contentDescritive .bodyDescritive {
+  display: flex;
+  justify-content: center;
 }
-.bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData {
+.fullContainer .contentDescritive .bodyDescritive .textInput {
+  font-size: 1.2em;
+  color: #469ba7;
+  margin-top: 20px;
   text-align: center;
 }
-.bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .textInput {
-  font-size: 20px;
-  color: #3e939e;
-  margin-top: 20px;
-}
-.bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData input[type=text] {
+.fullContainer .contentDescritive .bodyDescritive input[type=text] {
   border: 0;
   background: none;
   display: inline-block;
-  margin: 25px auto 20px;
+  margin: 0 auto;
   text-align: center;
-  border: 2px solid #3e939e;
+  border: 2px solid #469ba7;
   padding: 10px 20px;
   width: 400px;
   outline: none;
-  color: #3e939e;
+  color: #469ba7;
   border-radius: 25px;
   transition: 0.25s;
 }
-.bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData input[type=text]::placeholder {
-  color: #3e939e;
+.fullContainer .contentDescritive .bodyDescritive input[type=text]::placeholder {
+  color: #469ba7;
 }
-.bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData input[type=text]:focus {
-  color: #3e939e;
+.fullContainer .contentDescritive .bodyDescritive input[type=text]:focus {
+  color: #469ba7;
   font-size: 12px;
   font-weight: bold;
 }
-.bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData button[type=button] {
-  border: 0;
-  background: none;
-  display: inline-block;
-  border: 2px solid #3e939e;
-  padding: 10px 10px;
-  width: 45px;
-  color: #3e939e;
-  border-radius: 50%;
-  transition: 0.25s;
-  cursor: pointer;
+.fullContainer .contentDescritive .bodyDescritive small {
+  color: #469ba7;
+  text-align: center;
+  display: block;
 }
-.bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam {
+.fullContainer .contentDescritive .bodyDescritive .variavelPresent {
+  display: none;
+}
+.fullContainer .contentDescritive .bodyDescritive .variavelPresentActive {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 10px auto;
 }
-.bodyFull #sectionDescriptive .variavelPresent {
-  display: none;
+.fullContainer .contentDescritive .bodyDescritive .variavelPresentActive p {
+  color: #469ba7;
+  font-weight: 600;
+  margin-bottom: -15px;
 }
-.bodyFull #sectionDescriptive .variavelPresentActive {
+.fullContainer .contentDescritive .bodyDescritive .textVariable {
   display: block;
-}
-.bodyFull #sectionDescriptive #variavelText {
-  margin: -10px auto 20px;
-  color: #3e939e;
-}
-.bodyFull #sectionDescriptive select {
-  width: 50%;
-  margin-top: 15px;
-  color: #3e939e;
-  font: inherit;
-  font-size: 16px;
-  background-color: #fff;
-  border: 1px solid #3e939e;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  display: inline-block;
-  line-height: 1.5em;
-  padding: 0.5em 3.5em 0.5em 1em;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-.bodyFull #sectionDescriptive select .textVariable {
-  color: #3e939e;
+  margin: 20px auto 0;
+  color: #469ba7;
   font-weight: bold;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: #469ba7;
 }
-.bodyFull #sectionDescriptive select .arrow {
-  margin-left: 10px;
-}
-.bodyFull #sectionDescriptive .valorContent {
-  margin: 5px auto;
-  text-align: center;
-}
-.bodyFull #sectionDescriptive .valorContent .chipsPresent {
-  display: none;
-}
-.bodyFull #sectionDescriptive .valorContent .chipsActive {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-}
-.bodyFull #sectionDescriptive .valorContent #presentText {
-  padding-bottom: 20px;
-}
-.bodyFull #sectionDescriptive .valorContent p {
-  margin: 0 5px;
-  color: #fff;
-  display: inline-block;
-  background: #3e939e;
-  padding: 5px 35px;
-  border-radius: 30px;
-  position: relative;
-  box-shadow: 0.2px 0.2px 2px #000;
-}
-.bodyFull #sectionDescriptive .valorContent p label {
-  margin: auto;
-  width: 10px;
-  height: 10px;
-  top: 0px;
-  right: 15px;
-  position: absolute;
-}
-.bodyFull #sectionDescriptive .contentBtn {
-  padding: 20px;
-}
-.bodyFull #sectionDescriptive .contentBtn .btnCalculate {
-  padding: 10px 20px;
-  background-color: #fff;
-  border: 2px solid #3e939e;
-  border-radius: 25px;
-  color: #3e939e;
-  cursor: pointer;
-}
-.bodyFull #sectionDescriptive .contentBtn .btnCalculate:hover {
-  background: #3e939e;
-  color: #fff;
-}
-.bodyFull #sectionDescriptive .contentBtn .btnImport {
-  padding: 10px 20px;
-  background-color: #fff;
-  border: 2px solid #3e939e;
-  border-radius: 25px;
-  color: #3e939e;
-  cursor: pointer;
-}
-.bodyFull #sectionDescriptive .contentBtn .btnImport:hover {
-  background: #3e939e;
-  color: #fff;
-}
-.bodyFull #sectionDescriptive #valueOrganize:focus {
-  border-color: #3e939e;
-}
-.bodyFull #sectionDescriptive #modalValue {
+.fullContainer .contentDescritive .bodyDescritive #modalValue {
   margin-bottom: 0px;
   display: none;
 }
-.bodyFull #sectionDescriptive #modalValue .textInput2 {
+.fullContainer .contentDescritive .bodyDescritive #modalValue .textInput2 {
   font-size: 15px;
-  color: #3e939e;
+  color: #469ba7;
   margin-top: 20px;
   margin-bottom: 0px;
+  text-align: center;
 }
-.bodyFull #sectionDescriptive #modalValue-Active {
+.fullContainer .contentDescritive .bodyDescritive #modalValue-Active {
   display: block;
 }
-.bodyFull #sectionDescriptive #modalValue-Active .textInput2 {
+.fullContainer .contentDescritive .bodyDescritive #modalValue-Active .textInput2 {
   display: block;
   font-weight: bolder;
   font-size: 15px;
-  color: #3e939e;
+  color: #469ba7;
   margin-top: 20px;
   margin-bottom: 0px;
+  text-align: center;
 }
-.bodyFull #sectionDescriptive #modalValue-Active .modalPresent {
+.fullContainer .contentDescritive .bodyDescritive #modalValue-Active .modalPresent {
   display: none;
 }
-.bodyFull #sectionDescriptive #modalValue-Active .modalPresentActive {
+.fullContainer .contentDescritive .bodyDescritive #modalValue-Active .modalPresentActive {
   display: block;
   margin: 0 auto;
   text-align: center;
 }
-.bodyFull #sectionDescriptive #modalValue-Active #modalPresent {
+.fullContainer .contentDescritive .bodyDescritive #modalValue-Active #modalPresent {
   padding-bottom: 2px;
 }
-.bodyFull #sectionDescriptive #modalValue-Active p {
-  margin: 0 5px;
+.fullContainer .contentDescritive .bodyDescritive #modalValue-Active p {
+  margin: 0 5px 5px;
   color: #fff;
   display: inline-block;
-  background: #3e939e;
+  background: #469ba7;
   padding: 5px 35px;
   border-radius: 30px;
   position: relative;
   box-shadow: 0.2px 0.2px 2px #000;
 }
-.bodyFull #sectionDescriptive #modalValue-Active p label {
+.fullContainer .contentDescritive .bodyDescritive #modalValue-Active p label {
   margin: auto;
   width: 10px;
   height: 10px;
@@ -555,964 +286,293 @@ body {
   right: 15px;
   position: absolute;
 }
-.bodyFull #sectionDescriptive .content-Result {
-  display: none;
+.fullContainer .contentDescritive .bodyDescritive #modalValue-Active input {
+  display: block;
+  margin-bottom: 10px;
 }
-.bodyFull #sectionDescriptive .content-ResultActive {
-  margin: 0 auto;
+.fullContainer .contentDescritive .bodyDescritive .valorContent {
+  margin-top: 10px;
+}
+.fullContainer .contentDescritive .bodyDescritive .valorContent input {
   display: block;
 }
-.bodyFull #sectionDescriptive .content-ResultActive .titleResult {
-  margin: 0 auto;
+.fullContainer .contentDescritive #chipsPresent {
+  padding: 0 20px;
 }
-.bodyFull #sectionDescriptive .content-ResultActive .titleResult h2 {
-  text-align: center;
-  color: #3e939e;
+.fullContainer .contentDescritive #chipsPresent #presentText {
+  margin: 0 auto;
   padding: 20px;
-  display: block;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration {
-  display: block;
   text-align: center;
 }
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl {
-  width: 100%;
-  overflow: hidden;
-  margin: 0px auto;
-  display: block;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #header {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0 auto;
-  overflow: hidden;
-  cursor: pointer;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #content {
-  width: 100%;
-  overflow: hidden;
-  height: 100%;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .abas {
-  display: block;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .abas li {
-  padding: 5px;
-  display: block;
-  float: left;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .aba {
-  width: 100px;
-  height: 30px;
-  text-align: center;
-  padding-top: 5px;
-  background: rgba(59, 184, 200, 0.22);
-  transition: 0.1s ease-in;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .aba span {
-  color: #3e939e;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .ativa {
-  width: 100px;
-  height: 30px;
-  text-align: center;
-  padding-top: 5px;
-  background: rgba(59, 184, 200, 0.55);
-  transition: 0.3s ease-in;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .ativa span,
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .selected span {
+.fullContainer .contentDescritive #chipsPresent #presentText p {
+  margin: 0 5px 5px;
   color: #fff;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #content {
-  background: #fff;
-  margin: 0 auto 20px;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .conteudo {
-  width: 100%;
-  display: none;
-  color: #3e939e;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .selected {
-  width: 100px;
-  height: 30px;
-  border: solid 1 px;
-  border-radius: 5px 5px 0 0;
-  text-align: center;
-  padding-top: 5px;
-  background: #3e939e;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content {
-  margin: 0 auto;
-  text-align: center;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList {
-  background: #fff;
-  width: 90%;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList ul li {
-  height: 40px;
-  padding: 10px 70px 10px;
-  cursor: pointer;
-  transition: 0.105ms ease-in;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList ul li a {
-  font-size: 18px;
-  color: #3e939e;
-  font-weight: bold;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content .contentList ul li:hover {
-  background: rgba(59, 183, 200, 0.288);
-  color: #3e939e;
-  border-bottom: 2px solid #3e939e;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content .contentTabs {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  display: none;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content .contentTabs .contentBody-active {
-  display: block;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content #tableDemonstration-Medias {
-  margin: auto;
-  width: 100%;
-  max-width: 500px;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content #tableDemonstration-Medias td {
-  text-align: center;
-  box-sizing: border-box;
-  padding: 10px 15px 0;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content #tableDemonstration-Medias .tableTitle {
-  border-bottom: 2px solid #3e939e;
-}
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration #content #tableDemonstration-Medias .tableLines {
-  border-collapse: collapse;
-  border-left: 2px solid #3e939e;
-}
-.bodyFull #sectionDescriptive .breakerContent {
-  margin: 20px auto 20px;
-  text-align: center;
-}
-.bodyFull #sectionDescriptive .breakerContent .textInput {
-  font-size: 20px;
-  color: #3e939e;
-  margin: 20px auto 0px;
-  padding: 10px 0 0 0;
-}
-.bodyFull #sectionDescriptive .breakerContent .inputDiv {
-  width: 450px;
-  margin: 10px auto;
-  padding: 50px;
-  box-sizing: border-box;
+  display: inline-block;
+  background: #469ba7;
+  padding: 5px 30px;
+  border-radius: 30px;
   position: relative;
+  box-shadow: 0.2px 0.2px 2px #000;
 }
-.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range] {
-  display: block;
-  width: 350px;
-}
-.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]:focus {
-  outline: none;
-}
-.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range],
-.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-webkit-slider-runnable-track,
-.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}
-.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-webkit-slider-thumb {
-  background-color: #fff;
-  width: 20px;
-  height: 20px;
-  border: 3px solid #3e939e;
-  border-radius: 50%;
-  margin-top: -9px;
-}
-.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-moz-range-thumb {
-  background-color: #fff;
-  width: 15px;
-  height: 15px;
-  border: 3px solid #3e939e;
-  border-radius: 50%;
-}
-.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-ms-thumb {
-  background-color: #fff;
-  width: 20px;
-  height: 20px;
-  border: 3px solid #3e939e;
-  border-radius: 50%;
-}
-.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-webkit-slider-runnable-track {
-  background-color: #3e939e;
-  height: 3px;
-}
-.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]:focus::-webkit-slider-runnable-track {
-  outline: none;
-}
-.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-moz-range-track {
-  background-color: #3e939e;
-  height: 3px;
-}
-.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-ms-track {
-  background-color: #3e939e;
-  height: 3px;
-}
-.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-ms-fill-lower {
-  background-color: #000;
-}
-.bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range]::-ms-fill-upper {
-  background-color: black;
-}
-.bodyFull #sectionDescriptive .breakerContent .inputDiv #etiqueta {
-  position: absolute;
-  z-index: 9;
-  color: #fff;
-  font-weight: bold;
-  background-color: #3e939e;
-  width: 30px;
-  height: 25px;
-  font-size: 1em;
-  text-align: center;
-  padding-top: 12px;
-  top: -5px;
-}
-.bodyFull #sectionDescriptive .breakerContent .inputDiv #etiqueta::after {
-  content: "";
-  display: block;
+.fullContainer .contentDescritive #chipsPresent #presentText p label {
+  margin: auto;
   width: 10px;
   height: 10px;
-  -webkit-transform: rotate(45deg);
-  -mox-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  z-index: 8;
-  background-color: #3e939e;
-  position: relative;
-  left: 9px;
-  top: 2px;
+  top: 0px;
+  right: 15px;
+  position: absolute;
 }
-.bodyFull #sectionDescriptive .breakerContent .contentBtn {
-  margin-top: -20px;
-  padding: 0px 0 20px 0;
+.fullContainer .contentDescritive .contentBtn {
+  padding: 20px;
 }
-.bodyFull #sectionDescriptive .breakerContent .content-Breaker-Result p {
-  color: #3e939e;
-  font-weight: 500;
-  padding: 10px;
+.fullContainer .contentDescritive .contentBtn .btnCalculate {
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid #469ba7;
+  border-radius: 25px;
+  color: #469ba7;
+  cursor: pointer;
 }
-.bodyFull #sectionDescriptive .reloadPage {
+.fullContainer .contentDescritive .contentBtn .btnCalculate:hover {
+  background: #469ba7;
+  color: #fff;
+}
+.fullContainer .contentDescritive .contentBtn .btnImport {
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid #469ba7;
+  border-radius: 25px;
+  color: #469ba7;
+  cursor: pointer;
+}
+.fullContainer .contentDescritive .contentBtn .btnImport:hover {
+  background: #469ba7;
+  color: #fff;
+}
+.fullContainer .content-Result {
+  display: none;
+  width: 100%;
+}
+.fullContainer .content-Result h2 {
+  text-align: center;
+  color: #469ba7;
+  padding: 20px;
+  display: block;
+}
+.fullContainer .content-ResultActive {
+  margin: 0px auto;
+  display: block;
+  width: 100%;
+}
+.fullContainer .content-ResultActive .titleResult {
+  margin: 0 auto;
+}
+.fullContainer .content-ResultActive .titleResult h2 {
+  text-align: center;
+  color: #469ba7;
+  padding: 20px;
+  display: block;
+}
+.fullContainer .content-ResultActive #nav-tab #nav-table-tab,
+.fullContainer .content-ResultActive #nav-tab #nav-graphic-tab {
+  width: 150px;
+  color: #469ba7;
+}
+.fullContainer #tableDemonstration {
+  margin: 20px auto;
+}
+.fullContainer #tableDemonstration .tableTitle {
+  font-size: 20px;
+  color: #469ba7;
+  font-weight: bolder;
+}
+.fullContainer #tableDemonstration .tdVet {
+  border-collapse: collapse;
+  text-align: center;
+  padding: 6px;
+  border-bottom: 2px solid #469ba7;
+}
+.fullContainer #tableDemonstration .tdVet p {
+  color: #469ba7;
+  margin-bottom: 0;
+}
+.fullContainer #tableDemonstration .tableLines {
+  border-left: 2px solid #469ba7;
+}
+.fullContainer #tableDemonstration-Medias .tableTitle {
+  font-size: 18px;
+  color: #469ba7;
+  font-weight: bolder;
+  margin-bottom: 0;
+  padding: 0;
+}
+.fullContainer #tableDemonstration-Medias .tdVet {
+  border-collapse: collapse;
+  text-align: center;
+  border-bottom: 2px solid #469ba7;
+}
+.fullContainer #tableDemonstration-Medias .tdVet p {
+  color: #469ba7;
+  margin-bottom: 0;
+}
+.fullContainer #tableDemonstration-Medias .tableLines {
+  border-left: 2px solid #469ba7;
+}
+.fullContainer .reloadPage {
   margin: 0 auto 20px;
   text-align: center;
   padding: 20px;
 }
-.bodyFull #sectionDescriptive .reloadPage input[type=button] {
+.fullContainer .reloadPage input[type=button] {
   border: 0;
   background: none;
   display: block;
   margin: 25px auto;
   text-align: center;
-  border: 2px solid #3e939e;
+  border: 2px solid #469ba7;
   padding: 12px 10px;
   width: 250px;
   outline: none;
-  color: #3e939e;
+  color: #469ba7;
   border-radius: 25px;
   transition: 0.25s;
 }
-.bodyFull #sectionDescriptive .reloadPage input[type=button]:hover {
-  border-color: #3e939e;
-  background: #3e939e;
+.fullContainer .reloadPage input[type=button]:hover {
+  border-color: #469ba7;
+  background: #469ba7;
   color: #fff;
 }
-.bodyFull #sectionDescriptive #tableDemonstration {
-  margin: 30px auto;
+.fullContainer .breakerContent {
+  margin: 20px auto 20px;
+  text-align: center;
 }
-.bodyFull #sectionDescriptive #tableDemonstration tr:nth-child(even) {
-  background: rgba(59, 184, 200, 0.07);
-}
-.bodyFull #sectionDescriptive #tableDemonstration .tableTitle {
+.fullContainer .breakerContent .textInput {
   font-size: 20px;
-  color: #3e939e;
-  font-weight: bolder;
-  letter-spacing: 3px;
+  color: #469ba7;
 }
-.bodyFull #sectionDescriptive #tableDemonstration .tdVet {
-  border-collapse: collapse;
-  text-align: center;
-  padding: 10px;
-  border-bottom: 2px solid #3e939e;
-}
-.bodyFull #sectionDescriptive #tableDemonstration .tableLines {
-  border-left: 2px solid #3e939e;
-}
-.bodyFull #btnCalculateBreaker {
-  padding: 10px 20px;
-  background-color: #fff;
-  border: 2px solid #3e939e;
-  border-radius: 25px;
-  color: #3e939e;
-  cursor: pointer;
-}
-.bodyFull #btnCalculateBreaker:hover {
-  background: #3e939e;
-  color: #fff;
-}
-.bodyFull .footerContent {
-  width: 100%;
-  min-height: 5%;
-  margin-top: auto;
-  background-color: #fff;
-}
-.bodyFull .footerContent .footerMenu {
-  margin: auto;
-  text-align: center;
-}
-.bodyFull .footerContent .footerMenu ul li {
-  color: #3e939e;
-  font-weight: bold;
-  margin: 10px auto 0;
-  display: inline-block;
-  padding: 0px 50px;
-}
-
-@media screen and (max-width: 600px) {
-  header {
-    height: 15%;
+@media screen and (max-width: 1024px) {
+  .fullContainer .contentSection {
+    margin-top: 220px;
   }
-
-  .MobileActive {
-    left: 0px;
-    display: block;
-    width: 100%;
-    height: calc(100vh - 50px);
-    top: 50px;
-    position: absolute;
-    text-align: center;
-    background: #fff;
-  }
-  .MobileActive ul li {
-    color: #3e939e;
-    font-size: 15px;
-    font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  .navContent .navbar-collapse .navbar-nav a {
+    color: #fff;
+    font-size: 14px;
     padding: 10px 30px;
-    margin: 30% auto 20px auto;
-    display: block;
-    font-size: 15px;
-  }
-
-  .bodyFull {
-    margin: 0 auto;
-  }
-  .bodyFull header #navMenu {
-    text-align: center;
-  }
-  .bodyFull header #navMenu ul li {
-    display: none;
-  }
-  .bodyFull header .toggle {
-    display: block;
-  }
-  .bodyFull header .toggle .Active.hamburguer {
-    transform: rotate(45deg);
-  }
-  .bodyFull header .toggle .Active.hamburguer::before {
-    transform: rotate(90deg);
-    top: 0;
-  }
-  .bodyFull header .toggle .Active.hamburguer::after {
-    transform: rotate(90deg);
-    bottom: 0;
-  }
-  .bodyFull .formsLog {
-    margin-top: -50px;
-    margin-bottom: 25px;
-  }
-  .bodyFull #sectionDescriptive .boxContent {
-    display: block;
-    width: 100%;
-    max-width: 370px;
-    padding: 0 15px;
-    background: #fff;
-    margin: auto;
-    border-radius: 30px;
-    box-shadow: 2px 2px 10px #000;
-    -webkit-animation-name: fadeInLeft;
-    animation-name: fadeInLeft;
-  }
-  .bodyFull #sectionDescriptive .boxContent .logoImg {
-    display: block;
-    text-align: center;
-  }
-  .bodyFull #sectionDescriptive .boxContent .logoImg img {
-    width: 100%;
-    max-width: 250px;
-    max-height: 125px;
-  }
-  .bodyFull #sectionDescriptive .boxContent .pageDescritive {
-    margin: auto;
-  }
-  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData {
-    text-align: center;
-  }
-  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .textInput {
-    font-size: 20px;
-    color: #3e939e;
-    margin-top: 20px;
-  }
-  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData input[type=text] {
-    border: 0;
-    background: none;
-    display: inline-block;
-    margin: 25px auto 20px;
-    text-align: center;
-    border: 2px solid #3e939e;
-    padding: 10px 20px;
-    width: 200px;
-    outline: none;
-    color: #3e939e;
-    border-radius: 25px;
-    transition: 0.25s;
-  }
-  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData input[type=text]::placeholder {
-    color: #3e939e;
-  }
-  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData input[type=text]:focus {
-    color: #3e939e;
-    font-size: 12px;
     font-weight: bold;
   }
-  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData button[type=button] {
-    border: 0;
-    background: none;
-    display: inline-block;
-    border: 2px solid #3e939e;
-    padding: 10px 10px;
-    width: 45px;
-    color: #3e939e;
-    border-radius: 50%;
-    transition: 0.25s;
-    cursor: pointer;
-  }
-  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam {
-    display: block;
-    margin: 20px auto 20px auto;
-  }
-  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam input[type=radio] {
-    display: none;
-  }
-  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam input[type=radio]:checked + label {
-    padding: 5px 15px;
-    background: #3e939e;
-    color: #fff;
-  }
-  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam input[type=radio]:checked + label:before {
-    display: none;
-  }
-  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label {
-    margin: auto;
-    color: #3e939e;
-    padding: 5px 20px 5px 51px;
-    display: block;
-    width: 150px;
-    font-size: 1em;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label:hover {
-    background: #3e939e;
-    color: #fff;
-  }
-  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label:before {
-    content: "";
-    width: 17px;
-    height: 17px;
-    display: block;
-    background: none;
-    border: 3px solid #3e939e;
-    border-radius: 50%;
-    left: 17px;
-    top: 3px;
-  }
-  .bodyFull #sectionDescriptive .boxContent .pageDescritive .inputData .btn-PopSam label:before:hover {
-    border: 3px solid #fff;
-  }
-  .bodyFull #sectionDescriptive .variavelPresent {
-    display: none;
-  }
-  .bodyFull #sectionDescriptive .variavelPresentActive {
-    display: block;
-  }
-  .bodyFull #sectionDescriptive #variavelText {
-    margin: -10px auto 20px;
-    color: #3e939e;
-  }
-  .bodyFull #sectionDescriptive select {
-    margin-top: 15px;
-    color: #3e939e;
-    font: inherit;
-    font-size: 16px;
-    background-color: #fff;
-    border: 1px solid #3e939e;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    display: inline-block;
-    line-height: 1.5em;
-    padding: 0.5em 3.5em 0.5em 1em;
-    margin: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
-  .bodyFull #sectionDescriptive select .textVariable {
-    color: #3e939e;
-    font-weight: bold;
-  }
-  .bodyFull #sectionDescriptive select .arrow {
-    margin-left: 10px;
-  }
-  .bodyFull #sectionDescriptive .valorContent {
-    margin: 5px auto;
-    text-align: center;
-  }
-  .bodyFull #sectionDescriptive .valorContent .chipsPresent {
-    display: none;
-  }
-  .bodyFull #sectionDescriptive .valorContent .chipsActive {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .bodyFull #sectionDescriptive .valorContent #presentText {
-    padding-bottom: 20px;
-  }
-  .bodyFull #sectionDescriptive .valorContent p {
-    margin: 0 5px;
-    color: #fff;
-    display: inline-block;
-    background: #3e939e;
-    padding: 10px 35px;
+  .navContent .navbar-collapse .navbar-nav a:hover {
+    background: #fff;
     border-radius: 30px;
-    position: relative;
-    box-shadow: 0.2px 0.2px 2px #000;
+    color: #469ba7;
   }
-  .bodyFull #sectionDescriptive .valorContent p label {
-    margin: auto;
-    width: 10px;
-    height: 10px;
-    top: 0px;
-    right: 15px;
-    position: absolute;
+}
+@media screen and (max-width: 575px) {
+  .fullContainer .contentSection {
+    margin-top: 70px;
   }
-  .bodyFull #sectionDescriptive .contentBtn {
-    padding: 20px;
-  }
-  .bodyFull #sectionDescriptive .contentBtn .btnCalculate {
-    padding: 10px 20px;
-    background-color: #fff;
-    border: 2px solid #3e939e;
-    border-radius: 25px;
-    color: #3e939e;
-    cursor: pointer;
-  }
-  .bodyFull #sectionDescriptive .contentBtn .btnCalculate:hover {
-    background: #3e939e;
-    color: #fff;
-  }
-  .bodyFull #sectionDescriptive .contentBtn .btnImport {
-    padding: 10px 20px;
-    background-color: #fff;
-    border: 2px solid #3e939e;
-    border-radius: 25px;
-    color: #3e939e;
-    cursor: pointer;
-  }
-  .bodyFull #sectionDescriptive .contentBtn .btnImport:hover {
-    background: #3e939e;
-    color: #fff;
-  }
-  .bodyFull #sectionDescriptive #modalValue {
-    margin-bottom: 0px;
-    display: none;
-  }
-  .bodyFull #sectionDescriptive #modalValue-Active {
-    display: block;
-  }
-  .bodyFull #sectionDescriptive #modalValue-Active .textInput2 {
-    font-size: 15px;
-    color: #3e939e;
-    margin-top: 20px;
-    margin-bottom: 0px;
-  }
-  .bodyFull #sectionDescriptive .content-Result {
-    display: none;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive {
-    margin: -20px auto;
-    display: block;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .titleResult {
-    margin: 0 auto;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .titleResult h2 {
-    text-align: center;
-    color: #3e939e;
-    padding: 20px;
-    display: block;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration {
-    display: block;
-    text-align: center;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl {
-    width: 100%;
-    overflow: hidden;
-    margin: 0px auto;
-    display: block;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #header {
-    margin: auto;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #content {
-    width: 100%;
-    overflow: hidden;
-    height: 100%;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .abas {
-    display: block;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .abas li {
-    padding: 5px;
-    display: block;
-    float: left;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .aba {
-    width: 100px;
-    height: 30px;
-    text-align: center;
-    padding-top: 5px;
-    background: rgba(59, 184, 200, 0.22);
-    transition: 0.1s ease-in;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .aba span {
-    color: #3e939e;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .ativa {
-    width: 100px;
-    height: 30px;
-    text-align: center;
-    padding-top: 5px;
-    background: rgba(59, 184, 200, 0.55);
-    transition: 0.3s ease-in;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .ativa span,
-.bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .selected span {
-    color: #fff;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl #content {
-    background: #fff;
-    margin: 0 auto 20px;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .TabControl .conteudo {
-    width: 100%;
-    display: none;
-    color: #3e939e;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .selected {
-    width: 100px;
-    height: 30px;
-    border: solid 1 px;
-    border-radius: 5px 5px 0 0;
-    text-align: center;
-    padding-top: 5px;
-    background: #3e939e;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .content {
-    margin: 0 auto;
-    text-align: center;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList {
-    background: #fff;
-    width: 90%;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul {
-    list-style: none;
+  .fullContainer .bodyDescritive {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
   }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul li {
-    height: 40px;
-    padding: 10px 70px 10px;
-    cursor: pointer;
-    transition: 0.105ms ease-in;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul li a {
-    font-size: 18px;
-    color: #3e939e;
-    font-weight: bold;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .content .contentList ul li:hover {
-    background: rgba(59, 183, 200, 0.288);
-    color: #3e939e;
-    border-bottom: 2px solid #3e939e;
-  }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .content .contentTabs {
-    width: 100%;
-    margin: 0 auto;
+  .fullContainer .bodyDescritive .textInput {
+    font-size: 1.2em;
+    color: #469ba7;
+    margin-top: 20px;
     text-align: center;
-    display: none;
   }
-  .bodyFull #sectionDescriptive .content-ResultActive .resultDemonstration .content .contentTabs .contentBody-active {
-    display: block;
-  }
-  .bodyFull #sectionDescriptive .breakerContent .textInput {
-    font-size: 15px;
-  }
-  .bodyFull #sectionDescriptive .breakerContent .inputDiv {
-    width: 270px;
-    padding: 30px 0 !important;
-    float: left;
-  }
-  .bodyFull #sectionDescriptive .breakerContent .inputDiv #etiqueta {
-    position: absolute;
-    z-index: 9;
-    color: #fff;
-    font-weight: bold;
-    background-color: #3e939e;
-    width: 30px;
-    height: 35px;
-    font-size: 1em;
-    text-align: center;
-    padding-top: 12px;
-    top: -5px;
-  }
-  .bodyFull #sectionDescriptive .breakerContent .contentBtn {
-    margin-top: -20px;
-    padding: 0px 0 20px 0;
-  }
-  .bodyFull #sectionDescriptive .breakerContent .content-Breaker-Result p {
-    color: #3e939e;
-    font-weight: 500;
-    padding: 10px;
-  }
-  .bodyFull #sectionDescriptive .reloadPage {
+  .fullContainer .bodyDescritive input[type=text] {
     margin: 0 auto 20px;
+    padding: 10px 20px;
+    width: 300px !important;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .fullContainer .contentSection {
+    margin-top: 10px;
+  }
+  .fullContainer .contentSection .contentLog input[type=email],
+.fullContainer .contentSection .contentLog input[type=password] {
+    width: 260px;
+    height: 50px;
+  }
+  .fullContainer .contentSection .contentLog input[type=email]:hover,
+.fullContainer .contentSection .contentLog input[type=password]:hover {
+    width: 260px;
+  }
+  .fullContainer .contentSection .textLog {
+    text-align: left;
+    margin: 0 0 1rem 20px;
+    color: #469ba7;
+  }
+  .fullContainer .bodyDescritive {
+    display: flex;
+    justify-content: center;
+  }
+  .fullContainer .bodyDescritive .textInput {
+    font-size: 1.2em;
+    color: #469ba7;
+    margin-top: 20px;
     text-align: center;
-    padding: 20px;
   }
-  .bodyFull #sectionDescriptive .reloadPage input[type=button] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 25px auto;
-    text-align: center;
-    border: 2px solid #3e939e;
-    padding: 12px 10px;
-    width: 250px;
-    outline: none;
-    color: #3e939e;
-    border-radius: 25px;
-    transition: 0.25s;
+  .fullContainer .bodyDescritive input[type=text] {
+    margin: 0 auto 20px;
+    padding: 10px 20px;
+    width: 250px !important;
+    height: 60px;
   }
-  .bodyFull #sectionDescriptive .reloadPage input[type=button]:hover {
-    border-color: #3e939e;
-    background: #3e939e;
-    color: #fff;
+  .fullContainer #tableDemonstration {
+    margin: 20px auto;
   }
-  .bodyFull #sectionDescriptive #tableDemonstration {
-    margin: 30px auto;
-  }
-  .bodyFull #sectionDescriptive #tableDemonstration .tableTitle {
-    font-size: 20px;
-    color: #3e939e;
+  .fullContainer #tableDemonstration .tableTitle {
+    font-size: 17px;
+    color: #469ba7;
     font-weight: bolder;
-    letter-spacing: 3px;
   }
-  .bodyFull #sectionDescriptive #tableDemonstration .tdVet {
+  .fullContainer #tableDemonstration .tdVet {
     border-collapse: collapse;
     text-align: center;
-    padding: 10px;
-    border-bottom: 2px solid #3e939e;
+    border-bottom: 2px solid #469ba7;
+    padding: 5px 0px !important;
+    margin: 5px auto !important;
   }
-  .bodyFull #sectionDescriptive #tableDemonstration .tableLines {
-    border-left: 2px solid #3e939e;
+  .fullContainer #tableDemonstration .tdVet p {
+    font-size: 15px;
+    color: #469ba7;
+    margin-bottom: 0;
+    padding: 0px 2px !important;
   }
-  .bodyFull .footerContent {
-    bottom: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    min-height: 5%;
-    margin-top: auto;
-    background-color: #fff;
+  .fullContainer #tableDemonstration .tableLines {
+    border-left: 2px solid #469ba7;
   }
-  .bodyFull .footerContent .footerMenu ul li {
-    display: block;
-    margin: auto;
-    padding: 20px;
+  .fullContainer #nav-tab #nav-table-tab,
+.fullContainer #nav-tab #nav-graphic-tab {
+    width: 100px !important;
+    color: #469ba7;
   }
-
-  .bodyFull #sectionDescriptive .breakerContent .inputDiv input[type=range] {
-    display: block;
-    width: 170px;
-    margin-top: 20px;
-  }
-}
-@media screen and (max-width: 420px) {
-  .bodyFull {
-    margin: auto;
-  }
-  .bodyFull #sectionDescriptive {
-    margin: auto;
-    padding: 10px;
-  }
-  .bodyFull #sectionDescriptive .boxContent {
-    width: 100%;
-    width: 100%;
-    max-width: 320px;
-    padding: 0 50px;
-  }
-  .bodyFull #sectionDescriptive .boxContent .formsLog {
-    display: flex;
-    flex-direction: column;
-    flex-flow: wrap;
-  }
-  .bodyFull #sectionDescriptive .boxContent .formsLog .breakerContent {
-    text-align: left;
-    margin-left: 15px;
-  }
-  .bodyFull .content-ResultActive {
-    margin: -20px auto;
-    display: block;
-  }
-  .bodyFull .content-ResultActive .titleResult {
+  .fullContainer #tableDemonstration-Medias {
     margin: 0 auto;
   }
-  .bodyFull .content-ResultActive .titleResult h2 {
+  .fullContainer #tableDemonstration-Medias .tableTitle {
+    font-size: 13px;
+    color: #469ba7;
+    font-weight: bolder;
+    margin-bottom: 0;
+  }
+  .fullContainer #tableDemonstration-Medias .tdVet {
+    border-collapse: collapse;
     text-align: center;
-    color: #3e939e;
-    padding: 20px;
-    display: block;
+    border-bottom: 2px solid #469ba7;
+    padding: 5px 10px;
   }
-  .bodyFull .content-ResultActive .resultDemonstration {
-    display: block;
-    text-align: center;
+  .fullContainer #tableDemonstration-Medias .tdVet p {
+    color: #469ba7;
+    margin-bottom: 0;
   }
-  .bodyFull .content-ResultActive .resultDemonstration .TabControl {
-    width: 100%;
-    overflow: hidden;
-    margin: 0px auto;
-    display: block;
-  }
-  .bodyFull .content-ResultActive .resultDemonstration .TabControl #header {
-    margin: auto;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  .bodyFull .content-ResultActive .resultDemonstration .TabControl #content {
-    width: 100%;
-    overflow: hidden;
-    height: 100%;
-  }
-  .bodyFull .content-ResultActive .resultDemonstration .TabControl .abas {
-    display: block;
-  }
-  .bodyFull .content-ResultActive .resultDemonstration .TabControl .abas li {
-    padding: 5px;
-    display: block;
-    float: left;
-  }
-  .bodyFull .content-ResultActive .resultDemonstration .aba {
-    width: 100px;
-    height: 30px;
-    text-align: center;
-    padding-top: 5px;
-    background: rgba(59, 184, 200, 0.22);
-    transition: 0.1s ease-in;
-  }
-  .bodyFull .content-ResultActive .resultDemonstration .aba span {
-    color: #3e939e;
-  }
-  .bodyFull .content-ResultActive .resultDemonstration .ativa {
-    width: 100px;
-    height: 30px;
-    text-align: center;
-    padding-top: 5px;
-    background: rgba(59, 184, 200, 0.55);
-    transition: 0.3s ease-in;
-  }
-  .bodyFull .content-ResultActive .resultDemonstration .ativa span,
-.bodyFull .content-ResultActive .resultDemonstration .selected span {
-    color: #fff;
-  }
-  .bodyFull .content-ResultActive .resultDemonstration .TabControl #content {
-    background: #fff;
-    margin: 0 auto 20px;
-  }
-  .bodyFull .content-ResultActive .resultDemonstration .TabControl .conteudo {
-    width: 100%;
-    display: none;
-    color: #3e939e;
-  }
-  .bodyFull .content-ResultActive .resultDemonstration .selected {
-    width: 100px;
-    height: 30px;
-    border: solid 1 px;
-    border-radius: 5px 5px 0 0;
-    text-align: center;
-    padding-top: 5px;
-    background: #3e939e;
-  }
-  .bodyFull .content-ResultActive .resultDemonstration .content {
-    margin: 0 auto;
-    text-align: center;
-  }
-  .bodyFull .content-ResultActive .resultDemonstration .content .contentList {
-    background: #fff;
-    width: 90%;
-  }
-  .bodyFull .content-ResultActive .resultDemonstration .content .contentList ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-  }
-  .bodyFull .content-ResultActive .resultDemonstration .content .contentList ul li {
-    height: 40px;
-    padding: 10px 70px 10px;
-    cursor: pointer;
-    transition: 0.105ms ease-in;
-  }
-  .bodyFull .content-ResultActive .resultDemonstration .content .contentList ul li a {
-    font-size: 18px;
-    color: #3e939e;
-    font-weight: bold;
-  }
-  .bodyFull .content-ResultActive .resultDemonstration .content .contentList ul li:hover {
-    background: rgba(59, 183, 200, 0.288);
-    color: #3e939e;
-    border-bottom: 2px solid #3e939e;
-  }
-  .bodyFull .content-ResultActive .resultDemonstration .content .contentTabs {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    display: none;
-  }
-  .bodyFull .content-ResultActive .resultDemonstration .content .contentTabs .contentBody-active {
-    display: block;
+  .fullContainer #tableDemonstration-Medias .tableLines {
+    border-left: 2px solid #469ba7;
   }
 }
 
