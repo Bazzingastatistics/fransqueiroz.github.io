@@ -450,6 +450,93 @@ body {
   font-size: 20px;
   color: #469ba7;
 }
+.fullContainer .breakerContent .selectBreaker .textVariable {
+  display: block;
+  margin: 20px auto 10px;
+  color: #469ba7;
+  font-weight: bold;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: #469ba7;
+}
+.fullContainer .breakerContent .selectBreaker .container #inputBreaker {
+  width: 200px;
+}
+.fullContainer .breakerContent .selectBreaker .container input[type=range],
+.fullContainer .breakerContent .selectBreaker .container input[type=range]::-webkit-slider-runnable-track,
+.fullContainer .breakerContent .selectBreaker .container input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+.fullContainer .breakerContent .selectBreaker .container input[type=range]::-webkit-slider-thumb {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #469ba7;
+  border-radius: 50%;
+  margin-top: -9px;
+}
+.fullContainer .breakerContent .selectBreaker .container input[type=range]::-moz-range-thumb {
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  border: 3px solid #469ba7;
+  border-radius: 50%;
+}
+.fullContainer .breakerContent .selectBreaker .container input[type=range]::-ms-thumb {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #469ba7;
+  border-radius: 50%;
+}
+.fullContainer .breakerContent .selectBreaker .container input[type=range]::-webkit-slider-runnable-track {
+  background-color: #469ba7;
+  height: 3px;
+}
+.fullContainer .breakerContent .selectBreaker .container input[type=range]:focus::-webkit-slider-runnable-track {
+  outline: none;
+}
+.fullContainer .breakerContent .selectBreaker .container input[type=range]::-moz-range-track {
+  background-color: #469ba7;
+  height: 3px;
+}
+.fullContainer .breakerContent .selectBreaker .container input[type=range]::-ms-track {
+  background-color: #469ba7;
+  height: 3px;
+}
+.fullContainer .breakerContent .selectBreaker .container input[type=range]::-ms-fill-lower {
+  background-color: #000;
+}
+.fullContainer .breakerContent .selectBreaker .container input[type=range]::-ms-fill-upper {
+  background-color: black;
+}
+.fullContainer .breakerContent .selectBreaker .container #etiqueta {
+  margin: 0 auto;
+  color: #fff;
+  font-weight: bold;
+  background-color: #469ba7;
+  width: 40px;
+  height: 30px;
+  font-size: 1em;
+  text-align: center;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.fullContainer .breakerContent .contentBtn .btnCalculate2 {
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid #469ba7;
+  border-radius: 25px;
+  color: #469ba7;
+  cursor: pointer;
+}
+.fullContainer .breakerContent .contentBtn .btnCalculate2:hover {
+  background: #469ba7;
+  color: #fff;
+}
+
 @media screen and (max-width: 1024px) {
   .fullContainer .contentSection {
     margin-top: 220px;

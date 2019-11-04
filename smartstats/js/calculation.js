@@ -887,7 +887,7 @@ $(document).ready(function () {
 
  $('#selectBreaker').click(function () {
      console.log();
-
+     $('#etiqueta').css("display","flex");
      if ($(this).val() == "4") {
 
          $('#inputBreaker').attr('max', 4);
@@ -910,6 +910,7 @@ $(document).ready(function () {
      let selectBreaker = $('#selectBreaker').val();
      let value;
      let separaTrix;
+    
      switch(selectBreaker){
          case "4":
               value = ($('#inputBreaker').val() * 25 );
