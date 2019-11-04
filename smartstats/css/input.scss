@@ -53,6 +53,9 @@ body {
 .fullContainer {
   display: flex;
   justify-content: center;
+  padding-bottom: 30px;
+  -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
 
   .contentSection {
     width: 100%;
@@ -208,9 +211,10 @@ body {
     background: #fff;
     border-radius: 30px;
     box-shadow: 2px 2px 10px #000;
+    
 
     .content {
-
+      
       .brandLogo {
 
         .logo {
@@ -675,6 +679,11 @@ body {
       }
     }
   }
+}
+
+#footer{
+  position: absolute;
+  bottom: 0;
 }
 
 

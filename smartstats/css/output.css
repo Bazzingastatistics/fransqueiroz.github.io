@@ -44,6 +44,9 @@ body {
 .fullContainer {
   display: flex;
   justify-content: center;
+  padding-bottom: 30px;
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
 }
 .fullContainer .contentSection {
   width: 100%;
@@ -535,6 +538,11 @@ body {
 .fullContainer .breakerContent .contentBtn .btnCalculate2:hover {
   background: #469ba7;
   color: #fff;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
 }
 
 @media screen and (max-width: 1024px) {
