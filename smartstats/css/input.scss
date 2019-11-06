@@ -55,7 +55,7 @@ body {
   justify-content: center;
   padding-bottom: 30px;
   -webkit-animation-name: fadeInLeft;
-    animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
 
   .contentSection {
     width: 100%;
@@ -211,10 +211,10 @@ body {
     background: #fff;
     border-radius: 30px;
     box-shadow: 2px 2px 10px #000;
-    
+
 
     .content {
-      
+
       .brandLogo {
 
         .logo {
@@ -482,6 +482,10 @@ body {
   #tableDemonstration {
     margin: 20px auto;
 
+    tr:nth-child(even) {
+      background: rgba($baseColor, $alpha: 0.1);
+    }
+
     .tableTitle {
       font-size: 20px;
       color: $baseColor;
@@ -509,6 +513,10 @@ body {
   }
 
   #tableDemonstration-Medias {
+    tr:nth-child(even) {
+      background: rgba($baseColor, $alpha: 0.1);
+    }
+
     .tableTitle {
       font-size: 18px;
       color: $baseColor;
@@ -663,7 +671,8 @@ body {
         }
       }
     }
-    .contentBtn{
+
+    .contentBtn {
       .btnCalculate2 {
         padding: 10px 20px;
         background-color: #fff;
@@ -679,9 +688,125 @@ body {
       }
     }
   }
+
+  .contentProbability {
+    width: 100%;
+    margin-top: 50px;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px #000;
+
+
+    .content {
+
+      .brandLogo {
+
+        .logo {
+          width: 100%;
+          max-width: 250px;
+          max-height: 150px;
+          margin: 1em auto;
+        }
+      }
+    }
+
+    .selectDistribution {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .col-xs-12 {
+        nav {
+          .nav-tabs {
+            border-bottom: none;
+
+            a {
+              padding: 10px 40px;
+              border: 1px solid $baseColor;
+              color: $baseColor;
+              border-radius: 30px;
+              margin: 0 10px;
+
+              &:focus {
+                color: $secondColor;
+                background: $baseColor;
+              }
+
+              &:hover {
+                color: $secondColor;
+                background: $baseColor;
+              }
+            }
+          }
+        }
+
+        #nav-tabContent {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .tab-pane {
+
+            .titleDefault {
+              color: $baseColor;
+              font-size: 24px;
+              margin: 20px auto 10px;
+              text-align: center;
+            }
+
+            .row {
+              display: flex;
+              justify-content: space-between;
+
+              div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                  color: $baseColor;
+                }
+
+                input[type="text"] {
+                  width: 100px;
+                  border-radius: 30px;
+                  border: 1px solid $baseColor;
+                  text-align: center;
+                }
+              }
+
+              .selectLenght {
+                margin-top: 20px;
+                width: 100%;
+
+                #selectLenght {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 100%;
+                  text-align: center;
+                  text-align-last: center;
+                  color: $baseColor;
+                  font-weight: bold;
+                  border-top: none;
+                  border-left: none;
+                  border-right: none;
+                  border-color: $baseColor;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
-#footer{
+#footer {
   position: absolute;
   bottom: 0;
 }
@@ -692,7 +817,7 @@ body {
 @media screen and (max-width:1024px) {
   .fullContainer {
     .contentSection {
-      margin-top: 220px;
+      margin-top: 60px;
     }
   }
 }
@@ -735,6 +860,28 @@ body {
         padding: 10px 20px;
         width: 300px !important;
         height: 60px;
+      }
+    }
+
+    .selectDistribution {
+      .col-xs-12 {
+        nav {
+          .nav-tabs {
+            a {
+              padding: 10px 20px !important;
+            }
+          }
+        }
+
+        #nav-tabContent {
+          .tab-pane {
+
+            .titleDefault {
+              color: $baseColor;
+              font-size: 20px;
+            }
+          }
+        }
       }
     }
   }
@@ -859,6 +1006,57 @@ body {
 
       }
 
+    }
+
+    .selectDistribution {
+      .col-xs-12 {
+        nav {
+          .nav-tabs {
+            flex-direction: column;
+
+            a {
+              margin-bottom: 20px !important;
+              padding: 10px 60px !important;
+            }
+          }
+        }
+
+        #nav-tabContent {
+          .tab-pane {
+
+            .titleDefault {
+              color: $baseColor;
+              font-size: 20px;
+            }
+
+            .row {
+              flex-direction: column !important;
+
+              div {
+                input[type="text"] {
+                  width: 200px !important;
+                }
+              }
+              .selectLenght {
+                margin-top: 20px;
+
+                #selectLenght {
+                  display: block;
+                  width: 70%;
+                  text-align: center;
+                  text-align-last: center;
+                  color: $baseColor;
+                  font-weight: bold;
+                  border-top: none;
+                  border-left: none;
+                  border-right: none;
+                  border-color: $baseColor;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Smart Stats</title>
+  <link rel="shortcut icon" href="../assets/favicon-stats.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="../css/animate.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/output.css">
+</head>
+
+<body>
+
+  <header>
+    <div>
+      <div class="collapse navbar-collapse navMobile " id="navbarNavMobile">
+        <div class="navbar-nav m-auto">
+          <a class="nav-item nav-link" href="menu.html">Inicio</a>
+          <a class="nav-item nav-link" href="#">Criar Conta</a>
+          <a class="nav-item nav-link" href="#">Contato</a>
+          <a class="nav-item nav-link" href="#">Política de Privacidade</a>
+          <a class="nav-item nav-link" href="#">Sobre</a>
+        </div>
+      </div>
+    </div>
+    <div class="navContent">
+      <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-light ">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavMobile"
+            aria-controls="navbarNavMobile" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+          <div class="collapse navbar-collapse hidden-sm" id="navbarNavAltMarkup">
+            <div class="navbar-nav m-auto">
+              <a class="nav-item nav-link" href="menu.html">Inicio</a>
+              <a class="nav-item nav-link" href="#">Criar Conta</a>
+              <a class="nav-item nav-link" href="#">Contato</a>
+              <a class="nav-item nav-link" href="#">Política de Privacidade</a>
+              <a class="nav-item nav-link" href="#">Sobre</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <section>
+    <div class="container fullContainer">
+      <div class="contentProbability d-block">
+        <div class="content row m-auto justify-content-center">
+          <div class="brandLogo">
+            <img class="logo" src="../assets/logoStats.png" alt="">
+          </div>
+      </div>
+      <div class="row">
+       <div class="selectDistribution">
+        <div class="col-xs-12 ">
+         <nav>
+           <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+             <a class="nav-item nav-link" id="nav-Descritive-Uniforme" data-toggle="tab" href="#nav-Uniforme"  role="tab" aria-controls="nav-Uniforme" aria-selected="false">Uniforme</a>
+             <a class="nav-item nav-link" id="nav-Descritive-Binomial" data-toggle="tab" href="#nav-Binomial" role="tab" aria-controls="nav-Binomial" aria-selected="false">Binomial</a>
+             <a class="nav-item nav-link" id="nav-Descritive-Normal" data-toggle="tab" href="#nav-Normal" role="tab" aria-controls="nav-Normal" aria-selected="false">Normal</a>
+           </div>
+         </nav>
+         <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+           <div class="tab-pane fade" id="nav-Uniforme" role="tabpanel"  aria-labelledby="nav-Descritive-Uniforme">
+            <h2 class="titleDefault">Distribuição Uniforme</h2>
+            <div class="row">
+             <div>
+              <span>Valor Inicial</span>
+              <input type="text">
+             </div>
+             <div>
+              <span>Valor Final</span>
+              <input type="text">
+             </div>
+            </div>
+            <div class="row">
+             <div class="selectLenght">
+               <select class="textVariable" name="variable" id="selectLenght">
+                 <option class="textVariable" value="<">Menor Que < </option>
+                 <option class="textVariable" value=">">Maior que ></option>
+                 <option class="textVariable" value="=">Entre</option>
+               </select>
+             </div>
+            </div>
+           </div>
+           <div class="tab-pane fade" id="nav-Binomial" role="tabpanel" aria-labelledby="nav-Descritive-Binomial">
+            <h2 class="titleDefault">Distribuição Binomial</h2>
+           </div>
+           <div class="tab-pane fade" id="nav-Normal" role="tabpanel" aria-labelledby="nav-Descritive-Normal">
+             <h2 class="titleDefault">Distribuição Normal</h2>
+           </div>
+         </div>
+
+       </div>
+       </div>
+      </div>
+    </div>
+  </section>
+ 
+
+</body>
+
+<script src="../js/jquery-3.3.1.slim.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/calculation.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+
+</html>
