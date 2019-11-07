@@ -608,7 +608,7 @@ body {
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row div span {
   color: #469ba7;
 }
-.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row div input[type=text] {
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row div input[type=number] {
   width: 100px;
   border-radius: 30px;
   border: 1px solid #469ba7;
@@ -617,11 +617,12 @@ body {
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght {
   margin-top: 20px;
   width: 100%;
+  display: flex;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght #selectLenght {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: flex-start;
   width: 100%;
   text-align: center;
   text-align-last: center;
@@ -631,6 +632,26 @@ body {
   border-left: none;
   border-right: none;
   border-color: #469ba7;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght .intervalValue .inputInsert #inputInsertSmaller {
+  margin-left: 30px;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght .intervalValue .inputInsert #inputInsertBigger {
+  margin-left: 30px;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght .intervalValue .inputInsert span {
+  margin: 10px;
+  display: inline-block;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght .intervalValue .inputInsert .inputInsertMiddle {
+  margin: 5px;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght .row .buttonCalc {
+  display: flex;
+  margin: 0 auto;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght .row .buttonCalc #btnProbCalc {
+  padding: 20px;
 }
 
 #footer {

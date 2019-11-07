@@ -72,11 +72,11 @@
             <div class="row">
              <div>
               <span>Valor Inicial</span>
-              <input type="text">
+              <input type="number" name="" class="inputStart" id="inputStart">
              </div>
              <div>
               <span>Valor Final</span>
-              <input type="text">
+              <input type="number" name="" class="inputEnd" id="inputEnd">
              </div>
             </div>
             <div class="row">
@@ -86,7 +86,15 @@
                  <option class="textVariable" value=">">Maior que ></option>
                  <option class="textVariable" value="=">Entre</option>
                </select>
+               <div class="intervalValue">
+                 <div class="inputInsert"></div>
+               </div>
              </div>
+            </div>
+            <div class="row">
+              <div class="buttonCalc">
+                <button id="btnProbCalc">Calcular</button>
+              </div>
             </div>
            </div>
            <div class="tab-pane fade" id="nav-Binomial" role="tabpanel" aria-labelledby="nav-Descritive-Binomial">

@@ -771,7 +771,7 @@ body {
                   color: $baseColor;
                 }
 
-                input[type="text"] {
+                input[type="number"] {
                   width: 100px;
                   border-radius: 30px;
                   border: 1px solid $baseColor;
@@ -782,11 +782,13 @@ body {
               .selectLenght {
                 margin-top: 20px;
                 width: 100%;
+                display: flex;
+
 
                 #selectLenght {
                   display: flex;
-                  justify-content: center;
-                  align-items: center;
+                  justify-content: start;
+                  align-items: flex-start;
                   width: 100%;
                   text-align: center;
                   text-align-last: center;
@@ -797,6 +799,39 @@ body {
                   border-right: none;
                   border-color: $baseColor;
                 }
+
+
+                .intervalValue {
+                  .inputInsert {
+                    #inputInsertSmaller {
+                      margin-left: 30px;
+                    }
+
+                    #inputInsertBigger {
+                      margin-left: 30px;
+                    }
+
+                    span {
+                      margin: 10px;
+                      display: inline-block;
+                    }
+
+                    .inputInsertMiddle {
+                      margin: 5px;
+                    }
+                  }
+                }
+
+               .row{
+                .buttonCalc {
+                  display: flex;
+                  margin: 0 auto;
+
+                  #btnProbCalc {
+                    padding: 20px;
+                  }
+                }
+               }
               }
             }
           }
@@ -805,6 +840,8 @@ body {
     }
   }
 }
+
+
 
 #footer {
   position: absolute;
@@ -1037,6 +1074,7 @@ body {
                   width: 200px !important;
                 }
               }
+
               .selectLenght {
                 margin-top: 20px;
 
