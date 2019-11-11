@@ -564,12 +564,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 10px;
+  margin: auto;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 nav .nav-tabs {
   border-bottom: none;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 nav .nav-tabs a {
-  padding: 10px 40px;
+  padding: 10px 30px;
   border: 1px solid #469ba7;
   color: #469ba7;
   border-radius: 30px;
@@ -597,13 +602,14 @@ body {
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row div span {
   color: #469ba7;
@@ -616,7 +622,6 @@ body {
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght {
   margin-top: 20px;
-  width: 100%;
   display: flex;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght #selectLenght {
@@ -633,25 +638,28 @@ body {
   border-right: none;
   border-color: #469ba7;
 }
-.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght .intervalValue .inputInsert #inputInsertSmaller {
-  margin-left: 30px;
-}
-.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght .intervalValue .inputInsert #inputInsertBigger {
-  margin-left: 30px;
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght .intervalValue .inputInsert input[type=text] {
+  display: flex;
+  margin: 0 auto;
+  width: 100px;
+  border-radius: 30px;
+  border: 1px solid #469ba7;
+  text-align: center;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght .intervalValue .inputInsert span {
-  margin: 10px;
+  margin: 10px 0px;
   display: inline-block;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght .intervalValue .inputInsert .inputInsertMiddle {
   margin: 5px;
 }
-.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght .row .buttonCalc {
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .buttonCalc {
   display: flex;
-  margin: 0 auto;
+  margin: 20px auto;
+  width: 100%;
 }
-.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght .row .buttonCalc #btnProbCalc {
-  padding: 20px;
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .buttonCalc #btnProbCalc {
+  padding: 10px;
 }
 
 #footer {
@@ -794,6 +802,7 @@ body {
     flex-direction: column;
   }
   .fullContainer .selectDistribution .col-xs-12 nav .nav-tabs a {
+    width: 200px;
     margin-bottom: 20px !important;
     padding: 10px 60px !important;
   }
@@ -809,18 +818,10 @@ body {
   }
   .fullContainer .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght {
     margin-top: 20px;
+    flex-direction: column !important;
   }
-  .fullContainer .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght #selectLenght {
-    display: block;
-    width: 70%;
-    text-align: center;
-    text-align-last: center;
-    color: #469ba7;
-    font-weight: bold;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-color: #469ba7;
+  .fullContainer .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght .intervalValue .inputInsert {
+    margin: 20px auto;
   }
 }
 

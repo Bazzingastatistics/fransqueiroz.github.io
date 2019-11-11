@@ -50,7 +50,7 @@ $(function(){
       $('.selectLenght').css('flexDirection', 'column');
       let inputInsert = /*html*/`<span>De</span><input type="text" name="" class="inputInsertMiddle" id="inputInsertMiddle">
                                  <span>Até</span><input type="text" name="" class="inputInsertMiddle" id="inputInsertMiddle2">`
-      $('.inputInsert').css('display','block');
+      $('.inputInsert').css('display','flex');
       $('.inputInsert').append(inputInsert);
      }
    });
