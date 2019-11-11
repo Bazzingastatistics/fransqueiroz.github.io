@@ -49,9 +49,19 @@ $(function(){
       $('.inputInsert').html("");
       $('.selectLenght').css('flexDirection', 'column');
       let inputInsert = /*html*/`<span>De</span><input type="text" name="" class="inputInsertMiddle" id="inputInsertMiddle">
-                                 <span>Até</span><input type="text" name="" class="inputInsertMiddle" id="inputInsertMiddle2">`
-      $('.inputInsert').css('display','flex');
+                                 <span class="text-spacing">Até</span><input type="text" name="" class="inputInsertMiddle" id="inputInsertMiddle2">`
+        
+        $('.inputInsert').css('display','flex');      
+      if (screen.width < 640 || screen.height < 480){
+          $('.inputInsert').css('flexDirection','column');
+        }else{
+          $('.inputInsert').css('flexDirection','row');
+        }
       $('.inputInsert').append(inputInsert);
+      
+      
+      
+      
      }
    });
    /*Apresentação de Inputs de Valores Probabilidade*/

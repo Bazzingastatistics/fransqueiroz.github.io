@@ -647,8 +647,11 @@ body {
   text-align: center;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght .intervalValue .inputInsert span {
-  margin: 10px 0px;
+  margin: 10px 5px;
   display: inline-block;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght .intervalValue .inputInsert .text-spacing {
+  margin-left: 10px;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght .intervalValue .inputInsert .inputInsertMiddle {
   margin: 5px;
