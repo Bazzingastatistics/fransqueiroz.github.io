@@ -782,6 +782,7 @@ body {
                   border-radius: 30px;
                   border: 1px solid $baseColor;
                   text-align: center;
+                  color: $baseColor;
                 }
               }
 
@@ -805,7 +806,7 @@ body {
                 }
                 .intervalValue {
                   .inputInsert {
-                    input[type="text"]{
+                    input[type="number"]{
                       display: flex;
                       margin: 0 auto;
                       width: 100px;
@@ -1098,7 +1099,7 @@ body {
                 .intervalValue{
                   .inputInsert{
                     margin: 20px auto;
-                    input[type="text"]{
+                    input[type="number"]{
 
                     }
                   }
