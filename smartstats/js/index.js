@@ -34,7 +34,7 @@ $(function(){
    /*Demonstrar Valor Input Separatriz*/
 
    /*Apresentação de Inputs de Valores Probabilidade*/
-   $('.selectLenght').click(function(){
+   $('#selectEnter').click(function(){
      if($('#selectLenght').val() == ''){
         $('.inputInsert').html("");
      }else if($('#selectLenght').val() == '<'){

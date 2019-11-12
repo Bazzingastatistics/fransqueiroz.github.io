@@ -839,36 +839,36 @@ body {
                   border-right: none;
                   border-color: $baseColor;
                 }
+              }
+              .intervalValue {
+                .inputInsert {
+                  margin: 20px 0 0!important;
+                  input[type="number"] {
+                    display: flex;
+                    margin: 0 auto;
+                    width: 100px;
+                    border-radius: 30px;
+                    border: 1px solid $baseColor;
+                    text-align: center;
 
-                .intervalValue {
-                  .inputInsert {
-                    input[type="number"] {
-                      display: flex;
-                      margin: 0 auto;
-                      width: 100px;
-                      border-radius: 30px;
-                      border: 1px solid $baseColor;
-                      text-align: center;
+                  }
 
-                    }
+                  #inputInsertSmaller {}
 
-                    #inputInsertSmaller {}
+                  #inputInsertBigger {}
 
-                    #inputInsertBigger {}
+                  span {
+                    margin: 10px 5px;
+                    display: inline-block;
+                  }
 
-                    span {
-                      margin: 10px 5px;
-                      display: inline-block;
-                    }
+                  .text-spacing {
+                    margin-left: 10px;
+                  }
 
-                    .text-spacing {
-                      margin-left: 10px;
-                    }
+                  .inputInsertMiddle {
+                    margin: 5px;
 
-                    .inputInsertMiddle {
-                      margin: 5px;
-
-                    }
                   }
                 }
               }
@@ -1164,6 +1164,7 @@ body {
       align-items: center;
       justify-content: center;
       margin-bottom: 5px;
+      text-align: center;
       p{
         color: $baseColor;
         font-weight: 600;
@@ -1236,6 +1237,25 @@ body {
         }
       }
     }
+     .row{
+       display: flex;
+       justify-content: center;
+       .btn-Calc{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         button{
+           margin: 20px 5px;
+           width: 200px;
+          border-radius: 30px;
+          background: none;
+          color: $baseColor;
+          border: 1px solid $baseColor;
+          text-align: center;
+          padding: 10px;
+         }
+       }
+     }
   }
 }
 
@@ -1409,6 +1429,26 @@ body {
 
           img {
             width: 40px !important;
+          }
+        }
+      }
+      .row{
+        display: flex;
+        justify-content: center;
+        .btn-Calc{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          button{
+            margin: 10px 5px;
+            width: 200px;
+           border-radius: 30px;
+           background: none;
+           color: $baseColor;
+           border: 1px solid $baseColor;
+           text-align: center;
+           padding: 5px;
           }
         }
       }

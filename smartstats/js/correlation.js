@@ -49,4 +49,9 @@ $(function(){
         valuesDepInput.splice(valuesDepInput.indexOf($(this).attr('data-posicao')), 1);
         console.log(valuesDepInput);
     }); 
+
+
+    $('#btn-Calc').click(function(){
+        alert('teste')
+    });
 });
