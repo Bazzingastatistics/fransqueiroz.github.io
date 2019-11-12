@@ -1158,7 +1158,80 @@ body {
       }
     }
 
-    .contentData {}
+    .contentData {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 5px;
+      p{
+        color: $baseColor;
+        font-weight: 600;
+      }
+      input[type="text"]{
+        margin-top:  !important;
+        max-width: 300px;
+        padding: 5px 30px;
+        border: 1px solid $baseColor;
+        color: $baseColor;
+        border-radius: 30px;
+        margin: -10px 10px 20px;
+      }
+      .IndepApresent{
+        display:none;
+      }
+      .IndepApresent-Active{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        p {
+          margin: 0 5px 5px;
+          color: #fff;
+          display: inline-block;
+          background: $baseColor;
+          padding: 5px 35px;
+          border-radius: 30px;
+          position: relative;
+          box-shadow: .2px .2px 2px #000;
+
+          label {
+            margin: auto;
+            width: 10px;
+            height: 10px;
+            top: 0px;
+            right: 15px;
+            position: absolute;
+          }
+        }
+      }
+      .DepApresent{
+        display:none;
+      }
+      .DepApresent-Active{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        p {
+          margin: 0 5px 5px;
+          color: #fff;
+          display: inline-block;
+          background: $baseColor;
+          padding: 5px 35px;
+          border-radius: 30px;
+          position: relative;
+          box-shadow: .2px .2px 2px #000;
+
+          label {
+            margin: auto;
+            width: 10px;
+            height: 10px;
+            top: 0px;
+            right: 15px;
+            position: absolute;
+          }
+        }
+      }
+    }
   }
 }
 
