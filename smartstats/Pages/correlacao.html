@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Smart Stats</title>
   <link rel="shortcut icon" href="../assets/favicon-stats.png" type="image/x-icon">
+
   <link rel="stylesheet" href="../css/animate.css">
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -17,15 +18,15 @@
 
   <header>
     <div>
-        <div class="collapse navbar-collapse navMobile " id="navbarNavMobile">
-            <div class="navbar-nav m-auto">
-              <a class="nav-item nav-link" href="../index.html">Inicio</a>
-              <a class="nav-item nav-link" href="#">Criar Conta</a>
-              <a class="nav-item nav-link" href="#">Contato</a>
-              <a class="nav-item nav-link" href="#">Política de Privacidade</a>
-              <a class="nav-item nav-link" href="#">Sobre</a>
-            </div>
-          </div>
+      <div class="collapse navbar-collapse navMobile " id="navbarNavMobile">
+        <div class="navbar-nav m-auto">
+          <a class="nav-item nav-link" href="menu.html">Inicio</a>
+          <a class="nav-item nav-link" href="#">Criar Conta</a>
+          <a class="nav-item nav-link" href="#">Contato</a>
+          <a class="nav-item nav-link" href="#">Política de Privacidade</a>
+          <a class="nav-item nav-link" href="#">Sobre</a>
+        </div>
+      </div>
     </div>
     <div class="navContent">
       <div class="container">
@@ -36,7 +37,7 @@
           </button>
           <div class="collapse navbar-collapse hidden-sm" id="navbarNavAltMarkup">
             <div class="navbar-nav m-auto">
-              <a class="nav-item nav-link" href="../index.html">Inicio</a>
+              <a class="nav-item nav-link" href="menu.html">Inicio</a>
               <a class="nav-item nav-link" href="#">Criar Conta</a>
               <a class="nav-item nav-link" href="#">Contato</a>
               <a class="nav-item nav-link" href="#">Política de Privacidade</a>
@@ -49,24 +50,21 @@
   </header>
   <section>
     <div class="container fullContainer">
-      <div class="contentMenu d-block">
+      <div class="contentCorrelation d-block">
         <div class="content row m-auto justify-content-center">
+          <div class="backPage">
+           <a href="menu.html"><img src="../assets/backMenu.png" alt=""></a>
+          </div>
           <div class="brandLogo">
             <img class="logo" src="../assets/logoStats.png" alt="">
           </div>
         </div>
-        <div class="row justify-content-sm-center contentBtnMenu">
-          <ul>
-           <a href="descritive.html"><li class="btn-Menu">Descritiva</li></a>
-           <a href="probabilidade.html"><li class="btn-Menu">Probabilidade</li></a>
-           <a href="correlacao.html"><li class="btn-Menu">Correlação e Regressão</li></a>
-          </ul>
-        </div>
-        
+        <div class="contentData">
 
+        </div>
       </div>
-    </div>
   </section>
+
 
 </body>
 
@@ -74,5 +72,7 @@
 <script src="../js/popper.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/index.js"></script>
+<script src="../js/probability.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 
 </html>

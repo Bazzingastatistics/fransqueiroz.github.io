@@ -66,6 +66,15 @@ body {
     box-shadow: 2px 2px 10px #000;
 
     .content {
+      .backPage {
+        position: absolute;
+        right: 60%;
+
+        img {
+          width: 40px;
+          margin: 20px;
+        }
+      }
 
       .brandLogo {
 
@@ -213,6 +222,19 @@ body {
 
 
     .content {
+      .backPage {
+        position: absolute;
+        right: 60% !important;
+
+        img {
+          width: 40px;
+          margin: 20px auto;
+
+          &:hover {
+            width: 50px;
+          }
+        }
+      }
 
       .brandLogo {
 
@@ -698,6 +720,19 @@ body {
 
 
     .content {
+      .backPage {
+        position: absolute;
+        right: 60% !important;
+
+        img {
+          width: 40px;
+          margin: 20px auto;
+
+          &:hover {
+            width: 50px;
+          }
+        }
+      }
 
       .brandLogo {
 
@@ -753,13 +788,14 @@ body {
           align-items: center;
 
           .tab-pane {
-            
+
             .titleDefault {
               color: $baseColor;
               font-size: 24px;
               margin: 20px auto 10px;
               text-align: center;
             }
+
             /*Uniforme*/
             .row {
               display: flex;
@@ -788,7 +824,7 @@ body {
               .selectLenght {
                 margin-top: 20px;
                 display: flex;
-              
+
                 #selectLenght {
                   display: flex;
                   justify-content: start;
@@ -803,9 +839,10 @@ body {
                   border-right: none;
                   border-color: $baseColor;
                 }
+
                 .intervalValue {
                   .inputInsert {
-                    input[type="number"]{
+                    input[type="number"] {
                       display: flex;
                       margin: 0 auto;
                       width: 100px;
@@ -814,36 +851,34 @@ body {
                       text-align: center;
 
                     }
-                    #inputInsertSmaller {
-                     
-                    }
 
-                    #inputInsertBigger {
-                     
-                    }
+                    #inputInsertSmaller {}
+
+                    #inputInsertBigger {}
 
                     span {
                       margin: 10px 5px;
                       display: inline-block;
                     }
 
-                    .text-spacing{
+                    .text-spacing {
                       margin-left: 10px;
                     }
 
                     .inputInsertMiddle {
                       margin: 5px;
-                    
+
                     }
                   }
                 }
               }
             }
-            .row{
+
+            .row {
               .buttonCalc {
                 display: flex;
                 margin: 20px auto;
-                width:100%;
+                width: 100%;
 
                 #btnProbCalc {
                   width: 100px;
@@ -854,60 +889,79 @@ body {
                   text-align: center;
                   padding: 10px;
 
-                  &:hover{
-                    background:$baseColor;
+                  &:hover {
+                    background: $baseColor;
                     color: $secondColor;
                   }
                 }
               }
-             }
-             /*Binomial*/
-             .row{
-               .sampleSize{
-                 margin-top:20px;
-                 .textSample{
-                   color: $baseColor;
-                   font-size: 18px;
-                 }
-                 input[type="text"]{
+            }
+
+            .row {
+              .resultPresentation {
+                .textPresentation {
+                  color: $baseColor;
+                  font-size: 16px;
+                }
+              }
+            }
+
+            /*Binomial*/
+            .row {
+              .sampleSize {
+                margin-top: 20px;
+
+                .textSample {
+                  color: $baseColor;
+                  font-size: 18px;
+                }
+
+                input[type="text"] {
                   padding: 5px 30px;
                   border: 1px solid $baseColor;
                   color: $baseColor;
                   border-radius: 30px;
                   margin: 0 10px;
-                 }
-               }
-               .successFailure{
-                 margin: 25px auto;
-                 display: flex;
-                 flex-direction: row;
-                 .success{
-                   padding: 0!important;
-                  .textSample{
+                }
+              }
+
+              .successFailure {
+                margin: 25px auto;
+                display: flex;
+                flex-direction: row;
+
+                .success {
+                  padding: 0 !important;
+
+                  .textSample {
                     color: $baseColor;
                     font-size: 18px;
                   }
-                 }
-                 .failure{
-                  padding: 0!important;
-                  .textSample{
+                }
+
+                .failure {
+                  padding: 0 !important;
+
+                  .textSample {
                     color: $baseColor;
                     font-size: 18px;
                   }
-                 }
-                 input[type="text"]{
-                   max-width: 150px;
+                }
+
+                input[type="text"] {
+                  max-width: 150px;
                   padding: 5px 30px;
                   border: 1px solid $baseColor;
                   color: $baseColor;
                   border-radius: 30px;
                   margin: 0 10px;
-                 }
-               }
-               .selectLenght {
+                }
+              }
+
+              .selectLenght {
                 margin-top: 20px;
                 display: flex;
-              
+
                 #selectBinomialLenght {
                   display: flex;
                   justify-content: start;
@@ -923,22 +977,25 @@ body {
                   border-color: $baseColor;
                 }
               }
-              .event{
-                .textSample{
+
+              .event {
+                .textSample {
                   margin-top: 20px;
                   color: $baseColor;
                   font-size: 18px;
                 }
-                input[type="text"]{
+
+                input[type="text"] {
                   max-width: 550px;
-                 padding: 5px 30px;
-                 border: 1px solid $baseColor;
-                 color: $baseColor;
-                 border-radius: 30px;
-                 margin: 0 10px;
+                  padding: 5px 30px;
+                  border: 1px solid $baseColor;
+                  color: $baseColor;
+                  border-radius: 30px;
+                  margin: 0 10px;
                 }
               }
-              .buttonCalc{
+
+              .buttonCalc {
                 #btnBinomialCalc {
                   width: 100px;
                   border-radius: 30px;
@@ -948,22 +1005,32 @@ body {
                   text-align: center;
                   padding: 10px;
 
-                  &:hover{
-                    background:$baseColor;
+                  &:hover {
+                    background: $baseColor;
                     color: $secondColor;
                   }
                 }
               }
+
+              .resultPresentation {
+                .textPresentation {
+                  font-size: 16px;
+                  color: $baseColor;
+                }
+              }
+
               /*NOrmal*/
-              .valuesNormal{
+              .valuesNormal {
                 display: flex;
                 flex-direction: row;
-                .textSample{
+
+                .textSample {
                   color: $baseColor;
                   font-size: 18px;
                 }
-                input[type="text"]{
-                  margin-top: -10px!important;
+
+                input[type="text"] {
+                  margin-top: -10px !important;
                   max-width: 100px;
                   padding: 5px 30px;
                   border: 1px solid $baseColor;
@@ -972,18 +1039,21 @@ body {
                   margin: 0 10px;
                 }
 
-                .mean{
-                  padding: 0 5px!important;
+                .mean {
+                  padding: 0 5px !important;
                 }
-                .diversion{
-                  padding: 0 5px!important;
+
+                .diversion {
+                  padding: 0 5px !important;
                 }
-                .variance{
-                  padding: 0 5px!important;
+
+                .variance {
+                  padding: 0 5px !important;
                 }
               }
-              .selectLenght{
-                #selectNormalLenght{
+
+              .selectLenght {
+                #selectNormalLenght {
                   display: flex;
                   justify-content: start;
                   align-items: flex-start;
@@ -998,14 +1068,16 @@ body {
                   border-color: $baseColor;
                 }
               }
-              .valueNormal{
-                .textSample{
+
+              .valueNormal {
+                .textSample {
                   margin-top: 20px;
                   color: $baseColor;
                   font-size: 18px;
                 }
-                input[type="text"]{
-                  margin-top: -10px!important;
+
+                input[type="text"] {
+                  margin-top: -10px !important;
                   max-width: 250px;
                   padding: 5px 30px;
                   border: 1px solid $baseColor;
@@ -1014,8 +1086,9 @@ body {
                   margin: 0 10px;
                 }
               }
-              .buttonCalc{
-                #btnNormalCalc{
+
+              .buttonCalc {
+                #btnNormalCalc {
                   width: 100px;
                   border-radius: 30px;
                   background: none;
@@ -1024,17 +1097,68 @@ body {
                   text-align: center;
                   padding: 10px;
 
-                  &:hover{
-                    background:$baseColor;
+                  &:hover {
+                    background: $baseColor;
                     color: $secondColor;
                   }
                 }
               }
-             }
+
+              .resultPresentation {
+                .divDesabled {
+                  display: none;
+                }
+
+                .divActive {
+                  display: block;
+                  font-size: 20px;
+                  color: $baseColor;
+                }
+              }
+
+            }
           }
         }
       }
     }
+  }
+
+  .contentCorrelation {
+    width: 100%;
+    margin-top: 50px;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px #000;
+
+
+    .content {
+      .backPage {
+        position: absolute;
+        right: 60% !important;
+
+        img {
+          width: 40px;
+          margin: 20px auto;
+
+          &:hover {
+            width: 50px;
+          }
+        }
+      }
+
+      .brandLogo {
+
+        .logo {
+          width: 100%;
+          max-width: 250px;
+          max-height: 150px;
+          margin: 1em auto;
+        }
+      }
+    }
+
+    .contentData {}
   }
 }
 
@@ -1050,8 +1174,45 @@ body {
 
 @media screen and (max-width:1024px) {
   .fullContainer {
-    .contentSection {
+    .contentDescritive {
       margin-top: 60px;
+
+      .content {
+        .backPage {
+          position: absolute;
+          right: 65% !important;
+
+          img {
+            width: 50px !important;
+          }
+        }
+      }
+    }
+
+    .contentProbability {
+      .content {
+        .backPage {
+          position: absolute;
+          right: 65% !important;
+
+          img {
+            width: 50px !important;
+          }
+        }
+      }
+    }
+
+    .contentCorrelation {
+      .content {
+        .backPage {
+          position: absolute;
+          right: 65% !important;
+
+          img {
+            width: 50px !important;
+          }
+        }
+      }
     }
   }
 }
@@ -1069,31 +1230,110 @@ body {
       color: $baseColor;
     }
   }
+
+  .fullContainer {
+    .contentDescritive {
+      .content {
+        .backPage {
+          position: absolute;
+          right: 70% !important;
+          
+
+          img {
+            width: 40px !important;
+          }
+        }
+      }
+    }
+
+    .contentProbability {
+      .content {
+        .backPage {
+          position: absolute;
+          right: 70% !important;
+
+          img {
+            width: 40px !important;
+          }
+        }
+      }
+    }
+
+    .contentCorrelation {
+      .content {
+        .backPage {
+          position: absolute;
+          right: 70% !important;
+
+          img {
+            width: 40px !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 
 @media screen and (max-width:575px) {
   .fullContainer {
-    .contentSection {
+    .contentDescritive {
       margin-top: 70px;
-    }
 
-    .bodyDescritive {
-      display: flex;
-      justify-content: center;
+      .content {
+        .backPage {
+          position: absolute;
+          right: 75% !important;
 
-      .textInput {
-        font-size: 1.2em;
-        color: $baseColor;
-        margin-top: 20px;
-        text-align: center;
+          img {
+            width: 40px !important;
+          }
+        }
       }
 
-      input[type="text"] {
-        margin: 0 auto 20px;
-        padding: 10px 20px;
-        width: 300px !important;
-        height: 60px;
+      .bodyDescritive {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .textInput {
+          display: block;
+          font-size: 1.2em;
+          color: $baseColor;
+          margin-top: 20px;
+          text-align: center;
+        }
+
+        input[type="text"] {
+          margin: 0 auto 20px;
+          padding: 10px 20px;
+          width: 300px !important;
+          height: 60px;
+        }
+      }
+    }
+    .contentProbability{
+      .content {
+        .backPage {
+          position: absolute;
+          right: 75% !important;
+
+          img {
+            width: 40px !important;
+          }
+        }
+      }
+    }
+    .contentCorrelation{
+      .content {
+        .backPage {
+          position: absolute;
+          right: 75% !important;
+
+          img {
+            width: 40px !important;
+          }
+        }
       }
     }
 
@@ -1118,13 +1358,18 @@ body {
         }
       }
     }
+
+    .backPage {
+      position: absolute;
+      right: 75% !important;
+    }
   }
 }
 
 @media screen and (max-width:450px) {
   .fullContainer {
-    .contentSection {
-      margin-top: 10px;
+    .contentDescritive{
+      margin-top: 30px;
 
       .contentLog {
 
@@ -1276,53 +1521,62 @@ body {
               .selectLenght {
                 margin-top: 20px;
                 flex-direction: column !important;
-                .intervalValue{
-                  .inputInsert{
-                    margin: 20px auto;
-                    input[type="number"]{
 
-                    }
+                .intervalValue {
+                  .inputInsert {
+                    margin: 20px auto;
+
+                    input[type="number"] {}
                   }
                 }
               }
             }
-            .successFailure{
+
+            .successFailure {
               margin: 25px auto;
               display: flex;
-              flex-direction: column!important;
-              .success{
-                padding: 0!important;
-               .textSample{
-                 color: $baseColor;
-                 font-size: 18px;
-               }
+              flex-direction: column !important;
+
+              .success {
+                padding: 0 !important;
+
+                .textSample {
+                  color: $baseColor;
+                  font-size: 18px;
+                }
               }
-              .failure{
-               padding: 0!important;
-               margin-top: 15px;
-               .textSample{
-                 color: $baseColor;
-                 font-size: 18px;
-               }
+
+              .failure {
+                padding: 0 !important;
+                margin-top: 15px;
+
+                .textSample {
+                  color: $baseColor;
+                  font-size: 18px;
+                }
               }
-              input[type="text"]{
+
+              input[type="text"] {
                 max-width: 150px;
-               padding: 5px 30px;
-               border: 1px solid $baseColor;
-               color: $baseColor;
-               border-radius: 30px;
-               margin: 0 10px;
+                padding: 5px 30px;
+                border: 1px solid $baseColor;
+                color: $baseColor;
+                border-radius: 30px;
+                margin: 0 10px;
               }
             }
-            .valuesNormal{
+
+            .valuesNormal {
               display: flex;
-              flex-direction: column!important;
-              .textSample{
+              flex-direction: column !important;
+
+              .textSample {
                 color: $baseColor;
                 font-size: 18px;
               }
-              input[type="text"]{
-                margin-top: -10px!important;
+
+              input[type="text"] {
+                margin-top: -10px !important;
                 max-width: 100px;
                 padding: 5px 30px;
                 border: 1px solid $baseColor;
@@ -1331,20 +1585,21 @@ body {
                 margin: 0 10px;
               }
 
-              .mean{
-                padding: 0 5px!important;
+              .mean {
+                padding: 0 5px !important;
               }
-              .diversion{
-                padding: 0 5px!important;
+
+              .diversion {
+                padding: 0 5px !important;
               }
-              .variance{
-                padding: 0 5px!important;
+
+              .variance {
+                padding: 0 5px !important;
               }
             }
-            .selectLenght{
-              #selectNormalLenght{
 
-              }
+            .selectLenght {
+              #selectNormalLenght {}
             }
           }
         }

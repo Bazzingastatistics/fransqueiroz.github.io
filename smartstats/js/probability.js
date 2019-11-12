@@ -18,6 +18,14 @@ $(function(){
   console.log(finalValue);
   console.log(interVal);
   console.log(intervalValue);
+
+  $('#contentResulUniforme').html('');
+  let dvPadrao = /*html*/` <p class="textPresentation">Desvio Padráo</p>`
+  let Variance = /*html*/` <p class="textPresentation">Variancia</p>`
+  let Mean = /*html*/` <p class="textPresentation">Media</p>`
+  let probability = /*html*/` <p class="textPresentation">Probabilidade</p>`
+  $('#contentResulUniforme').append(dvPadrao,Variance,Mean,probability);
+
  });
 
 
@@ -35,6 +43,12 @@ $(function(){
   console.log(failure);
   console.log(interval);
   console.log(event);
+
+  $('#contentResulBinomial').html('');
+  let probability = /*html*/` <p class="textPresentation">Probabilidade</p>`
+  let Mean = /*html*/` <p class="textPresentation">Media</p>`
+  let dvPadrao = /*html*/` <p class="textPresentation">Desvio Padráo</p>`  
+  $('#contentResulBinomial').append(probability,Mean,dvPadrao);
  });
 
  /*Normal*/
@@ -52,6 +66,14 @@ $(function(){
   console.log(variance);
   console.log(interval);
   console.log(value);
+
+
+  /*Apresentação dos Resultados */
+  $('#contentResult').html("");
+  let resultPresentation = /*html*/`<p id="resultPresentation" >A média é ${mean}</p>`;
+  $('#contentResult').append(resultPresentation);
+  $('#resultPresentation').addClass('divActive');
+
  });
  
 });
