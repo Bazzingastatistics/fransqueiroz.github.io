@@ -35,29 +35,31 @@ $(function(){
 
    /*Apresentação de Inputs de Valores Probabilidade*/
    $('.selectLenght').click(function(){
-     if($('#selectLenght').val() == '<'){
-      $('.inputInsert').html("");
-      $('.selectLenght').css('flexDirection', 'row');
-      let inputInsert = /*html*/` <input type="number" name="insertSmall" id="inputInsertSmaller">`
-      $('.inputInsert').append(inputInsert);
+     if($('#selectLenght').val() == ''){
+        $('.inputInsert').html("");
+     }else if($('#selectLenght').val() == '<'){
+        $('.inputInsert').html("");
+        $('.selectLenght').css('flexDirection', 'row');
+        let inputInsert = /*html*/` <input type="number" name="insertSmall" id="inputInsertSmaller">`
+        $('.inputInsert').append(inputInsert);
      }else if ($('#selectLenght').val() == '>'){
-      $('.inputInsert').html("");
-      $('.selectLenght').css('flexDirection', 'row');
-      let inputInsert = /*html*/` <input type="number" name="InsertBig" id="inputInsertBigger">`
-      $('.inputInsert').append(inputInsert);
+        $('.inputInsert').html("");
+        $('.selectLenght').css('flexDirection', 'row');
+        let inputInsert = /*html*/` <input type="number" name="InsertBig" id="inputInsertBigger">`
+        $('.inputInsert').append(inputInsert);
      }else{
-      $('.inputInsert').html("");
-      $('.selectLenght').css('flexDirection', 'column');
-      let inputInsert = /*html*/` <span>De</span><input type="number" name="" class="inputInsertMiddle" id="inputInsertMiddle">
-                                  <span class="text-spacing">Até</span><input type="number" name="" class="inputInsertMiddle" id="inputInsertMiddle2">`
-        
+        $('.inputInsert').html("");
+        $('.selectLenght').css('flexDirection', 'column');
+        let inputInsert = /*html*/` <span>De</span><input type="number" name="" class="inputInsertMiddle" id="inputInsertMiddle">
+                                    <span class="text-spacing">Até</span><input type="number" name="" class="inputInsertMiddle" id="inputInsertMiddle2">`
+          
         $('.inputInsert').css('display','flex');      
-      if (screen.width < 640 || screen.height < 480){
-          $('.inputInsert').css('flexDirection','column');
-        }else{
-          $('.inputInsert').css('flexDirection','row');
-        }
-      $('.inputInsert').append(inputInsert); 
+          if (screen.width < 640 || screen.height < 480){
+              $('.inputInsert').css('flexDirection','column');
+            }else{
+              $('.inputInsert').css('flexDirection','row');
+            }
+        $('.inputInsert').append(inputInsert); 
      }
    });
    /*Apresentação de Inputs de Valores Probabilidade*/

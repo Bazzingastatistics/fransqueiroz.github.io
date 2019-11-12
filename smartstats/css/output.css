@@ -924,6 +924,10 @@ body {
   border-radius: 30px;
   margin: -10px 10px 20px;
 }
+.fullContainer .contentCorrelation .contentData small {
+  color: #469ba7;
+  margin-top: -20px;
+}
 .fullContainer .contentCorrelation .contentData .IndepApresent {
   display: none;
 }

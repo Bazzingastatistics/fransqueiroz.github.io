@@ -19,6 +19,12 @@ $(function(){
      }
  });
 
+    $(document).on('click', '.deletOrdination', function () {
+        $(this).remove();
+        valuesIndepInput.splice(valuesIndepInput.indexOf($(this).attr('data-posicao')), 1);
+        console.log(valuesIndepInput);
+    });
+
  var modalPresent2 = $('#resultDepApresent');
  var modalPresentText2 = $('#presentDepText');
  var valuesDepInput = [];
@@ -38,4 +44,9 @@ $(function(){
          }
      }
  });
+    $(document).on('click', '.deletOrdination', function () {
+        $(this).remove();
+        valuesDepInput.splice(valuesDepInput.indexOf($(this).attr('data-posicao')), 1);
+        console.log(valuesDepInput);
+    }); 
 });
