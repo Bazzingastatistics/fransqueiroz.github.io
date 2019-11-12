@@ -594,6 +594,10 @@ body {
   justify-content: center;
   align-items: center;
 }
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane {
+  /*Uniforme*/
+  /*Binomial*/
+}
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .titleDefault {
   color: #469ba7;
   font-size: 24px;
@@ -664,6 +668,78 @@ body {
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .buttonCalc #btnProbCalc {
   padding: 10px;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .sampleSize {
+  margin-top: 20px;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .sampleSize .textSample {
+  color: #469ba7;
+  font-size: 18px;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .sampleSize input[type=text] {
+  padding: 5px 30px;
+  border: 1px solid #469ba7;
+  color: #469ba7;
+  border-radius: 30px;
+  margin: 0 10px;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .successFailure {
+  margin: 25px auto;
+  display: flex;
+  flex-direction: row;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .successFailure .success {
+  padding: 0 !important;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .successFailure .success .textSample {
+  color: #469ba7;
+  font-size: 18px;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .successFailure .failure {
+  padding: 0 !important;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .successFailure .failure .textSample {
+  color: #469ba7;
+  font-size: 18px;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .successFailure input[type=text] {
+  max-width: 150px;
+  padding: 5px 30px;
+  border: 1px solid #469ba7;
+  color: #469ba7;
+  border-radius: 30px;
+  margin: 0 10px;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght {
+  margin-top: 20px;
+  display: flex;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght #selectBinomialLenght {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  width: 100%;
+  text-align: center;
+  text-align-last: center;
+  color: #469ba7;
+  font-weight: bold;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: #469ba7;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .event .textSample {
+  margin-top: 20px;
+  color: #469ba7;
+  font-size: 18px;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .event input[type=text] {
+  max-width: 550px;
+  padding: 5px 30px;
+  border: 1px solid #469ba7;
+  color: #469ba7;
+  border-radius: 30px;
+  margin: 0 10px;
 }
 
 #footer {
@@ -826,6 +902,34 @@ body {
   }
   .fullContainer .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght .intervalValue .inputInsert {
     margin: 20px auto;
+  }
+  .fullContainer .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .successFailure {
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column !important;
+  }
+  .fullContainer .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .successFailure .success {
+    padding: 0 !important;
+  }
+  .fullContainer .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .successFailure .success .textSample {
+    color: #469ba7;
+    font-size: 18px;
+  }
+  .fullContainer .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .successFailure .failure {
+    padding: 0 !important;
+    margin-top: 15px;
+  }
+  .fullContainer .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .successFailure .failure .textSample {
+    color: #469ba7;
+    font-size: 18px;
+  }
+  .fullContainer .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .successFailure input[type=text] {
+    max-width: 150px;
+    padding: 5px 30px;
+    border: 1px solid #469ba7;
+    color: #469ba7;
+    border-radius: 30px;
+    margin: 0 10px;
   }
 }
 

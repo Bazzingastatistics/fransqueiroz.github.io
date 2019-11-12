@@ -754,14 +754,14 @@ body {
           align-items: center;
 
           .tab-pane {
-
+            
             .titleDefault {
               color: $baseColor;
               font-size: 24px;
               margin: 20px auto 10px;
               text-align: center;
             }
-
+            /*Uniforme*/
             .row {
               display: flex;
               justify-content: center;
@@ -848,6 +848,84 @@ body {
 
                 #btnProbCalc {
                   padding: 10px;
+                }
+              }
+             }
+             /*Binomial*/
+             .row{
+               .sampleSize{
+                 margin-top:20px;
+                 .textSample{
+                   color: $baseColor;
+                   font-size: 18px;
+                 }
+                 input[type="text"]{
+                  padding: 5px 30px;
+                  border: 1px solid $baseColor;
+                  color: $baseColor;
+                  border-radius: 30px;
+                  margin: 0 10px;
+                 }
+               }
+               .successFailure{
+                 margin: 25px auto;
+                 display: flex;
+                 flex-direction: row;
+                 .success{
+                   padding: 0!important;
+                  .textSample{
+                    color: $baseColor;
+                    font-size: 18px;
+                  }
+                 }
+                 .failure{
+                  padding: 0!important;
+                  .textSample{
+                    color: $baseColor;
+                    font-size: 18px;
+                  }
+                 }
+                 input[type="text"]{
+                   max-width: 150px;
+                  padding: 5px 30px;
+                  border: 1px solid $baseColor;
+                  color: $baseColor;
+                  border-radius: 30px;
+                  margin: 0 10px;
+                 }
+               }
+               .selectLenght {
+                margin-top: 20px;
+                display: flex;
+              
+                #selectBinomialLenght {
+                  display: flex;
+                  justify-content: start;
+                  align-items: flex-start;
+                  width: 100%;
+                  text-align: center;
+                  text-align-last: center;
+                  color: $baseColor;
+                  font-weight: bold;
+                  border-top: none;
+                  border-left: none;
+                  border-right: none;
+                  border-color: $baseColor;
+                }
+              }
+              .event{
+                .textSample{
+                  margin-top: 20px;
+                  color: $baseColor;
+                  font-size: 18px;
+                }
+                input[type="text"]{
+                  max-width: 550px;
+                 padding: 5px 30px;
+                 border: 1px solid $baseColor;
+                 color: $baseColor;
+                 border-radius: 30px;
+                 margin: 0 10px;
                 }
               }
              }
@@ -1104,6 +1182,34 @@ body {
                     }
                   }
                 }
+              }
+            }
+            .successFailure{
+              margin: 25px auto;
+              display: flex;
+              flex-direction: column!important;
+              .success{
+                padding: 0!important;
+               .textSample{
+                 color: $baseColor;
+                 font-size: 18px;
+               }
+              }
+              .failure{
+               padding: 0!important;
+               margin-top: 15px;
+               .textSample{
+                 color: $baseColor;
+                 font-size: 18px;
+               }
+              }
+              input[type="text"]{
+                max-width: 150px;
+               padding: 5px 30px;
+               border: 1px solid $baseColor;
+               color: $baseColor;
+               border-radius: 30px;
+               margin: 0 10px;
               }
             }
           }
