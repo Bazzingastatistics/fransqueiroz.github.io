@@ -125,8 +125,8 @@
                     <div class="selectLenght">
                       <select class="textVariable" name="variable" id="selectBinomialLenght">
                         <option class="textVariable" value="">Selecione o Intervalo </option>
-                        <option class="textVariable" value="<">Menor Que < </option>
-                        <option class="textVariable" value=">">Maior que ></option>
+                        <option class="textVariable" value="<">Menor Que < </option> <option class="textVariable"
+                            value=">">Maior que ></option>
                         <option class="textVariable" value="=">Exatamente</option>
                       </select>
                     </div>
@@ -137,9 +137,51 @@
                       <input type="text" id="inputEvent">
                     </div>
                   </div>
+                  <div class="row">
+                    <div class="buttonCalc">
+                      <button id="btnBinomialCalc">Calcular</button>
+                    </div>
+                  </div>
                 </div>
                 <div class="tab-pane fade" id="nav-Normal" role="tabpanel" aria-labelledby="nav-Descritive-Normal">
                   <h2 class="titleDefault">Distribuição Normal</h2>
+                  <div class="row">
+                    <div class="valuesNormal">
+                      <div class="mean">
+                        <p class="textSample">Média</p>
+                        <input type="text" id="inputMean">
+                      </div>
+                      <div class="diversion">
+                        <p class="textSample">Desvio Padrão</p>
+                        <input type="text" id="inputDiversion">
+                      </div>
+                      <div class="variance">
+                        <p class="textSample">Variancia</p>
+                        <input type="text" id="inputVariance">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="selectLenght">
+                      <select class="textVariable" name="variable" id="selectNormalLenght">
+                        <option class="textVariable" value="">Selecione o Intervalo </option>
+                        <option class="textVariable" value="<">Menor Que < </option> <option class="textVariable"
+                            value=">">Maior que ></option>
+                        <option class="textVariable" value="=">Exatamente</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="valueNormal">
+                      <p class="textSample">Valor</p>
+                      <input type="text" id="valueNormal">
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="buttonCalc">
+                        <button id="btnNormalCalc">Calcular</button>
+                      </div>
+                    </div>
                 </div>
               </div>
 

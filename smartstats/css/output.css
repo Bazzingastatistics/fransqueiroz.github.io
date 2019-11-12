@@ -9,7 +9,6 @@ body {
 
 .navbarMobile-Active {
   width: 100%;
-  height: 100vh;
   display: flex;
   position: absolute;
   top: 51px;
@@ -667,7 +666,20 @@ body {
   width: 100%;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .buttonCalc #btnProbCalc {
+  width: 100px;
+  border-radius: 30px;
+  background: none;
+  color: #469ba7;
+  border: 1px solid #469ba7;
+  text-align: center;
   padding: 10px;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .buttonCalc #btnProbCalc:hover {
+  background: #469ba7;
+  color: #fff;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row {
+  /*NOrmal*/
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .sampleSize {
   margin-top: 20px;
@@ -741,6 +753,86 @@ body {
   border-radius: 30px;
   margin: 0 10px;
 }
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .buttonCalc #btnBinomialCalc {
+  width: 100px;
+  border-radius: 30px;
+  background: none;
+  color: #469ba7;
+  border: 1px solid #469ba7;
+  text-align: center;
+  padding: 10px;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .buttonCalc #btnBinomialCalc:hover {
+  background: #469ba7;
+  color: #fff;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .valuesNormal {
+  display: flex;
+  flex-direction: row;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .valuesNormal .textSample {
+  color: #469ba7;
+  font-size: 18px;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .valuesNormal input[type=text] {
+  margin-top: -10px !important;
+  max-width: 100px;
+  padding: 5px 30px;
+  border: 1px solid #469ba7;
+  color: #469ba7;
+  border-radius: 30px;
+  margin: 0 10px;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .valuesNormal .mean {
+  padding: 0 5px !important;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .valuesNormal .diversion {
+  padding: 0 5px !important;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .valuesNormal .variance {
+  padding: 0 5px !important;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .selectLenght #selectNormalLenght {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  width: 100%;
+  text-align: center;
+  text-align-last: center;
+  color: #469ba7;
+  font-weight: bold;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: #469ba7;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .valueNormal .textSample {
+  margin-top: 20px;
+  color: #469ba7;
+  font-size: 18px;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .valueNormal input[type=text] {
+  margin-top: -10px !important;
+  max-width: 250px;
+  padding: 5px 30px;
+  border: 1px solid #469ba7;
+  color: #469ba7;
+  border-radius: 30px;
+  margin: 0 10px;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .buttonCalc #btnNormalCalc {
+  width: 100px;
+  border-radius: 30px;
+  background: none;
+  color: #469ba7;
+  border: 1px solid #469ba7;
+  text-align: center;
+  padding: 10px;
+}
+.fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .buttonCalc #btnNormalCalc:hover {
+  background: #469ba7;
+  color: #fff;
+}
 
 #footer {
   position: absolute;
@@ -793,7 +885,7 @@ body {
     font-size: 20px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .fullContainer .contentSection {
     margin-top: 10px;
   }
@@ -930,6 +1022,32 @@ body {
     color: #469ba7;
     border-radius: 30px;
     margin: 0 10px;
+  }
+  .fullContainer .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .valuesNormal {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .fullContainer .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .valuesNormal .textSample {
+    color: #469ba7;
+    font-size: 18px;
+  }
+  .fullContainer .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .valuesNormal input[type=text] {
+    margin-top: -10px !important;
+    max-width: 100px;
+    padding: 5px 30px;
+    border: 1px solid #469ba7;
+    color: #469ba7;
+    border-radius: 30px;
+    margin: 0 10px;
+  }
+  .fullContainer .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .valuesNormal .mean {
+    padding: 0 5px !important;
+  }
+  .fullContainer .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .valuesNormal .diversion {
+    padding: 0 5px !important;
+  }
+  .fullContainer .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .valuesNormal .variance {
+    padding: 0 5px !important;
   }
 }
 
