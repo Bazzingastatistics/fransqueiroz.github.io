@@ -876,12 +876,18 @@ $(document).ready(function () {
  $('#selectVariable').click(function () {
      if ($('#selectVariable').val() == "ordinal") {
          $('#modalValue').attr("id", "modalValue-Active");
+         $('#enter').attr("type", "text"); 
 
-     } else {
-         if ($('#selectVariable').val() == "nominal" || $('#selectVariable').val() == "discreta" || $('#selectVariable').val() == "continua" || $('#selectVariable').val() == "") {
-             $("#modalValue-Active").attr('id', 'modalValue');
-         }
+     } else if ($('#selectVariable').val() == "nominal"){
+        $("#modalValue-Active").attr('id', 'modalValue');
+        $('#enter').attr("type", "text"); 
+         
+     }else {
+         if($('#selectVariable').val() == "discreta" || $('#selectVariable').val() == "continua" || $('#selectVariable').val() == "") {
+         $("#modalValue-Active").attr('id', 'modalValue');
+         $('#enter').attr("type", "number");   
      }
+    }
 
  });
 
