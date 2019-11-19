@@ -28,6 +28,11 @@ body {
   filter: invert(1);
 }
 
+.navContent {
+  height: 55px;
+  background: #1D5259;
+}
+
 .navContent .navbar-collapse .navbar-nav a {
   color: #fff;
   font-size: 18px;
@@ -36,8 +41,8 @@ body {
 }
 .navContent .navbar-collapse .navbar-nav a:hover {
   background: #fff;
-  border-radius: 30px;
   color: #469ba7;
+  border-bottom: 1px solid #1D5259;
 }
 
 .fullContainer {
@@ -1044,7 +1049,6 @@ body {
   }
   .navContent .navbar-collapse .navbar-nav a:hover {
     background: #fff;
-    border-radius: 30px;
     color: #469ba7;
   }
 

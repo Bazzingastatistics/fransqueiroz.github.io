@@ -95,7 +95,7 @@ $(function(){
   // Determinando vetor que forma os múltiplos "k"
 
   switch (ind) {
-      case "<":
+      case "-":
 
           for (let i = k[0]; i > -1; i--) {
               vetK.push(i);

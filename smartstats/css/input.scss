@@ -1,5 +1,6 @@
 $baseColor: #469ba7;
 $secondColor: #fff;
+$colorNav: #1D5259;
 
 body {
   background-color: $baseColor;
@@ -36,6 +37,12 @@ body {
   filter: invert(1);
 }
 
+.navContent {
+  height: 55px;
+  background: $colorNav;
+}
+
+
 .navContent .navbar-collapse .navbar-nav a {
   color: $secondColor;
   font-size: 18px;
@@ -44,8 +51,8 @@ body {
 
   &:hover {
     background: $secondColor;
-    border-radius: 30px;
     color: $baseColor;
+    border-bottom: 1px solid $colorNav;
   }
 }
 
@@ -1323,7 +1330,6 @@ body {
 
     &:hover {
       background: $secondColor;
-      border-radius: 30px;
       color: $baseColor;
     }
   }

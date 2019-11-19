@@ -1,3 +1,34 @@
+function graficoBarrasJuntas(dados, nomes) {
+    var ctx = $('.line-chart');
+
+    var chartGraph = new Chart(ctx, {
+        type: "bar",
+        data: {
+            datasets: dados,
+            labels: nomes,
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    categoryPercentage: 1.0,
+                    barPercentage: 1.0,
+                    ticks: {
+                        fonColor: '#000'
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        fontColor: '#000',
+                    }
+                }]
+            }
+        }
+    });
+}
+
+
+
 // Funções de Cálculo
 
 // Qualitativa Nominal
@@ -354,6 +385,38 @@ function qtContinua(vetor, nameVariable, analiseContinua) {
 
 
  tableContinua(nameVariable, lin, vetMin, vetMax, vetFi, vetFr, vetFac, vetFacP,vetModa,med,vetMediana,desvPad,cv);
+
+ /*Gráficos*/
+ var chartColors = [
+    'rgba(255, 99, 132, 0.85)',
+    'rgba(54, 162, 235, 0.85)',
+    'rgba(255, 206, 86, 0.85)',
+    'rgba(75, 192, 192, 0.85)',
+    'rgba(153, 102, 255, 0.85)',
+ ];
+
+ let dados = [],
+     names = [],
+     colors= [],
+     colorIndex = 0;
+ vetFi.forEach(element =>{
+     colors.push(chartColors[colorIndex])
+     if(colorIndex == chartColors.length -1)
+        colorIndex = 0;
+     else
+        colorIndex++
+ });
+
+    for (let i = 0; i < lin; i++){
+        names.push(vetMin[i],vetMax[i]);
+        dados.push(vetFi[i]);
+    }
+    
+    graficoBarrasJuntas([{
+        data:dados,
+        backgroundColor:colors,
+        label: nameVariable,
+    }],names)
 }
 
 //__________________________________________________________________________
@@ -983,48 +1046,7 @@ $(document).ready(function () {
 
  /*Graphics*/
 
- var ctx = $('.line-chart');
-
- var chartGraph = new Chart(ctx, {
-    type: 'bar',
-    data:{
-        /*numeros digitados*/
-     labels:['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-
-     datasets:[{
-         data:[12, 19, 3, 5, 2, 3],
-         backgroundColor: [
-            'rgba(255, 99, 132, 0.85)',
-            'rgba(54, 162, 235, 0.85)',
-            'rgba(255, 206, 86, 0.85)',
-            'rgba(75, 192, 192, 0.85)',
-            'rgba(153, 102, 255, 0.85)',
-            'rgba(255, 159, 64, 0.85)'
-        ],
-        borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
-        ],
-        borderWidth: 1,
-        label:'teste'
-     }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
- });
-
- /*Graphics*/
+ 
 
 
 
