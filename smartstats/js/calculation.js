@@ -27,6 +27,19 @@ function graficoBarrasJuntas(dados, nomes) {
     });
 }
 
+//___________Gráfico Pizza
+function graficoPizza(dados, nomes) {   
+    var ctx = $("#canvasGraph")
+
+    var pieChart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+            datasets: dados,
+            labels: nomes
+        }
+    });
+}
+
 
 
 // Funções de Cálculo
@@ -150,6 +163,25 @@ function qlOrdinal(vetor, vetorOrd,nameVariable) {
  console.log(vetFac);
  console.log(vetFacP);
  tableQualy(nameVariable,vetE, vetFi, vetFr, vetFac, vetFacP,vetModa,vetMediana);
+
+ /*Gráficos */
+    var chartColors = [
+        'rgba(255, 99, 132, 0.85)',
+        'rgba(54, 162, 235, 0.85)',
+        'rgba(255, 206, 86, 0.85)',
+        'rgba(75, 192, 192, 0.85)',
+        'rgba(153, 102, 255, 0.85)',
+    ];
+    let colors = [];
+
+        for(let i= 0; i< vetE.length; i++){
+            colors.push(chartColors[i]);
+        }
+        graficoPizza([{
+            data:vetFi,
+            backgroundColor: colors,
+            label: nameVariable,
+        }], vetE);
 }
 
 // Quantitativa Discreta
@@ -399,13 +431,13 @@ function qtContinua(vetor, nameVariable, analiseContinua) {
      names = [],
      colors= [],
      colorIndex = 0;
- vetFi.forEach(element =>{
+    vetFi.forEach(element =>{
      colors.push(chartColors[colorIndex])
      if(colorIndex == chartColors.length -1)
         colorIndex = 0;
      else
         colorIndex++
- });
+    });
 
     for (let i = 0; i < lin; i++){
         names.push(vetMin[i],vetMax[i]);
