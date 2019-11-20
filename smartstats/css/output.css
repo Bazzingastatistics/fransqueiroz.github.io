@@ -359,15 +359,15 @@ body {
 .fullContainer .contentDescritive .contentBtn {
   padding: 20px;
 }
-.fullContainer .contentDescritive .contentBtn .btnCalculate {
+.fullContainer .contentDescritive .contentBtn .btnCalculate, .fullContainer .contentDescritive .contentBtn a {
   padding: 10px 20px;
   background-color: #fff;
-  border: 2px solid #469ba7;
-  border-radius: 25px;
+  border: 2px solid #469ba7 !important;
+  border-radius: 25px !important;
   color: #469ba7;
   cursor: pointer;
 }
-.fullContainer .contentDescritive .contentBtn .btnCalculate:hover {
+.fullContainer .contentDescritive .contentBtn .btnCalculate:hover, .fullContainer .contentDescritive .contentBtn a:hover {
   background: #469ba7;
   color: #fff;
 }
@@ -460,7 +460,7 @@ body {
 }
 .fullContainer #nav-profile {
   width: 100% !important;
-  max-width: 520px;
+  max-width: 620px !important;
 }
 .fullContainer #nav-profile canvas {
   margin: 0 auto;

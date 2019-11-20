@@ -443,11 +443,11 @@ body {
     .contentBtn {
       padding: 20px;
 
-      .btnCalculate {
+      .btnCalculate,a {
         padding: 10px 20px;
         background-color: #fff;
-        border: 2px solid $baseColor;
-        border-radius: 25px;
+        border: 2px solid $baseColor!important;
+        border-radius: 25px!important;
         color: $baseColor;
         cursor: pointer;
 
@@ -579,7 +579,7 @@ body {
   }
   #nav-profile{
     width: 100%!important;
-    max-width: 520px;
+    max-width: 620px!important;
     canvas{
       margin: 0 auto;
     }

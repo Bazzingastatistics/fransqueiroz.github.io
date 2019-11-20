@@ -1005,7 +1005,8 @@ $(document).ready(function () {
  });
 
 
- $('.btnCalculate').click(function () {
+ $('#btnCalculate').click(function () {
+     
      let type = $('#selectVariable').val();
      $('#tableDemonstration').html("");
      $('#tableDemonstration-Medias').html("");
