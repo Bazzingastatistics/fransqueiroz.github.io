@@ -252,8 +252,6 @@ function fatorial(x) {
   tabelaNormalZ[38] = [0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999];
   tabelaNormalZ[39] = [0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000];
 
-  // Organizando o vetor
-  vetX.sort();
 
   // Declarando variáveis
   let z = 0;
@@ -319,13 +317,34 @@ function fatorial(x) {
   $('#contentResult').append(resultPresentation);
   $('#resultPresentation').addClass('divActive');
  }
+   
+ $('#selectNormalLenght').click(function(){
+    $('.valueNormal').html('');
+    if($('#selectNormalLenght').val() == "|"){
+        let insertNormal = /*html*/`<p class="textSample">Valor</p>
+                                    <input type="text" id="valueNormal1"> </input>
+                                    <input type="text" id="valueNormal2"> </input>`
+        $('.valueNormal').append(insertNormal);
+    }else{
+        let insertNormal = /*html*/`<p class="textSample">Valor</p>
+                                    <input type="text" id="valueNormal1"> </input>`
+        $('.valueNormal').append(insertNormal);
+    }
+ });
 
  $('#btnNormalCalc').click(function(){
   let mean = parseFloat($('#inputMean').val());
   let diversion = parseFloat($('#inputDiversion').val());
   let interval = $('#selectNormalLenght').val();
-  let value = [];
-  value.push(parseFloat($('#valueNormal').val()));
+  var value = [];
+  if($('#selectNormalLenght').val() == "|"){
+    value.push(parseFloat($('#valueNormal1').val()));
+    value.push(parseFloat($('#valueNormal2').val()));
+    }else{
+    value.push(parseFloat($('#valueNormal1').val()));
+    }
+ 
+  
 
   console.log(mean);
   console.log(diversion);

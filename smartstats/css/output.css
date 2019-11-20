@@ -183,7 +183,7 @@ body {
 .fullContainer .contentDescritive {
   width: 100%;
   margin-top: 50px;
-  max-width: 500px;
+  max-width: 650px;
   background: #fff;
   border-radius: 30px;
   box-shadow: 2px 2px 10px #000;
@@ -207,7 +207,9 @@ body {
 }
 .fullContainer .contentDescritive .bodyDescritive {
   display: flex;
-  justify-content: center;
+  justify-content: center !important;
+  flex-direction: column;
+  align-items: center;
 }
 .fullContainer .contentDescritive .bodyDescritive .textInput {
   font-size: 1.2em;
@@ -456,6 +458,13 @@ body {
 .fullContainer #tableDemonstration-Medias .tableLines {
   border-left: 2px solid #469ba7;
 }
+.fullContainer #nav-profile {
+  width: 100% !important;
+  max-width: 520px;
+}
+.fullContainer #nav-profile canvas {
+  margin: 0 auto;
+}
 .fullContainer .reloadPage {
   margin: 0 auto 20px;
   text-align: center;
@@ -633,6 +642,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 460px;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane {
   /*Uniforme*/
@@ -1104,7 +1114,7 @@ body {
     margin-top: 20px;
     text-align: center;
   }
-  .fullContainer .contentDescritive .bodyDescritive input[type=text] {
+  .fullContainer .contentDescritive .bodyDescritive input[type=text], .fullContainer .contentDescritive .bodyDescritive .enter {
     margin: 0 auto 20px;
     padding: 10px 20px;
     width: 300px !important;
@@ -1184,7 +1194,7 @@ body {
     margin-top: 20px;
     text-align: center;
   }
-  .fullContainer .bodyDescritive input[type=text] {
+  .fullContainer .bodyDescritive input[type=text], .fullContainer .bodyDescritive .enter {
     margin: 0 auto 20px;
     padding: 10px 20px;
     width: 250px !important;
@@ -1319,6 +1329,18 @@ body {
   }
   .fullContainer .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .valuesNormal .variance {
     padding: 0 5px !important;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .fullContainer .contentDescritive .bodyDescritive input[type=text], .fullContainer .contentDescritive .bodyDescritive .enter {
+    margin: 0 auto 20px;
+    padding: 10px 20px;
+    width: 230px !important;
+    height: 20px;
+  }
+  .fullContainer .contentDescritive #nav-profile .line-chart {
+    max-width: 500px !important;
+    max-height: 500px !important;
   }
 }
 

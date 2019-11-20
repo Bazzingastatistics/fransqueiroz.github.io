@@ -1,3 +1,16 @@
+var chartColors = [
+    'rgb(0,128,0)',
+    'rgb(0,0,205)',
+    'rgb(210,105,30)',
+    'rgb(128,0,128)',
+    'rgb(180,0,0)',
+    'rgb(0,191,255)',
+    'rgb(0,250,154)',
+    'rgb(255,0,255)',
+    'rgb(218,165,32)',
+    'rgb(128,0,0)',
+]
+
 function graficoBarrasJuntas(dados, nomes) {
     var ctx = $('.line-chart');
 
@@ -29,13 +42,36 @@ function graficoBarrasJuntas(dados, nomes) {
 
 //___________Gráfico Pizza
 function graficoPizza(dados, nomes) {   
-    var ctx = $("#canvasGraph")
+    var ctx = $(".line-chart");
 
-    var pieChart = new Chart(ctx, {
-        type: "doughnut",
+    var myDoughnutChart = new Chart(ctx, {
+        type: 'doughnut',
+        data:{
+            datasets:dados,
+            labels:nomes
+        }
+    });
+}
+
+//Barras Separadas
+function GraficoBarrasSeparadas(dados, nomes) {
+    var ctx = $(".line-chart");
+
+    var chartGraph = new Chart(ctx, {
+        type: "bar",
         data: {
             datasets: dados,
             labels: nomes
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+
+                    }
+                }]
+            }
         }
     });
 }
@@ -101,6 +137,29 @@ function qlNominal(vetor,nameVariable) {
  vetMediana = medianaGeral(vetor);
 
  tableQualy(nameVariable,vetE, vetFi, vetFr, vetFac, vetFacP,vetModa,vetMediana);
+
+ let dados = [],
+    names = [],
+    colors = [],
+    colorIndex = 0;
+    vetE.forEach(element => {
+    dados.push(element.length);
+    names.push(element[0]);
+    colors.push(chartColors[colorIndex])
+    if(colorIndex == chartColors.length -1)
+        colorIndex = 0;
+    else
+        colorIndex++
+    });
+
+    graficoPizza([{
+    data:vetFi,
+    label: colors,
+    }], names);
+
+    return true;
+    
+
 }
 
 // Qualitativa Ordinal
@@ -165,29 +224,30 @@ function qlOrdinal(vetor, vetorOrd,nameVariable) {
  tableQualy(nameVariable,vetE, vetFi, vetFr, vetFac, vetFacP,vetModa,vetMediana);
 
  /*Gráficos */
-    var chartColors = [
-        'rgba(255, 99, 132, 0.85)',
-        'rgba(54, 162, 235, 0.85)',
-        'rgba(255, 206, 86, 0.85)',
-        'rgba(75, 192, 192, 0.85)',
-        'rgba(153, 102, 255, 0.85)',
-        'rgba(255, 99, 132, 0.85)',
-        'rgba(54, 162, 235, 0.85)',
-        'rgba(255, 206, 86, 0.85)',
-        'rgba(75, 192, 192, 0.85)',
-        'rgba(153, 102, 255, 0.85)',
-    ];
-    let colors = [];
 
-        for(let i= 0; i< vetE.length; i++){
-            colors.push(chartColors[i]);
-        }
-        graficoPizza([{
-            data:vetFi,
-            backgroundColor: colors,
-            label: nameVariable,
-        }], vetE);
-}
+    
+    
+    let dados = [],
+    names = [],
+    colors = [],
+    colorIndex = 0;
+    vetE.forEach(element => {
+    dados.push(element.length);
+    names.push(element[0]);
+    colors.push(chartColors[colorIndex])
+    if(colorIndex == chartColors.length -1)
+        colorIndex = 0;
+    else
+        colorIndex++
+    });
+
+    graficoPizza([{
+    data:vetFi,
+    label: colors,
+    }], names);
+
+    return true;
+    }
 
 // Quantitativa Discreta
 
@@ -273,6 +333,29 @@ function qtDiscreta(vetor, nameVariable, analiseDiscreta) {
  cv = Math.round(((desvPad / med) * 100));
 
  tableDiscreta(nameVariable,vetE, vetFi, vetFr, vetFac, vetFacP,vetModa,med,vetMediana,desvPad,cv);
+
+ //Gráficos
+        let dados = [],
+            names = [],
+            colors = [],
+            colorIndex = 0;
+            vetFi.forEach(element => {
+            // dados.push(element.length);
+            // names.push(element[0].toString());
+            colors.push(chartColors[colorIndex])
+            if(colorIndex == chartColors.length -1)
+                colorIndex = 0;
+            else
+                colorIndex++
+            });
+
+        GraficoBarrasSeparadas([{
+        data:vetFi,
+        backgroundColor: colors,
+        label: nameVariable
+        }], vetE);
+
+        return true;
 }
 
 // Quantitativa Continua
@@ -424,13 +507,6 @@ function qtContinua(vetor, nameVariable, analiseContinua) {
  tableContinua(nameVariable, lin, vetMin, vetMax, vetFi, vetFr, vetFac, vetFacP,vetModa,med,vetMediana,desvPad,cv);
 
  /*Gráficos*/
- var chartColors = [
-    'rgba(255, 99, 132, 0.85)',
-    'rgba(54, 162, 235, 0.85)',
-    'rgba(255, 206, 86, 0.85)',
-    'rgba(75, 192, 192, 0.85)',
-    'rgba(153, 102, 255, 0.85)',
- ];
 
  let dados = [],
      names = [],

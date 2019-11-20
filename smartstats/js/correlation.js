@@ -51,17 +51,28 @@ $(function(){
 
         let proj = 0;
 
-        if (ind == "x") {
-            proj = (regA * vlProj + regB).toFixed(2);
+        if (ind == "x") {                  
+            proj = parseFloat((regA * vlProj + regB)).toFixed(2);
+            
         }
         if (ind == "y") {
-            proj = ((vlProj - regB) / regA).toFixed(2);
+            proj = parseFloat(((vlProj - regB) / regA)).toFixed(2);
         }
 
         if (proj < 0) {
             proj = proj * -1
         }
-        document.write(`<br>Projeção para ${ind} = ${vlProj} : ${proj}`);
+
+        if (ind == "x") {
+            let apresentX= /*html*/`<p>Projeção para ${ind} = ${vlProj} : Y é igual a ${proj}</p>`;
+            $('#apresent2').append(apresentX);
+        }
+        if (ind == "y") {
+            let apresentY= /*html*/`<p>Projeção para ${ind} = ${vlProj} : X é igual a ${proj}</p>`;
+            $('#apresent2').append(apresentY);
+        }
+      
+      
     }
 
 
@@ -76,7 +87,6 @@ $(function(){
          }
          else {
              valuesIndepInput.push(parseFloat($(this).val()));
-             console.log(valuesIndepInput);
              modalPresent.removeClass('IndepApresent').addClass('IndepApresent-Active');
              let indepText = '<p data-posicao="' + ($(this).val()) + '" class="deletOrdination">' + $(this).val() + '<label >x</label> </p>'
              modalPresentText.append(indepText);
@@ -88,7 +98,6 @@ $(function(){
     $(document).on('click', '.deletOrdination', function () {
         $(this).remove();
         valuesIndepInput.splice(valuesIndepInput.indexOf($(this).attr('data-posicao')), 1);
-        console.log(valuesIndepInput);
     });
 
  var modalPresent2 = $('#resultDepApresent');
@@ -102,7 +111,6 @@ $(function(){
          }
          else {
              valuesDepInput.push(parseFloat($(this).val()));
-             console.log(valuesDepInput);
              modalPresent2.removeClass('DepApresent').addClass('DepApresent-Active');
              let depTest = '<p data-posicao="' + ($(this).val()) + '" class="deletOrdination">' + $(this).val() + '<label >x</label> </p>'
              modalPresentText2.append(depTest);
@@ -113,7 +121,6 @@ $(function(){
     $(document).on('click', '.deletOrdination', function () {
         $(this).remove();
         valuesDepInput.splice(valuesDepInput.indexOf($(this).attr('data-posicao')), 1);
-        console.log(valuesDepInput);
     }); 
 
 
@@ -126,9 +133,10 @@ $(function(){
 
     //Projeção
 
-    let selectProj = $('#selectProjectionLenght').val()
-    let valueProj = $('#valueprojectInput').val();
+    
     $('#Calc').click(function(){
+        let selectProj = $('#selectProjectionLenght').val()
+         let valueProj = parseFloat($('#valueprojectInput').val());
         projecao(valueProj,selectProj);
     });
 });
