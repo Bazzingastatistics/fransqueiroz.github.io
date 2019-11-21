@@ -2,12 +2,12 @@ $(function(){
     //Function Chart
     var ctx = $('#myChart');
 
-    function scatterChart(){
+    function scatterChart(dados,name){
     var scatterChart = new Chart(ctx, {
         type: 'scatter',
         data: {
             datasets: [{
-                label: 'Scatter Dataset',
+                label: name,
                 data: dados
             }]
         },
@@ -62,6 +62,14 @@ $(function(){
         regB = ((eYI / vetY.length) - (regA * (eXI / vetX.length))).toFixed(2);
 
         apresent(cor);
+
+        let dados ={};
+
+         for(let i = 0; i < vetX.length; i++){
+             dados= vetX[0],vetY[0];
+         }
+
+         console.log(dados);
 
     }
 
