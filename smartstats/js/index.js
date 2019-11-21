@@ -1,5 +1,15 @@
 $(function(){
+  
+  $('.contentMenu').addClass('animated flipInY');
+  $('.contentDescritive ').addClass('animated flipInY');
+  $('.contentProbability ').addClass('animated flipInY');
+  $('.contentCorrelation ').addClass('animated flipInY');
 
+  $('.backPage').click(function(){
+    $('.contentDescritive ').addClass('animated flipOutY');
+  $('.contentProbability ').addClass('animated flipOutY');
+  $('.contentCorrelation ').addClass('animated flipOutY');
+  });
  /*Active Menu Mobile*/
  $('.navbar-toggler').click(function(){
  $('#navbarNavMobile').toggleClass('navbarMobile-Active');
