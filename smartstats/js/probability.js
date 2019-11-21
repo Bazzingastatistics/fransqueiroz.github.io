@@ -1,11 +1,7 @@
 $(function(){
  /*Uniforme*/
   function distUniforme(a, b, ind, vetX) {
-   console.log(a);
-   console.log(b);
-   console.log(ind);
-   console.log(vetX);
-   
+    
    let prob;
    let x;
    let med;
@@ -25,19 +21,14 @@ $(function(){
            x = vetX[1] - vetX[0];
            break;
    }
-
    // Calculando a probabilidade
    prob = (((1 / (b - a)) * x) * 100).toFixed(2);
-
    // Média
    med = (a + b) / 2
-
    //Desvio Padrão
    desvPad = (Math.sqrt(((b - a) ** 2 / 12))).toFixed(2);
-
    //CV
    cv = Math.round((desvPad / med) * 100);
-
    apresentValue(desvPad,cv,med,prob);
  }
  /*Apresentação De Dados*/
@@ -49,7 +40,6 @@ $(function(){
     let probability = /*html*/` <p class="textPresentation">Probabilidade = ${prob}%</p>`
     $('#contentResulUniforme').append(dvPadrao,Variance,Mean,probability);
   }
-
  $('#btnProbCalc').click(function(){
   let initialValue = parseFloat($('#inputStart').val());
   let finalValue = parseFloat($('#inputEnd').val());
@@ -66,91 +56,60 @@ $(function(){
   /*Inserção dos Valores de Intervalo no Vetor*/
 
   distUniforme(initialValue, finalValue, interVal, intervalValue);
-  console.log(initialValue);
-  console.log(finalValue);
-  console.log(interVal);
-  console.log(intervalValue);
-
  });
 
- 
-
-
  /*Binomial*/
-
- function distBinomial(n, p, q, k, ind) {
-  console.log(n);
-  console.log(p);
-  console.log(q);
-  console.log(k);
-  console.log(ind);
+ function distBinomial(n, p, q, k, ind) { 
   // Declarando Variáveis
   let anaComb;
   let vetComb = [];
   let vetP = [];
   let prob = 0;
   let vetK = [];
-
-
   // Determinando vetor que forma os múltiplos "k"
-
   switch (ind) {
       case "-":
-
           for (let i = k[0]; i > -1; i--) {
               vetK.push(i);
           }
           break;
-
       case ">":
           for (let i = k[0]; i < n + 1; i++) {
               vetK.push(i);
           }
           break;
-
       case "=":
           vetK.push(k);
           break;
-
       case "><":
           for (let i = k[0]; i < k[1] + 1; i++) {
               vetK.push(i);
           }
-
           vetK.shift();
           vetK.pop();
-
           if (vetK == []) {
               vetK.push(0);
           }
   }
   // Realizando cálculos de Análise Combinatória
-
   for (let i = 0; i < vetK.length; i++) {
-
       anaComb = (fatorial(n) / (fatorial(vetK[i]) * fatorial(n - vetK[i]))).toFixed(2);
       vetComb.push(parseFloat(anaComb));
   }
-
   // Calculando e somando as probabilidades dos múltiplos resultados
   for (let i = 0; i < vetK.length; i++) {
       let P = ((vetComb[i] * (p ** vetK[i]) * (q ** (n - vetK[i]))) * 100).toFixed(2);
       vetP.push(parseFloat(P));
   }
-
   for (let i = 0; i < vetP.length; i++) {
       prob += vetP[i];
   }
-
   // Calculando Média
   let med = n * p;
-
   // Calculando Desvio Padrão
   let desvPad = Math.sqrt((n * p * q)).toFixed(2);
-
   // Calculando CV
   let cv = ((desvPad / med) * 100).toFixed(2);
-
   apresentValueBinomial(prob,med,desvPad,cv);
 }
 
@@ -171,8 +130,6 @@ function fatorial(x) {
   }
   return fat
 }
-
-
  /*Apresentação dos Dados*/
  function apresentValueBinomial(prob,med,desvPad,cv){
    $('#contentResulBinomial').html('');
@@ -182,8 +139,6 @@ function fatorial(x) {
     let coefv = /*html*/` <p class="textPresentation">Coeficiente de Variação = ${cv}%</p>`  
     $('#contentResulBinomial').append(probability,Mean,dvPadrao,coefv);
   }
-
-
  $('#btnBinomialCalc').click(function(){
   let sampleSize = parseFloat($('#sampleSize').val());
   let success = parseFloat(($('#inputSuccess').val() / 100));
@@ -191,24 +146,11 @@ function fatorial(x) {
   let interval = $('#selectBinomialLenght').val();
   let event = [];
   event.push(parseFloat($('#inputEvent').val()));
-
-  console.log(sampleSize);
-  console.log(success);
-  console.log(failure);
-  console.log(interval);
-  console.log(event);
-
   distBinomial(sampleSize,success,failure,event,interval);
-  
  });
 
  /*Normal*/
-
  function distNormal(vetX, med, desvPad, ind) {
-  console.log(vetX);
-  console.log(med);
-  console.log(desvPad);
-  console.log(ind);
   // Declarando tabela de Distribuição Nornal
   let tabelaNormalZ = [];
   tabelaNormalZ[0] = [0.0000, 0.0040, 0.0080, 0.0120, 0.0160, 0.0199, 0.0239, 0.0279, 0.0319, 0.0359];
@@ -251,14 +193,11 @@ function fatorial(x) {
   tabelaNormalZ[37] = [0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999];
   tabelaNormalZ[38] = [0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999, 0.4999];
   tabelaNormalZ[39] = [0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000];
-
-
   // Declarando variáveis
   let z = 0;
   let prob = 0;
   let vetZ = [];
   let vetProb = [];
-
   // Calculando vetZ (determinando valores de Z)
   for (let i = 0; i < vetX.length; i++) {
       let aux = (vetX[i] - med) / desvPad;
@@ -271,7 +210,6 @@ function fatorial(x) {
       vetZ.push(aux);
       aux = 0;
   }
-
   // Transformando valores a partir do vetZ
   if (vetZ.length == 2) {
       for (let i = 0; i < vetZ.length; i++) {
@@ -291,16 +229,13 @@ function fatorial(x) {
           prob = ((parseFloat(vetProb[1]) - parseFloat(vetProb[0])) * 100).toFixed(2);
       }
   }
-
   // Convertendo os valores com base na tabela normal e calculando a probabilidade
   if (vetZ.length == 1) {
       z = (vetZ[0] * 10).toFixed(1);
       z = z.toString();
       let vetZStr = z.split(".");
-
       vetProb.push((tabelaNormalZ[parseInt(vetZStr[0])][parseInt(vetZStr[1])]));
       vetProb.push(0.5000);
-
       if ((vetX[0] < med && ind == ">") || (vetX[0] > med && ind == "<")) {
           prob = ((parseFloat(vetProb[0]) + parseFloat(vetProb[1])) * 100).toFixed(2);
       }
@@ -310,31 +245,24 @@ function fatorial(x) {
   }
   apresentValueNormal(prob)
  }
-
  function apresentValueNormal(prob){
   $('#contentResult').html("");
   let resultPresentation = /*html*/`<p id="resultPresentation" >Probabilidade = ${prob}%</p>`;
   $('#contentResult').append(resultPresentation);
   $('#resultPresentation').addClass('divActive');
- }
-   
+ } 
  $('#selectNormalLenght').click(function(){
     $('.valueNormal').html('');
     if($('#selectNormalLenght').val() == "|"){
         $('#valueNormal').css('flexDirection','row');
-        $('#valueNormal1').css('width','120');
-        $('#valueNormal2').css('width','120');
-        let insertNormal = /*html*/`
-                                    <input type="text" id="valueNormal1"> </input>
+        let insertNormal = /*html*/`<input type="text" id="valueNormal1"> </input>
                                     <input type="text" id="valueNormal2"> </input>`
         $('.valueNormal').append(insertNormal);
     }else{
-        let insertNormal = /*html*/`
-                                    <input type="text" id="valueNormal1"> </input>`
+        let insertNormal = /*html*/`<input type="text" id="valueNormal1"> </input>`
         $('.valueNormal').append(insertNormal);
     }
  });
-
  $('#btnNormalCalc').click(function(){
   let mean = parseFloat($('#inputMean').val());
   let diversion = parseFloat($('#inputDiversion').val());
@@ -346,19 +274,7 @@ function fatorial(x) {
     }else{
     value.push(parseFloat($('#valueNormal1').val()));
     }
- 
-  
-
-  console.log(mean);
-  console.log(diversion);
-  console.log(interval);
-  console.log(value);
-  
   distNormal(value,mean,diversion,interval);
-
   /*Apresentação dos Resultados */
-  
-
  });
- 
 });
