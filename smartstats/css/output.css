@@ -874,8 +874,8 @@ body {
   font-size: 18px;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .valueNormal input[type=text] {
-  margin-top: -10px !important;
-  max-width: 250px;
+  margin-top: 10px !important;
+  max-width: 150px;
   padding: 5px 30px;
   border: 1px solid #469ba7;
   color: #469ba7;
@@ -1313,7 +1313,7 @@ body {
     font-size: 18px;
   }
   .fullContainer .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .valuesNormal input[type=text] {
-    margin-top: -10px !important;
+    margin-top: 10px !important;
     max-width: 100px;
     padding: 5px 30px;
     border: 1px solid #469ba7;
@@ -1341,6 +1341,16 @@ body {
   .fullContainer .contentDescritive #nav-profile .line-chart {
     max-width: 500px !important;
     max-height: 500px !important;
+  }
+  .fullContainer .contentProbability #selectNormalLenght {
+    max-width: 150px !important;
+  }
+  .fullContainer .contentProbability #valueNormal {
+    max-width: 150px !important;
+    margin: 0 auto;
+  }
+  .fullContainer .contentProbability #valueNormal input[type=text] {
+    max-width: 100px !important;
   }
 }
 

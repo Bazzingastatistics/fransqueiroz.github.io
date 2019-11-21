@@ -321,12 +321,15 @@ function fatorial(x) {
  $('#selectNormalLenght').click(function(){
     $('.valueNormal').html('');
     if($('#selectNormalLenght').val() == "|"){
-        let insertNormal = /*html*/`<p class="textSample">Valor</p>
+        $('#valueNormal').css('flexDirection','row');
+        $('#valueNormal1').css('width','120');
+        $('#valueNormal2').css('width','120');
+        let insertNormal = /*html*/`
                                     <input type="text" id="valueNormal1"> </input>
                                     <input type="text" id="valueNormal2"> </input>`
         $('.valueNormal').append(insertNormal);
     }else{
-        let insertNormal = /*html*/`<p class="textSample">Valor</p>
+        let insertNormal = /*html*/`
                                     <input type="text" id="valueNormal1"> </input>`
         $('.valueNormal').append(insertNormal);
     }
