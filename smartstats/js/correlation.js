@@ -1,4 +1,28 @@
 $(function(){
+    //Function Chart
+    var ctx = $('#myChart');
+
+    function scatterChart(){
+    var scatterChart = new Chart(ctx, {
+        type: 'scatter',
+        data: {
+            datasets: [{
+                label: 'Scatter Dataset',
+                data: dados
+            }]
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    type: 'linear',
+                    position: 'bottom'
+                }]
+            }
+        }
+    });
+        return true
+    }
+    //______________________________________
     var regA,regB;
 
     //_________Função_______
