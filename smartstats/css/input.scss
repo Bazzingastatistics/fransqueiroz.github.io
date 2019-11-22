@@ -1209,6 +1209,12 @@ body {
         border-radius: 30px;
         margin: -10px 10px 20px;
       }
+      .IndepValue,.depValue{
+        display: none;
+      }
+      .IndepValue-Active,.depValue-Active{
+        display: block;
+      }
 
       small {
         color: $baseColor;
@@ -1298,10 +1304,18 @@ body {
       }
     }
     #apresent{
+      width: 100%;
       .textCorrelation{
         text-align: center;
         color: $baseColor;
       }
+    }
+    
+    .apresentChat{
+      display: none;
+    }
+    .apresentChat-Active{
+      display: block;
     }
     #projection{
       margin: 0 auto 20px;

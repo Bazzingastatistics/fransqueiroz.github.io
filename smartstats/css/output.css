@@ -954,6 +954,12 @@ body {
   border-radius: 30px;
   margin: -10px 10px 20px;
 }
+.fullContainer .contentCorrelation .contentData .IndepValue, .fullContainer .contentCorrelation .contentData .depValue {
+  display: none;
+}
+.fullContainer .contentCorrelation .contentData .IndepValue-Active, .fullContainer .contentCorrelation .contentData .depValue-Active {
+  display: block;
+}
 .fullContainer .contentCorrelation .contentData small {
   color: #469ba7;
   margin-top: -20px;
@@ -1029,9 +1035,18 @@ body {
   text-align: center;
   padding: 10px;
 }
+.fullContainer .contentCorrelation #apresent {
+  width: 100%;
+}
 .fullContainer .contentCorrelation #apresent .textCorrelation {
   text-align: center;
   color: #469ba7;
+}
+.fullContainer .contentCorrelation .apresentChat {
+  display: none;
+}
+.fullContainer .contentCorrelation .apresentChat-Active {
+  display: block;
 }
 .fullContainer .contentCorrelation #projection {
   margin: 0 auto 20px;

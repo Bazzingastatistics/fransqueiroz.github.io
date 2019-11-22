@@ -1,32 +1,47 @@
 $(function(){
     //Function Chart
+    var chartColors = [
+        'rgb(0,128,0)',
+        'rgb(0,0,205)',
+        'rgb(210,105,30)',
+        'rgb(128,0,128)',
+        'rgb(180,0,0)',
+        'rgb(0,191,255)',
+        'rgb(0,250,154)',
+        'rgb(255,0,255)',
+        'rgb(218,165,32)',
+        'rgb(128,0,0)',
+    ]
     var ctx = $('#myChart');
 
-    function scatterChart(dados,name){
-    var scatterChart = new Chart(ctx, {
+    function scatterChart(dados,names){
+        let borderColor = ['rgb(0,0,0)'];
+        let color =[ 'rgb(0,0,205)']
+        var scatterChart = new Chart(ctx, {
         type: 'scatter',
         data: {
             datasets: [{
-                label: name,
-                data: dados
+                label:names,
+                data: dados,
+                backgroundColor:color,
+                borderColor:borderColor
             }]
         },
         options: {
-            scales: {
-                xAxes: [{
-                    type: 'linear',
-                    position: 'bottom'
-                }]
+        scales: {
+            xAxes: [{
+                type: 'linear',
+                position: 'bottom'
+            }]
             }
         }
-    });
-        return true
+        });
     }
     //______________________________________
     var regA,regB;
 
     //_________Função_______
-    function correlacao(vetX, vetY) {
+    function correlacao(vetX, vetY,indValX,depY) {
 
         // Declaração de Variáveis
         let eXI = 0;
@@ -63,14 +78,13 @@ $(function(){
 
         apresent(cor);
 
-        let dados ={};
-
-         for(let i = 0; i < vetX.length; i++){
-             dados= vetX[0],vetY[0];
-         }
-
+        let dados =[]
+        for(let i = 0; i < vetX.length; i++){
+            dados.push({x : vetX[i], y : vetY[i]});
+        }
+        scatterChart(dados,indValX);
          console.log(dados);
-
+        
     }
 
     function apresent(cor){
@@ -104,6 +118,53 @@ $(function(){
             $('#apresent2').append(apresentY);
         }  
     }
+
+    //______________________________________________________
+    var modalPresentVal = $('#contentValueInd');
+    var modalPresentTextVal = $('#Indtext');
+    var indValX;
+
+    $('#independentValue').keyup(function (e) {
+        if (e.keyCode == 13) {
+            if (!$(this).val()) {
+                alert("Campo Vazio");
+            }
+            else {
+                indValX = $(this).val();
+                modalPresentVal.removeClass('IndepValue').addClass('IndepValue-Active');
+                let depTest = '<p data-posicao="' + ($(this).val()) + '" class="deletOrdination">' + $(this).val() + '</p>'
+                modalPresentTextVal.append(depTest);
+                $(this).val("");
+            }
+        }
+    });
+       $(document).on('click', '.deletOrdination', function () {
+           $(this).remove();
+           indValX.splice(indValX.indexOf($(this).attr('data-posicao')), 1);
+       }); 
+    var modalPresentVal2 = $('#contentValueDep');
+    var modalPresentTextVal2 = $('#Deptext');
+    var depY =[];
+
+    $('#dependentValue').keyup(function (e) {
+    if (e.keyCode == 13) {
+        if (!$(this).val()) {
+            alert("Campo Vazio");
+        }
+        else {
+            depY = $(this).val();
+            modalPresentVal2.removeClass('depValue').addClass('depValue-Active');
+            let depTest = '<p data-posicao="' + ($(this).val()) + '" class="deletOrdination">' + $(this).val() + '</p>'
+            modalPresentTextVal2.append(depTest);
+            $(this).val("");
+        }
+    }
+    });
+    $(document).on('click', '.deletOrdination', function () {
+        $(this).remove();
+        depY.splice(depY.indexOf($(this).attr('data-posicao')), 1);
+    }); 
+
  var modalPresent = $('#resultIndepApresent');
  var modalPresentText = $('#presentIndText');
  var valuesIndepInput = [];
@@ -150,21 +211,22 @@ $(function(){
         $(this).remove();
         valuesDepInput.splice(valuesDepInput.indexOf($(this).attr('data-posicao')), 1);
     }); 
-
-
+   
+   
     $('#btn-Calc').click(function(){
-        let indValX = $('#independentValue').val();
-        let depY= $('#dependentValue').val();
+         console.log(indValX);
+         console.log(depY);
+         console.log(valuesIndepInput);
+         console.log(valuesDepInput);
         if(valuesIndepInput == "" || valuesDepInput == ""){
             alert('Campos de Valores Vazios');
-        }else if(indValX = "" || depY == ""){
-            alert('Indique o Nome das Variáveis');
-        }
-        let corX = valuesIndepInput;
+        }else{
+         let corX = valuesIndepInput;
         let corY = valuesDepInput;
-        correlacao(corX,corY);
-        console.log(indValX);
-        console.log(depY);
+        correlacao(corX,corY,indValX,depY);
+        $('#apresentChat').removeClass('apresentChat').addClass('apresentChat-Active')
+
+        
         
         var apresentProj = /*html*/`<div class="contentTitle">
                             <h4 class="title">Projeção</h4>
@@ -172,18 +234,18 @@ $(function(){
                             <div class="contentSelectProj">
                             <span>Para</span>
                             <select class="textVariable" name="variable" id="selectProjectionLenght">
-                            <option class="textVariable" value=""> X ou Y </option>
-                            <option class="textVariable" value="x">Selecionar ${indValX} </option>
-                            <option class="textVariable" value="y">Selecionar ${depY} </option>
+                            <option class="textVariable" value=""> </option>
+                            <option class="textVariable" value="x"> ${indValX} </option>
+                            <option class="textVariable" value="y"> ${depY} </option>
                             </select>
                             <input type="number" id="valueprojectInput">
                             </div>
                             <div class="contentBtn">
                             <button id="Calc">Calcular</button>
                             </div>`
-    $('#projection').html('');
-    $('#projection').append(apresentProj);
-        
+            $('#projection').html('');
+            $('#projection').append(apresentProj);
+        }
     });
 
     //Projeção

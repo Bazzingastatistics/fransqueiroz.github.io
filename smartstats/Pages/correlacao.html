@@ -64,8 +64,16 @@
         <div class="contentData">
           <p>Nome da Variável Independente(Xi)</p>
           <input type="text" name="" id="independentValue">
+          <small>Digite o Valor e aperte Enter</small>
+          <div id="contentValueInd" class="IndepValue">
+            <div id="Indtext"></div>
+          </div>
           <p>Nome da Variável Dependente (Yi)</p>
           <input type="text" name="" id="dependentValue">
+          <small>Digite o Valor e aperte Enter</small>
+          <div id="contentValueDep" class="depValue">
+            <div id="Deptext"></div>
+          </div>
           <div class="contentData">
             <p>Digite os valores da Variável Independente</p>
             <input type="text" name="" id="inputIndepent">
@@ -91,7 +99,7 @@
         </div>
         <div class="row">
           <div id="apresent"></div>
-          <div class="apresentChat">
+          <div id="apresentChat" class="apresentChat">
             <canvas id="myChart" width="400" height="400"></canvas>
           </div>
         </div>
@@ -103,6 +111,11 @@
 
           </div>
         </div>
+        <div class="row">
+          <div class="reloadPage">
+              <input class="scroll" type="button" value="Limpar" href=".fullContainer">
+          </div>
+      </div>
       </div>
   </section>
 
