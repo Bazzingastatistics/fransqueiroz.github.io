@@ -56,11 +56,12 @@ body {
   }
 }
 
-#text-Menu{
+#text-Menu {
   display: flex;
   justify-content: center;
   margin: 5px 70px 0;
 }
+
 .fullContainer {
   display: flex;
   justify-content: center;
@@ -261,9 +262,10 @@ body {
 
     .bodyDescritive {
       display: flex;
-      justify-content: center!important;
+      justify-content: center !important;
       flex-direction: column;
       align-items: center;
+
       .textInput {
         font-size: 1.2em;
         color: $baseColor;
@@ -271,7 +273,8 @@ body {
         text-align: center;
       }
 
-      input[type="text"], .enter {
+      input[type="text"],
+      .enter {
         border: 0;
         background: none;
         display: inline-block;
@@ -443,11 +446,12 @@ body {
     .contentBtn {
       padding: 20px;
 
-      .btnCalculate,a {
+      .btnCalculate,
+      a {
         padding: 10px 20px;
         background-color: #fff;
-        border: 2px solid $baseColor!important;
-        border-radius: 25px!important;
+        border: 2px solid $baseColor !important;
+        border-radius: 25px !important;
         color: $baseColor;
         cursor: pointer;
 
@@ -577,10 +581,12 @@ body {
     }
 
   }
-  #nav-profile{
-    width: 100%!important;
-    max-width: 620px!important;
-    canvas{
+
+  #nav-profile {
+    width: 100% !important;
+    max-width: 620px !important;
+
+    canvas {
       margin: 0 auto;
     }
   }
@@ -861,9 +867,11 @@ body {
                   border-color: $baseColor;
                 }
               }
+
               .intervalValue {
                 .inputInsert {
-                  margin: 20px 0 0!important;
+                  margin: 20px 0 0 !important;
+
                   input[type="number"] {
                     display: flex;
                     margin: 0 auto;
@@ -1186,11 +1194,13 @@ body {
       justify-content: center;
       margin-bottom: 5px;
       text-align: center;
-      p{
+
+      p {
         color: $baseColor;
         font-weight: 600;
       }
-      input[type="text"]{
+
+      input[type="text"] {
         margin-top:  !important;
         max-width: 300px;
         padding: 5px 30px;
@@ -1199,17 +1209,21 @@ body {
         border-radius: 30px;
         margin: -10px 10px 20px;
       }
-      small{
+
+      small {
         color: $baseColor;
         margin-top: -20px;
       }
-      .IndepApresent{
-        display:none;
+
+      .IndepApresent {
+        display: none;
       }
-      .IndepApresent-Active{
+
+      .IndepApresent-Active {
         display: block;
         margin: 0 auto;
         text-align: center;
+
         p {
           margin: 0 5px 5px;
           color: #fff;
@@ -1230,13 +1244,16 @@ body {
           }
         }
       }
-      .DepApresent{
-        display:none;
+
+      .DepApresent {
+        display: none;
       }
-      .DepApresent-Active{
+
+      .DepApresent-Active {
         display: block;
         margin: 0 auto;
         text-align: center;
+
         p {
           margin: 0 5px 5px;
           color: #fff;
@@ -1258,25 +1275,79 @@ body {
         }
       }
     }
-     .row{
-       display: flex;
-       justify-content: center;
-       .btn-Calc{
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         button{
-           margin: 20px 5px;
-           width: 200px;
+
+    .row {
+      display: flex;
+      justify-content: center;
+
+      .btn-Calc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+          margin: 20px 5px;
+          width: 200px;
           border-radius: 30px;
           background: none;
           color: $baseColor;
           border: 1px solid $baseColor;
           text-align: center;
           padding: 10px;
-         }
-       }
-     }
+        }
+      }
+    }
+    #projection{
+      margin: 0 auto 20px;
+      .contentTitle{
+        .title{
+          color: $baseColor;
+          text-align: center;
+        }
+      }
+      .contentSelectProj{
+        span{
+          color: $baseColor;
+        }
+        #selectProjectionLenght{
+          width: 150px;
+          text-align: center;
+          text-align-last: center;
+          color: $baseColor;
+          font-weight: bold;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          border-color: $baseColor;
+        }
+        #valueprojectInput{
+          margin: 20px 5px;
+          width: 110px;
+          border-radius: 15px;
+          background: none;
+          color: $baseColor;
+          border: 1px solid $baseColor;
+          text-align: center;
+          padding: 5px;
+        }
+      }
+      .contentBtn{
+        margin: 0 auto;
+        text-align: center;
+        #Calc{
+          margin: 20px 5px;
+          width: 110px;
+          border-radius: 15px;
+          background: none;
+          color: $baseColor;
+          border: 1px solid $baseColor;
+          text-align: center;
+          padding: 5px;
+        }
+      }
+      
+      
+    }
   }
 }
 
@@ -1354,7 +1425,7 @@ body {
         .backPage {
           position: absolute;
           right: 70% !important;
-          
+
 
           img {
             width: 40px !important;
@@ -1413,6 +1484,7 @@ body {
         justify-content: center;
         flex-direction: column;
         align-items: center;
+
         .textInput {
           display: block;
           font-size: 1.2em;
@@ -1421,9 +1493,10 @@ body {
           text-align: center;
         }
 
-        
 
-        input[type="text"],.enter {
+
+        input[type="text"],
+        .enter {
           margin: 0 auto 20px;
           padding: 10px 20px;
           width: 300px !important;
@@ -1431,7 +1504,8 @@ body {
         }
       }
     }
-    .contentProbability{
+
+    .contentProbability {
       .content {
         .backPage {
           position: absolute;
@@ -1443,7 +1517,8 @@ body {
         }
       }
     }
-    .contentCorrelation{
+
+    .contentCorrelation {
       .content {
         .backPage {
           position: absolute;
@@ -1454,23 +1529,26 @@ body {
           }
         }
       }
-      .row{
+
+      .row {
         display: flex;
         justify-content: center;
-        .btn-Calc{
+
+        .btn-Calc {
           display: flex;
           justify-content: center;
           flex-direction: column;
           align-items: center;
-          button{
+
+          button {
             margin: 10px 5px;
             width: 200px;
-           border-radius: 30px;
-           background: none;
-           color: $baseColor;
-           border: 1px solid $baseColor;
-           text-align: center;
-           padding: 5px;
+            border-radius: 30px;
+            background: none;
+            color: $baseColor;
+            border: 1px solid $baseColor;
+            text-align: center;
+            padding: 5px;
           }
         }
       }
@@ -1507,7 +1585,7 @@ body {
 
 @media screen and (max-width:450px) {
   .fullContainer {
-    .contentDescritive{
+    .contentDescritive {
       margin-top: 30px;
 
       .contentLog {
@@ -1541,7 +1619,8 @@ body {
         text-align: center;
       }
 
-      input[type="text"],.enter {
+      input[type="text"],
+      .enter {
         margin: 0 auto 20px;
         padding: 10px 20px;
         width: 250px !important;
@@ -1747,36 +1826,65 @@ body {
   }
 }
 
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 320px) {
   .fullContainer {
     .contentDescritive {
-      .bodyDescritive {       
+      .bodyDescritive {
 
-        input[type="text"],.enter {
+        input[type="text"],
+        .enter {
           margin: 0 auto 20px;
           padding: 10px 20px;
           width: 230px !important;
           height: 20px;
         }
       }
-      #nav-profile{
-        .line-chart{
-          max-width:500px!important;
-          max-height: 500px!important;
+
+      #nav-profile {
+        .line-chart {
+          max-width: 500px !important;
+          max-height: 500px !important;
         }
       }
     }
-    .contentProbability{
-      #selectNormalLenght{
-        max-width: 150px!important;
+
+    .contentProbability {
+      #selectNormalLenght {
+        max-width: 150px !important;
       }
-      #valueNormal{
-        max-width: 150px!important;
+
+      #valueNormal {
+        max-width: 150px !important;
         margin: 0 auto;
-          input[type="text"]{
-            max-width: 100px!important;
-          }
+
+        input[type="text"] {
+          max-width: 100px !important;
+        }
       }
+    }
+    #projection{
+      margin: 0 auto 20px;
+      .contentTitle{
+        .title{
+          color: $baseColor;
+          text-align: center;
+        }
+      }
+      .contentSelectProj{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        span{
+          margin: 0 auto 20px!important;
+        }
+        #selectProjectionLenght{
+          margin: 0 auto 10px!important;
+        }
+        #valueprojectInput{
+          margin: 0 auto -5px!important;
+        }
+      }  
     }
   }
 }
