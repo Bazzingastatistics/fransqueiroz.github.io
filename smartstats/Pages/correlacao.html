@@ -33,7 +33,9 @@
         <nav class="navbar navbar-expand-sm navbar-light ">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavMobile"
             aria-controls="navbarNavMobile" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon "><p id="text-Menu">Menu</p></span>
+            <span class="navbar-toggler-icon ">
+              <p id="text-Menu">Menu</p>
+            </span>
           </button>
           <div class="collapse navbar-collapse hidden-sm" id="navbarNavAltMarkup">
             <div class="navbar-nav m-auto">
@@ -53,33 +55,33 @@
       <div class="contentCorrelation d-block">
         <div class="content row m-auto justify-content-center">
           <div class="backPage">
-           <a href="menu.html"><img src="../assets/backMenu.png" alt=""></a>
+            <a href="menu.html"><img src="../assets/backMenu.png" alt=""></a>
           </div>
           <div class="brandLogo">
             <img class="logo" src="../assets/logoStats.png" alt="">
           </div>
         </div>
         <div class="contentData">
-           <p>Nome da Variável Independente(Xi)</p>
-           <input type="text" name="" id="independentVal">
-           <p>Nome da Variável Dependente (Yi)</p>
-           <input type="text" name="" id="dependentVal">
-         <div class="contentData">
-           <p>Digite os valores da Variável Independente</p>
-           <input type="text" name="" id="inputIndepent">
-           <small>Digite o Valor e aperte Enter</small>
-           <div id="resultIndepApresent" class="IndepApresent">
-             <div id="presentIndText"></div>
-           </div>
-         </div>
-         <div class="contentData">
-           <p>Digite os valores da Variável Dependente</p>
-           <input type="text" name="" id="inputDependent">
-           <small>Digite o Valor e aperte Enter</small>
-           <div id="resultDepApresent" class="DepApresent">
-             <div id="presentDepText"></div>
+          <p>Nome da Variável Independente(Xi)</p>
+          <input type="text" name="" id="independentValue">
+          <p>Nome da Variável Dependente (Yi)</p>
+          <input type="text" name="" id="dependentValue">
+          <div class="contentData">
+            <p>Digite os valores da Variável Independente</p>
+            <input type="text" name="" id="inputIndepent">
+            <small>Digite o Valor e aperte Enter</small>
+            <div id="resultIndepApresent" class="IndepApresent">
+              <div id="presentIndText"></div>
             </div>
-         </div>
+          </div>
+          <div class="contentData">
+            <p>Digite os valores da Variável Dependente</p>
+            <input type="text" name="" id="inputDependent">
+            <small>Digite o Valor e aperte Enter</small>
+            <div id="resultDepApresent" class="DepApresent">
+              <div id="presentDepText"></div>
+            </div>
+          </div>
         </div>
         <div class="row">
           <div class="btn-Calc">
@@ -88,32 +90,17 @@
           </div>
         </div>
         <div class="row">
-          <div id="apresent">
+          <div id="apresent"></div>
+          <div class="apresentChat">
             <canvas id="myChart" width="400" height="400"></canvas>
           </div>
         </div>
         <div class="row">
-          <div id="projection" class="projection">
-            <div class="contentTitle">
-              <h4 class="title">Projeção</h4>
-            </div>
-            <div class="contentSelectProj">
-              <span>Para</span>
-              <select class="textVariable" name="variable" id="selectProjectionLenght">
-                <option class="textVariable" value=""> X ou Y </option>
-                <option class="textVariable" value="x">Selecionar X </option>
-                <option class="textVariable" value="y">Selecionar Y </option>
-              </select>
-              <input type="number" id="valueprojectInput">
-            </div>
-            <div class="contentBtn">
-              <button id="Calc">Calcular</button>
-            </div>
-          </div>
+          <div id="projection" class="projection"></div>
         </div>
         <div class="row">
           <div id="apresent2">
-           
+
           </div>
         </div>
       </div>

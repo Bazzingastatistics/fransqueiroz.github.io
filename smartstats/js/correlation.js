@@ -74,7 +74,7 @@ $(function(){
     }
 
     function apresent(cor){
-        let text = /*html*/`<p>Correlação ${cor}</p>`;
+        let text = /*html*/`<p class="textCorrelation">Correlação ${cor}</p>`;
         $('#apresent').append(text);
     }
 
@@ -102,12 +102,8 @@ $(function(){
         if (ind == "y") {
             let apresentY= /*html*/`<p>Projeção para ${ind} = ${vlProj} : X é igual a ${proj}</p>`;
             $('#apresent2').append(apresentY);
-        }
-      
-      
+        }  
     }
-
-
  var modalPresent = $('#resultIndepApresent');
  var modalPresentText = $('#presentIndText');
  var valuesIndepInput = [];
@@ -157,15 +153,43 @@ $(function(){
 
 
     $('#btn-Calc').click(function(){
+        let indValX = $('#independentValue').val();
+        let depY= $('#dependentValue').val();
+        if(valuesIndepInput == "" || valuesDepInput == ""){
+            alert('Campos de Valores Vazios');
+        }else if(indValX = "" || depY == ""){
+            alert('Indique o Nome das Variáveis');
+        }
         let corX = valuesIndepInput;
         let corY = valuesDepInput;
         correlacao(corX,corY);
+        console.log(indValX);
+        console.log(depY);
+        
+        var apresentProj = /*html*/`<div class="contentTitle">
+                            <h4 class="title">Projeção</h4>
+                            </div>
+                            <div class="contentSelectProj">
+                            <span>Para</span>
+                            <select class="textVariable" name="variable" id="selectProjectionLenght">
+                            <option class="textVariable" value=""> X ou Y </option>
+                            <option class="textVariable" value="x">Selecionar ${indValX} </option>
+                            <option class="textVariable" value="y">Selecionar ${depY} </option>
+                            </select>
+                            <input type="number" id="valueprojectInput">
+                            </div>
+                            <div class="contentBtn">
+                            <button id="Calc">Calcular</button>
+                            </div>`
+    $('#projection').html('');
+    $('#projection').append(apresentProj);
         
     });
 
     //Projeção
-
     
+    
+
     $('#Calc').click(function(){
         let selectProj = $('#selectProjectionLenght').val()
          let valueProj = parseFloat($('#valueprojectInput').val());

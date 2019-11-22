@@ -1297,6 +1297,12 @@ body {
         }
       }
     }
+    #apresent{
+      .textCorrelation{
+        text-align: center;
+        color: $baseColor;
+      }
+    }
     #projection{
       margin: 0 auto 20px;
       .contentTitle{
@@ -1344,9 +1350,7 @@ body {
           text-align: center;
           padding: 5px;
         }
-      }
-      
-      
+      } 
     }
   }
 }

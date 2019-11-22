@@ -1029,6 +1029,10 @@ body {
   text-align: center;
   padding: 10px;
 }
+.fullContainer .contentCorrelation #apresent .textCorrelation {
+  text-align: center;
+  color: #469ba7;
+}
 .fullContainer .contentCorrelation #projection {
   margin: 0 auto 20px;
 }
