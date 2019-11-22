@@ -1014,6 +1014,7 @@ $(document).ready(function () {
      if ($('#selectVariable').val() == null || $('#selectVariable').val() == "") {
          alert("Escolha um tipo de Variável")
      } else {
+        $('html, body').animate({scrollTop:800},'600');
      
          switch (type) {
              case 'ordinal':
@@ -1061,8 +1062,11 @@ $(document).ready(function () {
                  break
          }
          $(".content-Result").attr('class', 'content-ResultActive');
-
-
+            
+        
+         
+            
+        
      }
 
 
