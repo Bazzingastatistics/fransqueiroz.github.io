@@ -60,6 +60,11 @@ $(function(){
 
  /*Binomial*/
  function distBinomial(n, p, q, k, ind) { 
+     console.log(n);
+     console.log(p);
+     console.log(q);
+     console.log(k);
+     console.log(ind);
   // Declarando Variáveis
   let anaComb;
   let vetComb = [];
@@ -68,12 +73,12 @@ $(function(){
   let vetK = [];
   // Determinando vetor que forma os múltiplos "k"
   switch (ind) {
-      case "-":
+      case "<":
           for (let i = k[0]; i > -1; i--) {
               vetK.push(i);
           }
           break;
-      case ">":
+      case "-":
           for (let i = k[0]; i < n + 1; i++) {
               vetK.push(i);
           }
