@@ -40,16 +40,31 @@ function graficoBarrasJuntas(dados, nomes) {
     });
 }
 
+
 //___________Gráfico Pizza
-function graficoPizza(dados, nomes) {   
+function graficoPizza(dados,colors, nomes) {   
     var ctx = $(".line-chart");
+    console.log(dados);
+    console.log(nomes);
+    console.log(colors);
 
     var myDoughnutChart = new Chart(ctx, {
+        
         type: 'doughnut',
-        data:{
-            datasets:dados,
-            labels:nomes
-        }
+			data: {
+                datasets:[{
+                    data: dados,
+                    backgroundColor: colors,
+                }],
+                labels: nomes
+            },
+			options: {
+				responsive: true,
+				animation: {
+					animateScale: true,
+					animateRotate: true
+				}
+			}
     });
 }
 
@@ -142,24 +157,23 @@ function qlNominal(vetor,nameVariable) {
     names = [],
     colors = [],
     colorIndex = 0;
-    vetE.forEach(element => {
-    dados.push(element.length);
-    names.push(element[0]);
-    colors.push(chartColors[colorIndex])
-    if(colorIndex == chartColors.length -1)
-        colorIndex = 0;
-    else
-        colorIndex++
-    });
+    // vetE.forEach(element => {
+    // dados.push(element.length);
+    // names.push(element[0]);
 
-    graficoPizza([{
-    data:vetFi,
-    label: colors,
-    }], names);
+    for(item of chartColors){
+        colors.push(item)
+    }
+    colors.push(chartColors[colorIndex]);
+    for(item of vetFi){
+        dados.push(item);
+    }
+    for(item of vetE){
+        names.push(item);
+    }
+    graficoPizza(dados,colors,names);
 
     return true;
-    
-
 }
 
 // Qualitativa Ordinal

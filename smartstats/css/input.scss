@@ -400,7 +400,7 @@ body {
 
         input {
           display: block;
-          margin-bottom: 10px;
+          margin-bottom: 15px!important;
         }
       }
 
@@ -445,7 +445,11 @@ body {
     }
 
     .contentBtn {
-      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 0px 20px 20px;
 
       .btnCalculate,
       a {
@@ -461,8 +465,15 @@ body {
           color: $secondColor;
         }
       }
+      .d-block{
+        p{
+          color: $textColor;
+          font-size: 20px;
+        }
+      }
 
       .btnImport {
+        margin: 0 0 20px!important;
         padding: 5px 20px;
         background-color: $secondColor;
         border: 2px solid $baseColor;
