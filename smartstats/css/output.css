@@ -444,6 +444,9 @@ body {
 .fullContainer #tableDemonstration .tableLines {
   border-left: 2px solid #2a838f;
 }
+.fullContainer #tableDemonstration-Medias {
+  margin: 0 auto;
+}
 .fullContainer #tableDemonstration-Medias tr:nth-child(even) {
   background: rgba(42, 131, 143, 0.1);
 }

@@ -1004,6 +1004,29 @@ $(document).ready(function () {
 
  });
 
+ var Reader = new FileReader();
+/*importação do arquivo, pego o arquivo da tela e jogo no fileReader*/
+ $('#btnImport').change(function(){
+     var file = document.getElementById('btnImport').files[0];
+     Reader.readAsText(file);
+ });
+
+ Reader.onload = function(evt){
+     let fileArr = evt.target.result.split('\n').filter(x => x && x != " ").toString();
+     let fileVet = fileArr.split(';');
+     console.log(fileVet);
+
+     for(let item of fileVet){
+        console.log(item);
+        valuesVector.push(item);
+        console.log(valuesVector);
+        Present.removeClass('chipsPresent').addClass('chipsActive');
+        var text = '<p data-posicao="' + item + '" class="delet">' + item + '<label >x</label> </p>'
+        console.log(text)
+        presentText.append(text);
+     }
+    
+ };
 
  $('#btnCalculate').click(function () {
      

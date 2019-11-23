@@ -556,8 +556,10 @@ body {
   }
 
   #tableDemonstration-Medias {
+    margin: 0 auto;
     tr:nth-child(even) {
       background: rgba($baseColor, $alpha: 0.1);
+
     }
 
     .tableTitle {
