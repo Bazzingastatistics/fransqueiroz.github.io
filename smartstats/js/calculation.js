@@ -530,9 +530,12 @@ function qtContinua(vetor, nameVariable, analiseContinua) {
      else
         colorIndex++
     });
+    names.push(vetMin[0]);
+    for(let item of vetMax){
+        names.push(item);
+    }
 
     for (let i = 0; i < lin; i++){
-        names.push(vetMin[i],vetMax[i]);
         dados.push(vetFi[i]);
     }
     

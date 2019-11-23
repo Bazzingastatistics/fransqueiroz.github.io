@@ -860,7 +860,6 @@ body {
 
                 input[type="number"] {
                   width: 100px;
-                  border-radius: 30px;
                   border: 1px solid $textColor;
                   text-align: center;
                   color: $baseColor;
@@ -868,7 +867,7 @@ body {
               }
 
               .selectLenght {
-                margin-top: 20px;
+               margin: 20 auto 0!important;
                 display: flex;
 
                 #selectLenght {

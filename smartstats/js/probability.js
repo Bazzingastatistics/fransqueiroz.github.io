@@ -254,10 +254,19 @@ function fatorial(x) {
  $('#selectNormalLenght').click(function(){
     $('.valueNormal').html('');
     if($('#selectNormalLenght').val() == "|"){
-        $('#valueNormal').css('flexDirection','row');
-        let insertNormal = /*html*/`<input type="text" id="valueNormal1"> </input>
-                                    <input type="text" id="valueNormal2"> </input>`
-        $('.valueNormal').append(insertNormal);
+        if (screen.width < 640 || screen.height < 480){
+            $('#valueNormal').css('flexDirection','column');
+            let insertNormal = /*html*/`<div>
+                                            <span style="margin-bottom:-10px">Min</span><input type="text" id="valueNormal1"> </input>
+                                            <span style="margin-bottom:-10px">Max</span><input type="text" id="valueNormal2"> </input>
+                                        </div>`
+            $('.valueNormal').append(insertNormal);
+        }else{
+            $('#valueNormal').css('flexDirection','row');
+            let insertNormal = /*html*/`<input type="text" id="valueNormal1"> </input>
+                                        <input type="text" id="valueNormal2"> </input>`
+            $('.valueNormal').append(insertNormal);
+        }
     }else{
         let insertNormal = /*html*/`<input type="text" id="valueNormal1"> </input>`
         $('.valueNormal').append(insertNormal);
