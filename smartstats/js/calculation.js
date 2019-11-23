@@ -50,7 +50,7 @@ function graficoPizza(dados,colors, nomes) {
 
     var myDoughnutChart = new Chart(ctx, {
         
-        type: 'doughnut',
+        type: 'pie',
 			data: {
                 datasets:[{
                     data: dados,
@@ -242,26 +242,23 @@ function qlOrdinal(vetor, vetorOrd,nameVariable) {
     
     
     let dados = [],
-    names = [],
-    colors = [],
-    colorIndex = 0;
-    vetE.forEach(element => {
-    dados.push(element.length);
-    names.push(element[0]);
-    colors.push(chartColors[colorIndex])
-    if(colorIndex == chartColors.length -1)
+        names = [],
+        colors = [],
         colorIndex = 0;
-    else
-        colorIndex++
-    });
-
-    graficoPizza([{
-    data:vetFi,
-    label: colors,
-    }], names);
+    for(item of chartColors){
+        colors.push(item)
+    }
+    colors.push(chartColors[colorIndex]);
+    for(item of vetFi){
+        dados.push(item);
+    }
+    for(item of vetE){
+        names.push(item);
+    }
+    graficoPizza(dados,colors,names);
 
     return true;
-    }
+}
 
 // Quantitativa Discreta
 
