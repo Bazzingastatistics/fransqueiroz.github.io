@@ -1,5 +1,6 @@
 $baseColor: #2a838f;
 $secondColor: #fff;
+$textColor: #0D3C42;
 $colorNav: #1D5259;
 
 body {
@@ -237,7 +238,7 @@ body {
     .content {
       .backPage {
         position: absolute;
-        right: 60% !important;
+        right: 90% !important;
 
         img {
           width: 40px;
@@ -278,7 +279,7 @@ body {
         border: 0;
         background: none;
         display: inline-block;
-        margin: 0 auto;
+        margin: 0 auto -10px!important;
         text-align: center;
         border: 2px solid $baseColor;
         padding: 10px 20px;
@@ -288,7 +289,7 @@ body {
         transition: 0.25s;
 
         &::placeholder {
-          color: #0D3C42;
+          color: $textColor;
           font-size: 15px;
         }
 
@@ -302,7 +303,7 @@ body {
       }
 
       small {
-        color: #0D3C42;
+        color: $textColor;
         text-align: center;
         display: block;
       }
@@ -341,7 +342,7 @@ body {
 
         .textInput2 {
           font-size: 15px;
-          color: $baseColor;
+          color: $textColor;
           margin-top: 20px;
           margin-bottom: 0px;
           text-align: center;
@@ -356,7 +357,7 @@ body {
           display: block;
           font-weight: bolder;
           font-size: 15px;
-          color: $baseColor;
+          color: $textColor;
           margin-top: 20px;
           margin-bottom: 0px;
           text-align: center;
@@ -755,7 +756,7 @@ body {
     .content {
       .backPage {
         position: absolute;
-        right: 60% !important;
+        right: 90% !important;
 
         img {
           width: 40px;
@@ -824,7 +825,7 @@ body {
           .tab-pane {
 
             .titleDefault {
-              color: $baseColor;
+              color: $textColor;
               font-size: 24px;
               margin: 20px auto 10px;
               text-align: center;
@@ -849,7 +850,7 @@ body {
                 input[type="number"] {
                   width: 100px;
                   border-radius: 30px;
-                  border: 1px solid $baseColor;
+                  border: 1px solid $textColor;
                   text-align: center;
                   color: $baseColor;
                 }
@@ -883,8 +884,7 @@ body {
                     display: flex;
                     margin: 0 auto;
                     width: 100px;
-                    border-radius: 30px;
-                    border: 1px solid $baseColor;
+                    border: 1px solid $textColor;
                     text-align: center;
 
                   }
@@ -948,7 +948,7 @@ body {
                 margin-top: 20px;
 
                 .textSample {
-                  color: $baseColor;
+                  color: $textColor;
                   font-size: 18px;
                 }
 
@@ -969,7 +969,7 @@ body {
                   padding: 0 !important;
 
                   .textSample {
-                    color: $baseColor;
+                    color: $textColor;
                     font-size: 18px;
                   }
                 }
@@ -978,7 +978,7 @@ body {
                   padding: 0 !important;
 
                   .textSample {
-                    color: $baseColor;
+                    color: $textColor;
                     font-size: 18px;
                   }
                 }
@@ -1015,7 +1015,7 @@ body {
               .event {
                 .textSample {
                   margin-top: 20px;
-                  color: $baseColor;
+                  color: $textColor;
                   font-size: 18px;
                 }
 
@@ -1058,7 +1058,7 @@ body {
                 flex-direction: row;
 
                 .textSample {
-                  color: $baseColor;
+                  color: $textColor;
                   font-size: 18px;
                 }
 
@@ -1104,7 +1104,7 @@ body {
               .valueNormal {
                 .textSample {
                   margin-top: 20px;
-                  color: $baseColor;
+                  color: $textColor;
                   font-size: 18px;
                 }
 
@@ -1166,7 +1166,7 @@ body {
     .content {
       .backPage {
         position: absolute;
-        right: 60% !important;
+        right: 90% !important;
 
         img {
           width: 40px;
@@ -1598,7 +1598,7 @@ body {
           .tab-pane {
 
             .titleDefault {
-              color: $baseColor;
+              color: $textColor;
               font-size: 20px;
             }
           }
@@ -1756,7 +1756,7 @@ body {
           .tab-pane {
 
             .titleDefault {
-              color: $baseColor;
+              color: $textColor;
               font-size: 20px;
             }
 
@@ -1792,7 +1792,7 @@ body {
                 padding: 0 !important;
 
                 .textSample {
-                  color: $baseColor;
+                  color: $textColor;
                   font-size: 18px;
                 }
               }
@@ -1802,7 +1802,7 @@ body {
                 margin-top: 15px;
 
                 .textSample {
-                  color: $baseColor;
+                  color: $textColor;
                   font-size: 18px;
                 }
               }
@@ -1821,7 +1821,7 @@ body {
               flex-direction: column !important;
 
               .textSample {
-                color: $baseColor;
+                color: $textColor;
                 font-size: 18px;
               }
 
