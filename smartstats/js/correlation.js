@@ -211,6 +211,35 @@ $(function(){
         $(this).remove();
         valuesDepInput.splice(valuesDepInput.indexOf($(this).attr('data-posicao')), 1);
     }); 
+
+    /*importação do arquivo, pego o arquivo da tela e jogo no fileReader*/
+    var Reader = new FileReader();
+ $('#btn-Import').change(function(){
+    var file = document.getElementById('btn-Import').files[0];
+    Reader.readAsText(file);
+});
+
+Reader.onload = function(evt){
+    let fileArr = evt.target.result.split('\n').filter(x => x && x != " ");
+    let fileVetX = fileArr[0].toString().split(';');
+    let fileVetY = fileArr[1].toString().split(';');
+
+    for(let item of fileVetX){
+       console.log(item);
+        valuesIndepInput.push(parseFloat(item));
+        modalPresent.removeClass('IndepApresent').addClass('IndepApresent-Active');
+        let indepText = '<p data-posicao="' + item + '" class="deletOrdination">' + item + '<label >x</label> </p>'
+        modalPresentText.append(indepText);
+    }
+    for(let item of fileVetY){
+        console.log(item);
+        valuesDepInput.push(parseFloat(item));
+        modalPresent2.removeClass('DepApresent').addClass('DepApresent-Active');
+        let depTest = '<p data-posicao="' + item + '" class="deletOrdination">' + item + '<label >x</label> </p>'
+        modalPresentText2.append(depTest);
+     }
+   
+};
    
    
     $('#btn-Calc').click(function(){
