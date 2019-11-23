@@ -1,4 +1,4 @@
-$baseColor: #469ba7;
+$baseColor: #2a838f;
 $secondColor: #fff;
 $colorNav: #1D5259;
 
@@ -504,10 +504,15 @@ body {
         display: block;
       }
     }
+    .container {
+      .col-xs-12 {
+        width: 90%!important;
+      }
+    }
 
 
     #nav-tab {
-
+     
       #nav-table-tab,
       #nav-graphic-tab {
         width: 150px;
@@ -1684,7 +1689,7 @@ body {
 
       #nav-table-tab,
       #nav-graphic-tab {
-        width: 100px !important;
+        width: 180px !important;
         color: $baseColor;
 
       }
