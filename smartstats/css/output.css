@@ -603,6 +603,10 @@ body {
   background: #2a838f;
   color: #fff;
 }
+.fullContainer .breakerContent .content-Breaker-Result #sepTexResult {
+  color: #0D3C42;
+  font-size: 20px;
+}
 .fullContainer .contentProbability {
   width: 100%;
   margin-top: 50px;
@@ -1064,10 +1068,13 @@ body {
 .fullContainer .contentCorrelation .apresentChat-Active {
   display: block;
 }
-.fullContainer .contentCorrelation .apresentChat-Active #container > div {
+.fullContainer .contentCorrelation .apresentChat-Active .container #nav-profile {
+  width: 100%;
+}
+.fullContainer .contentCorrelation .apresentChat-Active .container #nav-profile #container > div {
   text-align: center !important;
 }
-.fullContainer .contentCorrelation .apresentChat-Active #container svg {
+.fullContainer .contentCorrelation .apresentChat-Active .container #nav-profile #container svg {
   max-width: 600px !important;
 }
 .fullContainer .contentCorrelation #projection {

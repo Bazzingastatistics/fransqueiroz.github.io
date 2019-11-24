@@ -736,6 +736,7 @@ body {
           align-items: center;
         }
       }
+      
     }
 
     .contentBtn {
@@ -751,6 +752,12 @@ body {
           background: $baseColor;
           color: $secondColor;
         }
+      }
+    }
+    .content-Breaker-Result{
+      #sepTexResult{
+        color: $textColor;
+        font-size: 20px;
       }
     }
   }
@@ -1338,12 +1345,18 @@ body {
     }
     .apresentChat-Active{
       display: block;
-      #container{
-        > div{
-          text-align: center!important;
-        }
-        svg{
-          max-width: 600px!important;
+      
+      .container{
+        #nav-profile{
+          width: 100%;
+          #container{
+            > div{
+              text-align: center!important;
+            }
+            svg{
+              max-width: 600px!important;
+            }
+          }
         }
       }
     }

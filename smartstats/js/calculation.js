@@ -1199,9 +1199,27 @@ $(document).ready(function () {
                   separaTrix = sepCt(valuesVector, value);
                  break
          }
-         let apresent = /*html*/ `<p>A separatriz selecionada é igual a:<strong> ${separaTrix}</strong></p>`            
-         $('.content-Breaker-Result').append(apresent);
-         
+         let apresent;
+         switch(selectBreaker){
+            
+            case "4":
+                apresent = /*html*/ `<p id="sepTexResult">Separatriz <strong>Q${$('#inputBreaker').val()} = ${separaTrix}</strong></p>`            
+                $('.content-Breaker-Result').append(apresent);
+                break;
+   
+            case "5":
+                apresent = /*html*/ `<p id="sepTexResult">Separatriz <strong>K${$('#inputBreaker').val()} = ${separaTrix}</strong></p>`            
+                $('.content-Breaker-Result').append(apresent);
+                break;
+   
+            case "10":
+                apresent = /*html*/ `<p id="sepTexResult">Separatriz <strong>D${$('#inputBreaker').val()} = ${separaTrix}</strong></p>`            
+                $('.content-Breaker-Result').append(apresent);
+                break;
+            case "100":
+                apresent = /*html*/ `<p id="sepTexResult">Separatriz <strong>P${$('#inputBreaker').val()} = ${separaTrix}</strong></p>`            
+                $('.content-Breaker-Result').append(apresent);
+        }
      }
  });
 

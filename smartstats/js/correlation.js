@@ -1,13 +1,19 @@
 $(function(){
    
-    function scatterChart(){
+    function scatterChart(dados,dados1,indValX,depY){
         var myChart = Highcharts.chart('container', {
             chart: {
         type: 'scatter',
         zoomType: 'xy'
     },
+    yAxis: { //--- Primary yAxis
+        title: {
+            text: depY
+        }
+    },
     title: {
-        text: 'Height Versus Weight of 507 Individuals by Gender'
+        text: 'Height Versus Weight of 507 Individuals by Gender',
+        enabled:true
     },
     responsive: {  
         rules: [{  
@@ -22,14 +28,14 @@ $(function(){
         }]
     },  
     series: [{
-        name: 'Female',
+        name: indValX,
         color: 'rgba(223, 83, 83, .5)',
-        data: [[300,33],[400,25],[500,24],[600,15],[700,12],[800,10]]
+        data: dados
         },
         {
             type: 'line',
             name: 'Regression Line',
-            data: [[300,33], [800, 10]],
+            data: dados1,
             marker: {
                 enabled: false
             }
@@ -77,9 +83,27 @@ $(function(){
         // Calculando A e B para equação de regressão
         regA = (((vetXIYI.length * eXIYI) - (eXI * eYI)) / ((vetX.length * eXI2) - (eXI) ** 2)).toFixed(2);
         regB = ((eYI / vetY.length) - (regA * (eXI / vetX.length))).toFixed(2);
-
         apresent(cor);
 
+        let dados = [];
+        let dados1 = [];
+       
+        if(vetX.length == vetY.length){
+            let ultposition = vetX.length - 1;
+            dados1.push([vetX[0],vetY[0]]);
+            dados1.push([vetX[ultposition],vetY[ultposition]]); 
+            for(let i = 0; i < vetX.length; i++){
+                dados.push([vetX[i],vetY[i]]);       
+            }
+        }
+        let min = dados.map(Number).reduce(function(a,b,c,d){
+            return Math.min(a, b,c,d);
+        });
+        console.log(min);
+        
+        console.log(dados1);
+        scatterChart(dados,dados1,indValX,depY);
+        
         
          
         
@@ -245,7 +269,7 @@ Reader.onload = function(evt){
          console.log(depY);
          console.log(valuesIndepInput);
          console.log(valuesDepInput);
-         scatterChart()
+         
         if(valuesIndepInput == "" || valuesDepInput == ""){
             alert('Campos de Valores Vazios');
         }else{
