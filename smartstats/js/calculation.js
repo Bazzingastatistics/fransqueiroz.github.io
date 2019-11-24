@@ -1050,9 +1050,9 @@ $(document).ready(function () {
      let type = $('#selectVariable').val();
      $('#tableDemonstration').html("");
      $('#tableDemonstration-Medias').html("");
-     if($('#variables').val() == null || $('#variables').val() == ""){
-        $('#variables').addClass('alertInput');
-     }
+    //  if($('#variables').val() == null || $('#variables').val() == ""){
+    //     $('#variables').addClass('alertInput');
+    //  }
      if ($('#selectVariable').val() == "") {
          alert("Escolha um tipo de Variável")
          $('#selectVariable').addClass('alertInput');
