@@ -697,7 +697,7 @@ body {
   color: #2a838f;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row div input[type=number] {
-  width: 100px;
+  width: 150px;
   border: 1px solid #0D3C42;
   text-align: center;
   color: #2a838f;
@@ -726,7 +726,7 @@ body {
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .intervalValue .inputInsert input[type=number] {
   display: flex;
   margin: 0 auto;
-  width: 100px;
+  width: 200px;
   border: 1px solid #0D3C42;
   text-align: center;
 }
@@ -861,7 +861,7 @@ body {
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .valuesNormal input[type=text] {
   margin-top: -10px !important;
-  max-width: 100px;
+  max-width: 150px;
   padding: 5px 30px;
   border: 1px solid #2a838f;
   color: #2a838f;

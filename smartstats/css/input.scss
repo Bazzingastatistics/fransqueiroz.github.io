@@ -869,7 +869,7 @@ body {
                 }
 
                 input[type="number"] {
-                  width: 100px;
+                  width: 150px;
                   border: 1px solid $textColor;
                   text-align: center;
                   color: $baseColor;
@@ -903,7 +903,7 @@ body {
                   input[type="number"] {
                     display: flex;
                     margin: 0 auto;
-                    width: 100px;
+                    width: 200px;
                     border: 1px solid $textColor;
                     text-align: center;
 
@@ -1084,7 +1084,7 @@ body {
 
                 input[type="text"] {
                   margin-top: -10px !important;
-                  max-width: 100px;
+                  max-width: 150px;
                   padding: 5px 30px;
                   border: 1px solid $baseColor;
                   color: $baseColor;
