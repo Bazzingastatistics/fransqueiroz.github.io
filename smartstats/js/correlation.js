@@ -1,5 +1,7 @@
 $(function(){
-   
+    function removeAlert(){
+        $('.alertInput').removeClass('alertInput');
+      }
     function scatterChart(dados,dados1,indValX,depY){
         var myChart = Highcharts.chart('container', {
             chart: {
@@ -12,8 +14,9 @@ $(function(){
         }
     },
     title: {
-        text: 'Height Versus Weight of 507 Individuals by Gender',
-        enabled:true
+        text: 'Gráfico de Correlação',
+        enabled:true,
+        color:'rgb(13, 60, 66,)',
     },
     responsive: {  
         rules: [{  
@@ -34,7 +37,7 @@ $(function(){
         },
         {
             type: 'line',
-            name: 'Regression Line',
+            name: 'Linha de Regressão',
             data: dados1,
             marker: {
                 enabled: false
@@ -100,6 +103,7 @@ $(function(){
             return Math.min(a, b,c,d);
         });
         console.log(min);
+        console.log(dados);
         
         console.log(dados1);
         scatterChart(dados,dados1,indValX,depY);
@@ -133,10 +137,12 @@ $(function(){
 
         if (ind == "x") {
             let apresentX= /*html*/`<p>Projeção para ${ind} = ${vlProj} : Y é igual a ${proj}</p>`;
+            console.log(apresentX);
             $('#apresent2').append(apresentX);
         }
         if (ind == "y") {
             let apresentY= /*html*/`<p>Projeção para ${ind} = ${vlProj} : X é igual a ${proj}</p>`;
+            console.log(apresentY);
             $('#apresent2').append(apresentY);
         }  
     }
@@ -265,38 +271,28 @@ Reader.onload = function(evt){
    
    
     $('#btn-Calc').click(function(){
-         console.log(indValX);
-         console.log(depY);
-         console.log(valuesIndepInput);
-         console.log(valuesDepInput);
-         
-        if(valuesIndepInput == "" || valuesDepInput == ""){
-            alert('Campos de Valores Vazios');
+         removeAlert()
+
+        if(valuesIndepInput == ""){
+            alert('Campo de Valor Vazio');
+            $('#inputIndepent').addClass('alertInput');
+        }else if( valuesDepInput == ""){
+            alert('Campo de Valor Vazio');
+            $('#inputDependent').addClass('alertInput');
         }else{
          let corX = valuesIndepInput;
         let corY = valuesDepInput;
         correlacao(corX,corY,indValX,depY);
         $('#apresentChat').removeClass('apresentChat').addClass('apresentChat-Active')
-
-        
-        
-        var apresentProj = /*html*/`<div class="contentTitle">
-                            <h4 class="title">Projeção</h4>
-                            </div>
-                            <div class="contentSelectProj">
-                            <span>Para</span>
-                            <select class="textVariable" name="variable" id="selectProjectionLenght">
-                            <option class="textVariable" value=""> </option>
-                            <option class="textVariable" value="x"> ${indValX} </option>
-                            <option class="textVariable" value="y"> ${depY} </option>
-                            </select>
-                            <input type="number" id="valueprojectInput">
-                            </div>
-                            <div class="contentBtn">
-                            <button id="Calc">Calcular</button>
-                            </div>`
-            $('#projection').html('');
-            $('#projection').append(apresentProj);
+         $('#projection').css('display', 'block');
+         let apresentSelect = /*html*/`<span>Para</span>
+         <select class="textVariable" name="variable" id="selectProjectionLenght">
+           <option class="textVariable" value=""> </option>
+           <option class="textVariable" value="x"> ${indValX} </option>
+           <option class="textVariable" value="y"> ${depY} </option>
+         </select>
+         <input type="number" id="valueprojectInput">`
+          $('#selectProject').append(apresentSelect);
         }
     });
 
@@ -304,7 +300,14 @@ Reader.onload = function(evt){
     
     
 
-    $('#Calc').click(function(){
+    $('#CalcProject').on('click',function(){
+        removeAlert()
+
+        if($('#selectProjectionLenght').val() == ""){
+            $('#selectProjectionLenght').addClass('alertInput');
+        }else if($('#valueprojectInput').val() == ""){
+            $('#valueprojectInput').addClass('alertInput');
+        }
         let selectProj = $('#selectProjectionLenght').val()
          let valueProj = parseFloat($('#valueprojectInput').val());
         projecao(valueProj,selectProj);

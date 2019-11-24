@@ -8,6 +8,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.alertInput{
+  border:1px solid #ff0000!important;
+}
 
 .navMobile {
 
@@ -1361,6 +1364,7 @@ body {
       }
     }
     #projection{
+      display: none;
       margin: 0 auto 20px;
       .contentTitle{
         .title{
@@ -1369,43 +1373,51 @@ body {
         }
       }
       .contentSelectProj{
-        span{
-          color: $baseColor;
-        }
-        #selectProjectionLenght{
-          width: 150px;
-          text-align: center;
-          text-align-last: center;
-          color: $baseColor;
-          font-weight: bold;
-          border-top: none;
-          border-left: none;
-          border-right: none;
-          border-color: $baseColor;
-        }
-        #valueprojectInput{
-          margin: 20px 5px;
-          width: 110px;
-          border-radius: 15px;
-          background: none;
-          color: $baseColor;
-          border: 1px solid $baseColor;
-          text-align: center;
-          padding: 5px;
+        #selectProject{
+          span{
+            color: $baseColor;
+          }
+          #selectProjectionLenght{
+            width: 150px;
+            text-align: center;
+            text-align-last: center;
+            color: $baseColor;
+            font-weight: bold;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-color: $baseColor;
+          }
+          #valueprojectInput{
+            margin: 20px 5px;
+            width: 110px;
+            border-radius: 15px;
+            background: none;
+            color: $baseColor;
+            border: 1px solid $baseColor;
+            text-align: center;
+            padding: 5px;
+          }
         }
       }
       .contentBtn{
         margin: 0 auto;
         text-align: center;
-        #Calc{
+        #CalcProject{
           margin: 20px 5px;
           width: 110px;
           border-radius: 15px;
-          background: none;
-          color: $baseColor;
-          border: 1px solid $baseColor;
+          background: $baseColor;
+          color: $secondColor;
           text-align: center;
           padding: 5px;
+          box-shadow: none!important;
+          &:hover{
+            background: $secondColor;
+            color: $baseColor;
+            border: 1px solid $baseColor;
+            
+          }
         }
       } 
     }

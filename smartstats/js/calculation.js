@@ -1,3 +1,6 @@
+function removeAlert(){
+    $('.alertInput').removeClass('alertInput');
+  }
 var chartColors = [
     'rgb(0,128,0)',
     'rgb(0,0,205)',
@@ -1043,13 +1046,16 @@ $(document).ready(function () {
  };
 
  $('#btnCalculate').click(function () {
-     
+     removeAlert()
      let type = $('#selectVariable').val();
      $('#tableDemonstration').html("");
      $('#tableDemonstration-Medias').html("");
-     
-     if ($('#selectVariable').val() == null || $('#selectVariable').val() == "") {
+     if($('#variables').val() == null || $('#variables').val() == ""){
+        $('#variables').addClass('alertInput');
+     }
+     if ($('#selectVariable').val() == "") {
          alert("Escolha um tipo de Variável")
+         $('#selectVariable').addClass('alertInput');
      } else {
         $('html, body').animate({scrollTop:800},'600');
      
@@ -1058,11 +1064,12 @@ $(document).ready(function () {
 
                  if (valuesOrdination == null || valuesOrdination == "") {
                      alert('Campo de Ordenação Vazio');
+                     $('#valueOrganize').addClass('alertInput');
                      return false;
                  }
                  if (valuesVector == null || valuesVector == "") {
                      alert('Digite os Valores e Aperte Enter');
-
+                    $('#enter').addClass('alertInput');
                      return false;
                  }
 
@@ -1073,7 +1080,7 @@ $(document).ready(function () {
              case 'nominal':
                  if (valuesVector == null || valuesVector == "") {
                      alert('Digite os Valores e Aperte Enter');
-
+                     $('#enter').addClass('alertInput');
                      return false;
                  }
                  qlNominal(valuesVector, nameVariable);
@@ -1082,7 +1089,7 @@ $(document).ready(function () {
              case 'discreta':
                  if (valuesVector == null || valuesVector == "") {
                      alert('Digite os Valores e Aperte Enter');
-
+                     $('#enter').addClass('alertInput');
                      return false;
                  }
                  qtDiscreta(valuesVector, nameVariable, universe);
@@ -1091,7 +1098,7 @@ $(document).ready(function () {
              case 'continua':
                  if (valuesVector == null || valuesVector == "") {
                      alert('Digite os Valores e Aperte Enter');
-
+                     $('#enter').addClass('alertInput');
                      return false;
                  }
                  qtContinua(valuesVector, nameVariable, universe);
