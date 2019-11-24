@@ -1,42 +1,44 @@
 $(function(){
-    //Function Chart
-    var chartColors = [
-        'rgb(0,128,0)',
-        'rgb(0,0,205)',
-        'rgb(210,105,30)',
-        'rgb(128,0,128)',
-        'rgb(180,0,0)',
-        'rgb(0,191,255)',
-        'rgb(0,250,154)',
-        'rgb(255,0,255)',
-        'rgb(218,165,32)',
-        'rgb(128,0,0)',
-    ]
-    var ctx = $('#myChart');
-
-    function scatterChart(dados,names){
-        let borderColor = ['rgb(0,0,0)'];
-        let color =[ 'rgb(0,0,205)']
-        var scatterChart = new Chart(ctx, {
+   
+    function scatterChart(){
+        var myChart = Highcharts.chart('container', {
+            chart: {
         type: 'scatter',
-        data: {
-            datasets: [{
-                label:names,
-                data: dados,
-                backgroundColor:color,
-                borderColor:borderColor
-            }]
+        zoomType: 'xy'
+    },
+    title: {
+        text: 'Height Versus Weight of 507 Individuals by Gender'
+    },
+    responsive: {  
+        rules: [{  
+          condition: {  
+            maxWidth: 400  
+          },  
+          chartOptions: {  
+            legend: {  
+              enabled: false  
+            }  
+          }  
+        }]
+    },  
+    series: [{
+        name: 'Female',
+        color: 'rgba(223, 83, 83, .5)',
+        data: [[300,33],[400,25],[500,24],[600,15],[700,12],[800,10]]
         },
-        options: {
-        scales: {
-            xAxes: [{
-                type: 'linear',
-                position: 'bottom'
-            }]
+        {
+            type: 'line',
+            name: 'Regression Line',
+            data: [[300,33], [800, 10]],
+            marker: {
+                enabled: false
             }
-        }
-        });
+        }]
+    });
+        
     }
+    
+    
     //______________________________________
     var regA,regB;
 
@@ -78,12 +80,8 @@ $(function(){
 
         apresent(cor);
 
-        let dados =[]
-        for(let i = 0; i < vetX.length; i++){
-            dados.push({x : vetX[i], y : vetY[i]});
-        }
-        scatterChart(dados,indValX);
-         console.log(dados);
+        
+         
         
     }
 
@@ -247,6 +245,7 @@ Reader.onload = function(evt){
          console.log(depY);
          console.log(valuesIndepInput);
          console.log(valuesDepInput);
+         scatterChart()
         if(valuesIndepInput == "" || valuesDepInput == ""){
             alert('Campos de Valores Vazios');
         }else{
@@ -287,3 +286,6 @@ Reader.onload = function(evt){
         projecao(valueProj,selectProj);
     });
 });
+
+
+
