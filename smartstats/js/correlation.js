@@ -107,10 +107,7 @@ $(function(){
         
         console.log(dados1);
         scatterChart(dados,dados1,indValX,depY);
-        
-        
-         
-        
+        $('.reloadPage').removeClass('d-none').addClass('d-block');     
     }
 
     function apresent(cor){
@@ -119,7 +116,7 @@ $(function(){
     }
 
     //____________________Projeção
-    function projecao(vlProj, ind) {
+    function projecao(vlProj, ind,indValX,depY) {
 
         let proj = 0;
 
@@ -136,12 +133,12 @@ $(function(){
         }
 
         if (ind == "x") {
-            let apresentX= /*html*/`<p>Projeção para ${ind} = ${vlProj} : Y é igual a ${proj}</p>`;
+            let apresentX= /*html*/`<p>Projeção para ${indValX} = ${vlProj} : ${depY} é igual a ${proj}</p>`;
             console.log(apresentX);
             $('#apresent2').append(apresentX);
         }
         if (ind == "y") {
-            let apresentY= /*html*/`<p>Projeção para ${ind} = ${vlProj} : X é igual a ${proj}</p>`;
+            let apresentY= /*html*/`<p>Projeção para ${depY} = ${vlProj} : ${indValX} é igual a ${proj}</p>`;
             console.log(apresentY);
             $('#apresent2').append(apresentY);
         }  
@@ -163,16 +160,17 @@ $(function(){
                 let depTest = '<p data-posicao="' + ($(this).val()) + '" class="deletOrdination">' + $(this).val() + '</p>'
                 modalPresentTextVal.append(depTest);
                 $(this).val("");
+                console.log(indValX);
             }
         }
     });
-       $(document).on('click', '.deletOrdination', function () {
-           $(this).remove();
-           indValX.splice(indValX.indexOf($(this).attr('data-posicao')), 1);
-       }); 
+    //    $(document).on('click', '.deletOrdination', function () {
+    //        $(this).remove();
+    //        indValX.splice(indValX.indexOf($(this).attr('data-posicao')), 1);
+    //    }); 
     var modalPresentVal2 = $('#contentValueDep');
     var modalPresentTextVal2 = $('#Deptext');
-    var depY =[];
+    var depY;
 
     $('#dependentValue').keyup(function (e) {
     if (e.keyCode == 13) {
@@ -185,13 +183,14 @@ $(function(){
             let depTest = '<p data-posicao="' + ($(this).val()) + '" class="deletOrdination">' + $(this).val() + '</p>'
             modalPresentTextVal2.append(depTest);
             $(this).val("");
+            console.log(depY)
         }
     }
     });
-    $(document).on('click', '.deletOrdination', function () {
-        $(this).remove();
-        depY.splice(depY.indexOf($(this).attr('data-posicao')), 1);
-    }); 
+    // $(document).on('click', '.deletOrdination', function () {
+    //     $(this).remove();
+    //     depY.splice(depY.indexOf($(this).attr('data-posicao')), 1);
+    // }); 
 
  var modalPresent = $('#resultIndepApresent');
  var modalPresentText = $('#presentIndText');
@@ -272,8 +271,7 @@ Reader.onload = function(evt){
    
     $('#btn-Calc').click(function(){
          removeAlert()
-
-        if(valuesIndepInput == ""){
+         if(valuesIndepInput == ""){
             alert('Campo de Valor Vazio');
             $('#inputIndepent').addClass('alertInput');
         }else if( valuesDepInput == ""){
@@ -307,10 +305,12 @@ Reader.onload = function(evt){
             $('#selectProjectionLenght').addClass('alertInput');
         }else if($('#valueprojectInput').val() == ""){
             $('#valueprojectInput').addClass('alertInput');
+        }else{
+            let selectProj = $('#selectProjectionLenght').val()
+            let valueProj = parseFloat($('#valueprojectInput').val());
+            projecao(valueProj,selectProj,indValX,depY);
         }
-        let selectProj = $('#selectProjectionLenght').val()
-         let valueProj = parseFloat($('#valueprojectInput').val());
-        projecao(valueProj,selectProj);
+        
     });
 });
 

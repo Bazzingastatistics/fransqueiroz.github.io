@@ -79,8 +79,31 @@ $(function(){
       event.preventDefault();
       $('html body').animate({scrollTop:$(this.hash).offset().top}, 700);
    }); 
-   
-   
 
-   
+  //  function fonte(e){
+  //   var elemento = $(".acessibilidade");
+  //   var fonte = elemento.css('font-size');
+  //   if (e == 'a') {
+  //     elemento.css("fontSize", parseInt(fonte) + 1);
+  //   } else if('d'){
+  //     elemento.css("fontSize", parseInt(fonte) - 1);
+  //   }
+  // }  
+  // $('.fontA').each(function(){
+  //   var font = $('body').css('font-size');
+  //   if($('.font').hasClass('fontA')){
+  //     $('body').css('fontSize', parseInt(font) - 1);
+  //   }else{
+  //     $('body').css('fontSize', parseInt(font) + 1);
+  //   }
+  // }); 
+ 
+  $('#fontA').click(function(){
+    var font = $('body').css('font-size');
+    $('body').css('fontSize', parseInt(font) + 1);
+  });
+  $('#fontD').click(function(){
+    var font = $('body').css('font-size');
+    $('body').css('fontSize', parseInt(font) - 1);
+  });
 });

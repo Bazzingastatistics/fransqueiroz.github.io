@@ -107,21 +107,21 @@ body {
   width: 370px;
   border-color: #2a838f;
 }
-.fullContainer .contentSection .contentLog input[type=submit] {
+.fullContainer .contentSection .contentLog a {
+  text-align: center;
   border: 0;
-  background: none;
+  background: #2a838f;
   margin: 25px auto 20px;
-  border: 2px solid #2a838f;
   padding: 12px 10px;
   width: 200px;
   outline: none;
-  color: #2a838f;
+  color: #fff;
   border-radius: 25px;
   transition: 0.25s;
   cursor: pointer;
 }
-.fullContainer .contentSection .contentLog input[type=submit]:hover {
-  background: #2a838f;
+.fullContainer .contentSection .contentLog a:hover {
+  background: #1D5259;
   border: 2px solid #2a838f;
   color: #fff;
 }
@@ -167,21 +167,20 @@ body {
 }
 .fullContainer .contentMenu .contentBtnMenu .btn-Menu {
   border: 0;
-  background: none;
+  background: #2a838f;
   display: block;
   margin: 25px auto 5px;
   text-align: center;
-  border: 2px solid #2a838f;
   padding: 12px 10px;
   width: 250px;
   outline: none;
-  color: #2a838f;
+  color: #fff;
   border-radius: 25px;
   transition: 0.3s ease-in;
   cursor: pointer;
 }
 .fullContainer .contentMenu .contentBtnMenu .btn-Menu:hover {
-  background: #2a838f;
+  background: #1D5259;
   color: #fff;
 }
 .fullContainer .contentDescritive {
@@ -372,16 +371,18 @@ body {
 }
 .fullContainer .contentDescritive .contentBtn .btnCalculate,
 .fullContainer .contentDescritive .contentBtn a {
+  width: 200px;
   padding: 10px 20px;
-  background-color: #fff;
-  border: 2px solid #2a838f !important;
+  background-color: #2a838f;
   border-radius: 25px !important;
-  color: #2a838f;
+  color: #fff;
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
 }
 .fullContainer .contentDescritive .contentBtn .btnCalculate:hover,
 .fullContainer .contentDescritive .contentBtn a:hover {
-  background: #2a838f;
+  background: #1D5259;
   color: #fff;
 }
 .fullContainer .contentDescritive .contentBtn .d-block p {
@@ -391,14 +392,13 @@ body {
 .fullContainer .contentDescritive .contentBtn .btnImport {
   margin: 0 0 20px !important;
   padding: 5px 20px;
-  background-color: #fff;
-  border: 2px solid #2a838f;
+  background-color: #2a838f;
   border-radius: 25px;
-  color: #2a838f;
+  color: #fff;
   cursor: pointer;
 }
 .fullContainer .contentDescritive .contentBtn .btnImport:hover {
-  background: #2a838f;
+  background: #1D5259;
   color: #fff;
 }
 .fullContainer .content-Result {
@@ -489,28 +489,26 @@ body {
 .fullContainer #nav-profile canvas {
   margin: 0 auto;
 }
-.fullContainer .reloadPage {
+.fullContainer .reloadPage, .fullContainer .clearPage, .fullContainer .clearPageBinomial, .fullContainer .clearPageNormal {
   margin: 0 auto 20px;
   text-align: center;
   padding: 20px;
 }
-.fullContainer .reloadPage input[type=button] {
+.fullContainer .reloadPage input[type=button], .fullContainer .clearPage input[type=button], .fullContainer .clearPageBinomial input[type=button], .fullContainer .clearPageNormal input[type=button] {
   border: 0;
-  background: none;
+  background: #2a838f;
   display: block;
   margin: 25px auto;
   text-align: center;
-  border: 2px solid #2a838f;
   padding: 12px 10px;
   width: 250px;
   outline: none;
-  color: #2a838f;
+  color: #fff;
   border-radius: 25px;
   transition: 0.25s;
 }
-.fullContainer .reloadPage input[type=button]:hover {
-  border-color: #2a838f;
-  background: #2a838f;
+.fullContainer .reloadPage input[type=button]:hover, .fullContainer .clearPage input[type=button]:hover, .fullContainer .clearPageBinomial input[type=button]:hover, .fullContainer .clearPageNormal input[type=button]:hover {
+  background: #1D5259;
   color: #fff;
 }
 .fullContainer .breakerContent {
@@ -597,14 +595,13 @@ body {
 }
 .fullContainer .breakerContent .contentBtn .btnCalculate2 {
   padding: 10px 20px;
-  background-color: #fff;
-  border: 2px solid #2a838f;
+  background-color: #2a838f;
   border-radius: 25px;
-  color: #2a838f;
+  color: #fff;
   cursor: pointer;
 }
 .fullContainer .breakerContent .contentBtn .btnCalculate2:hover {
-  background: #2a838f;
+  background: #1D5259;
   color: #fff;
 }
 .fullContainer .breakerContent .content-Breaker-Result #sepTexResult {
@@ -651,19 +648,19 @@ body {
   align-items: center;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 nav .nav-tabs a {
+  background: #2a838f;
   padding: 10px 30px;
-  border: 1px solid #2a838f;
-  color: #2a838f;
+  color: #fff;
   border-radius: 30px;
   margin: 0 10px;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 nav .nav-tabs a:focus {
   color: #fff;
-  background: #2a838f;
+  background: #1D5259;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 nav .nav-tabs a:hover {
   color: #fff;
-  background: #2a838f;
+  background: #1D5259;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent {
   width: 100%;
@@ -748,14 +745,13 @@ body {
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .buttonCalc #btnProbCalc {
   width: 100px;
   border-radius: 30px;
-  background: none;
-  color: #2a838f;
-  border: 1px solid #2a838f;
+  background: #2a838f;
+  color: #fff;
   text-align: center;
   padding: 10px;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .buttonCalc #btnProbCalc:hover {
-  background: #2a838f;
+  background: #1D5259;
   color: #fff;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .resultPresentation .textPresentation {
@@ -835,16 +831,15 @@ body {
   margin: 0 10px;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .buttonCalc #btnBinomialCalc {
-  width: 100px;
+  width: 150px;
   border-radius: 30px;
-  background: none;
-  color: #2a838f;
-  border: 1px solid #2a838f;
+  background: #2a838f;
+  color: #fff;
   text-align: center;
   padding: 10px;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .buttonCalc #btnBinomialCalc:hover {
-  background: #2a838f;
+  background: #1D5259;
   color: #fff;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .resultPresentation .textPresentation {
@@ -904,16 +899,15 @@ body {
   margin: 0 10px;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .buttonCalc #btnNormalCalc {
-  width: 100px;
+  width: 150px;
   border-radius: 30px;
-  background: none;
-  color: #2a838f;
-  border: 1px solid #2a838f;
+  background: #2a838f;
+  color: #fff;
   text-align: center;
   padding: 10px;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .buttonCalc #btnNormalCalc:hover {
-  background: #2a838f;
+  background: #1D5259;
   color: #fff;
 }
 .fullContainer .contentProbability .selectDistribution .col-xs-12 #nav-tabContent .tab-pane .row .resultPresentation .divDesabled {
@@ -968,6 +962,9 @@ body {
   border: 1px solid #2a838f;
   color: #2a838f;
   margin: -10px 10px 20px;
+}
+.fullContainer .contentCorrelation .contentData input[type=text]::placeholder {
+  font-size: 15px;
 }
 .fullContainer .contentCorrelation .contentData .IndepValue, .fullContainer .contentCorrelation .contentData .depValue {
   display: none;
@@ -1049,14 +1046,13 @@ body {
   margin: 20px 5px;
   width: 200px;
   border-radius: 30px;
-  background: none;
-  color: #2a838f;
-  border: 1px solid #2a838f;
+  background: #2a838f;
+  color: #fff;
   text-align: center;
   padding: 10px;
 }
 .fullContainer .contentCorrelation .row .btn-Calc button:hover, .fullContainer .contentCorrelation .row .btn-Calc .btnImport:hover {
-  background: #2a838f;
+  background: #1D5259;
   color: #fff;
 }
 .fullContainer .contentCorrelation #apresent {
@@ -1133,9 +1129,36 @@ body {
   border: 1px solid #2a838f;
 }
 
-#footer {
-  position: absolute;
-  bottom: 0;
+.accessibilityContent {
+  position: sticky;
+  left: 0;
+  bottom: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-color: #000;
+  width: 120px;
+  height: 130px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 1px 1px 1px 1px #1D5259;
+}
+.accessibilityContent .row img {
+  width: 60px;
+  margin: 0 auto 20px;
+}
+.accessibilityContent .row input[type=button] {
+  background: #1D5259;
+  border: none;
+  color: #fff;
+  margin: 0 5px;
+  padding: 5px 10px;
+}
+.accessibilityContent .row input[type=button]:hover {
+  background: #0D3C42;
+  padding: 5px 12px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1257,8 +1280,8 @@ body {
     margin: 10px 5px;
     width: 200px;
     border-radius: 30px;
-    background: none;
-    color: #2a838f;
+    background: #2a838f;
+    color: #fff;
     border: 1px solid #2a838f;
     text-align: center;
     padding: 5px;
@@ -1276,6 +1299,36 @@ body {
   .fullContainer .backPage {
     position: absolute;
     right: 75% !important;
+  }
+
+  .accessibilityContent {
+    position: sticky;
+    left: 0;
+    bottom: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    width: 50px;
+    height: 130px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  .accessibilityContent .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .accessibilityContent .row img {
+    width: 35px;
+    margin: 5px auto 10px;
+  }
+  .accessibilityContent .row input[type=button] {
+    background: #1D5259;
+    border: none;
+    color: #fff;
+    margin: 5px 5px;
+    padding: 0px 5px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -1447,6 +1500,36 @@ body {
   }
   .fullContainer .contentCorrelation .apresentChat-Active #container svg {
     max-width: 320px !important;
+  }
+
+  .accessibilityContent {
+    position: sticky;
+    left: 0;
+    bottom: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    width: 40px;
+    height: 130px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  .accessibilityContent .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .accessibilityContent .row img {
+    width: 35px;
+    margin: 5px auto 10px;
+  }
+  .accessibilityContent .row input[type=button] {
+    background: #1D5259;
+    border: none;
+    color: #fff;
+    margin: 5px 5px;
+    padding: 0px 5px;
   }
 }
 @media only screen and (max-width: 320px) {

@@ -127,21 +127,21 @@ body {
         }
       }
 
-      input[type="submit"] {
-        border: 0;
-        background: none;
-        margin: 25px auto 20px;
-        border: 2px solid $baseColor;
-        padding: 12px 10px;
-        width: 200px;
-        outline: none;
-        color: $baseColor;
-        border-radius: 25px;
-        transition: 0.25s;
-        cursor: pointer;
+        a {
+          text-align: center;
+          border: 0;
+          background: $baseColor;
+          margin: 25px auto 20px;
+          padding: 12px 10px;
+          width: 200px;
+          outline: none;
+          color: $secondColor;
+          border-radius: 25px;
+          transition: 0.25s;
+          cursor: pointer;
 
         &:hover {
-          background: $baseColor;
+          background: $colorNav;
           border: 2px solid $baseColor;
           color: $secondColor;
         }
@@ -203,21 +203,20 @@ body {
 
       .btn-Menu {
         border: 0;
-        background: none;
+        background: $baseColor;
         display: block;
         margin: 25px auto 5px;
         text-align: center;
-        border: 2px solid $baseColor;
         padding: 12px 10px;
         width: 250px;
         outline: none;
-        color: $baseColor;
+        color: $secondColor;
         border-radius: 25px;
         transition: 0.3s ease-in;
         cursor: pointer;
 
         &:hover {
-          background: $baseColor;
+          background: $colorNav;
           color: $secondColor;
         }
 
@@ -456,15 +455,16 @@ body {
 
       .btnCalculate,
       a {
+        width: 200px;
         padding: 10px 20px;
-        background-color: $secondColor;
-        border: 2px solid $baseColor !important;
+        background-color: $baseColor;
         border-radius: 25px !important;
-        color: $baseColor;
+        color: $secondColor;
         cursor: pointer;
-
+        text-align: center;
+        text-decoration: none;
         &:hover {
-          background: $baseColor;
+          background: $colorNav;
           color: $secondColor;
         }
       }
@@ -478,14 +478,13 @@ body {
       .btnImport {
         margin: 0 0 20px!important;
         padding: 5px 20px;
-        background-color: $secondColor;
-        border: 2px solid $baseColor;
+        background-color: $baseColor;
         border-radius: 25px;
-        color: $baseColor;
+        color: $secondColor;
         cursor: pointer;
 
         &:hover {
-          background: $baseColor;
+          background: $colorNav;
           color: $secondColor;
         }
       }
@@ -613,28 +612,26 @@ body {
     }
   }
 
-  .reloadPage {
+  .reloadPage,.clearPage,.clearPageBinomial,.clearPageNormal {
     margin: 0 auto 20px;
     text-align: center;
     padding: 20px;
 
     input[type="button"] {
       border: 0;
-      background: none;
+      background: $baseColor;
       display: block;
       margin: 25px auto;
       text-align: center;
-      border: 2px solid $baseColor;
       padding: 12px 10px;
       width: 250px;
       outline: none;
-      color: $baseColor;
+      color: $secondColor;
       border-radius: 25px;
       transition: 0.25s;
 
       &:hover {
-        border-color: $baseColor;
-        background: $baseColor;
+        background: $colorNav;
         color: $secondColor;
       }
     }
@@ -745,14 +742,13 @@ body {
     .contentBtn {
       .btnCalculate2 {
         padding: 10px 20px;
-        background-color: $secondColor;
-        border: 2px solid $baseColor;
+        background-color: $baseColor;
         border-radius: 25px;
-        color: $baseColor;
+        color: $secondColor;
         cursor: pointer;
 
         &:hover {
-          background: $baseColor;
+          background: $colorNav;
           color: $secondColor;
         }
       }
@@ -817,20 +813,20 @@ body {
             align-items: center;
 
             a {
+              background: $baseColor;
               padding: 10px 30px;
-              border: 1px solid $baseColor;
-              color: $baseColor;
+              color: $secondColor;
               border-radius: 30px;
               margin: 0 10px;
 
               &:focus {
                 color: $secondColor;
-                background: $baseColor;
+                background: $colorNav;
               }
 
               &:hover {
                 color: $secondColor;
-                background: $baseColor;
+                background: $colorNav;
               }
             }
           }
@@ -939,14 +935,13 @@ body {
                 #btnProbCalc {
                   width: 100px;
                   border-radius: 30px;
-                  background: none;
-                  color: $baseColor;
-                  border: 1px solid $baseColor;
+                  background: $baseColor;
+                  color: $secondColor;
                   text-align: center;
                   padding: 10px;
 
                   &:hover {
-                    background: $baseColor;
+                    background: $colorNav;
                     color: $secondColor;
                   }
                 }
@@ -1050,16 +1045,15 @@ body {
 
               .buttonCalc {
                 #btnBinomialCalc {
-                  width: 100px;
+                  width: 150px;
                   border-radius: 30px;
-                  background: none;
-                  color: $baseColor;
-                  border: 1px solid $baseColor;
+                  background: $baseColor;
+                  color: $secondColor;
                   text-align: center;
                   padding: 10px;
 
                   &:hover {
-                    background: $baseColor;
+                    background: $colorNav;
                     color: $secondColor;
                   }
                 }
@@ -1140,16 +1134,15 @@ body {
 
               .buttonCalc {
                 #btnNormalCalc {
-                  width: 100px;
+                  width: 150px;
                   border-radius: 30px;
-                  background: none;
-                  color: $baseColor;
-                  border: 1px solid $baseColor;
+                  background: $baseColor;
+                  color: $secondColor;
                   text-align: center;
                   padding: 10px;
 
                   &:hover {
-                    background: $baseColor;
+                    background: $colorNav;
                     color: $secondColor;
                   }
                 }
@@ -1229,6 +1222,9 @@ body {
         border: 1px solid $baseColor;
         color: $baseColor;
         margin: -10px 10px 20px;
+        &::placeholder{
+          font-size: 15px;
+        }
       }
       .IndepValue,.depValue{
         display: none;
@@ -1322,14 +1318,13 @@ body {
           margin: 20px 5px;
           width: 200px;
           border-radius: 30px;
-          background: none;
-          color: $baseColor;
-          border: 1px solid $baseColor;
+          background: $baseColor;
+          color: $secondColor;
           text-align: center;
           padding: 10px;
 
           &:hover{
-            background: $baseColor;
+            background: $colorNav;
             color: $secondColor;
           }
         }
@@ -1426,9 +1421,39 @@ body {
 
 
 
-#footer {
-  position: absolute;
-  bottom: 0;
+.accessibilityContent{
+  position: sticky;
+  left: 0;
+  bottom: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $secondColor;
+  border-color: #000;
+  width: 120px;
+  height: 130px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 1px 1px 1px 1px $colorNav;
+  
+  .row{
+    img{
+      width: 60px;
+      margin: 0 auto 20px;
+    }
+    input[type="button"]{
+      background: $colorNav;
+      border:none;
+      color: $secondColor;
+      margin: 0 5px;
+      padding:5px 10px;
+      &:hover{
+        background: $textColor;
+        padding: 5px 12px;
+      }
+    }
+  }
 }
 
 
@@ -1617,8 +1642,8 @@ body {
             margin: 10px 5px;
             width: 200px;
             border-radius: 30px;
-            background: none;
-            color: $baseColor;
+            background: $baseColor;
+            color: $secondColor;
             border: 1px solid $baseColor;
             text-align: center;
             padding: 5px;
@@ -1659,6 +1684,35 @@ body {
     .backPage {
       position: absolute;
       right: 75% !important;
+    }
+  }
+  .accessibilityContent{
+    position: sticky;
+    left: 0;
+    bottom: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $secondColor;
+    width: 50px;
+    height: 130px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    .row{
+      display: flex;
+      flex-direction: column;
+      img{
+        width: 35px;
+        margin: 5px auto 10px;
+      }
+      input[type="button"]{
+        background: $colorNav;
+        border:none;
+        color: $secondColor;
+        margin: 5px 5px;
+        padding:0px 5px;
+      }
     }
   }
 }
@@ -1911,6 +1965,35 @@ body {
               max-width: 320px!important;
             }
           }
+      }
+    }
+  }
+  .accessibilityContent{
+    position: sticky;
+    left: 0;
+    bottom: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $secondColor;
+    width: 40px;
+    height: 130px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    .row{
+      display: flex;
+      flex-direction: column;
+      img{
+        width: 35px;
+        margin: 5px auto 10px;
+      }
+      input[type="button"]{
+        background: $colorNav;
+        border:none;
+        color: $secondColor;
+        margin: 5px 5px;
+        padding:0px 5px;
       }
     }
   }
