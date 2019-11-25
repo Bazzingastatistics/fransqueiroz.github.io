@@ -102,10 +102,10 @@ $(function(){
         let min = dados.map(Number).reduce(function(a,b,c,d){
             return Math.min(a, b,c,d);
         });
-        console.log(min);
-        console.log(dados);
         
-        console.log(dados1);
+        
+        
+        
         scatterChart(dados,dados1,indValX,depY);
         apresentTable(vetX, vetY,indValX,depY)
         $('.reloadPage').removeClass('d-none').addClass('d-block');     
@@ -151,12 +151,12 @@ $(function(){
 
         if (ind == "x") {
             let apresentX= /*html*/`<p>Projeção para <strong>${indValX} = ${vlProj}</strong> : <strong>${depY}</strong> é igual a <strong>${proj}</strong></p>`;
-            console.log(apresentX);
+            
             $('#apresent2').append(apresentX);
         }
         if (ind == "y") {
             let apresentY= /*html*/`<p>Projeção para <strong>${depY} = ${vlProj}</strong> : <strong>${indValX}</strong> é igual a <strong>${proj}</strong></p>`;
-            console.log(apresentY);
+            
             $('#apresent2').append(apresentY);
         }  
     }
@@ -177,7 +177,7 @@ $(function(){
                 let depTest = '<p data-posicao="' + ($(this).val()) + '" class="deletOrdination">' + $(this).val() + '</p>'
                 modalPresentTextVal.append(depTest);
                 $(this).val("");
-                console.log(indValX);
+                
             }
         }
     });
@@ -200,7 +200,7 @@ $(function(){
             let depTest = '<p data-posicao="' + ($(this).val()) + '" class="deletOrdination">' + $(this).val() + '</p>'
             modalPresentTextVal2.append(depTest);
             $(this).val("");
-            console.log(depY)
+            
         }
     }
     });
@@ -269,14 +269,14 @@ Reader.onload = function(evt){
     let fileVetY = fileArr[1].toString().split(';');
 
     for(let item of fileVetX){
-       console.log(item);
+       
         valuesIndepInput.push(parseFloat(item));
         modalPresent.removeClass('IndepApresent').addClass('IndepApresent-Active');
         let indepText = '<p data-posicao="' + item + '" class="deletOrdination">' + item + '<label >x</label> </p>'
         modalPresentText.append(indepText);
     }
     for(let item of fileVetY){
-        console.log(item);
+        
         valuesDepInput.push(parseFloat(item));
         modalPresent2.removeClass('DepApresent').addClass('DepApresent-Active');
         let depTest = '<p data-posicao="' + item + '" class="deletOrdination">' + item + '<label >x</label> </p>'

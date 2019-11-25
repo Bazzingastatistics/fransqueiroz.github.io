@@ -102,11 +102,6 @@ $(function () {
 
     /*Binomial*/
     function distBinomial(n, p, q, k, ind) {
-        console.log(n);
-        console.log(p);
-        console.log(q);
-        console.log(k);
-        console.log(ind);
         // Declarando Variáveis
         let anaComb;
         let vetComb = [];

@@ -12,6 +12,7 @@ $(function(){
   $('.contentProbability ').addClass('animated flipOutY');
   $('.contentCorrelation ').addClass('animated flipOutY');
   });
+  
  /*Active Menu Mobile*/
  $('.navbar-toggler').click(function(){
  $('#navbarNavMobile').toggleClass('navbarMobile-Active');

@@ -47,9 +47,7 @@ function graficoBarrasJuntas(dados, nomes) {
 //___________Gráfico Pizza
 function graficoPizza(dados,colors, nomes) {   
     var ctx = $(".line-chart");
-    console.log(dados);
-    console.log(nomes);
-    console.log(colors);
+   
 
     var myDoughnutChart = new Chart(ctx, {
         
@@ -233,11 +231,7 @@ function qlOrdinal(vetor, vetorOrd,nameVariable) {
  // Mediana
  vetMediana = medianaGeral(vetor);
 
- console.log(vetE);
- console.log(vetFi);
- console.log(vetFr);
- console.log(vetFac);
- console.log(vetFacP);
+ 
  tableQualy(nameVariable,vetE, vetFi, vetFr, vetFac, vetFacP,vetModa,vetMediana);
 
  /*Gráficos */
@@ -929,7 +923,7 @@ $(document).ready(function () {
              alert('Campo de Valores Vazio');
          } else {
              nameVariable = $(this).val();
-             console.log(nameVariable);
+           
              $('#variavelPresent').removeClass('variavelPresent').addClass('variavelPresentActive');
              // valtext =   $(this).val() + '</span>';
              $('#variavelText').append($(this).val());
@@ -951,7 +945,7 @@ $(document).ready(function () {
          }
          else {
              valuesOrdination.push($(this).val());
-             console.log(valuesOrdination);
+           
              modalPresent.removeClass('modalPresent').addClass('modalPresentActive');
              let ordenationTest = '<p data-posicao="' + ($(this).val()) + '" class="deletOrdination">' + $(this).val() + '<label >x</label> </p>'
              modalPresentText.append(ordenationTest);
@@ -963,7 +957,7 @@ $(document).ready(function () {
  $(document).on('click', '.deletOrdination', function () {
      $(this).remove();
      valuesOrdination.splice(valuesOrdination.indexOf($(this).attr('data-posicao')), 1);
-     console.log(valuesOrdination);
+    
  });
 
  //Adicionando Valores para em um vetor
@@ -980,7 +974,7 @@ $(document).ready(function () {
          }
          else {
              valuesVector.push($(this).val());
-             console.log(valuesVector);
+         
              Present.removeClass('chipsPresent').addClass('chipsActive');
              var text = '<p data-posicao="' + ($(this).val()) + '" class="delet">' + $(this).val() + '<label >x</label> </p>'
              presentText.append(text);
@@ -992,14 +986,14 @@ $(document).ready(function () {
  $(document).on('click', '.delet', function () {
      $(this).remove();
      valuesVector.splice(valuesVector.indexOf($(this).attr('data-posicao')), 1);
-     console.log(valuesVector);
+    
  });
 
  let universe;
 
  $('#selectSampling').click(function () {
      universe = $(this).val();
-     console.log(universe);
+    
  });
 
 
@@ -1031,15 +1025,15 @@ $(document).ready(function () {
  Reader.onload = function(evt){
      let fileArr = evt.target.result.split('\n').filter(x => x && x != " ").toString();
      let fileVet = fileArr.split(';');
-     console.log(fileVet);
+   
 
      for(let item of fileVet){
-        console.log(item);
+       
         valuesVector.push(item);
-        console.log(valuesVector);
+     
         Present.removeClass('chipsPresent').addClass('chipsActive');
         var text = '<p data-posicao="' + item + '" class="delet">' + item + '<label >x</label> </p>'
-        console.log(text)
+  
         presentText.append(text);
      }
     
@@ -1117,7 +1111,7 @@ $(document).ready(function () {
  });
 
  $('#selectBreaker').click(function () {
-     console.log();
+   
      $('#etiqueta').css("display","flex");
      if ($(this).val() == "4") {
 
