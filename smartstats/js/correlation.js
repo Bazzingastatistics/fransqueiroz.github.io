@@ -133,7 +133,7 @@ $(function(){
         }
 
         if (ind == "x") {
-            let apresentX= /*html*/`<p>Projeção para ${indValX} = ${vlProj} : ${depY} é igual a ${proj}</p>`;
+            let apresentX= /*html*/`<p>Projeção para <strong>${indValX} = ${vlProj}</strong> : <strong>${depY}</strong> é igual a <strong>${proj}</strong></p>`;
             console.log(apresentX);
             $('#apresent2').append(apresentX);
         }

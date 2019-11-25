@@ -74,10 +74,14 @@ $(function(){
    });
    /*Apresentação de Inputs de Valores Probabilidade*/
    
-  
+   var alturaDocument = $(window).height();
+   function alturaSecao(){
+    $('.show').height(alturaDocument);
+   }
+   $(alturaSecao);
     $(".btnCalculation").click(function(event){        
       event.preventDefault();
-      $('html body').animate({scrollTop:$(this.hash).offset().top}, 700);
+      $('html body').animate({scrollTop:alturaDocument}, '900');
    }); 
 
   //  function fonte(e){

@@ -1128,6 +1128,10 @@ body {
   color: #2a838f;
   border: 1px solid #2a838f;
 }
+.fullContainer .contentCorrelation #apresent2 p {
+  color: #0D3C42;
+  font-size: 18px;
+}
 
 .accessibilityContent {
   position: sticky;
