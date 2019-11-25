@@ -4,6 +4,8 @@ $(function(){
   $('.contentDescritive ').addClass('animated flipInY');
   $('.contentProbability ').addClass('animated flipInY');
   $('.contentCorrelation ').addClass('animated flipInY');
+  $('.contentMaintenance').addClass('animated flipInY')
+  $('.accessibilityContent').addClass('animated fadeInLeft')
 
   $('.backPage').click(function(){
     $('.contentDescritive ').addClass('animated flipOutY');

@@ -69,9 +69,6 @@ body {
 .fullContainer {
   display: flex;
   justify-content: center;
-  padding-bottom: 30px;
-  -webkit-animation-name: fadeInLeft;
-  animation-name: fadeInLeft;
 
   .contentSection {
     width: 100%;
@@ -156,9 +153,9 @@ body {
 
   .contentMenu {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 15px;
     max-width: 500px;
-    height: 550px;
+    height: 500px;
     background: $secondColor;
     border-radius: 30px;
     box-shadow: 2px 2px 10px #000;
@@ -226,6 +223,70 @@ body {
 
 
 
+  }
+  .contentMaintenance {
+    width: 100%;
+    margin-top: 10px;
+    max-width: 500px;
+    height: 550px;
+    background: $secondColor;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px #000;
+     .row{
+       .gear{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: 0 auto;
+         flex-direction: column;
+         img{
+           width: 100%;
+           max-width: 300px;
+         }
+       }
+       .contentMaint{
+         margin: 0 auto;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         h3{
+           text-decoration: underline;
+           text-transform: uppercase;
+           color: $textColor;
+           font-weight: 600;
+         }
+         .contentText{
+           padding: 30px;
+           text-align: center;
+           p{
+             color: $textColor;
+             font-weight: 600; 
+           }
+           address{
+            color:$colorNav!important;
+            font-weight: 700;
+            font-size: 20px;
+          }
+         }
+       }
+       .backPageMain{
+         margin: -20px auto 0;
+         a {
+          width: 200px;
+          padding: 10px 20px;
+          background-color: $baseColor;
+          border-radius: 25px !important;
+          color: $secondColor;
+          cursor: pointer;
+          text-align: center;
+          text-decoration: none;
+          &:hover {
+            background: $colorNav;
+            color: $secondColor;
+          }
+        }
+       }
+     }
   }
 
   .contentDescritive {
@@ -1447,16 +1508,19 @@ body {
     img{
       width: 60px;
       margin: 0 auto 20px;
+      &:hover{
+        width:65px;
+      }
     }
     input[type="button"]{
       background: $colorNav;
       border:none;
       color: $secondColor;
       margin: 0 5px;
-      padding:5px 10px;
+      padding:0 8px;
+      font-size: 20px;
       &:hover{
         background: $textColor;
-        padding: 5px 12px;
       }
     }
   }
