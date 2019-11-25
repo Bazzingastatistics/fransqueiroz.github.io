@@ -122,9 +122,20 @@ body {
   border: 2px solid #2a838f;
   color: #fff;
 }
+.fullContainer .contentSection .row a {
+  text-decoration: none;
+}
 .fullContainer .contentSection .textLog {
   margin: 0 0 0 20px;
-  color: #2a838f;
+  color: #1D5259;
+  font-weight: 600;
+}
+.fullContainer .contentSection .textLog:hover {
+  text-decoration: none !important;
+  background: #0D3C42;
+  color: #fff;
+  padding: 5px;
+  border-radius: 20px;
 }
 .fullContainer .contentMenu {
   width: 100%;

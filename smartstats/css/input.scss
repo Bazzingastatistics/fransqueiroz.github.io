@@ -144,10 +144,23 @@ body {
         }
       }
     }
+    .row{
+      a{
+        text-decoration: none;
+      }
+    }
 
     .textLog {
       margin: 0 0 0 20px;
-      color: $baseColor;
+      color: $colorNav;
+      font-weight: 600;
+      &:hover{
+        text-decoration: none!important;
+        background: $textColor;
+        color: $secondColor;
+        padding: 5px;
+        border-radius: 20px;
+      }
     }
   }
 
