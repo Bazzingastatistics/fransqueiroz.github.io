@@ -155,7 +155,7 @@ $(function(){
             $('#apresent2').append(apresentX);
         }
         if (ind == "y") {
-            let apresentY= /*html*/`<p>Projeção para ${depY} = ${vlProj} : ${indValX} é igual a ${proj}</p>`;
+            let apresentY= /*html*/`<p>Projeção para <strong>${depY} = ${vlProj}</strong> : <strong>${indValX}</strong> é igual a <strong>${proj}</strong></p>`;
             console.log(apresentY);
             $('#apresent2').append(apresentY);
         }  
