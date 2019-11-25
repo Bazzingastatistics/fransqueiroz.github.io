@@ -107,6 +107,7 @@ $(function(){
         
         console.log(dados1);
         scatterChart(dados,dados1,indValX,depY);
+        apresentTable(vetX, vetY,indValX,depY)
         $('.reloadPage').removeClass('d-none').addClass('d-block');     
     }
 
@@ -115,6 +116,22 @@ $(function(){
         $('#apresent').append(text);
     }
 
+    //Tabela Correlacao
+    function apresentTable(vetX, vetY,indValX,depY){
+        let line1 = /*html*/`<tr>
+                                <td class="tdVet tableTitle">${indValX}</td>
+                                <td class="tdVet tableTitle tableLines">${depY}</td>
+                            </tr>`
+        $('#tableDemonstration').append(line1);
+        for(let i = 0; i < vetX.length; i++){
+            let line2 = /*html*/`<tr>
+                                    <td class="tdVet tableTitle">${vetX[i]}</td>
+                                    <td class="tdVet tableTitle tableLines">${vetY[i]}</td>
+                                </tr>`
+            $('#tableDemonstration').append(line2);
+        }
+       
+    }
     //____________________Projeção
     function projecao(vlProj, ind,indValX,depY) {
 
@@ -281,7 +298,8 @@ Reader.onload = function(evt){
          let corX = valuesIndepInput;
         let corY = valuesDepInput;
         correlacao(corX,corY,indValX,depY);
-        $('#apresentChat').removeClass('apresentChat').addClass('apresentChat-Active')
+        $('#tableCorrelation').removeClass('d-none').addClass('d-block');
+        $('#apresentChat').removeClass('apresentChat').addClass('apresentChat-Active');
          $('#projection').css('display', 'block');
          let apresentSelect = /*html*/`<span>Para</span>
          <select class="textVariable" name="variable" id="selectProjectionLenght">

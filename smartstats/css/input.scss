@@ -1658,8 +1658,11 @@ body {
       }
       .apresentChat-Active{
         #container{
+         
             svg{
-              max-width: 370px!important;
+              margin: 0 20%;
+              text-align: center;
+              max-width: 380px!important;
             }
           }
       }
@@ -2072,6 +2075,7 @@ body {
       .apresentChat-Active{
         #container{
             svg{
+              margin: -70px 27%;
               max-width: 280px!important;
             }
           }
