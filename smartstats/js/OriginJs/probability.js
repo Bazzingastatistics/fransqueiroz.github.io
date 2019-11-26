@@ -365,9 +365,9 @@ $(function () {
             let interval = $('#selectNormalLenght').val();
             var value = [];
             if ($('#selectNormalLenght').val() == "|") {
-                if ($('#valueNormal1').val()) {
+                if ($('#valueNormal1').val() == "") {
                     $('#valueNormal1').addClass('alertInput');
-                } else if ($('#valueNormal2').val()) {
+                } else if ($('#valueNormal2').val() == "") {
                     $('#valueNormal2').addClass('alertInput');
                 } else {
                     value.push(parseFloat($('#valueNormal1').val()));
