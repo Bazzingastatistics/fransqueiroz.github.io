@@ -206,7 +206,7 @@ function qlOrdinal(vetor, vetorOrd,nameVariable) {
      if (acum > 0) {
          vetFi.push(acum);
          vetE.push(vetorOrd[i]);
-        
+        console.log(vetFi);
          // Carregando vetor da frequência em percentual
          vetFr.push(((vetFi[k] / vetor.length) * 100).toFixed(2));
 
