@@ -197,7 +197,7 @@ function qlOrdinal(vetor, vetorOrd,nameVariable) {
 
  // Acumulando valores e carregando vetores(para uso posterior)
  for (let i = 0; i < vetorOrd.length; i++) {
-     for (let j = i; j < vetor.length; j++) {
+     for (let j = 0; j < vetor.length; j++) {
          if (vetorOrd[i] == vetor[j]) {
              acum += 1;
          }
