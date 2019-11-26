@@ -138,7 +138,7 @@ $(function(){
         let proj = 0;
 
         if (ind == "x") {                  
-            proj = parseFloat((regA * vlProj)) + parseFloat(regB).toFixed(2);
+            proj = parseFloat((regA * vlProj)) + parseFloat(regB);
             
         }
         if (ind == "y") {

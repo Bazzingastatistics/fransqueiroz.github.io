@@ -180,7 +180,7 @@ function qlNominal(vetor,nameVariable) {
 // Qualitativa Ordinal
 
 function qlOrdinal(vetor, vetorOrd,nameVariable) {
-
+   
  // Ordenando o vetor
  vetor.sort(function (a, b) {
      return a - b;
@@ -207,7 +207,7 @@ function qlOrdinal(vetor, vetorOrd,nameVariable) {
      if (acum > 0) {
          vetFi.push(acum);
          vetE.push(vetorOrd[i]);
-
+        
          // Carregando vetor da frequência em percentual
          vetFr.push(((vetFi[k] / vetor.length) * 100).toFixed(2));
 
@@ -231,7 +231,7 @@ function qlOrdinal(vetor, vetorOrd,nameVariable) {
  // Mediana
  vetMediana = medianaGeral(vetor);
 
- 
+
  tableQualy(nameVariable,vetE, vetFi, vetFr, vetFac, vetFacP,vetModa,vetMediana);
 
  /*Gráficos */
@@ -1041,6 +1041,8 @@ $(document).ready(function () {
 
  $('#btnCalculate').click(function () {
      removeAlert()
+     console.log(valuesVector);
+    console.log(valuesOrdination);
      let type = $('#selectVariable').val();
      $('#tableDemonstration').html("");
      $('#tableDemonstration-Medias').html("");
@@ -1052,7 +1054,7 @@ $(document).ready(function () {
          $('#selectVariable').addClass('alertInput');
      } else {
         $('html, body').animate({scrollTop:800},'600');
-     
+        
          switch (type) {
              case 'ordinal':
 
