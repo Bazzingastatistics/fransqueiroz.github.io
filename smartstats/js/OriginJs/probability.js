@@ -360,8 +360,8 @@ $(function () {
         } else if ($('#selectNormalLenght').val() == "") {
             $('#selectNormalLenght').addClass('alertInput');
         } else {
-            let mean = parseFloat($('#inputMean').val());
-            let diversion = parseFloat($('#inputDiversion').val());
+            let mean = parseFloat($('#inputMean').val().replace(",","."));
+            let diversion = parseFloat($('#inputDiversion').val().replace(",","."));
             let interval = $('#selectNormalLenght').val();
             var value = [];
             if ($('#selectNormalLenght').val() == "|") {
@@ -370,15 +370,15 @@ $(function () {
                 } else if ($('#valueNormal2').val() == "") {
                     $('#valueNormal2').addClass('alertInput');
                 } else {
-                    value.push(parseFloat($('#valueNormal1').val()));
-                    value.push(parseFloat($('#valueNormal2').val()));
+                    value.push(parseFloat($('#valueNormal1').val().replace(",",".")));
+                    value.push(parseFloat($('#valueNormal2').val().replace(",",".")));
                     distNormal(value, mean, diversion, interval);
                 }
             } else {
                 if ($('#valueNormal1').val() == "") {
                     $('#valueNormal1').addClass('alertInput');
                 } else {
-                    value.push(parseFloat($('#valueNormal1').val()));
+                    value.push(parseFloat($('#valueNormal1').val().replace(",",".")));
                     distNormal(value, mean, diversion, interval);
                 }
             }

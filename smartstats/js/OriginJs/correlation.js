@@ -138,7 +138,7 @@ $(function(){
         let proj = 0;
 
         if (ind == "x") {                  
-            proj = parseFloat((regA * vlProj + regB)).toFixed(2);
+            proj = parseFloat((regA * vlProj)) + parseFloat(regB).toFixed(2);
             
         }
         if (ind == "y") {
@@ -148,6 +148,7 @@ $(function(){
         if (proj < 0) {
             proj = proj * -1
         }
+        
 
         if (ind == "x") {
             let apresentX= /*html*/`<p>Projeção para <strong>${indValX} = ${vlProj}</strong> : <strong>${depY}</strong> é igual a <strong>${proj}</strong></p>`;
@@ -158,7 +159,8 @@ $(function(){
             let apresentY= /*html*/`<p>Projeção para <strong>${depY} = ${vlProj}</strong> : <strong>${indValX}</strong> é igual a <strong>${proj}</strong></p>`;
             
             $('#apresent2').append(apresentY);
-        }  
+        }
+        
     }
 
     //______________________________________________________
