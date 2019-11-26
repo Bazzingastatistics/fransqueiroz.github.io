@@ -182,10 +182,8 @@ function qlNominal(vetor,nameVariable) {
 function qlOrdinal(vetor, vetorOrd,nameVariable) {
    
  // Ordenando o vetor
- vetor.sort(function (a, b) {
-     return a - b;
- });
-
+ vetor.sort();
+ console.log(vetor);
  // Declarando variáveis
  let vetFi = [];
  let vetE = [];
@@ -1041,8 +1039,7 @@ $(document).ready(function () {
 
  $('#btnCalculate').click(function () {
      removeAlert()
-     console.log(valuesVector);
-    console.log(valuesOrdination);
+ 
      let type = $('#selectVariable').val();
      $('#tableDemonstration').html("");
      $('#tableDemonstration-Medias').html("");

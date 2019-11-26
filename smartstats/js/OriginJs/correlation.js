@@ -2,6 +2,19 @@ $(function(){
     function removeAlert(){
         $('.alertInput').removeClass('alertInput');
       }
+
+      function projecaoChart(vlProj) {
+
+        let proj = 0;
+
+                        
+            proj = parseFloat((regA * vlProj)) + parseFloat(regB);
+            
+        if (proj < 0) {
+            proj = proj * -1
+        }
+        return proj
+    }
     function scatterChart(dados,dados1,indValX,depY){
         var myChart = Highcharts.chart('container', {
             chart: {
@@ -87,14 +100,18 @@ $(function(){
         regA = (((vetXIYI.length * eXIYI) - (eXI * eYI)) / ((vetX.length * eXI2) - (eXI) ** 2)).toFixed(2);
         regB = ((eYI / vetY.length) - (regA * (eXI / vetX.length))).toFixed(2);
         apresent(cor);
-
+        let ultposition = vetX.length - 1;
         let dados = [];
         let dados1 = [];
+        let x1 = vetX[0];
+        let x2 = vetX[ultposition];
+        let y1 = projecaoChart(x1);
+        let y2 = projecaoChart(x2);
        
         if(vetX.length == vetY.length){
-            let ultposition = vetX.length - 1;
-            dados1.push([vetX[0],vetY[0]]);
-            dados1.push([vetX[ultposition],vetY[ultposition]]); 
+           
+            dados1.push([x1,y1]);
+            dados1.push([x2,y2]); 
             for(let i = 0; i < vetX.length; i++){
                 dados.push([vetX[i],vetY[i]]);       
             }
