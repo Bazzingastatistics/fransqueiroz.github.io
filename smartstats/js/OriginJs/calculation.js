@@ -184,6 +184,7 @@ function qlOrdinal(vetor, vetorOrd,nameVariable) {
  // Ordenando o vetor
  vetor.sort();
  console.log(vetor);
+ console.log(vetorOrd);
  // Declarando variáveis
  let vetFi = [];
  let vetE = [];
